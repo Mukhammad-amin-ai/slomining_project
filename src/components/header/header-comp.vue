@@ -7,12 +7,18 @@
             <div class="navigation">
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Contracts</li>
-                        <li>Dashboard</li>
-                        <li>About us</li>
-                        <li>Affiliaties</li>
-                        <li>Help Center</li>
+                        <router-link to="/">
+                            <li>Home</li>
+                        </router-link>
+                        <router-link to="/contacts">
+                            <li>Contracts</li>
+                        </router-link>
+                        <router-link to="/dashboard">
+                            <li>Dashboard</li>
+                        </router-link>
+                        <router-link to="/about">
+                            <li>About us</li>
+                        </router-link>
                     </ul>
                 </nav>
                 <div class="drop-down" v-on:click="dropclick">
@@ -75,15 +81,17 @@ header {
 }
 
 .logo {
-    width: 10%;
+    width: 15%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
 .logo img {
-    width: 100%;
+    width: 80%;
+    height: auto;
 }
 
 
@@ -114,6 +122,10 @@ ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 600;
+}
+
+li {
+    color: #000;
 }
 
 .auth {
