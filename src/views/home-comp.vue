@@ -12,6 +12,7 @@
                 <p>Begin your cloud mining investment, withdraw your first payout after 24 hours.</p>
                 <button class="start-mining">start mining</button>
                 <!-- </div> -->
+
             </div>
             <div class="hero-galery">
                 <div class="galery-image">
@@ -59,6 +60,7 @@ export default {
 }
 
 h1 {
+    width: 95%;
     font-size: 45px;
     font-family: 'Montserrat', sans-serif;
     color: rgb(28, 43, 70);
@@ -76,6 +78,16 @@ p {
     font-size: 16px;
     margin-top:24px
 }
+
+.start-mining{
+    margin-top:24px;
+    padding: 9px;
+    border-radius: 7px;
+    background-color: var(--blue);
+    color: var(--white);
+    text-transform: uppercase;
+}
+
 
 .hero-galery {
     width: 45%;
