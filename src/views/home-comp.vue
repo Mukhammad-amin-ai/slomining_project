@@ -20,13 +20,17 @@
             </div>
         </div>
     </div>
+
+    <how-to-start />
 </template>
 <script>
+import HowToStart from '@/components/start/HowToStart.vue'
 import headerComp from '../components/header/header-comp.vue'
 
 export default {
     components: {
-        headerComp
+        headerComp,
+        HowToStart
     }
 
 }
