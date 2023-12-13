@@ -1,5 +1,5 @@
 <template>
-  <div class="container d-flex center flex-column">
+  <div class="container d-flex center flex-column boxs_parent">
     <div class="start_title mb-3">HOW TO START</div>
     <div class="start_boxs">
       <div class="start_box d-flex flex-column">
