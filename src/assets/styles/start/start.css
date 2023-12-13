@@ -1,0 +1,54 @@
+.start_title {
+  font-size: 30px;
+  font-family: Montserrat-Bold, sans-serif;
+}
+
+.start_boxs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px 40px;
+}
+.start_box {
+  padding: 20px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.start_box_image {
+  height: 50px;
+  width: 50px;
+}
+
+.start_box_title {
+  margin-top: 16px;
+  font-family: Montserrat-Bold, sans-serif;
+  text-transform: uppercase;
+}
+
+.start_box_description {
+  margin-top: 16px;
+  font-family: Montserrat-Regular, sans-serif;
+}
+
+@media screen and (max-width: 567px) {
+  .boxs_parent {
+    padding: 20px;
+  }
+  .start_boxs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 768px) {
+  .boxs_parent {
+    padding: 20px;
+  }
+  .start_boxs {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr;
+  }
+}

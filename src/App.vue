@@ -1,12 +1,17 @@
-<template >
+<template>
   <div>
     <homeComp />
-    
   </div>
 </template>
 <script>
-import homeComp from './views/home-comp.vue';
+import data from '@/static/data'
+import homeComp from './views/home-comp.vue'
 export default {
+  data() {
+    return {
+      data
+    }
+  },
   components: {
     homeComp
   }
