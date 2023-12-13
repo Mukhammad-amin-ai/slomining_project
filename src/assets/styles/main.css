@@ -1,5 +1,6 @@
 @import "./fonts.css";
 @import "./variables.css";
+@import "./start/start.css";
 
 * {
   padding: 0;
