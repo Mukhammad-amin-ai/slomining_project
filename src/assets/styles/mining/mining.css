@@ -163,7 +163,10 @@
 .mining_invest {
   background: var(--black);
   color: var(--white);
+  position: relative;
+  padding-bottom: 100px;
 }
+
 
 .invest_content {
   margin-top: 80px;

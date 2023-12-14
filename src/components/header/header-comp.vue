@@ -103,7 +103,7 @@ export default {
       this.dropdawn = !this.dropdawn
     },
     handleScroll() {
-      this.isScrolled = window.scrollY > 600
+      this.isScrolled = window.scrollY > 700
     },
     toggleImage(index) {
       if (this.activeIndex === index) {
