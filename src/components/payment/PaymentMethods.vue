@@ -13,10 +13,31 @@
           range of payment methods for both depositing funds and receiving <br />
           payments.
         </div>
-        <div class="payment_circle">
-          <svg data-v-cbf2c648="" data-v-521ebb54="" class="svg-icon" aria-hidden="true">
-            <use data-v-cbf2c648="" xlink:href="#icon-BTC"></use>
-          </svg>
+        <div class="payment_circles">
+          <div class="payment_circle">
+            <img src="@/assets/icons/coin.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/t.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/trangle.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/l.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/square.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/green.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/copy.png" alt="" class="payment_circle_image" />
+          </div>
+          <div class="payment_circle">
+            <img src="@/assets/icons/fish.png" alt="" class="payment_circle_image" />
+          </div>
         </div>
       </div>
     </div>

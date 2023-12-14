@@ -103,6 +103,9 @@
     flex-wrap: wrap;
     padding: 20px;
   }
+  .invest_card {
+    padding: 20px;
+  }
 }
 
 /*! mining detail */
@@ -173,3 +176,5 @@
 .mt-2 {
   margin-top: 2rem !important;
 }
+
+
