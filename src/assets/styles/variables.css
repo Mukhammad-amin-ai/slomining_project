@@ -3,6 +3,7 @@
   --white: #fff;
   --main: #fbfbfb;
   --blue: #1c2b46;
+  --ligt_blue: #008cff;
   --black_card: #2e2e2e;
   --green: #1ffc90;
   --text_gray: #8091A7;
@@ -54,4 +55,11 @@
 
 .justify-content-start {
   justify-content: flex-start;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.rounded {
+  border-radius: 16px;
 }
