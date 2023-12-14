@@ -36,6 +36,26 @@ const router = createRouter({
           path: '/dashboard/my-bills',
           name: 'bills',
           component: () => import('@/components/dashboard/MyBills.vue')
+        },
+        {
+          path: '/dashboard/deposit',
+          name: 'deposit',
+          component: () => import('@/components/dashboard/DepositComponent.vue')
+        },
+        {
+          path: '/dashboard/withdraw',
+          name: 'withdraw',
+          component: () => import('@/components/dashboard/WithDraw.vue')
+        },
+        {
+          path: '/dashboard/order',
+          name: 'order',
+          component: () => import('@/components/dashboard/OrderComponent.vue')
+        },
+        {
+          path: '/dashboard/settings',
+          name: 'settings',
+          component: () => import('@/components/dashboard/SettingsPage.vue')
         }
       ]
     },
