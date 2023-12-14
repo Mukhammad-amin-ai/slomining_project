@@ -20,17 +20,23 @@
   </div>
   <div class="start_and_mining">
     <how-to-start />
+    <ParallaxImage />
     <MiningComponent />
+    <ParallaxSecond />
     <WhyChoose />
   </div>
 </template>
 <script>
 import HowToStart from '@/components/start/HowToStart.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
-import WhyChoose from "@/components/choose/WhyChoose.vue";
+import WhyChoose from '@/components/choose/WhyChoose.vue'
+import ParallaxImage from '@/components/ParallaxImage.vue'
+import ParallaxSecond from '@/components/ParallaxSecond.vue'
 
 export default {
   components: {
+    ParallaxSecond,
+    ParallaxImage,
     WhyChoose,
     MiningComponent,
     HowToStart
