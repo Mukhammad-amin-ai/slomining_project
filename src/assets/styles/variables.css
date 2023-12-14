@@ -1,32 +1,53 @@
 :root {
-    --black:#000;
-    --white:#fff;
-    --main: #fbfbfb;
-    --blue:#1c2b46;
+  --black: #000;
+  --white: #fff;
+  --main: #fbfbfb;
+  --blue: #1c2b46;
+  --black_card: #2e2e2e;
+  --green: #1ffc90;
+  --text_gray: #8091A7;
 }
 
-.d-flex  {
-    display: flex;
+.d-flex {
+  display: flex;
 }
 
-.center  {
-    justify-content: center;
-    align-items: center;
+.center {
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .mb-1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .mb-2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .mb-3 {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 .mb-4 {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+.ml-1 {
+  margin-left: 1rem;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.transparent {
+  background: transparent;
+}
+.text-green {
+  color: var(--green);
+}
+
+.justify-content-start {
+  justify-content: flex-start;
 }

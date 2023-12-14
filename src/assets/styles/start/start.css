@@ -1,10 +1,14 @@
-.start_parent {
+.start_and_mining {
   background: linear-gradient(180deg, transparent 79.17%, #000),
-    linear-gradient(135.02deg, #272f48, #000 100.06%);
+    linear-gradient(135.02deg, #272f48, #000 100.06%) ;
   background-blend-mode: multiply, normal, normal;
   padding-top: 100px;
+  color: var(--white);
+  font-family: Montserrat-Regular, sans-serif;
 }
-
+.start_parent {
+  background: transparent;
+}
 .start_title {
   font-size: 30px;
   font-family: Montserrat-Bold, sans-serif;

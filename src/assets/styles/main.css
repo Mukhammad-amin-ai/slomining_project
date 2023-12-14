@@ -1,6 +1,7 @@
 @import "./fonts.css";
 @import "./variables.css";
 @import "./start/start.css";
+@import "./mining/mining.css";
 
 * {
   padding: 0;
@@ -8,5 +9,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  background-color: var(--main);
+  /*background-color: var(--main);*/
+
 }
+
