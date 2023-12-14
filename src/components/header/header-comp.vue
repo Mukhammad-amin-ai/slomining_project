@@ -1,9 +1,9 @@
 <template >
     <header :class="{ 'b-shadow': isScrolled }">
         <div class="container">
-            <div class="logo">
+            <router-link to="/" class="logo">
                 <img src="../../assets/images/SKYHASH.png" alt="slomining">
-            </div>
+            </router-link>
             <div class="navigation">
                 <nav>
                     <ul>
