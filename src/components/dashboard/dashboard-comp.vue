@@ -5,10 +5,7 @@
         <div class="left-side">
           <ul>
             <li>
-              <router-link
-                to="/dashboard/profile"
-                class="dashboard_link text-black"
-              >
+              <router-link to="/dashboard/profile" class="dashboard_link text-black">
                 <img src="@/assets/icons/puzzle.svg" alt="" class="dashboard_icon" />
                 dashboard</router-link
               >
@@ -20,23 +17,23 @@
               >
             </li>
             <li>
-              <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
+              <router-link to="/dashboard/deposit" class="dashboard_link text-black">
                 <img src="@/assets/icons/cash.svg" alt="" class="dashboard_icon" /> Deposit
               </router-link>
             </li>
             <li>
-              <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
+              <router-link to="/dashboard/withdraw" class="dashboard_link text-black">
                 <img src="@/assets/icons/swap.svg" alt="" class="dashboard_icon" /> withdraw
               </router-link>
             </li>
             <li>
-              <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
+              <router-link to="/dashboard/order" class="dashboard_link text-black">
                 <img src="@/assets/icons/text.svg" alt="" class="dashboard_icon" /> My
                 orders</router-link
               >
             </li>
             <li>
-              <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
+              <router-link to="/dashboard/settings" class="dashboard_link text-black">
                 <img src="@/assets/icons/puzzle.svg" alt="" class="dashboard_icon" /> settings
               </router-link>
             </li>
