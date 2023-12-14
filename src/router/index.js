@@ -5,6 +5,8 @@ import dashboardCompVue from '@/views/dashboard-comp.vue'
 import aboutUsCompVue from '@/views/about-us-comp.vue'
 import signInVue from '@/views/sign-in.vue'
 import signUpVue from '@/views/sign-up.vue'
+import forgotPasswordVue from '@/views/forgot-password.vue' 
+
 
 import AOS from "aos";
 import 'aos/dist/aos.css';
@@ -34,6 +36,10 @@ const router = createRouter({
     {
       path: "/sign-up",
       component: signUpVue
+    },
+    {
+      path:"/forgot",
+      component:forgotPasswordVue,
     }
   ],
 
