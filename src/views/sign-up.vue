@@ -1,5 +1,4 @@
 <template>
-    <headerComp />
     <div class="sign-in d-flex center">
         <div class="container d-flex center">
             <div class="image ">
@@ -31,8 +30,8 @@
 
                 </form>
                 <div class="sign-up-text">
-                    By signing up, you agree to our <router-link to="/"> <span>Privacy Policy</span></router-link> and
-                    <router-link to="/"> <span>Terms</span></router-link>
+                    By signing up, you agree to our <router-link to="/privacy"> <span>Privacy Policy</span></router-link> and
+                    <router-link to="/terms"> <span>Terms</span></router-link>
                 </div>
 
                 <button class="sign-in btn ">Sign in</button>
@@ -44,11 +43,9 @@
     </div>
 </template>
 <script>
-import headerComp from '../components/header/header-comp.vue'
 // import ButtonComponent from '@/components/mini_components/ButtonComponent.vue';
 export default {
     components: {
-        headerComp,
         // ButtonComponent,
     }
 }
