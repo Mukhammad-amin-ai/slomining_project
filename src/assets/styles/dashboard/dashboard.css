@@ -26,9 +26,12 @@
 }
 .left-side ul li .dashboard_link:hover {
   background: var(--dashboard_bg);
+  /* innamay turingeeeee */
+  /* qarang google 2 moinitorda yandex 1 da  */
+  /* yandexga kliring */
 }
 .active_dashboard {
-  background: var(--dashboard_bg) !important;
+  background: var(--dashboard_bg) !important; 
 }
 .left-side ul li .dashboard_link {
   font-size: 14px;
