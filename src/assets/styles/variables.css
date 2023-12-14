@@ -6,7 +6,8 @@
   --ligt_blue: #008cff;
   --black_card: #2e2e2e;
   --green: #1ffc90;
-  --text_gray: #8091A7;
+  --text_gray: #8091a7;
+  --dashboard_bg: #f7f9fb;
 }
 
 .d-flex {
@@ -37,7 +38,7 @@
 .ml-1 {
   margin-left: 1rem;
 }
-.mt-3{
+.mt-3 {
   margin-top: 3rem;
 }
 
@@ -76,6 +77,9 @@
 
 .text-center {
   text-align: center;
+}
+.text-black {
+  color: var(--black) !important;
 }
 .pointer {
   cursor: pointer;

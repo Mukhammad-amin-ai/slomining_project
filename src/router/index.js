@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import homeCompVue from '@/views/home-comp.vue'
 
-import dashboardCompVue from '@/views/dashboard-comp.vue'
+import dashboardCompVue from '@/components/dashboard/dashboard-comp.vue'
 import aboutUsCompVue from '@/views/about-us-comp.vue'
 import signInVue from '@/views/sign-in.vue'
 import signUpVue from '@/views/sign-up.vue'
@@ -25,7 +25,19 @@ const router = createRouter({
     },
     {
       path: '/dashboard',
-      component: dashboardCompVue
+      component: dashboardCompVue,
+      children: [
+        {
+          path: '/dashboard/profile',
+          name: 'profile',
+          component: () => import('@/components/dashboard/ProfileComponent.vue')
+        },
+        {
+          path: '/dashboard/my-bills',
+          name: 'bills',
+          component: () => import('@/components/dashboard/MyBills.vue')
+        }
+      ]
     },
     {
       path: '/about',
