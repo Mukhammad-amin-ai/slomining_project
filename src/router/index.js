@@ -11,6 +11,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 const router = createRouter({
   history: createWebHistory(),
+
   routes: [
     {
       path: '/',
@@ -45,7 +46,11 @@ const router = createRouter({
       name: 'Product Detail',
       component: () => import('@/components/mining/MiningDetail.vue')
     }
-  ]
+  ],
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 0 };
+  },
 })
 router.beforeEach((to, from, next) => {
   AOS.init() // Initialize AOS

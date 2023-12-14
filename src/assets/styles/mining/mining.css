@@ -140,3 +140,19 @@ display: flex;
 .detail_card_right  .item_right_heading , .detail_card_right .item_right_body , .detail_card_right  .item_right_footer{
   margin-top: 16px;
 }
+
+.line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(77, 77, 77, 0.8), rgba(0, 0, 0, 0.416));
+
+}
+
+.product_detail {
+  font-size: 18px;
+  font-family: Montserrat-Regular, sans-serif;
+  margin-top: 20px;
+}
+.product_detail a {
+  color: var(--ligt_blue);
+}

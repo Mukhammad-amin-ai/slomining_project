@@ -38,7 +38,12 @@
           </div>
         </div>
       </div>
+      <div class="detail_card_right_name mb-1">detail  </div>
+          <div class="line">
+          </div>
+      <div class="product_detail" v-html="product.detail">
 
+      </div>
     </div>
   </div>
 </template>
