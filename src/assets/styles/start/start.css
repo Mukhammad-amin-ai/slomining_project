@@ -3,6 +3,8 @@
     linear-gradient(135.02deg, #272f48, #000 100.06%) ;
   background-blend-mode: multiply, normal, normal;
   padding-top: 100px;
+  color: var(--white);
+  font-family: Montserrat-Regular, sans-serif;
 }
 .start_parent {
   background: transparent;
