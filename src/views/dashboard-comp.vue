@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="dashboard">
         
     </div>
 </template>
@@ -10,5 +10,8 @@ export default {
 }
 </script>
 <style scoped>
-    
+    .dashboard{
+        width: 100%;
+        height: 500px;
+    }
 </style>
