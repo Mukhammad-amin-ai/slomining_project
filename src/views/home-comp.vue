@@ -40,8 +40,9 @@ export default {
 <style scoped>
 .hero {
   width: 100%;
-  height: 85vh;
+  /*height: 85vh;*/
   display: flex;
+  padding: 100px 0;
   justify-content: center;
   align-items: center;
 }
