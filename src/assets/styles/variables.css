@@ -5,6 +5,7 @@
   --blue: #1c2b46;
   --black_card: #2e2e2e;
   --green: #1ffc90;
+  --text_gray: #8091A7;
 }
 
 .d-flex {
@@ -32,6 +33,9 @@
 .mb-4 {
   margin-bottom: 4rem;
 }
+.ml-1 {
+  margin-left: 1rem;
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -42,4 +46,8 @@
 }
 .text-green {
   color: var(--green);
+}
+
+.justify-content-start {
+  justify-content: flex-start;
 }

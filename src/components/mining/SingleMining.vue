@@ -33,9 +33,9 @@
           </div>
         </div>
       </div>
-      <div class="item_right_footer">
+      <div class="item_right_footer d-flex justify-content-start">
         <ButtonComponent text="Order Now" class="default_black" />
-        <ButtonComponent text="See more" class="default_white" />
+        <ButtonComponent text="See more" class="default_white ml-1" />
       </div>
     </div>
   </div>

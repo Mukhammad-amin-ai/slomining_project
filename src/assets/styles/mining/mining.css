@@ -13,7 +13,8 @@
 }
 
 .mining_item_card {
-  padding: 20px 40px;
+  padding: 20px 20px;
+  gap: 20px;
   cursor: pointer;
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
@@ -32,7 +33,7 @@
   max-width: 100%;
   height: auto;
   border-radius: 16px;
-    object-fit: contain;
+  object-fit: contain;
 }
 .item_card_image:hover {
   object-fit: cover;
@@ -52,16 +53,45 @@
     hsla(0, 0%, 100%, 0.024) 104.35%
   );
   border-radius: 10px;
-  padding: 10px;
+  padding: 8px;
   font-family: Montserrat-Bold, sans-serif;
   margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .volume_value {
   margin-left: 10px;
+  font-size: 22px;
 }
 
 .item_card_sold {
   text-align: left;
   margin-top: 8px;
   font-family: Montserrat-Regular, sans-serif;
+}
+
+.item_card_right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.item_right_heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.term_title {
+  text-align: left;
+  color: var(--text_gray);
+  font-family: Montserrat-Medium, sans-serif;
+  font-size: 18px;
+}
+.term_content {
+  text-align: left;
+  color: var(--white);
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 8px;
 }
