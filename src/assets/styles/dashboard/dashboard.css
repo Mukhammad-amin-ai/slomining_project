@@ -1,3 +1,7 @@
+.dashboard_parent {
+  padding-top: 20px;
+}
+
 .dashboard_icon {
   height: 20px;
   width: 20px;
@@ -8,19 +12,22 @@
 .left-side ul {
   gap: 20px;
 }
-.left-side ul li {
-  padding:  20px 50px 20px 20px;
-    background: var(--white);
+.left-side ul li .dashboard_link {
+  padding: 20px 50px 20px 20px;
+  background: var(--white);
   margin-top: 8px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all .2s linear;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
-.left-side ul li:hover {
-    background: var(--dashboard_bg);
+.left-side ul li .dashboard_link:hover {
+  background: var(--dashboard_bg);
+}
+.active_dashboard {
+  background: var(--dashboard_bg) !important;
 }
 .left-side ul li .dashboard_link {
   font-size: 14px;
