@@ -3,6 +3,7 @@
 @import './start/start.css';
 @import './mining/mining.css';
 @import './choice/choice.css';
+@import './payment/payment.css';
 
 * {
   padding: 0;
