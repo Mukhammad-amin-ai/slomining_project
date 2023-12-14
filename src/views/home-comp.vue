@@ -21,14 +21,17 @@
   <div class="start_and_mining">
     <how-to-start />
     <MiningComponent />
+    <WhyChoose />
   </div>
 </template>
 <script>
 import HowToStart from '@/components/start/HowToStart.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
+import WhyChoose from "@/components/choose/WhyChoose.vue";
 
 export default {
   components: {
+    WhyChoose,
     MiningComponent,
     HowToStart
   }
@@ -37,8 +40,9 @@ export default {
 <style scoped>
 .hero {
   width: 100%;
-  height: 85vh;
+  /*height: 85vh;*/
   display: flex;
+  padding: 100px 0;
   justify-content: center;
   align-items: center;
 }

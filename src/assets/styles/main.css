@@ -1,7 +1,8 @@
-@import "./fonts.css";
-@import "./variables.css";
-@import "./start/start.css";
-@import "./mining/mining.css";
+@import './fonts.css';
+@import './variables.css';
+@import './start/start.css';
+@import './mining/mining.css';
+@import './choice/choice.css';
 
 * {
   padding: 0;
@@ -10,6 +11,4 @@
   list-style: none;
   text-decoration: none;
   /*background-color: var(--main);*/
-
 }
-
