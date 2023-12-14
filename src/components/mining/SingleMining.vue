@@ -34,7 +34,9 @@
         </div>
       </div>
       <div class="item_right_footer d-flex justify-content-start">
+        <router-link to="/sign-in">
         <ButtonComponent text="Order Now" class="default_black" />
+        </router-link>
         <router-link :to="'/product-detail/' + item.id">
         <ButtonComponent text="See more" class="default_white ml-1" />
         </router-link>

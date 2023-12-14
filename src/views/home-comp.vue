@@ -9,11 +9,11 @@
           high profits.
         </p>
         <p>Begin your cloud mining investment, withdraw your first payout after 24 hours.</p>
-        <button class="start-mining">start mining</button>
+        <button class="start-mining pointer">start mining</button>
       </div>
       <div class="hero-galery">
         <div class="galery-image">
-          <img src="../assets/images/phonePicture.png" alt="" />
+          <img src="../assets/images/phonePicture.png" alt="" draggable="false" />
         </div>
       </div>
     </div>
