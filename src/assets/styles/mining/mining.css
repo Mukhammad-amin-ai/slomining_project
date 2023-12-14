@@ -10,7 +10,7 @@
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  padding-top: 80px;
+  padding: 80px 20px;
 }
 
 .mining_item_card {
@@ -93,6 +93,15 @@
   color: var(--white);
   font-family: Montserrat-Bold, sans-serif;
   font-size: 18px;
-    text-transform: uppercase;
-    margin-top: 8px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 992px) {
+  .mining_items {
+
+ display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
 }

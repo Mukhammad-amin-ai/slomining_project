@@ -7,11 +7,11 @@
         profits.
       </div>
       <div class="mining_items">
-        <div v-for="(item , index) in data" :key="item">
-          <SingleMining :item="item"   data-aos="fade-up"
+
+          <SingleMining  v-for="(item , index) in data" :key="item" :item="item"   data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom"
                         :data-aos-delay="index + '50'"/>
-        </div>
+
       </div>
     </div>
   </div>
