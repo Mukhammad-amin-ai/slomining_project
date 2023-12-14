@@ -6,7 +6,8 @@ import aboutUsCompVue from '@/views/about-us-comp.vue'
 import signInVue from '@/views/sign-in.vue'
 import signUpVue from '@/views/sign-up.vue'
 
-
+import AOS from "aos";
+import 'aos/dist/aos.css';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -34,7 +35,12 @@ const router = createRouter({
       path: "/sign-up",
       component: signUpVue
     }
-  ]
+  ],
+
 })
+router.beforeEach((to, from, next) => {
+  AOS.init(); // Initialize AOS
+  next();
+});
 
 export default router
