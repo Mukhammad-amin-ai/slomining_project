@@ -50,6 +50,7 @@
 .transparent {
   background: transparent;
 }
+
 .text-green {
   color: var(--green);
 }
@@ -57,10 +58,12 @@
 .justify-content-start {
   justify-content: flex-start;
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
+
 .rounded {
   border-radius: 16px;
 }
@@ -68,9 +71,11 @@
 .pt-0 {
   padding-top: 0 !important;
 }
+
 .text-white {
   color: var(--white);
 }
+
 .justify-content-center {
   justify-content: center;
 }
