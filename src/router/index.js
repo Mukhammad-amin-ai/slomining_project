@@ -6,6 +6,9 @@ import aboutUsCompVue from '@/views/about-us-comp.vue'
 import signInVue from '@/views/sign-in.vue'
 import signUpVue from '@/views/sign-up.vue'
 import forgotPasswordVue from '@/views/forgot-password.vue'
+import privacyComp from '@/views/privacy-comp.vue'
+import termsComp from "@/views/terms-comp.vue"
+
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -44,7 +47,15 @@ const router = createRouter({
     {
       path: '/product-detail/:id',
       name: 'Product Detail',
-      component: () => import('@/components/mining/MiningDetail.vue')
+      component: () => import('@/components/mining/MiningDetail.vue')},
+
+    {
+      path: "/privacy",
+      component: privacyComp
+    },
+    {
+      path: "/terms",
+      component: termsComp
     }
   ],
   scrollBehavior() {

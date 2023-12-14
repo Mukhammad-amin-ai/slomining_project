@@ -1,5 +1,4 @@
 <template>
-    <headerComp />
     <div class="sign-in d-flex center">
         <div class="container d-flex center">
             <div class="image ">
@@ -45,11 +44,9 @@
     </div>
 </template>
 <script>
-import headerComp from '../components/header/header-comp.vue'
 // import ButtonComponent from '@/components/mini_components/ButtonComponent.vue';
 export default {
     components: {
-        headerComp,
         // ButtonComponent,
     }
 }

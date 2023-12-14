@@ -109,6 +109,8 @@ header {
     position: sticky;
     top: 0;
     transition: all .3s linear;
+    z-index: 99999999;
+    background-color: #fff;
 }
 
 .b-shadow {
