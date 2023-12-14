@@ -62,12 +62,13 @@ footer {
 
 .container {
   width: 95%;
-  height: 500px;
+  height: auto;
 }
 
 .contant {
   width: 100%;
   height: 80%;
+  padding: 20px 0;
 }
 
 .information {
@@ -171,6 +172,7 @@ footer {
   height: 20%;
   justify-content: flex-start;
   align-items: center;
+  padding: 20px 0 ;
 }
 
 .image {

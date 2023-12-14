@@ -1,17 +1,19 @@
 <template>
-    <div class="dashboard">
+    <div class="dashboard ">
         
     </div>
 </template>
 <script>
 
 export default {
-    
+
 }
 </script>
 <style scoped>
-    .dashboard{
-        width: 100%;
-        height: 500px;
-    }
+.dashboard {
+    width: 100%;
+    height: auto;
+}
+
+
 </style>
