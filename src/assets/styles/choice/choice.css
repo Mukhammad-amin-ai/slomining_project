@@ -1,0 +1,15 @@
+.why_choice {
+  background: var(--black);
+    padding-top: 100px;
+}
+.choice_card {
+  align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(180deg, rgba(70, 84, 97, 0.35), rgba(5, 14, 39, 0.42));
+  background-blend-mode: multiply, normal;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding: 93px 0 164px;
+}

@@ -21,14 +21,17 @@
   <div class="start_and_mining">
     <how-to-start />
     <MiningComponent />
+    <WhyChoose />
   </div>
 </template>
 <script>
 import HowToStart from '@/components/start/HowToStart.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
+import WhyChoose from "@/components/choose/WhyChoose.vue";
 
 export default {
   components: {
+    WhyChoose,
     MiningComponent,
     HowToStart
   }
