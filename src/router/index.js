@@ -1,14 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import homeCompVue from '@/views/home-comp.vue'
-import contactsComp from '@/views/contacts-comp.vue'
+
 import dashboardCompVue from '@/views/dashboard-comp.vue'
 import aboutUsCompVue from '@/views/about-us-comp.vue'
 import signInVue from '@/views/sign-in.vue'
 import signUpVue from '@/views/sign-up.vue'
 import forgotPasswordVue from '@/views/forgot-password.vue'
 import privacyComp from '@/views/privacy-comp.vue'
-import termsComp from "@/views/terms-comp.vue"
-
+import termsComp from '@/views/terms-comp.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -22,7 +21,7 @@ const router = createRouter({
     },
     {
       path: '/contacts',
-      component: contactsComp
+      component: () => import('@/components/contracts/ContractsComponent.vue')
     },
     {
       path: '/dashboard',
@@ -47,21 +46,22 @@ const router = createRouter({
     {
       path: '/product-detail/:id',
       name: 'Product Detail',
-      component: () => import('@/components/mining/MiningDetail.vue')},
+      component: () => import('@/components/mining/MiningDetail.vue')
+    },
 
     {
-      path: "/privacy",
+      path: '/privacy',
       component: privacyComp
     },
     {
-      path: "/terms",
+      path: '/terms',
       component: termsComp
     }
   ],
   scrollBehavior() {
     // always scroll to top
-    return { top: 0 };
-  },
+    return { top: 0 }
+  }
 })
 router.beforeEach((to, from, next) => {
   AOS.init() // Initialize AOS

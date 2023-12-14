@@ -72,6 +72,7 @@ color: var(--white);
   font-family: Montserrat-Regular, sans-serif;
   background: transparent;
   color: var(--white);
+  line-height: 28px;
 }
 
 @media screen and (max-width: 567px) {
