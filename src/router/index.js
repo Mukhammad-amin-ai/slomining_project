@@ -3,6 +3,9 @@ import homeCompVue from '@/views/home-comp.vue'
 import contactsComp from "@/views/contacts-comp.vue"
 import dashboardCompVue from '@/views/dashboard-comp.vue'
 import aboutUsCompVue from '@/views/about-us-comp.vue'
+import signInVue from '@/views/sign-in.vue'
+import signUpVue from '@/views/sign-up.vue'
+
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,12 +19,20 @@ const router = createRouter({
       component: contactsComp
     },
     {
-      path:"/dashboard",
-      component:dashboardCompVue
+      path: "/dashboard",
+      component: dashboardCompVue
     },
     {
-      path:"/about",
-      component:aboutUsCompVue
+      path: "/about",
+      component: aboutUsCompVue
+    },
+    {
+      path: "/sign-in",
+      component: signInVue
+    },
+    {
+      path: "/sign-up",
+      component: signUpVue
     }
   ]
 })
