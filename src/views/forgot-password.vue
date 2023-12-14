@@ -3,12 +3,12 @@
     <div class="sign-in d-flex center">
         <div class="container d-flex center">
             <div class="image ">
-                <img src="../assets/images/sign-up.png" alt="server">
+                <img src="../assets/images/remote.png" alt="server">
             </div>
             <div class="sign-in-form">
                 <div class="signin-text">
-                    <h1>WELCOME TO SLOMINING</h1>
-                    <p>Sign in to continue</p>
+                    <h1>Forgot Password</h1>
+                    <p>Please enter your email address. You will receive your verify code information through email.</p>
                 </div>
                 <form>
                     <div class="floating">
@@ -17,28 +17,28 @@
                             <span class="hidden--visually">
                                 Email</span></label>
                     </div>
+                    <div class="verify-code d-flex">
+                        <div class="floating">
+                            <input id="Verify code" type="password" class="floating__input" name="Verify code"
+                                placeholder="Password" />
+                            <label for="Verify code" class="floating__label" data-content="Verify code"><span
+                                    class="hidden--visually">Verify code</span></label>
+                        </div>
+                        <button class="verify">
+                            send
+                        </button>
+                    </div>
                     <div class="floating">
                         <input id="input__password" type="password" class="floating__input" name="password"
                             placeholder="Password" />
                         <label for="input__password" class="floating__label" data-content="Password"><span
-                                class="hidden--visually">Password</span></label>
+                                class="hidden--visually">Confirm Password</span></label>
                     </div>
+
                 </form>
-                <div class="forgot d-flex">
-                    <div data-v-53267c94="" class="form-check"><input data-v-53267c94="" class="form-check-input"
-                            type="checkbox" id="logMeIn" value="" data-gtm-form-interact-field-id="4">
-                        <label data-v-53267c94="" class="form-check-label form-check-label-s1" for="logMeIn"> Remember
-                            me
-                        </label>
-                    </div>
-                    <router-link to="/forgot">
-                        <p>Forgot Password?</p>
-                    </router-link>
-                </div>
-                <!-- <ButtonComponent text="Sign in "  /> -->
                 <button class="sign-in btn ">Sign in</button>
                 <div class="dont">
-                    <h5>Don't have an account ? <router-link to="/sign-up"><span>Sign Up</span></router-link></h5>
+                    <h5>Remember your password ? <router-link to="/sign-in"><span>SIGN IN</span></router-link></h5>
                 </div>
             </div>
         </div>
@@ -63,8 +63,8 @@ export default {
 .container {
     width: 93%;
     height: auto;
+    gap: 20px;
     margin-top: 50px;
-
 }
 
 .image {
@@ -205,36 +205,46 @@ legend {
     position: absolute;
     width: 1px;
 }
-
-/* input================================== */
-.forgot {
+/* verif */
+.verify-code{
     width: 100%;
     height: auto;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 24px;
+    gap: 10px;
+    overflow: hidden;
 }
+.verify-code .floating{
+    width: 90%;
 
-.form-check {
-    width: 20%;
-    height: 10px;
-    display: flex;
-    align-items: center;
-    min-height: 1.5rem;
-    padding-left: 1.5em;
-    margin-bottom: 0.125rem;
 }
-
-.form-check-label-s1 {
-    font-size: .938rem;
-}
-
-.form-check-label {
+.verify{
+    transition: all .3s;
+    border-radius: 0.375rem;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-family: Montserrat-Bold,sans-serif;
+    margin-bottom: 30px;
+    background-color: var(--blue);
+    color: var(--white);
     cursor: pointer;
-    display: block;
-    font-family: Montserrat-Regular, sans-serif;
-    color: rgb(128, 145, 167);
 }
+
+
+/* input================================== */
+.sign-up-text {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    font-family: Montserrat-Medium, sans-serif;
+    color: rgba(33, 37, 41, 0.75);
+}
+
+.sign-up-text span {
+    font-family: Montserrat-Bold, sans-serif;
+    color: rgb(97, 66, 143);
+}
+
 
 /* btn */
 .btn {

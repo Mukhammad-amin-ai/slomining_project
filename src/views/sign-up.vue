@@ -62,6 +62,7 @@ export default {
 .container {
     width: 93%;
     height: auto;
+    margin-top: 50px;
 }
 
 .image {
