@@ -51,3 +51,10 @@
 .justify-content-start {
   justify-content: flex-start;
 }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.rounded {
+  border-radius: 16px;
+}
