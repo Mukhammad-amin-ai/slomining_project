@@ -4,6 +4,7 @@
 @import './mining/mining.css';
 @import './choice/choice.css';
 @import './payment/payment.css';
+@import './dashboard/dashboard.css';
 
 * {
   padding: 0;
