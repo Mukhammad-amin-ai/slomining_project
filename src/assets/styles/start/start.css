@@ -5,6 +5,19 @@
   padding-top: 100px;
   color: var(--white);
   font-family: Montserrat-Regular, sans-serif;
+  position: relative;
+}
+.start_and_mining:after {
+  background: linear-gradient(0deg,#151515 20%,hsla(0,0%,8%,0));
+  bottom: 0;
+  content: "";
+  height: 40px;
+  left: 0;
+  mix-blend-mode: multiply;
+  opacity: .9;
+  position: absolute;
+  width: 100%;
+  z-index: 102!important;
 }
 .start_parent {
   background: transparent;
