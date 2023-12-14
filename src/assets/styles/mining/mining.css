@@ -123,13 +123,12 @@
   border-radius: 20px;
   -moz-column-gap: 60px;
   column-gap: 60px;
-display: flex;
+  display: flex;
   justify-content: flex-start;
 
   padding: 80px;
   row-gap: 120px;
 }
-
 
 .detail_card_right_name {
   text-transform: uppercase;
@@ -137,7 +136,9 @@ display: flex;
   font-size: 40px;
 }
 
-.detail_card_right  .item_right_heading , .detail_card_right .item_right_body , .detail_card_right  .item_right_footer{
+.detail_card_right .item_right_heading,
+.detail_card_right .item_right_body,
+.detail_card_right .item_right_footer {
   margin-top: 16px;
 }
 
@@ -145,7 +146,6 @@ display: flex;
   height: 2px;
   width: 100%;
   background: linear-gradient(180deg, rgba(77, 77, 77, 0.8), rgba(0, 0, 0, 0.416));
-
 }
 
 .product_detail {
@@ -155,4 +155,21 @@ display: flex;
 }
 .product_detail a {
   color: var(--ligt_blue);
+}
+
+.mining_invest {
+  background: var(--black);
+  color: var(--white);
+}
+
+.invest_content {
+  margin-top: 80px;
+  padding-bottom: 80px;
+  max-width: 1414px;
+}
+.invest_content p {
+  font-family: Montserrat-Regular, sans-serif;
+}
+.mt-2 {
+  margin-top: 2rem !important;
 }

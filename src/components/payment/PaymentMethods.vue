@@ -6,6 +6,13 @@
           ACCEPT A VARIETY OF PAYMENT <br />
           METHODS
         </div>
+        <div
+          class="payment_description d-flex justify-content-center text-center start_box_description"
+        >
+          To ensure convenience for our investors, SLOMINING provides a diverse <br />
+          range of payment methods for both depositing funds and receiving <br />
+          payments.
+        </div>
         <div class="payment_circle">
           <svg data-v-cbf2c648="" data-v-521ebb54="" class="svg-icon" aria-hidden="true">
             <use data-v-cbf2c648="" xlink:href="#icon-BTC"></use>
