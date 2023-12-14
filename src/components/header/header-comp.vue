@@ -1,5 +1,5 @@
 <template >
-    <header>
+    <header :class="{ 'b-shadow': isScrolled }">
         <div class="container">
             <div class="logo">
                 <img src="../../assets/images/SKYHASH_Монтажная область 1.png" alt="slomining">
@@ -7,17 +7,32 @@
             <div class="navigation">
                 <nav>
                     <ul>
-                        <router-link to="/">
-                            <li>Home</li>
+                        <router-link to="/" @click="toggleImage(0)">
+                            <li :class="{ 'active': activeIndex === 0 }">
+                                <span>Home
+                                    <img v-show="activeIndex === 0 || activeIndex === null"
+                                        src="../../assets/images/line.png" alt="line">
+                                </span>
+                            </li>
                         </router-link>
-                        <router-link to="/contacts">
-                            <li>Contracts</li>
+                        <router-link to="/contacts" @click="toggleImage(1)">
+                            <li :class="{ 'active': activeIndex === 1 }"> <span>Contracts
+                                    <img v-show="activeIndex === 1 || activeIndex === null"
+                                        src="../../assets/images/line.png" alt="line">
+                                </span>
+                            </li>
                         </router-link>
-                        <router-link to="/dashboard">
-                            <li>Dashboard</li>
+                        <router-link to="/dashboard" @click="toggleImage(2)">
+                            <li :class="{ 'active': activeIndex === 2 }"><span>Dashboard
+                                    <img v-show="activeIndex === 2 || activeIndex === null"
+                                        src="../../assets/images/line.png" alt="line">
+                                </span></li>
                         </router-link>
-                        <router-link to="/about">
-                            <li>About us</li>
+                        <router-link to="/about" @click="toggleImage(3)">
+                            <li :class="{ 'active': activeIndex === 3 }"> <span>About us
+                                    <img v-show="activeIndex === 3 || activeIndex === null"
+                                        src="../../assets/images/line.png" alt="line">
+                                </span> </li>
                         </router-link>
                     </ul>
                 </nav>
@@ -39,10 +54,13 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="auth">
-                    <button class="sign-in">Sign In</button>
-                    <button class="sign-up">Sign Up</button>
+                    <router-link to="/sign-in">
+                        <button class="sign-in">Sign In</button>
+                    </router-link>
+                    <router-link to="/sign-up">
+                        <button class="sign-up">Sign Up</button>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -52,13 +70,31 @@
 export default {
     data() {
         return {
-            dropdawn: false
+            dropdawn: false,
+            isScrolled: false,
+            activeIndex: 0,
         }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
         dropclick() {
             this.dropdawn = !this.dropdawn
-        }
+        },
+        handleScroll() {
+            this.isScrolled = window.scrollY > 0;
+        },
+        toggleImage(index) {
+            if (this.activeIndex === index) {
+                this.activeIndex = null;
+            } else {
+                this.activeIndex = index;
+            }
+        },
     },
 
 }
@@ -66,10 +102,17 @@ export default {
 <style scoped>
 header {
     width: 100%;
-    height: 80px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0;
+    transition: all .3s linear;
+}
+
+.b-shadow {
+    box-shadow: 0 1px 3px 2px rgba(28, 43, 70, 0.08);
 }
 
 .container {
@@ -119,13 +162,36 @@ ul {
     justify-content: flex-end;
     align-items: center;
     gap: 40px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat-Bold, sans-serif;
     font-size: 16px;
     font-weight: 600;
 }
 
 li {
+    color: #1D2C4899;
+}
+
+li.active {
     color: #000;
+}
+
+li span {
+    position: relative;
+    width: 100%;
+}
+
+li img {
+    position: absolute;
+    bottom: -0.575rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0.375rem;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+li.active img {
+    opacity: 1;
 }
 
 .auth {
@@ -166,7 +232,6 @@ span {
     height: auto;
     position: absolute;
     top: 40px;
-    /* display: none; */
 }
 
 .drop-list ul {
@@ -198,9 +263,8 @@ span {
 button {
     width: auto;
     padding: 8px 12px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat-Bold, sans-serif;
     font-size: 16px;
-    font-weight: 600;
     border-radius: 7px;
     border: 1px solid #1c2b46;
     text-transform: uppercase;

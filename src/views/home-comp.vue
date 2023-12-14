@@ -3,7 +3,6 @@
     <div class="hero">
         <div class="container">
             <div class="hero-text">
-                <!-- <div class="contant"> -->
                 <h1>
                     EFFICIENT AND STABLE <span>CLOUD</span> <span>MINING</span> INVESTMENT PLATFORM
                 </h1>
@@ -11,8 +10,6 @@
                     system, we offer stable investment returns for investors with low costs and high profits.</p>
                 <p>Begin your cloud mining investment, withdraw your first payout after 24 hours.</p>
                 <button class="start-mining">start mining</button>
-                <!-- </div> -->
-
             </div>
             <div class="hero-galery">
                 <div class="galery-image">
@@ -54,15 +51,15 @@ export default {
 }
 
 .hero-text {
-    width: 53%;
+    width: 55%;
     height: 100%;
 
 }
 
 h1 {
-    width: 95%;
+    /* width: 100%; */
     font-size: 45px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat-Extra-Bold, sans-serif;
     color: rgb(28, 43, 70);
     font-weight: 700;
 }
@@ -72,20 +69,22 @@ span {
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat-Medium, sans-serif;
     color: rgb(128, 145, 167);
     font-weight: 400;
     font-size: 16px;
-    margin-top:24px
+    margin-top: 24px
 }
 
-.start-mining{
-    margin-top:24px;
-    padding: 9px;
+.start-mining {
+    margin-top: 24px;
+    padding: 12px 30px;
     border-radius: 7px;
     background-color: var(--blue);
     color: var(--white);
     text-transform: uppercase;
+    font-family: Montserrat-Bold, sans-serif;
+    font-size: 16px;
 }
 
 
