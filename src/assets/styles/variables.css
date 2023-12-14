@@ -30,3 +30,11 @@
 .mb-4 {
     margin-bottom: 4rem;
 }
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.transparent {
+    background: transparent;
+}
