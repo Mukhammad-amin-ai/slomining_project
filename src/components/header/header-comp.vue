@@ -2,7 +2,7 @@
     <header :class="{ 'b-shadow': isScrolled }">
         <div class="container">
             <div class="logo">
-                <img src="../../assets/images/SKYHASH_Монтажная область 1.png" alt="slomining">
+                <img src="../../assets/images/SKYHASH.png" alt="slomining">
             </div>
             <div class="navigation">
                 <nav>
