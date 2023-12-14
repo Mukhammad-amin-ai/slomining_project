@@ -1,5 +1,4 @@
 <template>
-  <headerComp />
   <div class="hero">
     <div class="container">
       <div class="hero-text">
@@ -26,13 +25,11 @@
 </template>
 <script>
 import HowToStart from '@/components/start/HowToStart.vue'
-import headerComp from '../components/header/header-comp.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
 
 export default {
   components: {
     MiningComponent,
-    headerComp,
     HowToStart
   }
 }
