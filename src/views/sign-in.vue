@@ -24,9 +24,9 @@
                     </div>
                 </form>
                 <div class="forgot d-flex">
-                    <div data-v-53267c94="" class="form-check"><input data-v-53267c94="" class="form-check-input"
-                            type="checkbox" id="logMeIn" value="" data-gtm-form-interact-field-id="4">
-                        <label data-v-53267c94="" class="form-check-label form-check-label-s1" for="logMeIn"> Remember
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="logMeIn">
+                        <label class="form-check-label form-check-label-s1" for="logMeIn"> Remember
                             me
                         </label>
                     </div>
@@ -218,10 +218,11 @@ legend {
     display: flex;
     align-items: center;
     min-height: 1.5rem;
-    padding-left: 1.5em;
     margin-bottom: 0.125rem;
 }
-
+.form-check-input{
+    width: 10% !important;
+}
 .form-check-label-s1 {
     font-size: .938rem;
 }

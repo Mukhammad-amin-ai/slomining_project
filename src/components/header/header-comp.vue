@@ -7,51 +7,33 @@
       <div class="navigation">
         <nav>
           <ul>
-            <router-link to="/" @click="toggleImage(0)">
-              <li :class="{ active: activeIndex === 0 }">
-                <span
-                  >Home
-                  <img
-                    v-show="activeIndex === 0 || activeIndex === null"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+            <router-link to="/">
+              <li :class="{ active: $route.fullPath === '/' }">
+                <span>Home
+                  <img v-show="activeIndex === 0 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
             <router-link to="/contacts" @click="toggleImage(1)">
               <li :class="{ active: activeIndex === 1 }">
-                <span
-                  >Contracts
-                  <img
-                    v-show="activeIndex === 1 || activeIndex === null"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+                <span>Contracts
+                  <img v-show="activeIndex === 1 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
-            <router-link to="/dashboard" @click="toggleImage(2)">
-              <li :class="{ active: activeIndex === 2 }">
-                <span
-                  >Dashboard
-                  <img
-                    v-show="activeIndex === 2 || activeIndex === null"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+            <router-link to="/dashboard">
+              <li :class="[{ active: $route.fullPath === '/dashboard/' },
+              { active: $route.fullPath === '/dashboard/profile' },
+              ]">
+                <span>Dashboard
+                  <img v-show="activeIndex === 2 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
             <router-link to="/about" @click="toggleImage(3)">
               <li :class="{ active: activeIndex === 3 }">
-                <span
-                  >About us
-                  <img
-                    v-show="activeIndex === 3 || activeIndex === null"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+                <span>About us
+                  <img v-show="activeIndex === 3 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
@@ -116,6 +98,7 @@ export default {
 }
 </script>
 <style scoped>
+
 header {
   width: 100%;
   height: 90px;
@@ -136,16 +119,16 @@ header {
   border-top: 0;
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(
-    90deg,
-    hsla(0, 0%, 100%, 0.1) -1.52%,
-    hsla(0, 0%, 100%, 0.024) 104.35%
-  );
+  background: linear-gradient(90deg,
+      hsla(0, 0%, 100%, 0.1) -1.52%,
+      hsla(0, 0%, 100%, 0.024) 104.35%);
   background-blend-mode: multiply, normal;
 }
+
 .b-shadow .navigation nav ul a li span {
   color: var(--white) !important;
 }
+
 .container {
   width: 93%;
   height: 100%;
