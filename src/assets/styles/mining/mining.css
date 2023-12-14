@@ -31,4 +31,37 @@
 .item_card_image {
   max-width: 100%;
   height: auto;
+  border-radius: 16px;
+    object-fit: contain;
+}
+.item_card_image:hover {
+  object-fit: cover;
+}
+.item_card_name {
+  font-family: Montserrat-Medium, sans-serif;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+.item_card_volume {
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0.1) -1.52%,
+    hsla(0, 0%, 100%, 0.024) 104.35%
+  );
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Montserrat-Bold, sans-serif;
+  margin-top: 8px;
+}
+.volume_value {
+  margin-left: 10px;
+}
+
+.item_card_sold {
+  text-align: left;
+  margin-top: 8px;
+  font-family: Montserrat-Regular, sans-serif;
 }
