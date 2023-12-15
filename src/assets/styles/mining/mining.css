@@ -106,23 +106,47 @@
   .invest_card {
     padding: 20px;
   }
+  .term_title {
+    font-size: 13px;
+  }
+  .term_content {
+    font-size: 13px;
+  }
+  .mining_item_card {
+    padding: 10px;
+  }
+  .item_card_name {
+    font-size: 13px;
+  }
+  .volume_value {
+    font-size: 16px;
+  }
+  .item_right_footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .item_right_footer .global_btn {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 8px;
+  }
 }
 
 /*! mining detail */
 .mining_detail {
   /*background: linear-gradient(180deg, transparent 79.17%, #000),*/
   /*  linear-gradient(135.02deg, #272f48, #000 100.06%);*/
-  background: var(--black);
+  background: var(--blue);
+  /*background: #59adda;*/
   background-blend-mode: multiply, normal, normal;
   padding: 100px 80px;
   color: var(--white);
   font-family: Montserrat-Regular, sans-serif;
 }
 .mining_detail_card {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background: linear-gradient(180deg, rgba(77, 77, 77, 0.8), rgba(0, 0, 0, 0.416));
-  background-blend-mode: multiply, normal;
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient( 90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35% ); background-blend-mode: multiply, normal;
   border-radius: 20px;
   -moz-column-gap: 60px;
   column-gap: 60px;
@@ -207,4 +231,27 @@
 }
 .count_item {
   font-family:Montserrat-Medium ,sans-serif ;
+}
+
+@media screen and (max-width: 567px) {
+  .mining_detail {
+    padding: 20px;
+  }
+  .mining_detail_card {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 20px;
+
+  }
+  .detail_card_right_name {
+    font-size: 18px;
+  }
+  .detail_card_right_name {
+    padding-top: 40px;
+  }
+  .mining_parent {
+    padding-bottom: 40px;
+  }
 }
