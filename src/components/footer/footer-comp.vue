@@ -189,4 +189,18 @@ footer {
   padding: 8px 0;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .information {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-team , .learn  , .compan {
+    width: 100%;
+    margin-top: 40px;
+  }
+  footer {
+    margin-bottom: 50px;
+  }
+}
 </style>
