@@ -7,12 +7,14 @@
             <li>
               <router-link to="/dashboard/profile" class="dashboard_link text-black">
                 <img src="@/assets/icons/puzzle.svg" alt="" class="dashboard_icon" />
-                dashboard</router-link>
+                dashboard</router-link
+              >
             </li>
             <li>
               <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
                 <img src="@/assets/icons/text.svg" alt="" class="dashboard_icon" /> My
-                Bills</router-link>
+                Bills</router-link
+              >
             </li>
             <li>
               <router-link to="/dashboard/deposit" class="dashboard_link text-black">
@@ -27,7 +29,8 @@
             <li>
               <router-link to="/dashboard/order" class="dashboard_link text-black">
                 <img src="@/assets/icons/text.svg" alt="" class="dashboard_icon" /> My
-                orders</router-link>
+                orders</router-link
+              >
             </li>
             <li>
               <router-link to="/dashboard/settings" class="dashboard_link text-black">
@@ -36,7 +39,7 @@
             </li>
           </ul>
         </div>
-        <div class="right-side">
+        <div class="right-side ml-1">
           <router-view></router-view>
         </div>
       </div>
