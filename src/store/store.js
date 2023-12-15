@@ -18,6 +18,10 @@ const store = createStore({
         modalfunc({ commit }) {
             // commit('setModal', !this.state.activemodal)
             commit('setClass', 'active')
+        },
+        modalClose({ commit }) {
+            commit('setClass', '')
+
         }
     }
 })

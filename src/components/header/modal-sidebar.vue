@@ -1,6 +1,6 @@
 <template >
     <div class="modal" :class="$store.state.activeClass">
-        <button class="close">
+        <button class="close" @click="closeMod">
             <img src="../../assets/svg/close-outline.svg" alt="close">
         </button>
         <div class="sidebar" :class="$store.state.activeClass">
@@ -88,7 +88,12 @@ export default {
             } else if (this.$route.fullPath === '/about') {
                 this.about = true
             }
+        },
+        closeMod() {
+            this.$store.dispatch('modalClose')
         }
+
+
     },
 
 }
