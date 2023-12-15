@@ -181,3 +181,30 @@
 }
 
 
+
+
+.quantity {
+  font-size: 16px;
+  font-family: Montserrat-Medium, sans-serif;
+}
+
+.count{
+  /*display: grid;*/
+  /*grid-template-columns: 1fr 4fr 1fr;*/
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--border_color);
+  gap: 4px 8px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.dec , .inc {
+  border: 1px solid var(--border_color);
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: Montserrat-Bold, sans-serif;
+}
+.count_item {
+  font-family:Montserrat-Medium ,sans-serif ;
+}

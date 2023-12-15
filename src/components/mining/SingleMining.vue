@@ -21,9 +21,7 @@
           </div>
           <div class="item_term">
             <div class="term_title">Contract Price</div>
-            <div class="term_content">
-              {{ item.contract_price }}
-            </div>
+            <div class="term_content">$ {{ item.contract_price }}</div>
           </div>
         </div>
         <div class="item_right_body">
@@ -60,10 +58,19 @@
             <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
           </div>
         </template>
-
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dignissimos dolores
-        fugiat natus non quam sed. Alias commodi consectetur cumque ea, est ex excepturi facilis
-        fugit illo modi sapiente voluptates?
+        <div class="add_cart_section" style="display: grid; grid-template-columns: 1fr 1fr">
+          <div class="left_side">
+            <img :src="item.image" :alt="item.name" class="item_card_image" />
+          </div>
+          <div class="right_side ml-1 d-flex flex-column">
+            <div class="quantity">Quantity</div>
+            <div class="count">
+              <div class="dec" @click="dec">-</div>
+              <div class="count_item">{{ count }}</div>
+              <div class="inc" @click="inc">+</div>
+            </div>
+          </div>
+        </div>
         <template #footer> </template>
       </n-card>
     </n-modal>
@@ -83,6 +90,7 @@ export default {
   data() {
     return {
       showModal: false,
+      count: 0,
       bodyStyle: {
         width: '600px'
       },
@@ -90,6 +98,16 @@ export default {
         content: 'soft',
         footer: 'soft'
       }
+    }
+  },
+  methods: {
+    dec() {
+      if (this.count > 0) {
+        this.count--
+      }
+    },
+    inc() {
+      this.count++
     }
   }
 }
