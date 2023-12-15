@@ -1,6 +1,6 @@
 <template>
   <div class="settings_parent">
-    <TabReusable  title="Settings" tab="Change Your Password" />
+    <TabReusable title="Settings" tab="Change Your Password" />
     <form class="settings_form d-flex flex-column mt-2">
       <label for="email" class="form_label">Email</label>
       <input type="email" id="email" placeholder="example@gmail.com" class="form_input" />
@@ -30,18 +30,18 @@
         </div>
       </div>
       <div class="submit-form">
-        <button type="button" class="send ">Submit</button>
+        <button type="button" class="send">Submit</button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-import TabReusable from "@/components/mini_components/tab-reusable.vue";
+import TabReusable from '@/components/mini_components/tab-reusable.vue'
 
 export default {
   name: 'SettingsPage',
-  components: {TabReusable},
+  components: { TabReusable },
   data() {
     return {
       type: 'text'
