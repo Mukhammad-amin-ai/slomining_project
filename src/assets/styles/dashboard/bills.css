@@ -1,0 +1,80 @@
+/* Updated styles for the table */
+.my-bills-parent {
+    width: 100%;
+}
+
+.bills-table {
+    margin-top: 40px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table {
+    border: 1px solid var(--border_color);
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px !important;
+}
+.table .thead tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.table tbody tr {
+    display: flex;
+    justify-content: flex-start;
+}
+.table thead th {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 14px;
+    font-family: Montserrat-Medium, sans-serif;
+}
+.table tbody {
+    border-top: 1px solid var(--border_color);
+}
+.table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.table tbody tr td {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 13px;
+    font-family: Montserrat-Regular, sans-serif;
+    font-weight: 400;
+}
+
+.usd span {
+    display: flex;
+    text-decoration: underline;
+    color: var(--ligt_blue);
+    font-family: Montserrat-Medium, sans-serif;
+}
+.status span {
+    font-family: Montserrat-Medium, sans-serif;
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 50px;
+    background: var(--green);
+}
+
+
+
+/* select */
+
+#date {
+    width: 400px;
+    padding: 10px 20px;
+    font-family: Montserrat-Regular, sans-serif;
+    border-radius: 8px;
+    outline: none;
+}
