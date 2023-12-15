@@ -2,7 +2,7 @@
     <div class="sticy-nav">
         <div class="item d-flex center">
             <router-link class="d-flex center flex-column" to="/">
-                <img src="../../assets/svg/person-outline.svg" alt="person">
+                <img src="../../assets/svg/home-outline.svg" alt="person">
                 <p>Home</p>
             </router-link>
         </div>
@@ -35,6 +35,7 @@ export default {
     position: fixed;
     background-color: #fff;
     bottom: 0;
+    box-shadow: 0 -5px 10px 0 rgba(0,0,0,.06);
     z-index: 99999999999999;
 }
 
@@ -52,6 +53,21 @@ export default {
 @media screen and (max-width:990px) {
     .sticy-nav {
         display: flex;
+    }
+
+}
+@media screen and (max-width:425px) {
+    .item{
+        font-size: 12px;
+    }
+    .sticy-nav {
+       padding: 10px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .item{
+        font-size: 10px;
     }
 
 }

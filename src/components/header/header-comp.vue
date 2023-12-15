@@ -73,7 +73,7 @@
           </router-link>
         </div>
         <div class="menu ml-5 center">
-          <button class="bx-shadow center d-flex">
+          <button class="bx-shadow center d-flex" @click="clickMenu">
             <img src="../../assets/svg/menu-outline.svg" alt="person">
           </button>
         </div>
@@ -126,7 +126,11 @@ export default {
     },
     dropauth() {
       this.dropauthList = !this.dropauthList
+    },
+    clickMenu() {
+      this.$store.dispatch('modalfunc')
     }
+
   }
 }
 </script>
@@ -208,7 +212,6 @@ ul {
   gap: 40px;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 16px;
-  font-weight: 600;
 }
 
 li {
@@ -397,7 +400,6 @@ button {
 .drop-auth .sign-in {
   padding-left: 17px;
 }
-
 
 /* Media for header */
 @media screen and (max-width:1310px) {

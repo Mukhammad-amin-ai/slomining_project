@@ -34,7 +34,7 @@
         </div>
         <div class="item_right_footer d-flex justify-content-start">
           <div @click="showModal = true">
-            <ButtonComponent text="Order Now" class="default_black" />
+            <ButtonComponent text="Buy Now" class="default_black" />
           </div>
           <router-link :to="'/product-detail/' + item.id">
             <ButtonComponent text="See more" class="default_white ml-1" />
@@ -43,16 +43,9 @@
       </div>
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
-      <n-card
-        style="width: 100%; max-width: 900px; min-width: 350px"
-        title="Checkout
+      <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout
 
-"
-        :bordered="false"
-        size="huge"
-        role="dialog"
-        aria-modal="true"
-      >
+" :bordered="false" size="huge" role="dialog" aria-modal="true">
         <template #header-extra>
           <div @click="showModal = false" style="cursor: pointer">
             <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -83,11 +76,7 @@
                 Amount <br />
                 <span class="text-green d-flex justify-content-center center">
                   = {{ item.contract_price }} USDT
-                  <img
-                    style="width: 20px; margin-left: 5px; margin-bottom: 2px"
-                    src="@/assets/svg/crypto-t.svg"
-                    alt=""
-                  />
+                  <img style="width: 20px; margin-left: 5px; margin-bottom: 2px" src="@/assets/svg/crypto-t.svg" alt="" />
                 </span>
               </div>
               <div class="submit-form">
