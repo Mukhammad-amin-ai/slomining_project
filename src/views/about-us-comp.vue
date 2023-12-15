@@ -1,5 +1,5 @@
 <template>
-    <div class="about d-flex center">
+    <div class="about d-flex center ">
         <div class="container">
             <div class="about-header-contant d-flex center">
                 <div class="about-text">
@@ -102,8 +102,6 @@
                                             placeholder="Email address" />
                                         <label for="input__email" class="floating__label" data-content="Email address"><span
                                                 class="hidden--visually">Email address</span></label>
-
-
                                     </div>
                                 </div>
                                 <div class="message">
@@ -249,6 +247,15 @@ export default {
 .get-in-touch {
     width: 100%;
     height: auto;
+    padding: 20px 20px;
+    gap: 20px;
+    cursor: pointer;
+    border: 1px solid var(--white);
+    backdrop-filter: blur(5px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.284), transparent);
+    background-blend-mode: multiply, normal;
+    border-radius: 20px;
+    color: var(--black) !important;
 }
 
 .get-in-touch h3 {
@@ -302,7 +309,7 @@ export default {
 .floating__input {
     padding: 1.8rem 1rem 0.6rem;
     font-size: 1rem;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     transition: border-color 0.2s ease;
     border-radius: 6px;
 }
@@ -317,6 +324,7 @@ export default {
     max-height: 0;
     font-weight: 500;
     pointer-events: none;
+    color: #8091A7;
 }
 
 .floating__label::before {
@@ -434,31 +442,57 @@ legend {
     width: 100%;
     height: 230px;
 }
-.email{
+
+.email {
     width: 100%;
     height: auto;
     gap: 10px;
     align-items: center;
     padding-bottom: 20px;
 }
-.bx-email{
+
+.bx-email {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     background-color: #fff;
 }
-.text{
+
+.text {
     width: 80%;
     height: auto;
 }
-.text h4{
+
+.text h4 {
     font-family: Montserrat-Extra-Bold, sans-serif;
     font-size: 16px;
     color: var(--black);
 }
-.text p{
+
+.text p {
     font-family: Montserrat-Medium, sans-serif;
     color: var(--text_gray);
 }
 
+@media screen and (max-width:1050px) {
+    .card {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .about-header-contant {
+        flex-direction: column-reverse;
+    }
+
+    .about-text {
+        width: 90%;
+    }
+    .image{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
 </style>
