@@ -44,7 +44,7 @@
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
       <n-card
-        style="width: 900px; min-width: 900px"
+        style="width: 100%; max-width: 900px; min-width: 350px"
         title="Checkout
 
 "

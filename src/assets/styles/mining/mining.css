@@ -233,7 +233,7 @@
   font-family:Montserrat-Medium ,sans-serif ;
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 992px) {
   .mining_detail {
     padding: 20px;
   }
@@ -253,5 +253,9 @@
   }
   .mining_parent {
     padding-bottom: 40px;
+  }
+  .add_cart_section {
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
