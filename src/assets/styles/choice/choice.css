@@ -76,7 +76,9 @@
 }
 
 @media screen and (max-width: 567px) {
-
+.choice_card {
+  padding-bottom: 20px !important;
+}
   .choice_boxes {
     padding: 10px;
   }

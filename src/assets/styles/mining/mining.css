@@ -30,7 +30,7 @@
 /*  background: transparent;*/
 /*  backdrop-filter: blur(5px);*/
 /*  background: linear-gradient(180deg, rgba(190, 229, 236, 0.5),transparent);  background-blend-mode: multiply, normal;*/
-/*border: 1px solid var(--white);*/
+border: 1px solid var(--white);
   backdrop-filter: blur(5px);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.5),transparent);
   background-blend-mode: multiply, normal;
