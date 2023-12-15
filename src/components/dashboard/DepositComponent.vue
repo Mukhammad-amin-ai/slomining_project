@@ -94,7 +94,7 @@ export default {
 
 <style scoped>
 .deposit {
-  margin: 10px 0 0 64px;
+  margin: 10px 0 0 30px;
   width: 100%;
   height: auto;
 }
