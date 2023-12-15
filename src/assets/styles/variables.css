@@ -9,6 +9,8 @@
   --text_gray: #8091a7;
   --dashboard_bg: #f7f9fb;
   --border_color: #dedede;
+  --form_bg: #f8f9fc;
+  --violet: #7952b3;
 }
 
 .d-flex {
@@ -91,3 +93,14 @@
   cursor: pointer;
 }
 
+.w100 {
+  width: 100% !important;
+}
+
+.text-gray {
+  color: var(--text_gray);
+}
+
+.relative {
+  position: relative;
+}
