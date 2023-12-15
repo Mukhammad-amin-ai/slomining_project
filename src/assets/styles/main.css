@@ -5,6 +5,7 @@
 @import './choice/choice.css';
 @import './payment/payment.css';
 @import './dashboard/dashboard.css';
+@import './dashboard/bills.css';
 
 * {
   padding: 0;
