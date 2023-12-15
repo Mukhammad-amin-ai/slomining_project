@@ -1,0 +1,53 @@
+.send {
+  background-color: #1c2b46;
+  color: #fff;
+  border-radius: 8px !important;
+  font-family: Montserrat-Medium, sans-serif;
+
+  cursor: pointer;
+  transition: all .2s linear;
+  border: 1px solid transparent;  transition: all .2s linear;
+}
+
+.settings_form {
+  background: var(--form_bg);
+  border-radius: 16px;
+  padding: 20px;
+  width: 512px;
+}
+
+.form_label {
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form_input {
+  padding: 10px;
+  border-radius: 8px;
+  outline: 1px solid var(--violet);
+  border: 1px solid var(--border_color);
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 14px;
+}
+
+.eyes {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.eyes img {
+  width: 20px;
+}
+.submit-form .send {
+  padding: 10px 40px;
+  font-size: 16px;
+
+}
+.send:hover {
+ color: #1c2b46;
+  background-color: #fff;
+  border: 1px solid #1c2b46;
+}
