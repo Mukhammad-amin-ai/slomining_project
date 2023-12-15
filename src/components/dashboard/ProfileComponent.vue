@@ -6,11 +6,13 @@
           <h2>BALANCE</h2>
           <p>$ 5</p>
         </div>
-        <div class="depo">
-          <button>Deposit</button>
-        </div>
-        <div class="withdrow">
-          <button>withdrow</button>
+        <div class="buttns">
+          <div class="depo">
+            <button>Deposit</button>
+          </div>
+          <div class="withdrow">
+            <button>withdrow</button>
+          </div>
         </div>
       </div>
     </div>
@@ -40,10 +42,13 @@ export default {
   height: 96px;
   background-color: var(--blue);
   align-items: center;
-  /* pls turn off music */
-  /* are you heare this yes fuck dnx xD qani error */
+  
 }
 
-
-
+.money {
+  width: 20%;
+  height: 100%;
+  background-color: aqua;
+  
+}
 </style>
