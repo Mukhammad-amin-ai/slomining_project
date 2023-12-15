@@ -39,7 +39,7 @@
             </router-link>
           </ul>
         </nav>
-        <div class="drop-down" v-on:click="dropclick">
+        <div class="drop-down" @click="dropclick">
           <div class="lang">
             <img src="../../assets/svg/gb.fcfef678.svg" alt="eng" />
           </div>
@@ -78,9 +78,17 @@
           </button>
         </div>
         <div class="settings center  ml-5">
-          <button class="bx-shadow center d-flex">
+          <button class="bx-shadow center d-flex" @click="dropauth">
             <img src="../../assets/svg/settings-outline.svg" alt="settings">
           </button>
+        </div>
+        <div class="drop-auth" :style="{ display: dropauthList ? 'flex' : 'none' }">
+          <router-link to="/sign-in">
+            <button class="sign-in">Sign In</button>
+          </router-link>
+          <router-link to="/sign-up">
+            <button class="sign-up">Sign Up</button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -92,7 +100,8 @@ export default {
     return {
       dropdawn: false,
       isScrolled: false,
-      activeIndex: 0
+      activeIndex: 0,
+      dropauthList: false
     }
   },
   mounted() {
@@ -114,6 +123,9 @@ export default {
       } else {
         this.activeIndex = index
       }
+    },
+    dropauth() {
+      this.dropauthList = !this.dropauthList
     }
   }
 }
@@ -368,6 +380,22 @@ button {
   background-color: #fff;
   background-color: transparent;
   border: none;
+}
+
+.drop-auth {
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  right: 80px;
+  top: 70px;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.drop-auth .sign-in {
+  padding-left: 17px;
 }
 
 

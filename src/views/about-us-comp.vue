@@ -172,14 +172,14 @@ export default {
 .about-text h1 {
     font-size: 32px;
     font-family: Montserrat-Extra-Bold, sans-serif;
-    color: #000;
+    color: #fff;
     margin-bottom: 20px;
 }
 
 .about-text h4 {
     font-size: 24px;
     font-family: Montserrat-Extra-Bold, sans-serif;
-    color: #000;
+    color: #fff;
     margin: 30px 0;
 }
 
@@ -254,6 +254,7 @@ export default {
 .get-in-touch h3 {
     font-size: 32px;
     font-family: Montserrat-Extra-Bold, sans-serif;
+    color: #fff;
 }
 
 .get-container {
@@ -416,6 +417,7 @@ legend {
     font-size: 1rem;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 .find-us {
