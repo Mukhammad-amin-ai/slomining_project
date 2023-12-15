@@ -84,7 +84,8 @@
 
 .term_title {
   text-align: left;
-  color: var(--text_gray);
+  /*color: var(--text_gray);*/
+  color: var(--white);
   font-family: Montserrat-Medium, sans-serif;
   font-size: 18px;
 }
@@ -138,6 +139,11 @@
   /*  linear-gradient(135.02deg, #272f48, #000 100.06%);*/
   background: var(--blue);
   /*background: #59adda;*/
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-blend-mode: multiply, normal, normal;
+
   background-blend-mode: multiply, normal, normal;
   padding: 100px 80px;
   color: var(--white);
@@ -185,7 +191,7 @@
 }
 
 .mining_invest {
-  background: var(--black);
+  /*background: var(--black);*/
   color: var(--white);
   position: relative;
   padding-bottom: 100px;
