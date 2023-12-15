@@ -44,7 +44,7 @@
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
       <n-card
-        style="width: 600px; min-width: 600px"
+        style="width: 900px; min-width: 900px"
         title="Checkout
 
 "
@@ -69,6 +69,24 @@
               <div class="count_item">{{ count }}</div>
               <div class="inc" @click="inc">+</div>
             </div>
+            <label for="verify" class="form_label">New password</label>
+
+            <div class="password relative w100">
+              <input :type="type" id="verify" placeholder="******" class="form_input w100" />'
+              <div class="eyes" @click="changeType">
+                <img v-if="type === 'text'" src="@/assets/icons/eye-open.svg" alt="" />
+                <img v-else src="@/assets/icons/slash.svg" alt="" />
+              </div>
+            </div>
+            <div class="amount_parent d-flex justify-content-between ">
+           <div class="amount_price medium d-flex justify-content-start flex-column">
+             Amount <br>
+             <span class="text-green d-flex justify-content-center center" > = {{item.contract_price}}  USDT  <img style="width: 20px; margin-left: 5px;margin-bottom: 2px;"  src="@/assets/svg/crypto-t.svg" alt="">  </span>
+           </div>
+            <div class="submit-form">
+              <button type="button" class="send">Submit</button>
+            </div>
+            </div>
           </div>
         </div>
         <template #footer> </template>
@@ -90,7 +108,8 @@ export default {
   data() {
     return {
       showModal: false,
-      count: 0,
+      type: 'text',
+      count: 1,
       bodyStyle: {
         width: '600px'
       },
@@ -101,6 +120,13 @@ export default {
     }
   },
   methods: {
+    changeType() {
+      if (this.type === 'text') {
+        this.type = 'password'
+      } else {
+        this.type = 'text'
+      }
+    },
     dec() {
       if (this.count > 0) {
         this.count--
