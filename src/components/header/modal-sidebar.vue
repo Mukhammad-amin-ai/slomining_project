@@ -106,7 +106,7 @@ export default {
 }
 
 .sidebar {
-  width: 70%;
+  width: 50%;
   height: 100%;
   background-color: #fff;
   position: sticky;
