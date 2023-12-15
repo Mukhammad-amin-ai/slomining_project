@@ -2,13 +2,11 @@
   <div class="hero">
     <div class="container">
       <div class="hero-text">
-        <h1>EFFICIENT AND STABLE <span>CLOUD</span> <span>MINING</span> INVESTMENT PLATFORM</h1>
+        <h1>Skyhash: Your Gateway to Top-Tier Cloud Mining</h1>
         <p>
-          We features a world-class technical team. Using advanced servers and a robust solar power
-          generation system, we offer stable investment returns for investors with low costs and
-          high profits.
+          Empower Your Portfolio with Skyhash's Distinctive Cloud Mining Edge
         </p>
-        <p>Begin your cloud mining investment, withdraw your first payout after 24 hours.</p>
+        <!-- <p>Begin your cloud mining investment, withdraw your first payout after 24 hours.</p> -->
         <button class="start-mining pointer">start mining</button>
       </div>
       <div class="hero-galery">
@@ -22,8 +20,8 @@
     <how-to-start />
     <MiningComponent />
   </div>
-    <WhyChoose />
-    <PaymentMethods />
+  <WhyChoose />
+  <PaymentMethods />
   <MiningInvest />
 </template>
 <script>
@@ -46,7 +44,7 @@ export default {
 <style scoped>
 .hero {
   width: 100%;
-  /*height: 85vh;*/
+  height: auto;
   display: flex;
   padding: 100px 0;
   justify-content: center;
@@ -59,6 +57,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .hero-text {
@@ -67,16 +66,13 @@ export default {
 }
 
 h1 {
-  /* width: 100%; */
   font-size: 45px;
   font-family: Montserrat-Extra-Bold, sans-serif;
   color: rgb(28, 43, 70);
   font-weight: 700;
 }
 
-span {
-  color: rgb(0, 153, 250);
-}
+
 
 p {
   font-family: Montserrat-Medium, sans-serif;
@@ -115,5 +111,22 @@ p {
 
 .galery-image img {
   width: 100%;
+}
+@media screen and (max-width:750px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .hero-text{
+    width: 100%;
+  }
+  h1{
+    font-size: 30px !important;
+    line-height: 30px;
+  }
+
+  .hero-galery{
+    width: 100%;
+    padding-bottom: 50px;
+  }
 }
 </style>

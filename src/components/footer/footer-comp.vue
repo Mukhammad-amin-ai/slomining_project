@@ -39,10 +39,8 @@
       <hr />
       <div class="all-rights d-flex">
         <div class="image">
-          <router-link
-            to="https://find-and-update.company-information.service.gov.uk/company/11512926"
-          >
-            <img src="../../assets/images/about.png" alt="about" style="object-fit: contain" />
+          <router-link to="/">
+            <img src="../../assets/images/SKYHASH.png" alt="about" style="object-fit: contain" />
           </router-link>
         </div>
         <h5>© 2018-2023, SLOMINING. All Rights Reserved.</h5>
@@ -172,7 +170,7 @@ footer {
   height: 20%;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px 0 ;
+  padding: 20px 0;
 }
 
 .image {
