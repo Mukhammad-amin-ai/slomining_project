@@ -21,10 +21,10 @@
   <div class="start_and_mining">
     <how-to-start />
     <MiningComponent />
-  </div>
     <WhyChoose />
     <PaymentMethods />
   <MiningInvest />
+  </div>
 </template>
 <script>
 import HowToStart from '@/components/start/HowToStart.vue'

@@ -7,7 +7,7 @@
           METHODS
         </div>
         <div
-          class="payment_description d-flex justify-content-center text-center start_box_description"
+          class="payment_description d-flex justify-content-center text-center "
         >
           To ensure convenience for our investors, SLOMINING provides a diverse <br />
           range of payment methods for both depositing funds and receiving <br />
