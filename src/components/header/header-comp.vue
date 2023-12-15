@@ -66,9 +66,11 @@
           </router-link>
         </div>
         <div class="user ml-5 center">
-          <button class="bx-shadow center d-flex">
-            <img src="../../assets/svg/person-outline.svg" alt="person">
-          </button>
+          <router-link to="/dashboard/profile">
+            <button class="bx-shadow center d-flex">
+              <img src="../../assets/svg/person-outline.svg" alt="person">
+            </button>
+          </router-link>
         </div>
         <div class="menu ml-5 center">
           <button class="bx-shadow center d-flex">
@@ -83,26 +85,6 @@
       </div>
     </div>
   </header>
-  <div class="sticy-nav">
-    <div class="item d-flex center">
-      <router-link class="d-flex center flex-column" to="/">
-        <img src="../../assets/svg/person-outline.svg" alt="person">
-        <p>Home</p>
-      </router-link>
-    </div>
-    <div class="item d-flex center ">
-      <router-link class="d-flex center flex-column" to="/contacts">
-        <img src="../../assets/svg/bag-handle-outline.svg" alt="person">
-        <p>Contracts</p>
-      </router-link>
-    </div>
-    <div class="item d-flex center ">
-      <router-link class="d-flex center flex-column" to="/dashboard">
-        <img src="../../assets/svg/puzzle-mini.svg" alt="person">
-        <p>Dashboard</p>
-      </router-link>
-    </div>
-  </div>
 </template>
 <script>
 export default {
@@ -388,28 +370,6 @@ button {
   border: none;
 }
 
-.sticy-nav {
-  width: 100%;
-  height: 60px;
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  background-color: #fff;
-  bottom: 0;
-  z-index: 99999999999999;
-}
-
-.item {
-  width: 20%;
-  height: 100%;
-  font-family: Montserrat-Medium, sans-serif;
-  text-transform: uppercase;
-}
-
-.item a {
-  color: #000;
-}
 
 /* Media for header */
 @media screen and (max-width:1310px) {
@@ -439,9 +399,6 @@ button {
     display: flex;
   }
 
-  .sticy-nav {
-    display: flex;
-  }
 
 }
 
