@@ -46,7 +46,7 @@ li {
     height: 100%;
     background-color: transparent;
     border: none;
-    color: #7952b3;
+    color: #59adda;
     font-size: 17px;
     font-family: Montserrat-Extra-Bold, sans-serif;
     margin: 0px 0px -1px;
@@ -61,7 +61,7 @@ li {
     right: 0;
     bottom: 0;
     height: 2px;
-    background-color: #7952b3;
+    background-color: #59adda;
     width: 100%;
     transition: all .2s;
     transform: scale(1)
