@@ -43,9 +43,8 @@
       </div>
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
-      <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout
-
-" :bordered="false" size="huge" role="dialog" aria-modal="true">
+      <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
+        role="dialog" aria-modal="true">
         <template #header-extra>
           <div @click="showModal = false" style="cursor: pointer">
             <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
