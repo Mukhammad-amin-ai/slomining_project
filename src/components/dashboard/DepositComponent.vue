@@ -1,13 +1,30 @@
 <template>
-  <h1 class="start_title text-green">Deposit</h1>
+  <div class="deposit">
+    <div class="contant">
+      <tabReusable title="Deposit"  tab="Cryptocurrency "/>
+    </div>
+  </div>
 </template>
 
 <script>
+import tabReusable from '../mini_components/tab-reusable.vue';
 export default {
-  name: "DepositComponent"
+  name: "DepositComponent",
+  components: {
+    tabReusable,
+  }
 }
 </script>
 
 <style scoped>
+.deposit {
+  margin: 10px 0 0 64px;
+  width: 100%;
+  height: auto;
+}
+.contant{
+  width: 1144px;
+  height: 784px;
+}
 
 </style>
