@@ -104,3 +104,10 @@
 .relative {
   position: relative;
 }
+.justify-content-between {
+  justify-content: space-between;
+}
+.medium {
+  font-family: Montserrat-Medium, sans-serif;
+
+}
