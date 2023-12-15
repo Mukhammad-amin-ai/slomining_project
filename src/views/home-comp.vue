@@ -13,7 +13,7 @@
       </div>
       <div class="hero-galery">
         <div class="galery-image">
-          <img src="../assets/images/hero.png" alt="" draggable="false" />
+          <img src="../assets/images/hero.png" alt="hero" draggable="false" />
         </div>
       </div>
     </div>
