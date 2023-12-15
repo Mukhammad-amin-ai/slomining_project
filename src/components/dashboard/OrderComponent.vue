@@ -1,5 +1,5 @@
 <template>
-  <h1 class="start_title text-green">Order</h1>
+  <h1>Order</h1>
 </template>
 
 <script>
