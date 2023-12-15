@@ -2,7 +2,7 @@
   <div>
     <div class="mining_item_card">
       <div class="item_card_left">
-        <img :src="item.image" :alt="item.name" class="item_card_image" />
+        <img draggable="false" :src="item.image" :alt="item.name" class="item_card_image" />
         <div class="item_card_name">
           {{ item.name }}
         </div>
@@ -44,7 +44,7 @@
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
       <n-card
-        style="width: 900px; min-width: 900px"
+        style="width: 100%; max-width: 900px; min-width: 350px"
         title="Checkout
 
 "
@@ -78,14 +78,21 @@
                 <img v-else src="@/assets/icons/slash.svg" alt="" />
               </div>
             </div>
-            <div class="amount_parent d-flex justify-content-between ">
-           <div class="amount_price medium d-flex justify-content-start flex-column">
-             Amount <br>
-             <span class="text-green d-flex justify-content-center center" > = {{item.contract_price}}  USDT  <img style="width: 20px; margin-left: 5px;margin-bottom: 2px;"  src="@/assets/svg/crypto-t.svg" alt="">  </span>
-           </div>
-            <div class="submit-form">
-              <button type="button" class="send">Submit</button>
-            </div>
+            <div class="amount_parent d-flex justify-content-between">
+              <div class="amount_price medium d-flex justify-content-start flex-column">
+                Amount <br />
+                <span class="text-green d-flex justify-content-center center">
+                  = {{ item.contract_price }} USDT
+                  <img
+                    style="width: 20px; margin-left: 5px; margin-bottom: 2px"
+                    src="@/assets/svg/crypto-t.svg"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div class="submit-form">
+                <button type="button" class="send">Submit</button>
+              </div>
             </div>
           </div>
         </div>
