@@ -43,21 +43,6 @@
           <h5>$ 5.00</h5>
         </div>
       </div>
-      <div class="link d-flex">
-        <div class="affility-link">
-          <h3>Your Affiliates Link</h3>
-          <div class="link-box">
-            <span>https://slomining.com/sign-up?ref=328117</span>
-            <button class="copy-link">
-              Copy Link
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <h3>Your Partners</h3>
-          <h5>0</h5>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -163,63 +148,6 @@ h5 {
 }
 
 .profit .item {
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .08);
-  border-radius: 0.5rem;
-  padding: 12px 22px;
-}
-
-.link {
-  width: 100%;
-  height: 120px;
-  gap: 30px;
-  align-items: center;
-  margin: 16px 0;
-}
-
-.affility-link {
-  width: 80%;
-  height: 90% !important;
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .08);
-  border-radius: 0.5rem;
-  padding: 12px 22px;
-}
-
-.link-box {
-  height: 35px;
-  border-radius: 8px;
-  opacity: .8;
-  border: 1px solid #3a516c;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 6px;
-}
-
-.link-box span {
-  flex: 1;
-  width: 0;
-  font-size: 13px;
-  font-family: Montserrat-Medium,sans-serif;
-  color: var(--blue);
-  line-height: 18px;
-  padding: 0 13px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  word-break: break-all;
-}
-
-.copy-link{
-  background-color: transparent;
-  font-family: Montserrat-Medium,sans-serif;
-  border: none;
-  padding: 0 13px;
-  font-size: 14px;
-  color: #00B301;
-}
-.link .item {
-  height: 90% !important;
   background-color: #fff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .08);
   border-radius: 0.5rem;

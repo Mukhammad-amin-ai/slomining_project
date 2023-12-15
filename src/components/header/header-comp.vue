@@ -21,7 +21,7 @@
                 </span>
               </li>
             </router-link>
-            <router-link to="/dashboard">
+            <router-link to="/dashboard/profile">
               <li :class="[{ active: $route.fullPath === '/dashboard/' },
               { active: $route.fullPath === '/dashboard/profile' },
               ]">
@@ -48,8 +48,12 @@
           </span>
           <div class="drop-list" :style="{ display: dropdawn ? 'block' : 'none' }">
             <ul>
-              <li><img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English</li>
-              <li><img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian</li>
+              <li>
+                <img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English
+              </li>
+              <li>
+                <img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian
+              </li>
             </ul>
           </div>
         </div>
@@ -61,9 +65,44 @@
             <button class="sign-up">Sign Up</button>
           </router-link>
         </div>
+        <div class="user ml-5 center">
+          <button class="bx-shadow center d-flex">
+            <img src="../../assets/svg/person-outline.svg" alt="person">
+          </button>
+        </div>
+        <div class="menu ml-5 center">
+          <button class="bx-shadow center d-flex">
+            <img src="../../assets/svg/menu-outline.svg" alt="person">
+          </button>
+        </div>
+        <div class="settings center  ml-5">
+          <button class="bx-shadow center d-flex">
+            <img src="../../assets/svg/settings-outline.svg" alt="settings">
+          </button>
+        </div>
       </div>
     </div>
   </header>
+  <div class="sticy-nav">
+    <div class="item d-flex center">
+      <router-link class="d-flex center flex-column" to="/">
+        <img src="../../assets/svg/person-outline.svg" alt="person">
+        <p>Home</p>
+      </router-link>
+    </div>
+    <div class="item d-flex center ">
+      <router-link class="d-flex center flex-column" to="/contacts">
+        <img src="../../assets/svg/bag-handle-outline.svg" alt="person">
+        <p>Contracts</p>
+      </router-link>
+    </div>
+    <div class="item d-flex center ">
+      <router-link class="d-flex center flex-column" to="/dashboard">
+        <img src="../../assets/svg/puzzle-mini.svg" alt="person">
+        <p>Dashboard</p>
+      </router-link>
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -98,7 +137,6 @@ export default {
 }
 </script>
 <style scoped>
-
 header {
   width: 100%;
   height: 90px;
@@ -302,5 +340,149 @@ button {
 .sign-up:hover {
   background-color: #1c2b46;
   color: #fff;
+}
+
+.ml-5 {
+  margin-left: 10px;
+}
+
+.settings {
+  width: 5%;
+  height: auto;
+  display: none;
+}
+
+.settings button {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.user {
+  width: 5%;
+  height: auto;
+  display: none;
+}
+
+.user button {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.menu {
+  width: 5%;
+  height: auto;
+  display: none;
+}
+
+.menu button {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.sticy-nav {
+  width: 100%;
+  height: 60px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  z-index: 99999999999999;
+}
+
+.item {
+  width: 20%;
+  height: 100%;
+  font-family: Montserrat-Medium, sans-serif;
+  text-transform: uppercase;
+}
+
+.item a {
+  color: #000;
+}
+
+/* Media for header */
+@media screen and (max-width:1310px) {
+  .auth {
+    display: none !important;
+  }
+
+  .settings {
+    display: flex;
+  }
+}
+
+@media screen and (max-width:990px) {
+  nav {
+    display: none !important;
+  }
+
+  .navigation {
+    justify-content: flex-end !important;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .user {
+    display: flex;
+  }
+
+  .sticy-nav {
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .logo {
+    width: 20%;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .ml-5 {
+    margin-left: 15px;
+  }
+
+
+
+}
+
+@media screen and (max-width:500px) {
+  .logo {
+    width: 25%;
+  }
+
+  .ml-5 {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  .ml-5 {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .logo {
+    width: 50% !important;
+  }
+
 }
 </style>
