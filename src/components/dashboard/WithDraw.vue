@@ -61,6 +61,7 @@
       <h2>
         Withdraw Records
       </h2>
+      <div class="table-response">
       <table class="table-info">
         <thead>
           <tr>
@@ -80,7 +81,7 @@
           </tr>
         </tbody>
       </table>
-
+    </div>
 
     </div>
   </div>
@@ -206,12 +207,15 @@ form {
   padding: 10px 14px;
   border: none;
 }
-
+.table-response {
+  width: 100%;
+  height: auto;
+  overflow-x: auto;
+}
 .table-info {
   width: 100%;
   height: auto;
   border: 1px solid var(--text_gray);
-  overflow-y: auto;
   border-radius: 5px;
 }
 
@@ -227,4 +231,59 @@ th {
   font-size: 15.008px;
   line-height: 26px;
 }
+
+@media screen and (max-width:1024px) {
+  .deposit {
+    margin: 0 !important;
+  }
+
+  .contant {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contant {
+    width: 90%;
+  }
+
+  .table-info {
+    width: 90% !important;
+  }
+
+  th {
+    padding: 0.875rem 1rem;
+  }
+}
+
+@media screen and (max-width:700px) {
+   .contant{
+    height: auto;
+   }
+   .deposit-container{
+    height: auto;
+   }
+  .crypto {
+    justify-content: unset !important;
+    gap: 10px;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .item {
+    width: 45% !important;
+  }
+  .next{
+    width: 200px;
+ }
+}
+@media screen and (max-width:320px) {
+ .next{
+    width: 100px;
+ }
+}
+
+
+
 </style>
