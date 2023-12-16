@@ -23,7 +23,7 @@
       <label for="verify" class="form_label">New password</label>
 
       <div class="password relative w100">
-        <input :type="type" id="verify" placeholder="******" class="form_input w100" />'
+        <input :type="type" id="verify" placeholder="******" class="form_input w100" />
         <div class="eyes" @click="changeType">
           <img v-if="type === 'text'" src="@/assets/icons/eye-open.svg" alt="" />
           <img v-else src="@/assets/icons/slash.svg" alt="" />
