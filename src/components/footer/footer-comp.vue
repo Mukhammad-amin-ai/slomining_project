@@ -30,16 +30,26 @@
           <div class="learn">
             <p>LEARN</p>
             <ul>
-              <li>What is cryptocurrency?</li>
-              <li>What is web3?</li>
+              <router-link to="/what-is-cryptocurrency">
+                <li>What is cryptocurrency?</li>
+              </router-link>
+              <router-link to="/what-is-web3">
+                <li>What is web3?</li>
+              </router-link>
             </ul>
           </div>
           <div class="compan">
             <p>COMPANY</p>
             <ul>
-              <li>About Us</li>
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
+              <router-link to="/about">
+                <li>About Us</li>
+              </router-link>
+              <router-link to="/terms">
+                <li>Terms of Service</li>
+              </router-link>
+              <router-link to="/privacy">
+                <li>Privacy Policy</li>
+              </router-link>
             </ul>
           </div>
         </div>

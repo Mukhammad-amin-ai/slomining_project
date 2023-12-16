@@ -217,11 +217,13 @@ h2 {
     height: auto;
     padding: 20px 0;
 }
+
 .list-header h5 {
     font-family: Montserrat-Light, sans-serif;
     color: var(--blue);
     font-size: 17px;
 }
+
 .list-header p {
     padding: 20px 0 0 0;
 }
@@ -254,6 +256,4 @@ li {
     font-size: 16px;
     line-height: 26px;
 }
-
-
 </style>

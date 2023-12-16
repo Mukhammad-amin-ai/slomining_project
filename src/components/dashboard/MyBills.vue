@@ -15,7 +15,7 @@
       <table class="table">
         <thead class="thead">
           <tr>
-            <th>Date</th>
+            <!-- <th>Date</th> -->
             <th>Currency</th>
             <th>Status</th>
             <th>Amount</th>
@@ -28,13 +28,13 @@
         <tbody>
           <!-- Add your table rows dynamically here -->
           <tr>
-            <td>12/14/23 11:24</td>
+            <!-- <td>12/14/23 11:24</td> -->
             <td class="usd"><span>USDT</span></td>
             <td class="status"><span>Paid</span></td>
             <td>5 USDT</td>
             <td>$5.00</td>
             <td>$5</td>
-            <td></td>
+            <td>Registration Bonus</td>
             <td></td>
           </tr>
           <!-- Add more rows as needed -->
