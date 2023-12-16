@@ -1,28 +1,28 @@
-import { createStore } from "vuex";
-
+import { createStore } from 'vuex'
 
 const store = createStore({
-    state: {
-        activemodal: true,
-        activeClass: ''
+  state: {
+    activemodal: true,
+    activeClass: '',
+    isLogin: false
+  },
+  mutations: {
+    setModal(state, payload) {
+      state.activemodal = payload
     },
-    mutations: {
-        setModal(state, payload) {
-            state.activemodal = payload;
-        },
-        setClass(state, payload) {
-            state.activeClass = payload;
-        }
-    },
-    actions: {
-        modalfunc({ commit }) {
-            // commit('setModal', !this.state.activemodal)
-            commit('setClass', 'active_navbar')
-        },
-        modalClose({ commit }) {
-            commit('setClass', '')
-        }
+    setClass(state, payload) {
+      state.activeClass = payload
     }
+  },
+  actions: {
+    modalfunc({ commit }) {
+      // commit('setModal', !this.state.activemodal)
+      commit('setClass', 'active_navbar')
+    },
+    modalClose({ commit }) {
+      commit('setClass', '')
+    }
+  }
 })
 
 export default store

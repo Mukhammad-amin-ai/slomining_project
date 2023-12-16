@@ -31,7 +31,28 @@
                 </span>
               </li>
             </router-link>
-            <router-link to="/dashboard/profile">
+            <router-link to="/dashboard/profile" v-if="isLogin">
+              <li
+                :class="[
+                  { active: $route.fullPath === '/dashboard/' },
+                  { active: $route.fullPath === '/dashboard/profile' }
+                ]"
+              >
+                <span
+                  >Dashboard
+                  <img
+                    v-show="[
+                      { active: $route.fullPath === '/dashboard/' },
+                      { active: $route.fullPath === '/dashboard/profile' }
+                    ]"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
+                </span>
+              </li>
+            </router-link>
+
+            <router-link to="/sign-in" v-else>
               <li
                 :class="[
                   { active: $route.fullPath === '/dashboard/' },
@@ -138,6 +159,13 @@ export default {
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   },
+  watch: {
+    isLogin(newVal) {
+      if (newVal) {
+        this.isLogin = localStorage.getItem('isLogin')
+      }
+    }
+  },
   methods: {
     logOut() {
       Swal.fire({
@@ -152,6 +180,7 @@ export default {
         if (result) {
           localStorage.removeItem('form')
           localStorage.setItem('isLogin', false)
+          this.$store.state.isLogin = true
           this.isLogin = false
           this.$router.push('/')
           const Toast = Swal.mixin({
