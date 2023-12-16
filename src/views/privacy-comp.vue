@@ -140,6 +140,8 @@ h2 {
 .container {
     width: 97%;
     height: auto;
+    padding: 10px 0;
+
 }
 
 p {

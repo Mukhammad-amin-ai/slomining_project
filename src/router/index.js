@@ -8,6 +8,9 @@ import signUpVue from '@/views/sign-up.vue'
 import forgotPasswordVue from '@/views/forgot-password.vue'
 import privacyComp from '@/views/privacy-comp.vue'
 import termsComp from '@/views/terms-comp.vue'
+import webComp from '@/views/web-comp.vue'
+import crypto from '@/views/crupto-comp.vue'
+
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -88,6 +91,14 @@ const router = createRouter({
     {
       path: '/terms',
       component: termsComp
+    },
+    {
+      path: '/what-is-cryptocurrency',
+      component: crypto
+    },
+    {
+      path: '/what-is-web3',
+      component: webComp
     }
   ],
   scrollBehavior() {
