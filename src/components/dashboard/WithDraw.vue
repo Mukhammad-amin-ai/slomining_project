@@ -109,7 +109,7 @@ export default {
       this.width = '50%'
       this.class = 'borderclas'
       await this.$store.dispatch('convert', option)
-      this.text = this.amount / this.$store.state.convert
+      this.text = this.amount * this.$store.state.convert
       this.price = `${this.amount} USDT = ${this.text} ${option}`
     },
 
@@ -224,6 +224,8 @@ form {
 .btn-container {
   width: 100%;
   height: auto;
+  display: flex;
+  align-items: center;
 }
 
 .next {
@@ -266,6 +268,10 @@ th {
   color: rgb(33, 37, 41);
   font-size: 15.008px;
   line-height: 26px;
+}
+
+h4 {
+  color: #198754;
 }
 
 @media screen and (max-width:1024px) {
