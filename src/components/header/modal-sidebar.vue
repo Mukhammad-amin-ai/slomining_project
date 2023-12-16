@@ -8,16 +8,44 @@
         <li v-for="link in sidebarLinks" :key="link.path">
           <router-link :to="link.path" class="sidebar_links" @click="setActive">
             <span class="link_name">{{ link.name }}</span>
-            <img :style="{ opacity: isActive(link.path) ? '1' : '0' }" src="@/assets/images/line.png" alt="line" />
+            <img
+              :style="{ opacity: isActive(link.path) ? '1' : '0' }"
+              src="@/assets/images/line.png"
+              alt="line"
+            />
           </router-link>
+        </li>
+        <li>
+          <div class="profile_dropdown d-flex justify-content-between center" @click="openMenu">
+            <div class="link_name profile_name" ref="profile">PROFILE</div>
+            <img
+              class="profile_icon"
+              src="@/assets/icons/right.svg"
+              style="width: 20px; margin-top: 6px; margin-right: 10px"
+              alt=""
+              ref="icon"
+            />
+          </div>
+          <div class="opened_items d-flex flex-column mt-1" ref="opened_items">
+            <router-link
+              class="sub_link_name"
+              v-for="link in openedItems"
+              :to="link.path"
+              :key="link"
+            >
+              <span @click="setActive">
+                {{ link.name }}
+              </span>
+            </router-link>
+          </div>
         </li>
       </ul>
     </div>
   </div>
   <div
-      class="closeBg"
-      @click="closeMod"
-      :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"
+    class="closeBg"
+    @click="closeMod"
+    :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"
   ></div>
 </template>
 
@@ -30,33 +58,70 @@ export default {
         { name: 'Contracts', path: '/contacts' },
         { name: 'Dashboard', path: '/dashboard/profile' },
         { name: 'About us', path: '/about' }
-      ]
-    };
+      ],
+      openedItems: [
+        { name: 'MY BILLS', path: '/dashboard/my-bills' },
+        { name: 'DEPOSIT', path: '/dashboard/deposit' },
+        { name: 'WITHDRAW', path: '/dashboard/withdraw' },
+        { name: 'MY ORDERS', path: '/dashboard/order' },
+        { name: 'CONTRACTS', path: '/contacts' },
+        { name: 'SETTINGS', path: '/dashboard/settings' }
+      ],
+      isOpen: false
+    }
   },
   computed: {
     activeLink() {
-      return this.$route.fullPath;
+      return this.$route.fullPath
     }
   },
   methods: {
     isActive(linkPath) {
-      return this.activeLink === linkPath;
+      return this.activeLink === linkPath
     },
     setActive() {
-      this.closeMod();
+      this.closeMod()
       // You may not need this function if clicking the link updates the active route automatically.
     },
     closeMod() {
-      this.$store.dispatch('modalClose');
+      this.$store.dispatch('modalClose')
+    },
+    openMenu() {
+      this.isOpen = !this.isOpen
+      if (!this.isOpen) {
+        this.$refs.opened_items.classList.add('opened')
+        this.$refs.icon.classList.add('rotate_icon')
+        this.$refs.profile.classList.add('active_profile')
+      } else {
+        this.$refs.opened_items.classList.remove('opened')
+        this.$refs.icon.classList.remove('rotate_icon')
+        this.$refs.profile.classList.remove('active_profile')
+      }
     }
   },
   updated() {
-    document.body.style.overflow = this.$store.state.activeClass === 'active_navbar' ? 'hidden' : 'visible';
+    document.body.style.overflow =
+      this.$store.state.activeClass === 'active_navbar' ? 'hidden' : 'visible'
   }
-};
+}
 </script>
 
 <style scoped>
+.opened_items {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; /* Adjust the timing function as needed */
+  background: var(--form_bg);
+}
+
+.opened {
+  max-height: 250px; /* Set a maximum height for smooth transition */
+}
+
+.rotate_icon {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-out; /* Transition for the icon rotation */
+}
 .active_bg {
   width: 30%;
   position: fixed;
@@ -118,6 +183,15 @@ ul {
   font-size: 16px;
   text-transform: uppercase;
 }
+.sub_link_name {
+  width: 100%;
+  padding: 0.5rem 1.5rem 0 1.5rem;
+  font-family: Montserrat-Regular, sans-serif;
+  font-size: 14px;
+  color: var(--text_gray);
+  text-transform: uppercase;
+}
+
 .sidebar_links {
   display: flex;
   flex-direction: column;
@@ -129,6 +203,9 @@ ul {
 }
 .link_name {
   color: #1d2c4899;
+}
+.active_profile {
+  color: var(--blue);
 }
 
 li span {
