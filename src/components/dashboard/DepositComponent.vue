@@ -91,11 +91,27 @@
         >
           <template #header-extra> Oops! </template>
           <p style="color: red">Please enter Amount（USDT）</p>
+
+          <n-card
+            style="width: 600px"
+            title="Warning"
+            :bordered="false"
+            size="huge"
+            role="dialog"
+            aria-modal="true"
+          >
+            <template #header-extra>
+              <div @click="showModal = false" style="cursor: pointer">
+                <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
+              </div>
+            </template>
+            <p style="color: red">Please enter Amount（USDT）</p>
+          </n-card>
         </n-card>
       </n-modal>
       <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
         <n-card
-          style="width: 100%; max-width: 1100px; min-width: 350px"
+          style="width: 100%; max-width: 1000px; min-width: 350px"
           title="Checkout"
           :bordered="false"
           size="huge"
@@ -103,7 +119,7 @@
           aria-modal="true"
         >
           <template #header-extra>
-            <div @click="showModal = false" style="cursor: pointer">
+            <div @click="show = false" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
             </div>
           </template>
@@ -129,7 +145,10 @@
             <div class="right_side ml-1 mt-2 d-flex flex-column">
               <div class="transfer">Transfer Address</div>
 
-              <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText('TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe')">
+              <div
+                class="right_heading d-flex justify-content-start center pointer"
+                @click="copiedText('TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe')"
+              >
                 <div class="copied_text mt-1">TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe</div>
 
                 <svg
@@ -149,12 +168,36 @@
                   ></path>
                 </svg>
               </div>
-            <div class="submit-form mt-2">
-              <button type="button" class="send">Submit</button>
-            </div>
+
+              <div class="transfer">Convert</div>
+
+              <div class="right_heading d-flex justify-content-start center pointer text-green">
+                <div class="copied_text mt-1">{{ price }} LTC</div>
+              </div>
+              <div class="submit-form mt-2 d-flex flex-column">
+                <div class="mt-4">
+                  <span>{{ uploadedFileName }}</span>
+                </div>
+                <input
+                  class="d-none"
+                  type="file"
+                  id="img"
+                  ref="imgFile"
+                  accept="image/*"
+                  @change="handleImageUpload"
+                />
+                <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" />
+                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px;"> + upload screen</label>
+              </div>
             </div>
           </div>
-          <template #footer> </template>
+          <template #footer >
+
+            <div class="deposit_footer_text d-flex justify-content-start center">
+              <svg style="width: 20px; margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z"></path></svg>
+              Please transfer the exact amount to address
+            </div>
+          </template>
         </n-card>
       </n-modal>
     </div>
@@ -166,7 +209,7 @@ import tabReusable from '../mini_components/tab-reusable.vue'
 import { NCard } from 'naive-ui'
 import { NModal } from 'naive-ui'
 import loadingComp from '@/components/mini_components/loading-comp.vue'
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2'
 export default {
   name: 'DepositComponent',
   components: {
@@ -184,37 +227,52 @@ export default {
       width: '',
       class1: '',
       show: false,
-      showModal: false
+      showModal: false,
+      imageUrl: '',
+      uploadedFileName: '',
+      uploadedFile: ''
     }
   },
 
   methods: {
+    handleImageUpload(event) {
+      const file = event.target.files[0]
+      if (file) {
+        this.uploadedFileName = file.name
+        this.uploadedFile = file
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          this.imageUrl = e.target.result
+        }
+        reader.readAsDataURL(file)
+      }
+    },
     showDeposit() {
       this.show = true
     },
     copiedText(text) {
       navigator.clipboard
-          .writeText(text)
-          .then(() => {
-            const Toast = Swal.mixin({
-              toast: true,
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                toast.onmouseenter = Swal.stopTimer
-                toast.onmouseleave = Swal.resumeTimer
-              }
-            })
-            Toast.fire({
-              icon: 'success',
-              title: 'Token Copied.'
-            })
+        .writeText(text)
+        .then(() => {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer
+              toast.onmouseleave = Swal.resumeTimer
+            }
           })
-          .catch((err) => {
-            console.error(err);
-          });
+          Toast.fire({
+            icon: 'success',
+            title: 'Token Copied.'
+          })
+        })
+        .catch((err) => {
+          console.error(err)
+        })
     },
     async convert(option) {
       if (this.amount === '') {
@@ -232,6 +290,17 @@ export default {
 </script>
 
 <style scoped>
+.deposit_footer_text  {
+  background: var(--depost_bg);
+  color: vaR(--depost_tex);
+  padding: 10px;
+  border-radius: 8px;
+}
+.uploaded-img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
 .deposit_text {
   font-family: Montserrat-Medium, sans-serif, sans-serif, sans-serif;
   line-height: 40px;

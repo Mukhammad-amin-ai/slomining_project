@@ -55,11 +55,15 @@
             </div>
           </div>
         </div>
+        <n-alert  type="error" v-if="alertM">
+          Balance is insufficient!
+        </n-alert>
         <div class="btn-container">
           <div class="price-amout " :style="{ width: width }">
             <h4>{{ this.price }}</h4>
           </div>
-          <button class="next">Submit</button>
+
+          <button class="next" @click="alertFunc">Submit</button>
         </div>
       </div>
       <h2>
@@ -89,11 +93,14 @@
       <n-modal v-model:show="showModal">
         <n-card style="width: 600px" title="Warning" :bordered="false" size="huge" role="dialog" aria-modal="true">
           <template #header-extra>
-            Oops!
+            <div @click="showModal = false" style="cursor: pointer">
+              <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
+            </div>
           </template>
           <p style="color: red;"> Please enter Amount（USDT）</p>
         </n-card>
       </n-modal>
+
     </div>
   </div>
 </template>
@@ -102,12 +109,14 @@
 import loadingComp from '@/components/mini_components/loading-comp.vue'
 import { NCard } from 'naive-ui';
 import { NModal } from 'naive-ui';
+import { NAlert } from 'naive-ui';
 export default {
   name: "DepositComponent",
   components: {
     loadingComp,
     NModal,
-    NCard
+    NCard,
+    NAlert
   },
   data() {
     return {
@@ -118,8 +127,8 @@ export default {
       price: '',
       width: "",
       class1: "",
-      showModal: false
-
+      showModal: false,
+      alertM: false,
     }
   },
   methods: {
@@ -134,6 +143,11 @@ export default {
         this.price = `${this.amount} USDT = ${this.text} ${option}`
       }
     },
+    alertFunc(){
+      if(this.adress !== ''){
+        this.alertM = true
+      }
+    }
 
   },
 }
@@ -151,20 +165,21 @@ export default {
 
 .deposit {
   margin: 10px 0 0 30px;
-
   width: 100%;
   height: auto;
 }
 
 .contant {
   width: 1144px;
-  height: 784px;
+  /* height: 784px; */
+  height: auto;
 }
 
 .deposit-container {
+  position: relative;
   margin: 30px 0;
   width: 100%;
-  height: 590px;
+  height: auto;
   background-color: #f8f9fc;
   border-radius: 16px;
   padding: 21px;
@@ -263,7 +278,7 @@ form {
   padding: 10px 14px;
   border: none;
   cursor: pointer;
-
+  margin-top: 20px;
 }
 
 .table-response {
