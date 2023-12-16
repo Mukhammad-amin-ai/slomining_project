@@ -86,9 +86,11 @@
       <n-modal v-model:show="showModal">
         <n-card style="width: 600px" title="Warning" :bordered="false" size="huge" role="dialog" aria-modal="true">
           <template #header-extra>
-            Oops!
+            <div @click="showModal = false" style="cursor: pointer">
+              <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
+            </div>
           </template>
-           <p style="color: red;"> Please enter Amount（USDT）</p>
+          <p style="color: red;"> Please enter Amount（USDT）</p>
         </n-card>
       </n-modal>
 
@@ -125,7 +127,7 @@ export default {
     async convert(option) {
       if (this.amount === '') {
         this.showModal = true
-      }else{ 
+      } else {
         this.width = '50%'
         this.class = 'borderclas'
         await this.$store.dispatch('convert', option)
