@@ -129,6 +129,18 @@
 .global_btn {
   color: var(--black) !important;
 }
+.detail_card_right {
+  width: 30%;
+}
+@media screen and (max-width: 992px) {
+  .detail_card_right {
+    width: 100%;
+  }
+}@media (min-width: 993px) and (max-width: 1440px) {
+  .detail_card_right {
+    width: 60%;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .mining_items {
