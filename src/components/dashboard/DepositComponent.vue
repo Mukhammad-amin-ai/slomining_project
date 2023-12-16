@@ -6,14 +6,14 @@
         <loadingComp />
         <p>Amount (USDT)</p>
         <form @submit.prevent="convert">
-          <input type="text" v-model="this.amount" placeholder="Pleace enter amount">
+          <input type="text" v-model="this.amount" placeholder="Pleace enter amount" />
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
           <div class="item">
             <div class="item-container" @click="convert('USDT')">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="">
+                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
               </div>
               <p>USDT-TRC20</p>
             </div>
@@ -21,7 +21,7 @@
           <div class="item">
             <div class="item-container" @click="convert('USDT')">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="">
+                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
               </div>
               <p>USDT-ERC20</p>
             </div>
@@ -29,7 +29,7 @@
           <div class="item">
             <div class="item-container" @click="convert('LTC')">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="">
+                <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="" />
               </div>
               <p>LTC-Litecoin</p>
             </div>
@@ -37,7 +37,7 @@
           <div class="item">
             <div class="item-container" @click="convert('ETH')">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="">
+                <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="" />
               </div>
               <p>ETH-ERC20</p>
             </div>
@@ -45,24 +45,21 @@
           <div class="item" @click="convert('BTC')" :class="class1">
             <div class="item-container">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/btc.svg" alt="">
+                <img class="img-fluid" src="../../assets/svg/btc.svg" alt="" />
               </div>
               <p>BTC-Bitcoin</p>
             </div>
           </div>
         </div>
         <div class="btn-container">
-          <div class="price-amout " :style="{ width: width }">
+          <div class="price-amout" :style="{ width: width }">
             <h4>{{ this.price }}</h4>
           </div>
-          <button class="next">Next</button>
+          <button class="next" @click="showDeposit">Next</button>
         </div>
       </div>
-      <h2>
-        Deposit Records
-      </h2>
+      <h2>Deposit Records</h2>
       <div class="table-response">
-
         <table class="table-info">
           <thead>
             <tr>
@@ -84,25 +81,94 @@
         </table>
       </div>
       <n-modal v-model:show="showModal">
-        <n-card style="width: 600px" title="Warning" :bordered="false" size="huge" role="dialog" aria-modal="true">
-          <template #header-extra>
-            Oops!
-          </template>
-           <p style="color: red;"> Please enter Amount（USDT）</p>
+        <n-card
+          style="width: 600px"
+          title="Warning"
+          :bordered="false"
+          size="huge"
+          role="dialog"
+          aria-modal="true"
+        >
+          <template #header-extra> Oops! </template>
+          <p style="color: red">Please enter Amount（USDT）</p>
         </n-card>
       </n-modal>
+      <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
+        <n-card
+          style="width: 100%; max-width: 1100px; min-width: 350px"
+          title="Checkout"
+          :bordered="false"
+          size="huge"
+          role="dialog"
+          aria-modal="true"
+        >
+          <template #header-extra>
+            <div @click="showModal = false" style="cursor: pointer">
+              <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
+            </div>
+          </template>
+          <div class="heading_deposit">
+            <div class="deposit_text">
+              Please transfer to the following address <br />
 
+              The system will automatically confirm the receipt on the memory block chain and post
+              it to your account balance. <br />
+
+              Minimum deposit amount: <span class="text-green text-bold"> $50</span>, amount less
+              than <span class="text-green text-bold"> $50</span> will not be credited to your
+              account. <br />
+
+              Every transfer in will be recorded on the memory block chain and cannot be tampered
+              with <br />
+            </div>
+          </div>
+          <div class="add_cart_section d-flex justify-content-start">
+            <div class="left_side">
+              <img src="@/assets/images/qr.png" alt="" class="img-fluid" />
+            </div>
+            <div class="right_side ml-1 mt-2 d-flex flex-column">
+              <div class="transfer">Transfer Address</div>
+
+              <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText('TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe')">
+                <div class="copied_text mt-1">TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe</div>
+
+                <svg
+                  class="copied_img ml-1"
+                  style="width: 20px"
+                  data-v-653498c4=""
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1024 1024"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z"
+                  ></path>
+                </svg>
+              </div>
+            <div class="submit-form mt-2">
+              <button type="button" class="send">Submit</button>
+            </div>
+            </div>
+          </div>
+          <template #footer> </template>
+        </n-card>
+      </n-modal>
     </div>
   </div>
 </template>
 <script>
 // import axios from 'axios'
-import tabReusable from '../mini_components/tab-reusable.vue';
-import { NCard } from 'naive-ui';
-import { NModal } from 'naive-ui';
+import tabReusable from '../mini_components/tab-reusable.vue'
+import { NCard } from 'naive-ui'
+import { NModal } from 'naive-ui'
 import loadingComp from '@/components/mini_components/loading-comp.vue'
+import Swal from "sweetalert2";
 export default {
-  name: "DepositComponent",
+  name: 'DepositComponent',
   components: {
     tabReusable,
     loadingComp,
@@ -112,34 +178,77 @@ export default {
   data() {
     return {
       amount: '',
-      crypto: "",
+      crypto: '',
       text: '',
       price: '',
-      width: "",
-      class1: "",
+      width: '',
+      class1: '',
+      show: false,
       showModal: false
     }
   },
 
   methods: {
+    showDeposit() {
+      this.show = true
+    },
+    copiedText(text) {
+      navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer
+                toast.onmouseleave = Swal.resumeTimer
+              }
+            })
+            Toast.fire({
+              icon: 'success',
+              title: 'Token Copied.'
+            })
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+    },
     async convert(option) {
       if (this.amount === '') {
         this.showModal = true
-      }else{ 
+      } else {
         this.width = '50%'
         this.class = 'borderclas'
         await this.$store.dispatch('convert', option)
         this.text = this.amount * this.$store.state.convert
         this.price = `${this.amount} USDT = ${this.text} ${option}`
       }
-    },
-  },
-
-
+    }
+  }
 }
 </script>
 
 <style scoped>
+.deposit_text {
+  font-family: Montserrat-Medium, sans-serif, sans-serif, sans-serif;
+  line-height: 40px;
+  font-size: 16px;
+}
+.transfer {
+  font-family: Montserrat-Medium, sans-serif;
+  font-size: 14px;
+}
+.copied_text {
+  font-size: 18px;
+}
+.heading_deposit {
+  background: var(--deposit);
+  border-radius: 16px;
+  padding: 20px 10px;
+}
 .borderclas {
   border: 1px solid #000;
 }
@@ -186,7 +295,7 @@ form {
   padding-bottom: 20px;
 }
 
-.deposit-container input[type="text"] {
+.deposit-container input[type='text'] {
   width: 100%;
   height: auto;
   padding: 10px;
@@ -198,7 +307,7 @@ form {
   border-radius: 6px;
 }
 
-.deposit-container input[type="text"]:focus {
+.deposit-container input[type='text']:focus {
   outline-color: #59adda;
 }
 
@@ -235,7 +344,7 @@ form {
   justify-content: center;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-container {
@@ -259,7 +368,7 @@ form {
   font-family: Montserrat-Medium, sans-serif;
   font-size: 16px;
   color: var(--white);
-  transition: all .3s;
+  transition: all 0.3s;
   padding: 10px 14px;
   border: none;
   cursor: pointer;
@@ -281,7 +390,6 @@ form {
 thead {
   width: 100%;
   height: auto;
-
 }
 
 th {
@@ -296,7 +404,7 @@ h4 {
   color: #198754;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .deposit {
     margin: 0 !important;
   }
@@ -306,7 +414,7 @@ h4 {
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .contant {
     width: 90%;
   }
@@ -320,7 +428,7 @@ h4 {
   }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
   .contant {
     height: auto;
   }
@@ -333,10 +441,9 @@ h4 {
     justify-content: unset !important;
     gap: 10px;
   }
-
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .item {
     width: 45% !important;
   }
@@ -346,7 +453,7 @@ h4 {
   }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .next {
     width: 100px;
   }
