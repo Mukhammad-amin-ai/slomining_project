@@ -13,10 +13,18 @@
               investment journey is both rewarding and secure.
             </p>
             <div class="social-media">
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
-              <div class="item"></div>
+              <div class="item d-flex center">
+                <img src="../../assets/icons/logo-twitter.svg" alt="twitter">
+              </div>
+              <div class="item d-flex center">
+                <img src="../../assets/icons/logo-facebook.svg" alt="facebook">
+              </div>
+              <div class="item d-flex center">
+                <img src="../../assets/icons/logo-instagram.svg" alt="instagram">
+              </div>
+              <div class="item d-flex center">
+                <img src="../../assets/icons/mail-outline.svg" alt="mail">
+              </div>
             </div>
           </div>
           <div class="learn">
@@ -129,10 +137,21 @@ footer {
 }
 
 .learn li {
+
   font-size: 16px;
   font-family: Montserrat-Medium, sans-serif;
   color: #fff;
   padding: 10px 0;
+  cursor: pointer;
+}
+
+li {
+  width: 50%;
+  transition: all .3s linear;
+}
+
+li:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .learn p {
@@ -195,10 +214,14 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .our-team , .learn  , .compan {
+
+  .our-team,
+  .learn,
+  .compan {
     width: 100%;
     margin-top: 40px;
   }
+
   footer {
     margin-bottom: 50px;
   }
