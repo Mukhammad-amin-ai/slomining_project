@@ -10,39 +10,7 @@
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
-          <div class="item">
-            <div class="item-container" @click="convert('USDT')">
-              <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
-              </div>
-              <p>USDT-TRC20</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-container" @click="convert('USDT')">
-              <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
-              </div>
-              <p>USDT-ERC20</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-container" @click="convert('LTC')">
-              <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="" />
-              </div>
-              <p>LTC-Litecoin</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-container" @click="convert('ETH')">
-              <div class="image">
-                <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="" />
-              </div>
-              <p>ETH-ERC20</p>
-            </div>
-          </div>
-          <div class="item" @click="convert('BTC')" :class="class1">
+          <div class="item" @click="convert('BTC')" :class="classs">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/btc.svg" alt="" />
@@ -50,6 +18,40 @@
               <p>BTC-Bitcoin</p>
             </div>
           </div>
+          <div class="item">
+            <div class="item-container" @click="convert('ETH')" >
+              <div class="image">
+                <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="" />
+              </div>
+              <p>ETH-ERC20</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-container" @click="convert('USDT')" >
+              <div class="image">
+                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
+              </div>
+              <p>USDT-TRC20</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-container" @click="convert('USDT')" >
+              <div class="image">
+                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
+              </div>
+              <p>USDT-ERC20</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-container" @click="convert('LTC')" >
+              <div class="image">
+                <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="" />
+              </div>
+              <p>LTC-Litecoin</p>
+            </div>
+          </div>
+
+
         </div>
         <div class="btn-container">
           <div class="price-amout" :style="{ width: width }">
@@ -88,10 +90,6 @@
             </div>
           </template>
           <p style="color: red">Please enter Amount（USDT）</p>
-
-
-
-
 
         </n-card>
       </n-modal>
@@ -189,12 +187,12 @@ export default {
   },
   data() {
     return {
+      classs: '',
       amount: '',
       crypto: '',
       text: '',
       price: '',
       width: '',
-      class1: '',
       show: false,
       showModal: false,
       imageUrl: '',
@@ -250,7 +248,7 @@ export default {
         this.showModal = true
       } else {
         this.width = '50%'
-        this.class = 'borderclas'
+        this.classs = 'borderclas'
         await this.$store.dispatch('convert', option)
         this.text = this.amount * this.$store.state.convert
         this.price = `${this.amount} USDT = ${this.text} ${option}`
@@ -261,6 +259,10 @@ export default {
 </script>
 
 <style scoped>
+.borderclas {
+  border: 1px solid #000;
+  border-radius: 6px;
+}
 .deposit_footer_text {
   background: var(--depost_bg);
   color: vaR(--depost_tex);
@@ -295,9 +297,7 @@ export default {
   padding: 20px 10px;
 }
 
-.borderclas {
-  border: 1px solid #000;
-}
+
 
 .deposit {
   margin: 10px 0 0 30px;
