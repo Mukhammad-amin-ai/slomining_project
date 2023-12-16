@@ -4,16 +4,16 @@
       <h2>Withdraw</h2>
       <div class="deposit-container">
         <p>Amount (USDT)</p>
-        <form>
-          <input type="text" placeholder="Pleace enter amount">
+        <form @submit.prevent="convert">
+          <input type="text" placeholder="Pleace enter amount" v-model="this.amount">
         </form>
         <p>Withdraw Address</p>
         <form>
-          <input type="text" placeholder="Pleace enter amount">
+          <input type="text" placeholder="Pleace enter address" v-model="this.adress">
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
-          <div class="item">
+          <div class="item" @click="convert('USDT')">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="">
@@ -21,7 +21,7 @@
               <p>USDT-TRC20</p>
             </div>
           </div>
-          <div class="item">
+          <div class="item" @click="convert('USDT')">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="">
@@ -29,7 +29,7 @@
               <p>USDT-ERC20</p>
             </div>
           </div>
-          <div class="item">
+          <div class="item" @click="convert('LTC')">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="">
@@ -37,7 +37,7 @@
               <p>LTC-Litecoin</p>
             </div>
           </div>
-          <div class="item">
+          <div class="item" @click="convert('ETH')">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="">
@@ -45,7 +45,7 @@
               <p>ETH-ERC20</p>
             </div>
           </div>
-          <div class="item">
+          <div class="item" @click="convert('BTC')">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/btc.svg" alt="">
@@ -55,33 +55,36 @@
           </div>
         </div>
         <div class="btn-container">
-          <button class="next">Next</button>
+          <div class="price-amout " :style="{ width: width }">
+            <h4>{{ this.price }}</h4>
+          </div>
+          <button class="next">Submit</button>
         </div>
       </div>
       <h2>
         Withdraw Records
       </h2>
       <div class="table-response">
-      <table class="table-info">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Currency</th>
-            <th>Status</th>
-            <th>Amount</th>
-            <th>USDT</th>
-            <th>Balance</th>
-            <th>Type</th>
-            <th>Wallet Address</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <table class="table-info">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Currency</th>
+              <th>Status</th>
+              <th>Amount</th>
+              <th>USDT</th>
+              <th>Balance</th>
+              <th>Type</th>
+              <th>Wallet Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     </div>
   </div>
@@ -90,11 +93,40 @@
 <script>
 export default {
   name: "DepositComponent",
- 
+  data() {
+    return {
+      adress: "",
+      amount: '',
+      crypto: "",
+      text: '',
+      price: '',
+      width: "",
+      class1: ""
+    }
+  },
+  methods: {
+    async convert(option) {
+      this.width = '50%'
+      this.class = 'borderclas'
+      await this.$store.dispatch('convert', option)
+      this.text = this.amount / this.$store.state.convert
+      this.price = `${this.amount} USDT = ${this.text} ${option}`
+    },
+
+  },
 }
 </script>
 
 <style scoped>
+.borderclas {
+  border: 1px solid #000;
+}
+
+.price-amout {
+  display: flex;
+  align-items: center;
+}
+
 .deposit {
   margin: 10px 0 0 30px;
 
@@ -209,11 +241,13 @@ form {
   cursor: pointer;
 
 }
+
 .table-response {
   width: 100%;
   height: auto;
   overflow-x: auto;
 }
+
 .table-info {
   width: 100%;
   height: auto;
@@ -259,12 +293,14 @@ th {
 }
 
 @media screen and (max-width:700px) {
-   .contant{
+  .contant {
     height: auto;
-   }
-   .deposit-container{
+  }
+
+  .deposit-container {
     height: auto;
-   }
+  }
+
   .crypto {
     justify-content: unset !important;
     gap: 10px;
@@ -276,16 +312,15 @@ th {
   .item {
     width: 45% !important;
   }
-  .next{
+
+  .next {
     width: 200px;
- }
+  }
 }
+
 @media screen and (max-width:320px) {
- .next{
+  .next {
     width: 100px;
- }
+  }
 }
-
-
-
 </style>
