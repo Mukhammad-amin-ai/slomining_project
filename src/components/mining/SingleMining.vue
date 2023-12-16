@@ -29,7 +29,8 @@
           <div class="item_term">
             <div class="term_title">Daily Rewards</div>
             <div class="term_content">
-              {{ item.daily_rewards }}
+              <!-- {{ item.daily_rewards }} -->
+              {{ dealyRewardCount(item.daily_rewards) }}
             </div>
           </div>
         </div>
@@ -47,14 +48,8 @@
       </div>
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
-      <n-card
-        style="width: 100%; max-width: 900px; min-width: 350px"
-        title="Checkout"
-        :bordered="false"
-        size="huge"
-        role="dialog"
-        aria-modal="true"
-      >
+      <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
+        role="dialog" aria-modal="true">
         <template #header-extra>
           <div @click="showModal = false" style="cursor: pointer">
             <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -85,11 +80,7 @@
                 Amount <br />
                 <span class="text-green d-flex justify-content-center center">
                   = {{ item.contract_price }} USDT
-                  <img
-                    style="width: 20px; margin-left: 5px; margin-bottom: 2px"
-                    src="@/assets/svg/crypto-t.svg"
-                    alt=""
-                  />
+                  <img style="width: 20px; margin-left: 5px; margin-bottom: 2px" src="@/assets/svg/crypto-t.svg" alt="" />
                 </span>
               </div>
               <div class="submit-form">
@@ -126,8 +117,12 @@ export default {
       segmented: {
         content: 'soft',
         footer: 'soft'
-      }
+      },
+      dailyrewards: ''
     }
+  },
+  mounted() {
+
   },
   methods: {
     changeType() {
@@ -144,6 +139,13 @@ export default {
     },
     inc() {
       this.count++
+    },
+
+
+     dealyRewardCount(option) {
+       this.$store.dispatch('dailyReward')
+      this.dailyrewards = this.$store.state.dailyReward * option
+      return `(${this.dailyrewards}) BTC = $ ${option}`
     }
   }
 }
