@@ -30,7 +30,8 @@
 
                 </form>
                 <div class="sign-up-text">
-                    By signing up, you agree to our <router-link to="/privacy"> <span>Privacy Policy</span></router-link> and
+                    By signing up, you agree to our <router-link to="/privacy"> <span>Privacy Policy</span></router-link>
+                    and
                     <router-link to="/terms"> <span>Terms</span></router-link>
                 </div>
 
@@ -43,10 +44,9 @@
     </div>
 </template>
 <script>
-// import ButtonComponent from '@/components/mini_components/ButtonComponent.vue';
 export default {
     components: {
-        // ButtonComponent,
+
     }
 }
 </script>
@@ -100,7 +100,6 @@ form {
     height: auto;
 }
 
-/* input================================== */
 .floating {
     margin-bottom: 2rem;
     background-color: transparent;
@@ -201,7 +200,6 @@ legend {
     width: 1px;
 }
 
-/* input================================== */
 .sign-up-text {
     width: 100%;
     height: auto;
@@ -215,8 +213,6 @@ legend {
     color: rgb(97, 66, 143);
 }
 
-
-/* btn */
 .btn {
     font-family: Montserrat-Medium, sans-serif;
     cursor: pointer;
@@ -236,8 +232,6 @@ legend {
 
 }
 
-
-/* dont */
 .dont {
     margin: 16px 0 0;
     color: rgba(33, 37, 41, 0.75) !important;
@@ -252,4 +246,20 @@ legend {
 .dont h5 span {
     color: #000;
 }
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image{
+        display: none;
+    }  
+    .sign-in-form{
+        width: 100%;
+    }
+}
+
 </style>

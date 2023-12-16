@@ -220,9 +220,11 @@ legend {
     min-height: 1.5rem;
     margin-bottom: 0.125rem;
 }
-.form-check-input{
+
+.form-check-input {
     width: 10% !important;
 }
+
 .form-check-label-s1 {
     font-size: .938rem;
 }
@@ -270,4 +272,24 @@ legend {
 .dont h5 span {
     color: #000;
 }
+
+@media screen and (max-width: 1300px) {
+    .container {
+        padding: 50px 0;
+    }
+    .form-check{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        display: none;
+    }
+
+    .sign-in-form {
+        width: 100%;
+    }
+}
+
 </style>
