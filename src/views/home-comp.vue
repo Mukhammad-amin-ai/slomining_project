@@ -95,7 +95,7 @@ p {
 }
 
 .hero-galery {
-  width: 45%;
+  width: 65%;
   height: 100%;
   display: flex;
   justify-content: center;
