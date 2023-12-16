@@ -30,9 +30,8 @@ const store = createStore({
     },
     async convert({ commit }, option) {
       try {
-        let response = await axios.get(`https://slomining.com/api/index/roe?alias=${option}`)
-        console.log(response);
-        commit('setConvert', response.data?.data?.price)
+        let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=${option}&api_key=28f0d66a3a7be247a5ecd95f6ab3ad1f2533f7e22625601b9b4fd753508a6f64`)
+        commit('setConvert', response.data[option])
       } catch (e) {
         console.error(e);
       }

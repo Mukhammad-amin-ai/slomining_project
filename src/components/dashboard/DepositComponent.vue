@@ -105,15 +105,15 @@ export default {
       class1: ""
     }
   },
+
   methods: {
     async convert(option) {
       this.width = '50%'
       this.class = 'borderclas'
       await this.$store.dispatch('convert', option)
-      this.text = this.amount / this.$store.state.convert
+      this.text = this.amount * this.$store.state.convert
       this.price = `${this.amount} USDT = ${this.text} ${option}`
     },
-
   },
 
 
