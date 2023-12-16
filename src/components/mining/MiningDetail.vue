@@ -1,6 +1,9 @@
 <template>
   <div class="mining_detail">
     <div class="container">
+      <router-link to="/">
+        <button class="go">Go Back</button>
+      </router-link>
       <div class="mining_detail_card">
         <div class="detail_card_left">
           <img :src="product.image" :alt="product.name" class="detail_card_left_image img-fluid rounded" />
@@ -38,9 +41,9 @@
           </div>
         </div>
       </div>
-      <div class="detail_card_right_name mb-1">detail  </div>
-          <div class="line">
-          </div>
+      <div class="detail_card_right_name mb-1">detail </div>
+      <div class="line">
+      </div>
       <div class="product_detail" v-html="product.detail">
 
       </div>
@@ -71,4 +74,23 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.go {
+  width: auto;
+  padding: 8px 12px;
+  font-family: Montserrat-Bold, sans-serif;
+  font-size: 16px;
+  border-radius: 7px;
+  border: 1px solid #1c2b46;
+  text-transform: uppercase;
+  transition: 0.2s linear all;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1c2b46;
+}
+.go:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+</style>

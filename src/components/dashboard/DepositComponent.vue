@@ -84,14 +84,32 @@
     </div>
   </div>
 </template>
-
 <script>
+// import axios from 'axios'
 import tabReusable from '../mini_components/tab-reusable.vue';
 export default {
   name: "DepositComponent",
   components: {
     tabReusable,
-  }
+  },
+  data() {
+    return {
+      amount: '',
+      apikey: "9fbe4a05f24a767b9585db2818a7c411",
+
+    }
+  },
+  methods: {
+    // async convert() {
+    //   try {
+    //     let respone = await axios.get()
+    //   } catch (e) {
+    //     console.error(e);
+    //   }
+    // }
+  },
+
+
 }
 </script>
 
@@ -206,6 +224,7 @@ form {
   transition: all .3s;
   padding: 10px 14px;
   border: none;
+  cursor: pointer;
 }
 
 .table-response {
@@ -262,12 +281,14 @@ th {
 }
 
 @media screen and (max-width:700px) {
-   .contant{
+  .contant {
     height: auto;
-   }
-   .deposit-container{
+  }
+
+  .deposit-container {
     height: auto;
-   }
+  }
+
   .crypto {
     justify-content: unset !important;
     gap: 10px;
@@ -279,15 +300,15 @@ th {
   .item {
     width: 45% !important;
   }
-  .next{
+
+  .next {
     width: 200px;
- }
+  }
 }
+
 @media screen and (max-width:320px) {
- .next{
+  .next {
     width: 100px;
- }
+  }
 }
-
-
 </style>
