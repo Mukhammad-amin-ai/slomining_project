@@ -54,3 +54,12 @@
   background-color: #fff;
   border: 1px solid #1c2b46;
 }
+
+
+@media screen  and (max-width: 768px) {
+  .settings_form {
+    max-width: 350px;
+    width: 100%;
+
+  }
+}

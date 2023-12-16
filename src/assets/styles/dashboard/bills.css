@@ -78,3 +78,42 @@
     border-radius: 8px;
     outline: none;
 }
+
+
+@media screen and (max-width: 768px) {
+ #date {
+     max-width: 350px;
+     width: 100%;
+ }
+    .bills-table {
+        width: 350px;
+        overflow-y: scroll;
+    }
+    .status span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4px;
+        border-radius: 16px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1030px) {
+
+    .bills-table {
+        width: 550px;
+        overflow-y: scroll;
+        border: 1px solid var(--border_color);
+        border-radius: 8px;
+    }
+    .bills-table .table {
+        width: 100%;
+        border: 0;
+    }
+    .status span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4px;
+        border-radius: 16px;
+    }
+}
