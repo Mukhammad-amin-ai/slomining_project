@@ -9,31 +9,57 @@
           <ul>
             <router-link to="/">
               <li :class="{ active: $route.fullPath === '/' }">
-                <span>Home
-                  <img v-show="activeIndex === 0 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
+                <span
+                  >Home
+                  <img
+                    v-show="{ active: $route.fullPath === '/' }"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
-            <router-link to="/contacts" @click="toggleImage(1)">
-              <li :class="{ active: activeIndex === 1 }">
-                <span>Contracts
-                  <img v-show="activeIndex === 1 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
+            <router-link to="/contacts">
+              <li :class="{ active: $route.fullPath === '/contacts' }">
+                <span
+                  >Contracts
+                  <img
+                    v-show="{ active: $route.fullPath === '/contacts' }"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
             <router-link to="/dashboard/profile">
-              <li :class="[{ active: $route.fullPath === '/dashboard/' },
-              { active: $route.fullPath === '/dashboard/profile' },
-              ]">
-                <span>Dashboard
-                  <img v-show="activeIndex === 2 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
+              <li
+                :class="[
+                  { active: $route.fullPath === '/dashboard/' },
+                  { active: $route.fullPath === '/dashboard/profile' }
+                ]"
+              >
+                <span
+                  >Dashboard
+                  <img
+                    v-show="[
+                      { active: $route.fullPath === '/dashboard/' },
+                      { active: $route.fullPath === '/dashboard/profile' }
+                    ]"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
-            <router-link to="/about" @click="toggleImage(3)">
-              <li :class="{ active: activeIndex === 3 }">
-                <span>About us
-                  <img v-show="activeIndex === 3 || activeIndex === null" src="../../assets/images/line.png" alt="line" />
+            <router-link to="/about">
+              <li :class="{ active: $route.fullPath === '/about' }">
+                <span
+                  >About us
+                  <img
+                    v-show="{ active: $route.fullPath === '/about' }"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
@@ -48,12 +74,8 @@
           </span>
           <div class="drop-list" :style="{ display: dropdawn ? 'block' : 'none' }">
             <ul>
-              <li>
-                <img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English
-              </li>
-              <li>
-                <img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian
-              </li>
+              <li><img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English</li>
+              <li><img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian</li>
             </ul>
           </div>
         </div>
@@ -68,18 +90,18 @@
         <div class="user ml-5 center">
           <router-link to="/dashboard/profile">
             <button class="bx-shadow center d-flex">
-              <img src="../../assets/svg/person-outline.svg" alt="person">
+              <img src="../../assets/svg/person-outline.svg" alt="person" />
             </button>
           </router-link>
         </div>
         <div class="menu ml-5 center">
           <button class="bx-shadow center d-flex" @click="clickMenu">
-            <img src="../../assets/svg/menu-outline.svg" alt="person">
+            <img src="../../assets/svg/menu-outline.svg" alt="person" />
           </button>
         </div>
-        <div class="settings center  ml-5">
+        <div class="settings center ml-5">
           <button class="bx-shadow center d-flex" @click="dropauth">
-            <img src="../../assets/svg/settings-outline.svg" alt="settings">
+            <img src="../../assets/svg/settings-outline.svg" alt="settings" />
           </button>
         </div>
         <div class="drop-auth" :style="{ display: dropauthList ? 'flex' : 'none' }">
@@ -117,20 +139,13 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 700
     },
-    toggleImage(index) {
-      if (this.activeIndex === index) {
-        this.activeIndex = null
-      } else {
-        this.activeIndex = index
-      }
-    },
+
     dropauth() {
       this.dropauthList = !this.dropauthList
     },
     clickMenu() {
       this.$store.dispatch('modalfunc')
     }
-
   }
 }
 </script>
@@ -155,9 +170,11 @@ header {
   border-top: 0;
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(90deg,
-      hsla(0, 0%, 100%, 0.1) -1.52%,
-      hsla(0, 0%, 100%, 0.024) 104.35%);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0.1) -1.52%,
+    hsla(0, 0%, 100%, 0.024) 104.35%
+  );
   background-blend-mode: multiply, normal;
 }
 
@@ -402,7 +419,7 @@ button {
 }
 
 /* Media for header */
-@media screen and (max-width:1310px) {
+@media screen and (max-width: 1310px) {
   .auth {
     display: none !important;
   }
@@ -412,7 +429,7 @@ button {
   }
 }
 
-@media screen and (max-width:990px) {
+@media screen and (max-width: 990px) {
   nav {
     display: none !important;
   }
@@ -428,11 +445,9 @@ button {
   .user {
     display: flex;
   }
-
-
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .logo {
     width: 20%;
   }
@@ -444,12 +459,9 @@ button {
   .ml-5 {
     margin-left: 15px;
   }
-
-
-
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .logo {
     width: 25%;
   }
@@ -459,17 +471,15 @@ button {
   }
 }
 
-@media screen and (max-width:375px) {
-
+@media screen and (max-width: 375px) {
   .ml-5 {
     margin-left: 25px;
   }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .logo {
     width: 50% !important;
   }
-
 }
 </style>
