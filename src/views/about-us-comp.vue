@@ -3,45 +3,38 @@
         <div class="container">
             <div class="about-header-contant d-flex center">
                 <div class="about-text">
-                    <h1>SLOMINING - Leading the Way in Cloud Mining</h1>
                     <h4>Introduction:</h4>
-                    <p>Founded in 2018 and headquartered in the United Kingdom, SLOMINING has rapidly emerged as a
-                        frontrunner
-                        in the cloud mining industry. With a global membership exceeding 300,000, our company has been at
-                        the
-                        forefront of harnessing the power of blockchain and cryptocurrencies.</p>
+                    <p>Established in 2018 and headquartered in the United Kingdom, Skyhash has swiftly risen as a
+                        frontrunner in the cloud mining industry. With a global membership exceeding 300,000, our company
+                        has been at the forefront of leveraging the potential of blockchain and cryptocurrencies.</p>
                     <h4>Our Strengths:</h4>
-                    <p>1. User-Friendly Platform: At SLOMINING, we pride ourselves on offering a user-friendly platform that
-                        is
-                        accessible to both newcomers and experienced miners. Our interface is designed to be intuitive and
-                        straightforward, ensuring that anyone can easily navigate and make the most of their mining
-                        experience.
+                    <p>1. User-Friendly Platform: Skyhash prides itself on providing a user-friendly platform accessible to
+                        both newcomers and seasoned miners. Our interface is designed to be intuitive and straightforward,
+                        ensuring that anyone can easily navigate and optimize their mining experience.
                     </p>
                     <p>
-                        2. Cutting-Edge New Energy Mining Technology: We distinguish ourselves by employing the latest
-                        advancements in new energy mining technology. This commitment to innovation enables us to provide
-                        our
-                        users with a reliable and secure way to mine cryptocurrencies. Our state-of-the-art equipment is
-                        optimized for energy efficiency, ensuring minimal environmental impact while maximizing returns.
+                        2. Cutting-Edge New Energy Mining Technology: We set ourselves apart by incorporating the latest
+                        advancements in new energy mining technology. This commitment to innovation enables us to offer
+                        users a reliable and secure method for cryptocurrency mining. Our state-of-the-art equipment is
+                        optimized for energy efficiency, minimizing environmental impact while maximizing returns.
                     </p>
                     <p>
-                        3. Stability and Security: Our company places the highest priority on stability and security. We
-                        understand the importance of safeguarding your investments. Through rigorous security measures and a
-                        vigilant approach to risk management, SLOMINING offers a safe and risk-free environment for mining
-                        activities.
+                        3. Stability and Security: Skyhash places the highest priority on stability and security.
+                        Recognizing the importance of safeguarding your investments, we implement rigorous security measures
+                        and adopt a vigilant approach to risk management. Skyhash provides a safe and risk-free environment
+                        for mining activities.
                     </p>
-                    <h4>Why Choose SLOMINING:</h4>
-                    <p>Joining SLOMINING means becoming a part of a dynamic community of miners who are passionate about the
-                        potential of cryptocurrencies. Whether you're a newcomer looking to enter the world of crypto mining
-                        or
-                        an experienced miner seeking a reliable platform, SLOMINING has you covered.</p>
+                    <h4>Why Choose Skyhash:</h4>
+                    <p>As we continue to push the boundaries of what's possible in the realm of cloud mining, we invite you
+                        to embark on this exciting journey with us. Experience the ease of use, security, and profitability
+                        that Skyhash offers. Join us today and be part of the future of cryptocurrency mining.</p>
                     <p>As we continue to push the boundaries of what's possible in the world of cloud mining, we invite you
                         to
                         embark on this exciting journey with us. Experience the ease of use, security, and profitability
                         that
                         SLOMINING offers. Join us today and be part of the future of cryptocurrency mining.</p>
 
-                    <p>SLOMINING - Leading the Evolution of Cloud Mining.</p>
+                    <p>Skyhash - Leading the Evolution of Cloud Mining.</p>
                 </div>
                 <div class="image d-flex ">
                     <div class="image-container">
@@ -549,10 +542,12 @@ legend {
     h1 {
         font-size: 25px !important;
     }
+
     h3 {
         font-size: 25px !important;
     }
-    h4{
+
+    h4 {
         font-size: 18px !important;
     }
 }
