@@ -5,23 +5,19 @@
     </button>
     <div class="sidebar" :class="$store.state.activeClass">
       <ul>
-        <li @click="setActive(link.path)" v-for="link in sidebarLinks" :key="link.route">
-          <router-link :to="link.path">
-            <span  class="link_name"> {{ link.name }}</span>
-            <img
-
-              src="../../assets/images/line.png"
-              alt="line"
-            />
+        <li v-for="link in sidebarLinks" :key="link.path">
+          <router-link :to="link.path" class="sidebar_links" @click="setActive">
+            <span class="link_name">{{ link.name }}</span>
+            <img :style="{ opacity: isActive(link.path) ? '1' : '0' }" src="@/assets/images/line.png" alt="line" />
           </router-link>
         </li>
       </ul>
     </div>
   </div>
   <div
-    class="closeBg"
-    @click="closeMod"
-    :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"
+      class="closeBg"
+      @click="closeMod"
+      :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"
   ></div>
 </template>
 
@@ -29,51 +25,37 @@
 export default {
   data() {
     return {
-      activeIndex: 0,
-      activeLink: false,
       sidebarLinks: [
         { name: 'Home', path: '/' },
         { name: 'Contracts', path: '/contacts' },
         { name: 'Dashboard', path: '/dashboard/profile' },
         { name: 'About us', path: '/about' }
       ]
+    };
+  },
+  computed: {
+    activeLink() {
+      return this.$route.fullPath;
     }
   },
-  mounted() {
-    this.setActiveLink()
-  },
   methods: {
-    setActiveLink() {
-      this.activeLink = this.$route.fullPath
+    isActive(linkPath) {
+      return this.activeLink === linkPath;
     },
-    isActive(linkName) {
-      if (linkName === this.$route.fullPath) {
-        this.activeLink = true
-      } else {
-        this.activeLink = false
-      }
-    },
-    setActive(linkName) {
-      this.closeMod()
-      if (linkName === this.$route.fullPath) {
-        this.activeLink = true
-      } else {
-        this.activeLink = false
-      }
+    setActive() {
+      this.closeMod();
+      // You may not need this function if clicking the link updates the active route automatically.
     },
     closeMod() {
-      this.$store.dispatch('modalClose')
+      this.$store.dispatch('modalClose');
     }
   },
   updated() {
-    if (this.$store.state.activeClass === 'active_navbar') {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'visible'
-    }
+    document.body.style.overflow = this.$store.state.activeClass === 'active_navbar' ? 'hidden' : 'visible';
   }
-}
+};
 </script>
+
 <style scoped>
 .active_bg {
   width: 30%;
@@ -130,13 +112,21 @@ ul {
 
 .link_name {
   width: 100%;
-line-height: 40px;
-  padding: 0.5rem 1.5rem;
+
+  padding: 0.5rem 1.5rem 0 1.5rem;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
 }
-
+.sidebar_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sidebar_links img {
+  width: 50px;
+  margin-left: 25px;
+}
 .link_name {
   color: #1d2c4899;
 }
@@ -144,15 +134,5 @@ line-height: 40px;
 li span {
   position: relative;
   width: 100%;
-}
-
-li img {
-  position: absolute;
-  bottom: -0.575rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 0.375rem;
-  opacity: 0;
-  transition: all 0.3s ease;
 }
 </style>
