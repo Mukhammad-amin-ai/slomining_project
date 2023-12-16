@@ -7,7 +7,8 @@
           {{ item.name }}
         </div>
         <div class="item_card_volume">
-          Volume <span class="volume_value text-green">{{ item.volume }}%</span>
+          <div class="liquid-bar" :style="{ width: item.volume + '%' }"></div>
+          Volume <span class="volume_value">{{ item.volume }}%</span>
         </div>
         <div class="item_card_sold">(Sold out at 100%)</div>
       </div>
