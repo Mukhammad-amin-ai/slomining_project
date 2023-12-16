@@ -31,7 +31,28 @@
                 </span>
               </li>
             </router-link>
-            <router-link to="/dashboard/profile">
+            <router-link to="/dashboard/profile" v-if="isLogin">
+              <li
+                :class="[
+                  { active: $route.fullPath === '/dashboard/' },
+                  { active: $route.fullPath === '/dashboard/profile' }
+                ]"
+              >
+                <span
+                  >Dashboard
+                  <img
+                    v-show="[
+                      { active: $route.fullPath === '/dashboard/' },
+                      { active: $route.fullPath === '/dashboard/profile' }
+                    ]"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
+                </span>
+              </li>
+            </router-link>
+
+            <router-link to="/sign-in" v-else>
               <li
                 :class="[
                   { active: $route.fullPath === '/dashboard/' },
