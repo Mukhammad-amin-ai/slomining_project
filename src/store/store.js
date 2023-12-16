@@ -8,7 +8,8 @@ const store = createStore({
     activeClass: '',
     isLogin: false,
     convert: [],
-    loading: false
+    loading: false,
+    dailyReward: []
   },
   mutations: {
     setModal(state, payload) {
@@ -22,6 +23,9 @@ const store = createStore({
     },
     setLoading(state, payload) {
       state.loading = payload
+    },
+    setRewards(state, payload) {
+      state.dailyReward = payload
     }
   },
   actions: {
@@ -39,6 +43,17 @@ const store = createStore({
           commit('setConvert', response.data[option])
           commit('setLoading', false)
         }
+      } catch (e) {
+        console.error(e);
+      }
+    },
+    async dailyReward({ commit }) {
+      try {
+        let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=BTC&api_key=28f0d66a3a7be247a5ecd95f6ab3ad1f2533f7e22625601b9b4fd753508a6f64`)
+        if (response.status === 200) {
+          commit('setRewards', response.data.BTC)
+        }
+        console.log(response.data.BTC);
       } catch (e) {
         console.error(e);
       }
