@@ -202,8 +202,9 @@ legend {
     position: absolute;
     width: 1px;
 }
+
 /* verif */
-.verify-code{
+.verify-code {
     width: 100%;
     height: auto;
     justify-content: space-between;
@@ -211,16 +212,18 @@ legend {
     gap: 10px;
     overflow: hidden;
 }
-.verify-code .floating{
+
+.verify-code .floating {
     width: 90%;
 
 }
-.verify{
+
+.verify {
     transition: all .3s;
     border-radius: 0.375rem;
     padding: 10px 14px;
     font-size: 1rem;
-    font-family: Montserrat-Bold,sans-serif;
+    font-family: Montserrat-Bold, sans-serif;
     margin-bottom: 30px;
     background-color: var(--blue);
     color: var(--white);
@@ -278,5 +281,22 @@ legend {
 
 .dont h5 span {
     color: #000;
+}
+
+@media screen and (max-width: 1300px) {
+    .container {
+        padding: 50px 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .image {
+        display: none;
+    }
+
+    .sign-in-form {
+        width: 100%;
+    }
 }
 </style>
