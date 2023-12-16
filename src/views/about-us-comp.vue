@@ -488,11 +488,72 @@ legend {
     .about-text {
         width: 90%;
     }
-    .image{
+
+    .image {
         width: 90%;
         justify-content: center;
         align-items: center;
     }
 
+}
+
+@media screen and (max-width:768px) {
+    .stat-container {
+        width: 90%;
+        justify-content: center !important;
+    }
+
+    .get-in-touch {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .contact-us {
+        flex-direction: column;
+    }
+
+    .question {
+        width: 100%;
+    }
+
+    .find-us {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 28px !important;
+    }
+
+    h3 {
+        font-size: 28px !important;
+    }
+
+}
+
+@media screen and (max-width:660px) {
+    .name-addres {
+        flex-direction: column;
+    }
+
+    .floating {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:425px) {
+    h1 {
+        font-size: 25px !important;
+    }
+    h3 {
+        font-size: 25px !important;
+    }
+    h4{
+        font-size: 18px !important;
+    }
 }
 </style>
