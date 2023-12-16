@@ -3,6 +3,7 @@
     <div class="contant">
       <tabReusable title="Deposit" tab="Cryptocurrency " />
       <div class="deposit-container">
+        <loadingComp />
         <p>Amount (USDT)</p>
         <form @submit.prevent="convert">
           <input type="text" v-model="this.amount" placeholder="Pleace enter amount">
@@ -90,10 +91,13 @@
 <script>
 // import axios from 'axios'
 import tabReusable from '../mini_components/tab-reusable.vue';
+
+import loadingComp from '@/components/mini_components/loading-comp.vue'
 export default {
   name: "DepositComponent",
   components: {
     tabReusable,
+    loadingComp,
   },
   data() {
     return {
@@ -105,15 +109,15 @@ export default {
       class1: ""
     }
   },
+
   methods: {
     async convert(option) {
       this.width = '50%'
       this.class = 'borderclas'
       await this.$store.dispatch('convert', option)
-      this.text = this.amount / this.$store.state.convert
+      this.text = this.amount * this.$store.state.convert
       this.price = `${this.amount} USDT = ${this.text} ${option}`
     },
-
   },
 
 
@@ -137,6 +141,7 @@ export default {
 }
 
 .deposit-container {
+    position: relative;
   margin: 30px 0;
   width: 100%;
   height: 500px;
