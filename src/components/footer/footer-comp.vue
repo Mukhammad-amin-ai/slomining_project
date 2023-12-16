@@ -133,6 +133,11 @@ footer {
   height: 35px;
   border-radius: 50%;
   background-color: #fff;
+  transition: all .3s linear;
+}
+
+.item:hover {
+  background-color: #5babda;
 }
 
 .learn {
