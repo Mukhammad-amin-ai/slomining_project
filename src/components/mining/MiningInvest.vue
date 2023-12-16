@@ -1,68 +1,59 @@
 <template>
   <div class="mining_invest">
     <div class="container">
-    <div class="invest_card">
-      <div class="invest_title d-flex justify-content-center text-center detail_card_right_name">
-        CLOUD MINING INVESTMENT IN TEXAS
+      <div class="invest_card">
+        <div class="invest_title d-flex justify-content-center text-center detail_card_right_name">
+          CLOUD MINING INVESTMENTS
+        </div>
+        <div class="invest_content">
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span> Step into the dynamic realm of cryptocurrency mining with Skyhash – your
+            gateway to an exhilarating venture. Whether you're a novice or a seasoned investor, our platform presents a
+            diverse range of opportunities to delve into and reap rewards from the digital currency landscape.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span> Skyhash embarks on its journey in the heart of Texas, harnessing the
+            state's abundant resources and technological prowess to provide state-of-the-art cloud mining solutions.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>Beyond mining, Skyhash is a beacon of innovation. Offering Cloud Mining
+            Investment in the USA, we ensure you remain at the forefront of evolving cryptocurrency trends.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>Our cutting-edge Cloud Mining Hardware in Washington is equipped with
+            top-tier technology, ensuring optimal performance and reliability. Whether your interest lies in Bitcoin or
+            other cryptocurrencies, our hardware supports your aspirations.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>Bid farewell to intricate setups; with Cloud Mining Bitcoin in California,
+            access our services online. Our Bitcoin Mining Cloud Service prioritizes user-friendliness, catering to both
+            beginners and experts.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>Security is paramount to us. Our Reliable Cloud Mining Services are
+            fortified with robust measures, establishing SloMining as a paragon of transparency and trustworthiness, not
+            just in Arizona, but across the USA.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>Our commitment to blockchain technology shines through our Blockchain Cloud
+            Mining in the USA. We leverage public blockchains for an enhanced mining experience, backed by Enhanced Cloud
+            Mining Security to safeguard your assets.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>From Litecoin to Ethereum, explore diverse options such as Litecoin Cloud
+            Mining in Massachusetts and Ethereum Cloud Mining in Colorado to diversify your investment portfolio.
+          </p>
+          <p class="mt-2 s-content">
+            But there's more. Skyhash offers a unique opportunity to profit from your passion. Join our Cloud Mining
+            Affiliate Programs and Crypto Affiliate Program in the USA, transforming your interest in cryptocurrency into
+            a lucrative income source.
+          </p>
+          <p class="mt-2 s-content">
+            <span class="bullet-icon">•</span>With Skyhash, your journey into the cryptocurrency universe commences. Start
+            mining, start earning, and secure your financial future today.
+          </p>
+        </div>
       </div>
-      <div class="invest_content">
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon" >•</span> Welcome to SloMining, your ticket to
-          the exciting world of cryptocurrency mining. Whether you're a novice or a seasoned
-          investor, our platform offers an array of opportunities to explore and profit from the
-          digital currency realm.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon" >•</span> In the heart of Texas, SloMining's
-          journey begins, leveraging the state's vast resources and technological prowess to deliver
-          cutting-edge cloud mining solutions.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon">•</span>At SloMining, we're not just about
-          mining; we're about innovation. We provide Cloud Mining Investment in the USA, ensuring
-          you stay at the forefront of cryptocurrency trends.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon">•</span>Our Cloud Mining Hardware in
-          Washington boasts top-notch equipment, guaranteeing optimal performance and reliability.
-          Whether you're interested in Bitcoin or other cryptocurrencies, we have the hardware to
-          support your goals.
-        </p>
-        <p class="mt-2 s-content">
-          <span class="bullet-icon" >•</span>Say goodbye to complex setups; with
-          Cloud Mining Bitcoin in California, you can access our services online. Our Bitcoin Mining
-          Cloud Service is designed with user-friendliness in mind, catering to both beginners and
-          experts.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon">•</span>We take your security seriously,
-          offering Reliable Cloud Mining Services backed by robust measures. SloMining is known for
-          its transparency and trustworthiness, making us a preferred choice for cloud mining, not
-          just in Arizona, but across the USA.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon" >•</span>Our dedication to blockchain
-          technology is evident in our Blockchain Cloud Mining in the USA. We utilize public
-          blockchains for enhanced mining experiences, and our Enhanced Cloud Mining Security
-          ensures the safety of your assets.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon" >•</span>From Litecoin to Ethereum, we've got
-          you covered. Explore various options, such as Litecoin Cloud Mining in Massachusetts and
-          Ethereum Cloud Mining in Colorado, to diversify your investment portfolio.
-        </p>
-        <p class="mt-2 s-content" >
-          But it doesn't end there. SloMining offers a unique opportunity for you to profit from
-          your passion. Join our Cloud Mining Affiliate Programs and Crypto Affiliate Program in the
-          USA, turning your interest in cryptocurrency into a source of income.
-        </p>
-        <p class="mt-2 s-content" >
-          <span class="bullet-icon" >•</span>With SloMining, your journey into the
-          cryptocurrency universe begins. Start mining, start earning, and start securing your
-          financial future today.
-        </p>
-      </div>
-    </div>
     </div>
   </div>
 </template>
