@@ -128,7 +128,7 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999999999;
+  z-index: 99;
 }
 .modal {
   width: 100vw;
@@ -137,7 +137,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
-  z-index: 999999999;
+  z-index: 99;
   visibility: hidden;
 }
 

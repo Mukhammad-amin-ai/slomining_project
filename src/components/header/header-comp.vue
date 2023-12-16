@@ -79,7 +79,10 @@
             </ul>
           </div>
         </div>
-        <div class="auth">
+        <div class="auth" v-if="isLogin">
+          <button class="sign-in" @click="logOut">Sign Out</button>
+        </div>
+        <div class="auth" v-else>
           <router-link to="/sign-in">
             <button class="sign-in">Sign In</button>
           </router-link>
@@ -117,13 +120,16 @@
   </header>
 </template>
 <script>
+import Swal from 'sweetalert2'
+
 export default {
   data() {
     return {
       dropdawn: false,
       isScrolled: false,
       activeIndex: 0,
-      dropauthList: false
+      dropauthList: false,
+      isLogin: localStorage.getItem('isLogin')
     }
   },
   mounted() {
@@ -133,6 +139,39 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    logOut() {
+      Swal.fire({
+        text: `Dou you want sign out?`,
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        confirmButtonColor: '#4466f2',
+        cancelButtonText: 'No',
+        cancelButtonColor: '#f31616',
+        reverseButtons: false
+      }).then(async (result) => {
+        if (result) {
+          localStorage.removeItem('form')
+          localStorage.setItem('isLogin', false)
+          this.isLogin = false
+          this.$router.push('/')
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer
+              toast.onmouseleave = Swal.resumeTimer
+            }
+          })
+          await Toast.fire({
+            icon: 'success',
+            title: 'Sign out successfully'
+          })
+        }
+      })
+    },
     dropclick() {
       this.dropdawn = !this.dropdawn
     },
@@ -159,7 +198,7 @@ header {
   position: sticky;
   top: 0;
   transition: all 0.3s linear;
-  z-index: 99999999;
+  z-index: 99;
   background-color: #fff;
 }
 

@@ -15,6 +15,7 @@
   list-style: none;
   text-decoration: none;
   /*background-color: var(--main);*/
+  font-family: Montserrat-Medium, sans-serif, sans-serif;
 }
 input[type="number"] {
   -moz-appearance: textfield;
@@ -23,4 +24,9 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.err-msg {
+  color: var(--red);
+  font-family: Montserrat-Medium, sans-serif;
 }
