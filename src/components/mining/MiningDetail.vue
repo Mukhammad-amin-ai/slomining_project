@@ -2,7 +2,7 @@
   <div class="mining_detail">
     <div class="container">
       <router-link to="/">
-        
+
         <button class="go">Go Back</button>
       </router-link>
       <div class="mining_detail_card">
@@ -40,6 +40,7 @@
               Volume <span class="volume_value text-green">{{ product.volume }}%</span>
             </div>
           </div>
+          <button class="buy">Buy now</button>
         </div>
       </div>
       <div class="detail_card_right_name mb-1">detail </div>
@@ -49,6 +50,7 @@
 
       </div>
     </div>
+    
   </div>
 </template>
 
@@ -88,10 +90,28 @@ export default {
   cursor: pointer;
   color: #fff;
   background-color: #1c2b46;
+  transition: .3s linear all;
+  cursor: pointer;
+
 }
-.go:hover{
+
+.go:hover {
   background-color: #fff;
   color: #000;
 }
 
+.buy {
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: transparent;
+  margin-top: 20px;
+  transition: .3s linear all;
+}
+
+.buy:hover {
+  background-color: #1c2b46;
+  color: #fff;
+  cursor: pointer;
+}
 </style>
