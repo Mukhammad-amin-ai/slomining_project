@@ -77,11 +77,11 @@ import Swal from 'sweetalert2'
 
 export default {
   data() {
-    return {
+    return{
       form: {
-        email: 'javohirbekkhaydarov@gmail.com',
-        password: 'admin123',
-        password_confirm: 'admin123'
+        email: '',
+        password: '',
+        password_confirm: ''
       },
       errors: {} // To store validation errors
     }
@@ -100,6 +100,8 @@ export default {
       if (Object.keys(this.errors).length === 0) {
         localStorage.setItem('form', JSON.stringify(this.form))
         localStorage.setItem('isLogin', true)
+        this.$store.state.isLogin  = true
+
         const Toast = Swal.mixin({
           toast: true,
           position: 'top-end',
@@ -116,6 +118,9 @@ export default {
           title: 'Signed in successfully'
         })
         this.$router.push('/dashboard/profile')
+        setTimeout(() => {
+        window.location.reload()
+        } , 1000)
       }
     },
     isValidEmail(email) {

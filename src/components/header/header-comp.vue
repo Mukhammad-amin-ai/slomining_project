@@ -138,6 +138,13 @@ export default {
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   },
+  watch: {
+    isLogin(newVal) {
+      if (newVal) {
+        this.isLogin = localStorage.getItem('isLogin')
+      }
+    }
+  },
   methods: {
     logOut() {
       Swal.fire({
@@ -152,6 +159,7 @@ export default {
         if (result) {
           localStorage.removeItem('form')
           localStorage.setItem('isLogin', false)
+          this.$store.state.isLogin = true
           this.isLogin = false
           this.$router.push('/')
           const Toast = Swal.mixin({
