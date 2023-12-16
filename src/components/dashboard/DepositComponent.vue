@@ -83,7 +83,14 @@
           </tbody>
         </table>
       </div>
-
+      <n-modal v-model:show="showModal">
+        <n-card style="width: 600px" title="Warning" :bordered="false" size="huge" role="dialog" aria-modal="true">
+          <template #header-extra>
+            Oops!
+          </template>
+           <p style="color: red;"> Please enter Amount（USDT）</p>
+        </n-card>
+      </n-modal>
 
     </div>
   </div>
@@ -91,13 +98,16 @@
 <script>
 // import axios from 'axios'
 import tabReusable from '../mini_components/tab-reusable.vue';
-
+import { NCard } from 'naive-ui';
+import { NModal } from 'naive-ui';
 import loadingComp from '@/components/mini_components/loading-comp.vue'
 export default {
   name: "DepositComponent",
   components: {
     tabReusable,
     loadingComp,
+    NCard,
+    NModal
   },
   data() {
     return {
@@ -106,17 +116,22 @@ export default {
       text: '',
       price: '',
       width: "",
-      class1: ""
+      class1: "",
+      showModal: false
     }
   },
 
   methods: {
     async convert(option) {
-      this.width = '50%'
-      this.class = 'borderclas'
-      await this.$store.dispatch('convert', option)
-      this.text = this.amount * this.$store.state.convert
-      this.price = `${this.amount} USDT = ${this.text} ${option}`
+      if (this.amount === '') {
+        this.showModal = true
+      }else{ 
+        this.width = '50%'
+        this.class = 'borderclas'
+        await this.$store.dispatch('convert', option)
+        this.text = this.amount * this.$store.state.convert
+        this.price = `${this.amount} USDT = ${this.text} ${option}`
+      }
     },
   },
 
@@ -141,7 +156,7 @@ export default {
 }
 
 .deposit-container {
-    position: relative;
+  position: relative;
   margin: 30px 0;
   width: 100%;
   height: 500px;
