@@ -7,22 +7,14 @@
       <ul>
         <li @click="setActive(link.path)" v-for="link in sidebarLinks" :key="link.route">
           <router-link :to="link.path">
-            <span  class="link_name"> {{ link.name }}</span>
-            <img
-
-              src="../../assets/images/line.png"
-              alt="line"
-            />
+            <span class="link_name"> {{ link.name }}</span>
+            <img src="../../assets/images/line.png" alt="line" />
           </router-link>
         </li>
       </ul>
     </div>
   </div>
-  <div
-    class="closeBg"
-    @click="closeMod"
-    :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"
-  ></div>
+  <div class="closeBg" @click="closeMod" :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"></div>
 </template>
 
 <script>
@@ -83,6 +75,7 @@ export default {
   bottom: 0;
   z-index: 9999999999;
 }
+
 .modal {
   width: 100vw;
   max-width: 100%;
@@ -130,7 +123,7 @@ ul {
 
 .link_name {
   width: 100%;
-line-height: 40px;
+  line-height: 40px;
   padding: 0.5rem 1.5rem;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 16px;
