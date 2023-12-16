@@ -45,6 +45,9 @@
 .eyes img {
   width: 20px;
 }
+.submit-form{
+  padding-top: 10px;
+}
 .submit-form .send {
   padding: 10px 40px;
   font-size: 16px;
