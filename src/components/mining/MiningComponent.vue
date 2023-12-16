@@ -1,5 +1,5 @@
 <template>
-  <div class="mining_parent transparent">
+  <div class="mining_parent transparent" >
     <div class="container transparent">
       <div class="start_title">CHOOSE MINING CONTRACTS</div>
       <div class="start_box_description">

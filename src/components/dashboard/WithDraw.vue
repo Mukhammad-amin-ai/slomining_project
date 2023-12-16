@@ -206,6 +206,8 @@ form {
   transition: all .3s;
   padding: 10px 14px;
   border: none;
+  cursor: pointer;
+
 }
 .table-response {
   width: 100%;
