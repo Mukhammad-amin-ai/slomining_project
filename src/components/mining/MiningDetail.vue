@@ -44,12 +44,14 @@
               Volume <span class="volume_value ">{{ product.volume }}%</span>
             </div>
           </div>
-          <ButtonComponent
-            @click="showModal = true"
-            text="Buy now"
-            class="default_black mt-1"
-            style="width: 150px"
-          />
+            <router-link to="/dashboard/deposit">
+
+              <ButtonComponent
+              text="Buy now"
+              class="default_black mt-1"
+              style="width: 150px"
+              />
+            </router-link>
         </div>
       </div>
       <div class="detail_card_right_name mb-1">detail</div>
