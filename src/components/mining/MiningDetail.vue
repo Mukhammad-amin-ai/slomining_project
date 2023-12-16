@@ -40,10 +40,16 @@
           </div>
           <div class="item_right_footer">
             <div class="item_card_volume">
-              Volume <span class="volume_value text-green">{{ product.volume }}%</span>
+              <div class="liquid-bar" :style="{ width: product.volume + '%' }"></div>
+              Volume <span class="volume_value ">{{ product.volume }}%</span>
             </div>
           </div>
-          <button class="buy" @click="showModal = true">Buy now</button>
+          <ButtonComponent
+            @click="showModal = true"
+            text="Buy now"
+            class="default_black mt-1"
+            style="width: 150px"
+          />
         </div>
       </div>
       <div class="detail_card_right_name mb-1">detail</div>
@@ -97,7 +103,7 @@
                   />
                 </span>
               </div>
-              <div class="submit-form ">
+              <div class="submit-form">
                 <button type="button" class="send">Submit</button>
               </div>
             </div>
@@ -112,6 +118,7 @@
 <script>
 import data from '@/static/data'
 import { NCard, NModal } from 'naive-ui'
+import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
 export default {
   name: 'MiningDetail',
   data() {
@@ -119,14 +126,19 @@ export default {
       data,
       product: {},
       showModal: false,
-      count:1,type: 'text',
-
+      count: 1,
+      type: 'text'
     }
   },
-  components: { NModal, NCard },
+  components: { ButtonComponent, NModal, NCard },
   created() {
     const productId = this.$route.params.id
     this.product = this.getProductDetails(productId)
+  },
+  computed: {
+    liquidWidth() {
+      return `${this.product.volume}%`
+    }
   },
   methods: {
     getProductDetails(productId) {
@@ -155,36 +167,14 @@ export default {
 .go {
   width: auto;
   padding: 8px 12px;
-  font-family: Montserrat-Bold, sans-serif;
+  font-family: Montserrat-Regular, sans-serif;
   font-size: 16px;
   border-radius: 7px;
   border: 1px solid #1c2b46;
   text-transform: uppercase;
-  transition: 0.2s linear all;
   cursor: pointer;
-  color: #fff;
-  background-color: #1c2b46;
   transition: 0.3s linear all;
-  cursor: pointer;
-}
-
-.go:hover {
-  background-color: #fff;
   color: #000;
-}
-
-.buy {
-  width: 100px;
-  height: 40px;
-  border-radius: 6px;
   background-color: transparent;
-  margin-top: 20px;
-  transition: 0.3s linear all;
-}
-
-.buy:hover {
-  background-color: #1c2b46;
-  color: #fff;
-  cursor: pointer;
 }
 </style>
