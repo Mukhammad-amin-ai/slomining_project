@@ -3,6 +3,7 @@
     <div class="contant">
       <h2>Withdraw</h2>
       <div class="deposit-container">
+        <loadingComp />
         <p>Amount (USDT)</p>
         <form @submit.prevent="convert">
           <input type="text" placeholder="Pleace enter amount" v-model="this.amount">
@@ -91,8 +92,12 @@
 </template>
 
 <script>
+import loadingComp from '@/components/mini_components/loading-comp.vue'
 export default {
   name: "DepositComponent",
+  components: {
+    loadingComp,
+  },
   data() {
     return {
       adress: "",
