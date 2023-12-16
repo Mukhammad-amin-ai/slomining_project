@@ -6,8 +6,9 @@
         <p>
           Empower Your Portfolio with Skyhash's Distinctive Cloud Mining Edge
         </p>
-        <!-- <p>Begin your cloud mining investment, withdraw your first payout after 24 hours.</p> -->
-        <button class="start-mining pointer">start mining</button>
+         <router-link to="/contacts">
+           <button class="start-mining pointer">start mining</button>
+         </router-link>
       </div>
       <div class="hero-galery">
         <div class="galery-image">
