@@ -36,7 +36,7 @@ export default {
     background-color: #fff;
     bottom: 0;
     box-shadow: 0 -5px 10px 0 rgba(0,0,0,.06);
-    z-index: 99999999999999;
+    z-index: 99;
 }
 
 .item {
