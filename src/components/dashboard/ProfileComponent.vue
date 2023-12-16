@@ -11,7 +11,7 @@
             <button class="btn">Deposit</button>
           </router-link>
           <router-link to="/dashboard/withdraw">
-            <button class="btn">Withdrow</button>
+            <button class="btn">Withdraw</button>
           </router-link>
         </div>
       </div>
