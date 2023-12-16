@@ -5,7 +5,7 @@
         <div class="information d-flex">
           <div class="our-team">
             <div class="our-logo">
-              <img src="../../assets/images/SKYHASH.png" alt="" />
+              <img src="../../assets/images/SKYHASH-02.png" alt="" />
             </div>
             <p>
               Our dedicated team of experts, coupled with cutting-edge technology, enables us to
@@ -40,7 +40,7 @@
       <div class="all-rights d-flex">
         <div class="image">
           <router-link to="/">
-            <img src="../../assets/images/SKYHASH.png" alt="about" style="object-fit: contain" />
+            <img src="../../assets/images/SKYHASH-02.png" alt="about" style="object-fit: contain" />
           </router-link>
         </div>
         <h5>© 2018-2023, SKYHASH. All Rights Reserved.</h5>
