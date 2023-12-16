@@ -2,180 +2,143 @@
     <div class="privacy d-flex center">
         <div class="container">
             <div class="head ">
-                <h2 class="mb-1 mt-3">Terms & Condition</h2>
+                <h2 class="mb-1 mt-3">What is cryptocurrency?</h2>
             </div>
             <section class="container">
-                <div class="list-header">
-                    <h5>
-                        Last Updated: 5 July 2021
-                    </h5>
-                    <br>
-                    <p>
-                        This agreement is made between you as a user and platform SLOMINING. <br>
-                        <br>
-                        Using the services of the site SLOMINING, you agree that you have read and accepted all the
-                        conditions described in this agreement, as well as familiarized with our Privacy Policy. <br>
-                        <br>
-                        If you do not agree with this agreement, immediately stop using the services of the platform
-                        SLOMINING. <br>
-                        <br>
-                        By creating your account at SLOMINING, you consent to the terms and conditions set forth in this
-                        User Agreement. <br>
-                        <br>
-                        If you have any related questions, you can always contact our support team.
-                    </p>
-                </div>
-                <h4>Terms and Definitions </h4>
-                <ul>
-                    <li> 1. Agreement is a list of the conditions of Users that must be accepted to continue working on the
-                        platform SLOMINING.</li>
-                    <li>2. Cryptocurrency - a peer-to-peer electronic currency that does not have a single centralized
-                        issuer, which is distributed between holders of such a currency.</li>
-                    <li>3. A personal account is a page inside the platform that is created as a result of registration and
-                        acceptance of the User Agreement.</li>
-                    <li>4. Privacy policy - these are the rules for the collection, storage and use of personal data of
-                        users.</li>
-                    <li>5. User is a natural or legal person registered in accordance with local national legislation,
-                        registered and accepted the User Agreement.</li>
-                    <li>6. Deposit and withdrawal of funds - an operation to transfer the user's funds from a personal
-                        account.</li>
-                    <li>7. Account data - personal data of the user, this is the username, password, email address that the
-                        user specified when registering on the platform SLOMINING.</li>
-
-                </ul>
-                <h4>Terms of agreement </h4>
-                <p>About such changes SLOMINING will notify all users by the specified mail by the user, and all updates
-                    will be displayed in the Agreement Terms themselves.
-
-                    If you continue to work on the platform, then you automatically accept these updates.
-
-                    By creating an account in SLOMINING, you confirm that you are at least 18 years old and you are an
-                    individual or legal entity, an organization that is fully authorized to accept this User Agreement
-                    between you and SLOMINING.</p>
-
-                <h4>Prohibition of use </h4>
-                <p>Using the services of the platform SLOMINING, you declare that you are not on any list of trade or
-                    economic sanctions, such as the List of Sanctions of the UN Security Council and the like. <br>
-
-                    This Agreement cannot be excluded under the laws of the country in which the user is located.</p>
-
-                <h4>Description of the services </h4>
-                <p>Users have the opportunity to register, open accounts and deposit assets in SLOMINING. Platform users
-                    have the right to request the withdrawal of their funds, taking into account the restrictions specified
-                    in the Terms of the agreement, if any. <br>
-
-                    All users should be aware of all the risks associated with all possible movements of cryptocurrency
-                    rates. <br>
-
-                    SLOMINING never requires transfers of funds to the wallet and never asks for your account password. <br>
-
-                    Users need to be careful about promotions and any discounts that could lead to fraud and loss of funds.
-                    All notifications that come to the e-mail specified by users will never require any transaction data,
-                    personal data until a user requests it. <br>
-
-                    The list of fraudulent transactions is wider, the user agrees that SLOMINING does not take
-                    responsibility for any loss of funds resulting from the situations listed above. <br>
-
-                    By using the services of SLOMINING, you confirm that all information provided by SLOMINING under this
-                    Agreement is true, complete and accurate.</p>
-
-                <h4>Registration and account requirements </h4>
-                <p>Before starting work on the platform SLOMINING all users must go through a simple registration. <br>
-
-                    And also users need to accept the Terms of Use, Privacy Policy. <br>
-
-                    To create an account you need to provide your real name, email address and password. <br>
-
-                    At our sole discretion and depending on a number of conditions, SLOMINING may refuse to open an account.
-                    <br>
+                <h4>What is cryptocurrency?</h4>
+                <p>Cryptocurrency is digital currency that exists on a decentralized system called the blockchain.
+                    Cryptocurrency serves as an umbrella term for all digital currencies. These can be accessed through the
+                    use of a crypto wallet.</p>
+                <h4>How are cryptocurrency and the blockchain related? </h4>
+                <br>
+                <p>In 2016, Fabricio Santos described the concept of the blockchain as a bank vault filled with rows of
+                    glass deposit boxes that allow everyone to see the contents of the boxes without being able to access
+                    their contents. He continued the metaphor by explaining that when a person opens a new deposit box, they
+                    receive a key unique to that box, but making a copy of the key does not duplicate the contents of the
+                    box; it only provides access. </p> <br>
+                <p>Blockchain technology is unique in that all transactions are permanently etched into the blockchain for
+                    anyone to view at any time—the blockchain record can only be added to, and the recorded history can’t be
+                    modified. Cryptocurrency relies on blockchain’s decentralized network of computers to validate and
+                    verify its ownership.</p>
+                <br>
+                <h4>The advantages of cryptocurrency</h4>
+                <h4>Secure, instant transactions</h4>
+                <p>Cryptocurrency is rooted in privacy. This means you don’t need to give every entity you transact with
+                    your personal information. Using cryptocurrency keeps your financial and personal data protected
+                    because
+                    it’s not shared with other parties who may want to access your information (think: advertisers and
+                    other
+                    entities you did not interact with). Cryptocurrency also allows for near-instant transactions.
+                    Because
+                    users have instant access to the contents of their crypto wallets, it cuts down on the 3-4 days one
+                    would typically have to wait for a transfer from a traditional bank.</p><br>
+                <h4>The choice to have self custody of your cryptocurrency</h4>
+                <p>A traditional banking system requires you to trust the entity holding your money. Whether that’s a bank
+                    or another payment service, these centralized entities hold and protect your currency, but they may also
+                    use it in other ways too. It’s also possible that they can shut down, change their rules, or experience
+                    changes in their policies that affect your ability to use or access your funds.
+                </p> <br>
+                <p>One benefit of cryptocurrency is that it enables you to remove middlemen through the use of decentralized
+                    finance. In decentralized finance, transactions are “trustless” because they don’t require you to put
+                    your trust in someone to transact. Similarly, because the transactions are carried out by a network of
+                    computers, they are “permissionless” in that they don’t require the permission of a third party.</p>
+                <br>
+                <p> Non-custodial wallets, which give users self custody of their cryptocurrency and gave rise to DeFi,
+                    require their owners to safeguard their own funds, but they also allow them to access their funds
+                    whenever they want.</p> <br>
+                <p>But cryptocurrency is not entirely without intermediaries. Cryptocurrency bought and stored in central
+                    exchanges like Coinbase and Binance is subject to systems more akin to traditional centralized banking.
+                    These organizations act as middlemen while providing their customers with an added layer of convenience
+                    for those who may not want the responsibility that comes with a non-custodial wallet.</p> <br>
+                <h4>Anonymity and privacy</h4>
+                <p>Privacy is often touted as one of cryptocurrency’s most important features. Transactions using
+                    cryptocurrency are considered “pseudonymous.” They aren’t fully anonymous, but they don’t require the
+                    use of one’s government name or other identifying information. Instead, all transactions are tied
+                    immutably to your wallet’s address. Having confidential and private access to your crypto wallet is a
+                    useful tool, particularly for those who are a part of historically marginalized groups.
                 </p>
-                <h4>User data authentication</h4>
-                <p>By creating an account with SLOMINING, you agree to provide personal data to verify the authenticity of
-                    your identity. <br>
-
-                    These measures are necessary to detect and prevent schemes of money laundering, fraud, financing of
-                    terrorist organizations and other financial crimes. <br>
-
-                    After registration, you must ensure that your information provided is complete, truthful, and you will
-                    be updated in a timely manner in the event of a change. <br>
-
-                    If there is any doubt that the information you submitted is untrue or is outdated or incomplete,
-                    SLOMINING has the right to send you a notification asking you to correct or update personal data. <br>
-
-                    You take full responsibility for any losses or expenses incurred at the time of use SLOMINING if you
-                    cannot contact in a timely manner and update your personal information.
-
-                    By this agreement, you acknowledge that you undertake to update personal information in case of any
-                    changes.</p>
-
-                <h4>Account Requirements </h4>
-                <p>SLOMINING has the right to freeze or cancel accounts used by third parties that are not account holders.
-                    <br>
-
-                    SLOMINING is not responsible for these accounts. <br>
+                <h1>Things to keep in mind when using cryptocurrency </h1>
+                <h4>New and constantly evolving</h4>
+                <p>While blockchain technology was developed in the ‘90s, Bitcoin (the first cryptocurrency) was only first
+                    launched in 2009. The technology’s infancy means that everyone is learning how to use it simultaneously
+                    (which can be level-setting), but it also means that everyone is experiencing growing pains at the same
+                    time. <br>
                 </p>
-
-                <h4>Account security</h4>
-                <p>SLOMINING, strives to create maximum security to preserve user funds. <br>
-
-                    You are solely responsible for maintaining the security of your account at SLOMINING, for maintaining
-                    the password, and the electronic login address. <br>
-
-                    Our company asks you, as account holders, to also be extremely careful and take precautions to protect
-                    your account and personal information. <br>
-
-                    You will comply with the security system, authentication, processing and collection of payments or
-                    withdrawals. you immediately inform SLOMINING if you become aware of any unauthorized use of your
-                    account and password in SLOMINING by another person, or other violations of security rules. SLOMINING
-                    does not take responsibility for any losses and consequences caused by your neglect of the above account
-                    security statement.</p>
-
-                <h4>Copyright and trademarks</h4>
-                <p>In order to properly use Intellectual Property SLOMINING, obtaining the necessary permissions is
-                    required.</p>
-                <h4>Recommendations for use</h4>
-                <p>You hereby agree to abide by these points when you use the platform SLOMINING: <br>
-
-                    will not shy away from paying taxes or government fees. all the actions you take while working on
-                    SLOMINING will meet the requirements of applicable laws, as well as charters SLOMINING. this agreement
-                    will not be violated, and the rules SLOMINING. If you have violated the above paragraphs and this has
-                    led to any legal consequences, you will independently carry out all legal paragraphs on your own behalf
-                    and protect SLOMINING from all claims and costs associated with such a violation. <br>
-
-                    You will use the platform in accordance with the Privacy Policy and Terms of Use, without interfering
-                    with the normal operation of the platform SLOMINING.</p>
-                <h4>Limitation of liability</h4>
-                <p>SLOMINING is not responsible for any of your losses resulting from the events described below, but not
-                    limited to: <br>
-
-                    unauthorized alteration of your data by third parties. loss of profit, goodwill or other intangible
-                    losses. unauthorized use of your account. other losses.</p>
-                <h4>Recompense</h4>
-                <p>You agree to protect SLOMINING, its current employees, directors, affiliates and agents from all kinds of
-                    losses incurred by a third party as a result of User SLOMINING actions in violation of this Agreement.
+                <h4>It’s decentralized</h4>
+                <p>Because of blockchain technology’s decentralized nature, there’s no central bank you can call to fix any
+                    problems that may surface. This is particularly true if you choose a non-custodial wallet over a
+                    custodial wallet. As a refresher, there are two types of crypto wallets: custodial (“hosted”) and
+                    non-custodial wallets. Custodial wallets are managed by a third-party company, whereas a non-custodial
+                    wallet is not. Non-custodial wallets give you full control, and full responsibility, which is why
+                    safeguarding your access key is even more important.</p> <br>
+                <h4>How do people use cryptocurrency now?</h4>
+                <p>The breadth and usage of cryptocurrencies have grown significantly since Bitcoin’s introduction into the
+                    world in 2009. Now crypto can be used to purchase everything from NFTs (non-fungible tokens) on OpenSea
+                    to physical goods or real-world services (McDonald’s now accepts Bitcoin in some regions, and Google
+                    Cloud also accepts Bitcoin and Ethereum as payment for cloud infrastructure).</p> <br>
+                <h1>How might people use cryptocurrencies in the future?</h1>
+                <p>More and more merchants (and industries) seem poised to begin to accept cryptocurrencies as a form of
+                    payment for any purchase. Blockchain technology as a whole is being adopted by additional industries as
+                    well, where future applications could range from medical records to mortgages.</p>
+                <h4>Types of cryptocurrency</h4>
+                <p>Coins and tokens are two types of cryptocurrency, and there are a few key differences between the two.
                 </p>
-                <h4>Termination</h4>
-                <p>You agree that SLOMINING has the right to stop your use of the platform, block funds if it is suspected
-                    that such accounts have violated the Terms of the Agreement, the Privacy Policy, or other applicable
-                    legislation. SLOMINING, has the right to save, use and provide transaction data of violators at the
-                    request of the legislature. <br>
+                <h4>Coins</h4>
+                <p>Coins are tied to a particular blockchain and operate solely off of the blockchain’s decentralized
+                    system, and may be more volatile in nature. (This is different from stablecoins which are set against a
+                    more fixed entity, more on this below.) <br>
 
-                    The termination of the agreement is possible with such factors: <br>
-
-                    by order of a court or other regulatory authority. if unauthorized access to the account is detected. if
-                    non-natural account activity is detected. After the account is closed and the funds are blocked, the
-                    entire balance of the user will go to pay off all costs and expenses SLOMINING.</p>
-                <h4>Privacy policy</h4>
-                <p>Privacy policy is an important clause of this agreement. SLOMINING may, if necessary, amend this clause
-                    of the agreement. All changes to the Privacy Policy, and any other clause, will be notified to all users
-                    through the mailing list indicated by their email.</p>
-                <h4>Compensation and Disclaimer</h4>
-                <p>By accepting this agreement, the user agrees to reimburse all losses and expenses incurred SLOMINING if
-                    the user's actions led to such losses. <br>
-
-                    SLOMINING is not responsible for errors and inaccuracies associated with the use of its services.</p>
-                <h4>Support service</h4>
-                <p>If you have any questions about these terms, please contact info@slomining.com</p>
+                    These are some of the most widely used tokens: <br>
+                    Bitcoin (BTC) — The first cryptocurrency, with the largest market cap of any cryptocurrency today. Used
+                    to buy goods in some retail stores, car dealerships, or via PayPal. <br>
+                    Ethereum (ETH) — The decentralized, open-source blockchain is best known for its smart contract
+                    functionality, eventually leading to its popularity for NFTs. <br>
+                    Polygon (MATIC) – As an EVM-compatible Ethereum sidechain, Polygon enables developers to build scalable
+                    dApps with low transaction fees. <br>
+                    Solana (SOL) — Boasting low gas fees and fast transactions, Solana also enables developers to build
+                    dApps. Solana uses the Proof-of-History method. <br>
+                    Avalanche (AVAX) — An eco-friendly cryptocurrency focused on smart contracts. <br>
+                </p>
+                <h4>Tokens</h4>
+                <p>Tokens are built on top of blockchains. Stablecoins are a popular type of token, and differ from coins in
+                    that they are anchored against an external reference to reduce the volatility of the cryptocurrency.</p>
+                <p>Tether (USDT) —The third largest cryptocurrency and the largest stablecoin, pegged to the US dollar.</p>
+                <br>
+                <p>USD Coin (USDC) — Available on multiple blockchains, USDC is a digital US dollar that lives natively
+                    online. USDC can be exchanged for US dollars at a 1:1 rate.</p> <br>
+                <p> Dai (DAI) — A stablecoin that operates on the Ethereum blockchain and is similar to USDC, DAI allows for
+                    easy transfer to US dollars.</p> <br>
+                <h4>What are the advantages of decentralization?</h4>
+                <p>Blockchain technology is not controlled by a single entity (like a central bank); instead, it’s upheld by
+                    the multitude of computer systems (“nodes”) that support the blockchain (this gives it its
+                    “decentralized” trait). The responsibility of keeping it secure therefore falls on those validating or
+                    mining the blockchain itself through what’s called a “consensus mechanism,” where nodes in the
+                    blockchain must agree that a transaction is valid before it’s written to the blockchain. (This is
+                    commonly either a Proof-of-Work or a Proof-of-Stake system.)</p>
+                <p>Although cryptocurrency is often described as secure, it’s still important to employ best practices for
+                    keeping your crypto safe. Never share your wallet’s seed phrase, be careful when taking actions using
+                    your wallet, and make sure to thoroughly evaluate NFTs before buying. If something looks too good to be
+                    true, it probably is.</p>
+                <h4>How do I access my cryptocurrency?</h4>
+                <p>You can access your cryptocurrency using a crypto wallet. Here’s one important thing to remember: your
+                    cryptocurrency doesn’t live in your wallet (the way your cash lives in your wallet); instead, your
+                    wallet is a key to unlock access to your crypto that’s stored on the blockchain (the way you would use a
+                    debit card to grab cash from an ATM). </p> <br>
+                <p>When it comes to supplying your crypto wallet with cryptocurrency, you can buy crypto using an exchange
+                    like Binance or Coinbase, but many NFT-compatible wallets support adding cryptocurrency directly using
+                    your wallet through services such as Moonpay or Wyre. These are integrated into the wallet and allow you
+                    to buy cryptocurrency using a credit or debit card and skip the process of using a crypto exchange. You
+                    may be prompted to verify your identity during this process.</p>
+                <h4>How are cryptocurrency and NFTs related?</h4>
+                <p>Cryptocurrency and NFTs both rely on blockchain technology. The key difference is that cryptocurrencies
+                    are “fungible” (mutually interchangeable) tokens, whereas NFTs are “non-fungible” (unique and not
+                    interchangeable) tokens. For example, one Bitcoin is exactly equal to another Bitcoin, but every NFT is
+                    unique by definition.</p> <br>
+                <p>
+                    To purchase an NFT, you’ll need both cryptocurrency and a crypto wallet. Your crypto wallet allows you
+                    to access your cryptocurrency and your NFTs , which is why it’s important to ensure that your wallet is
+                    compatible with both. NFT transactions happen using cryptocurrency, although many NFTs on OpenSea are
+                    available to buy with a credit or debit card. You can read more about how to buy an NFT here.</p> <br>
             </section>
         </div>
     </div>
