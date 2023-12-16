@@ -2,6 +2,7 @@
   <div class="mining_detail">
     <div class="container">
       <router-link to="/">
+        
         <button class="go">Go Back</button>
       </router-link>
       <div class="mining_detail_card">

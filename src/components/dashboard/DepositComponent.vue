@@ -4,13 +4,13 @@
       <tabReusable title="Deposit" tab="Cryptocurrency " />
       <div class="deposit-container">
         <p>Amount (USDT)</p>
-        <form>
-          <input type="text" placeholder="Pleace enter amount">
+        <form @submit.prevent="convert">
+          <input type="text" v-model="this.amount" placeholder="Pleace enter amount">
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
           <div class="item">
-            <div class="item-container">
+            <div class="item-container" @click="convert('USDT')">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="">
               </div>
@@ -18,7 +18,7 @@
             </div>
           </div>
           <div class="item">
-            <div class="item-container">
+            <div class="item-container" @click="convert('USDT')">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="">
               </div>
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="item">
-            <div class="item-container">
+            <div class="item-container" @click="convert('LTC')">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="">
               </div>
@@ -34,14 +34,14 @@
             </div>
           </div>
           <div class="item">
-            <div class="item-container">
+            <div class="item-container" @click="convert('ETH')">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="">
               </div>
               <p>ETH-ERC20</p>
             </div>
           </div>
-          <div class="item">
+          <div class="item" @click="convert('BTC')" :class="class1">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/btc.svg" alt="">
@@ -51,6 +51,9 @@
           </div>
         </div>
         <div class="btn-container">
+          <div class="price-amout " :style="{ width: width }">
+            <h4>{{ this.price }}</h4>
+          </div>
           <button class="next">Next</button>
         </div>
       </div>
@@ -95,18 +98,22 @@ export default {
   data() {
     return {
       amount: '',
-      apikey: "9fbe4a05f24a767b9585db2818a7c411",
-
+      crypto: "",
+      text: '',
+      price: '',
+      width: "",
+      class1: ""
     }
   },
   methods: {
-    // async convert() {
-    //   try {
-    //     let respone = await axios.get()
-    //   } catch (e) {
-    //     console.error(e);
-    //   }
-    // }
+    async convert(option) {
+      this.width = '50%'
+      this.class = 'borderclas'
+      await this.$store.dispatch('convert', option)
+      this.text = this.amount / this.$store.state.convert
+      this.price = `${this.amount} USDT = ${this.text} ${option}`
+    },
+
   },
 
 
@@ -114,6 +121,10 @@ export default {
 </script>
 
 <style scoped>
+.borderclas {
+  border: 1px solid #000;
+}
+
 .deposit {
   margin: 10px 0 0 30px;
   width: 100%;
@@ -210,6 +221,13 @@ form {
 .btn-container {
   width: 100%;
   height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.price-amout {
+  display: flex;
+  align-items: center;
 }
 
 .next {
@@ -240,8 +258,6 @@ form {
   border-radius: 5px;
 }
 
-
-
 thead {
   width: 100%;
   height: auto;
@@ -254,6 +270,10 @@ th {
   color: rgb(33, 37, 41);
   font-size: 15.008px;
   line-height: 26px;
+}
+
+h4 {
+  color: #198754;
 }
 
 @media screen and (max-width:1024px) {

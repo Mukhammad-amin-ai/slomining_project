@@ -21,10 +21,7 @@
     <MiningComponent />
     <WhyChoose />
     <PaymentMethods />
-
-  <WhyChoose />
-  <PaymentMethods />
-  <MiningInvest />
+    <MiningInvest />
   </div>
 </template>
 <script>
@@ -115,19 +112,22 @@ p {
 .galery-image img {
   width: 100%;
 }
+
 @media screen and (max-width:750px) {
   .container {
     flex-direction: column-reverse;
   }
-  .hero-text{
+
+  .hero-text {
     width: 100%;
   }
-  h1{
+
+  h1 {
     font-size: 30px !important;
     line-height: 30px;
   }
 
-  .hero-galery{
+  .hero-galery {
     width: 100%;
     padding-bottom: 50px;
   }
