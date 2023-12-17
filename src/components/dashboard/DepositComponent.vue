@@ -105,8 +105,8 @@
               The system will automatically confirm the receipt on the memory block chain and post
               it to your account balance. <br />
 
-              Minimum deposit amount: <span class="text-green text-bold"> $50</span>, amount less
-              than <span class="text-green text-bold"> $50</span> will not be credited to your
+              Minimum deposit amount: <span class="text-green text-bold"> $100</span>, amount less
+              than <span class="text-green text-bold"> $100</span> will not be credited to your
               account. <br />
 
               Every transfer in will be recorded on the memory block chain and cannot be tampered
