@@ -230,6 +230,7 @@ import { NCard } from 'naive-ui'
 import { NModal } from 'naive-ui'
 import loadingComp from '@/components/mini_components/loading-comp.vue'
 import Swal from 'sweetalert2'
+import data from '@/static/data.js'
 export default {
   name: 'DepositComponent',
   components: {
@@ -240,6 +241,7 @@ export default {
   },
   data() {
     return {
+      data,
       classs: '',
       amount: '',
       crypto: '',
@@ -331,6 +333,13 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    this.data.map((item) => {
+      if (item.id === +this.$route.query.id) {
+        this.amount = item.contract_price
+      }
+    })
   }
 }
 </script>
