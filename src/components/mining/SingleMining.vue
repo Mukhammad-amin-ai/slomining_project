@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <div class="item_right_footer d-flex justify-content-start" style="margin-bottom: 37px;">
+        <div class="item_right_footer d-flex justify-content-start btns">
           <div @click="showModal = true" v-if="isLogin">
             <ButtonComponent text="Buy Now" class="default_black buyBtn" />
           </div>
@@ -142,8 +142,8 @@ export default {
     },
 
 
-     dealyRewardCount(option) {
-       this.$store.dispatch('dailyReward')
+    dealyRewardCount(option) {
+      this.$store.dispatch('dailyReward')
       this.dailyrewards = this.$store.state.dailyReward * option
       return `(${this.dailyrewards}) BTC = $ ${option}`
     }
@@ -152,18 +152,35 @@ export default {
 </script>
 
 <style scoped>
-.buyBtn{
+.buyBtn {
   background-color: #148db3;
   color: #fff !important;
   font-family: Montserrat-Bold;
-
+  padding: 16px;
+  width: 130% ;
 }
-.seeBtn{
+
+.seeBtn {
+  padding: 16px;
+  width: 130% ;
   font-family: Montserrat-Bold;
 }
 
-.buyBtn:hover{
+.buyBtn:hover {
   color: #000 !important;
 }
 
+.btns {
+  margin-bottom: 30px;
+  gap: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .btns{
+    gap: 0;
+  }
+  .buyBtn,.seeBtn{
+    width: 100%;
+  }
+}
 </style>
