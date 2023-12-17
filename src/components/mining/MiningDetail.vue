@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="item_term mt-2">
-              <div class="term_title">3 Days Fixed Rewards:</div>
+              <div class="term_title">3 Days Fixed Return:</div>
               <div class="term_content">
                 {{ product.fixed_rewards }}
               </div>
