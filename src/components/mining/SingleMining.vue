@@ -142,8 +142,6 @@ export default {
     inc() {
       this.count++
     },
-
-
     dealyRewardCount(option) {
       this.$store.dispatch('dailyReward')
       this.dailyrewards = this.$store.state.dailyReward * option
