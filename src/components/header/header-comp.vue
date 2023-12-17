@@ -9,70 +9,101 @@
           <ul>
             <router-link to="/">
               <li :class="{ active: $route.fullPath === '/' }">
-                <span>Home
-                  <img v-show="{ active: $route.fullPath === '/' }" src="../../assets/images/line.png" alt="line" />
+                <span
+                  >Home
+                  <img
+                    v-show="{ active: $route.fullPath === '/' }"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
             <router-link to="/contacts">
               <li :class="{ active: $route.fullPath === '/contacts' }">
-                <span>Contracts
-                  <img v-show="{ active: $route.fullPath === '/contacts' }" src="../../assets/images/line.png"
-                    alt="line" />
+                <span
+                  >Contracts
+                  <img
+                    v-show="{ active: $route.fullPath === '/contacts' }"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
             <router-link to="/dashboard/profile" v-if="isLogin">
-              <li :class="[
-                { active: $route.fullPath === '/dashboard/' },
-                { active: $route.fullPath === '/dashboard/profile' }
-              ]">
-                <span>Dashboard
-                  <img v-show="[
-                    { active: $route.fullPath === '/dashboard/' },
-                    { active: $route.fullPath === '/dashboard/profile' }
-                  ]" src="../../assets/images/line.png" alt="line" />
+              <li
+                :class="[
+                  { active: $route.fullPath === '/dashboard/' },
+                  { active: $route.fullPath === '/dashboard/profile' }
+                ]"
+              >
+                <span
+                  >Dashboard
+                  <img
+                    v-show="[
+                      { active: $route.fullPath === '/dashboard/' },
+                      { active: $route.fullPath === '/dashboard/profile' }
+                    ]"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
 
             <router-link to="/sign-in" v-else>
-              <li :class="[
-                { active: $route.fullPath === '/dashboard/' },
-                { active: $route.fullPath === '/dashboard/profile' }
-              ]">
-                <span>Dashboard
-                  <img v-show="[
-                    { active: $route.fullPath === '/dashboard/' },
-                    { active: $route.fullPath === '/dashboard/profile' }
-                  ]" src="../../assets/images/line.png" alt="line" />
+              <li
+                :class="[
+                  { active: $route.fullPath === '/dashboard/' },
+                  { active: $route.fullPath === '/dashboard/profile' }
+                ]"
+              >
+                <span
+                  >Dashboard
+                  <img
+                    v-show="[
+                      { active: $route.fullPath === '/dashboard/' },
+                      { active: $route.fullPath === '/dashboard/profile' }
+                    ]"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
             <router-link to="/about">
               <li :class="{ active: $route.fullPath === '/about' }">
-                <span>About us
-                  <img v-show="{ active: $route.fullPath === '/about' }" src="../../assets/images/line.png" alt="line" />
+                <span
+                  >About us
+                  <img
+                    v-show="{ active: $route.fullPath === '/about' }"
+                    src="../../assets/images/line.png"
+                    alt="line"
+                  />
                 </span>
               </li>
             </router-link>
           </ul>
         </nav>
+      
       </div>
       <div class="auth3" v-if="isLogin">
         <button class="sign-in" @click="logOut">Sign Out</button>
       </div>
       <div class="auth2" v-if="isLogin">
-          <button class="sign-in" style="background-color: transparent; border: none;">
-            <img class="img-fluid" src="../../assets/icons/profile-icon.png" alt="">
-          </button>
-          <router-link to="/dashboard/profile">
-            <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/icons/profile-icon.png" alt="">
-          </router-link>
+        <router-link to="/dashboard/profile">
+          <img
+            class="img-fluid"
+            style="width: 25px;  !important;"
+            src="../../assets/icons/profile-icon.png"
+            alt=""
+          />
+        </router-link>
       </div>
       <div class="auth" v-if="!isLogin">
         <router-link to="/sign-in">
-          <button class="sign-in">Sign In </button>
+          <button class="sign-in">Sign In</button>
         </router-link>
         <router-link to="/sign-up">
           <button class="sign-up">Sign Up</button>
@@ -115,8 +146,7 @@ export default {
       dropdawn: false,
       isScrolled: false,
       activeIndex: 0,
-      dropauthList: false,
-
+      dropauthList: false
     }
   },
   computed: {
@@ -204,9 +234,11 @@ header {
   border-top: 0;
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(90deg,
-      hsla(0, 0%, 100%, 0.1) -1.52%,
-      hsla(0, 0%, 100%, 0.024) 104.35%);
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0.1) -1.52%,
+    hsla(0, 0%, 100%, 0.024) 104.35%
+  );
   background-blend-mode: multiply, normal;
 }
 
@@ -240,10 +272,9 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   text-transform: uppercase;
   gap: 10px;
-  margin-right: 20px;
 }
 
 nav {
@@ -307,7 +338,6 @@ li.active img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
 }
 
 .auth3 {
