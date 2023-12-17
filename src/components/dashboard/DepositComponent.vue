@@ -84,7 +84,7 @@
       </div>
       <h2>Deposit Records</h2>
       <div class="table-response">
-        <table class="table-info">
+        <table class="table-info ">
           <thead>
             <tr>
               <th>Date</th>
@@ -99,7 +99,7 @@
           </thead>
           <tbody>
             <tr>
-              <td></td>
+              <td>No Deposit history</td>
             </tr>
           </tbody>
         </table>
@@ -449,21 +449,26 @@ form {
   width: 100%;
   height: auto;
   overflow-x: auto;
+  border-radius: 8px !important;
+  border: 1px solid var(--border_color);
+
 }
 
 .table-info {
   width: 100%;
   height: auto;
-  border: 1px solid var(--text_gray);
-  border-radius: 5px;
 }
 
-thead {
+thead,
+tbody {
   width: 100%;
   height: auto;
+
 }
 
-th {
+
+th,
+td {
   padding: 0.875rem 1.25rem;
   font-family: Montserrat-Bold, sans-serif;
   color: rgb(33, 37, 41);

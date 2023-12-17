@@ -108,7 +108,7 @@
           </thead>
           <tbody>
             <tr>
-              <td></td>
+              <td> No Withdraw history</td>
             </tr>
           </tbody>
         </table>
@@ -310,6 +310,7 @@ form {
   width: 100%;
   height: auto;
   overflow-x: auto;
+  border: 1px solid var(--border_color);
 }
 
 .table-info {
