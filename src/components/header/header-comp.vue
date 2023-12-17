@@ -97,14 +97,14 @@
             </button>
           </router-link>
         </div>
-        <div class="menu ml-5 center">
-          <button class="bx-shadow center d-flex" @click="clickMenu">
-            <img src="../../assets/svg/menu-outline.svg" alt="menu" />
-          </button>
-        </div>
         <div class="settings center ml-5" v-if="!isLogin">
           <button class="bx-shadow center d-flex" @click="dropauth">
             <img src="../../assets/svg/settings-outline.svg" alt="settings" />
+          </button>
+        </div>
+        <div class="menu ml-5 center">
+          <button class="bx-shadow center d-flex" @click="clickMenu">
+            <img src="../../assets/svg/menu-outline.svg" alt="menu" />
           </button>
         </div>
         <div class="drop-auth" :style="{ display: dropauthList ? 'flex' : 'none' }">
@@ -552,6 +552,7 @@ button {
   .settings {
     margin-right: 10px;
   }
+
   .sign-in {
     font-size: 10px;
   }
@@ -559,7 +560,8 @@ button {
   .sign-up {
     font-size: 10px;
   }
-  .auth3{
+
+  .auth3 {
     display: none !important;
   }
 
