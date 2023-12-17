@@ -565,7 +565,8 @@ h4 {
     width: 100%;
     height: auto;
   }
-  .deposit-container{
+
+  .deposit-container {
     height: auto;
   }
 }
@@ -609,9 +610,23 @@ h4 {
   }
 }
 
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .next {
     width: 100px;
   }
-}
-</style>
+
+  p {
+    font-size: 10px;
+  }
+
+}</style>

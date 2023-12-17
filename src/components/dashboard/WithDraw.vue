@@ -387,10 +387,20 @@ h4 {
     width: 200px;
   }
 }
-
+@media screen and (max-width: 425px) {
+  h2{
+    font-size: 28px !important;
+  }
+  p{
+    font-size: 12px;
+  }
+}
 @media screen and (max-width:320px) {
   .next {
     width: 100px;
+  }
+  p{
+    font-size: 10px;
   }
 }
 </style>
