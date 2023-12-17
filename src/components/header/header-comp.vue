@@ -83,7 +83,7 @@
       <div class="auth2" v-if="isLogin">
         <router-link to="/dashboard/settings">
           <button class="sign-in" style="background-color: transparent; border: none;">
-            <img src="../../assets/svg/puzzle-mini.svg" alt="">
+            <img class="img-fluid" src="../../assets/icons/profile-icon.png" alt="">
           </button>
         </router-link>
       </div>
