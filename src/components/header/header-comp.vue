@@ -86,26 +86,13 @@
             </router-link>
           </ul>
         </nav>
-        <div class="drop-down" @click="dropclick">
-          <div class="lang">
-            <img src="../../assets/svg/gb.fcfef678.svg" alt="eng" />
-          </div>
-          <span>
-            <img src="../../assets/svg/chevron-down.svg" alt="eng" />
-          </span>
-          <div class="drop-list" :style="{ display: dropdawn ? 'block' : 'none' }">
-            <ul>
-              <li><img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English</li>
-              <li><img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian</li>
-            </ul>
-          </div>
-        </div>
+      
       </div>
       <div class="auth3" v-if="isLogin">
         <button class="sign-in" @click="logOut">Sign Out</button>
       </div>
       <div class="auth2" v-if="isLogin">
-        <router-link to="/dashboard/settings">
+        <router-link to="/dashboard/profile">
           <img
             class="img-fluid"
             style="width: 25px;  !important;"
