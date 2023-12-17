@@ -76,16 +76,16 @@
             </ul>
           </div>
         </div>
-        <div class="auth2" v-if="isLogin">
-          <router-link to="/dashboard/settings">
-            <button class="sign-in" style="background-color: transparent; border: none;">
-              <img src="../../assets/svg/puzzle-mini.svg" alt="">
-            </button>
-          </router-link>
-        </div>
-        <div class="auth3" v-if="isLogin">
-          <button class="sign-in" @click="logOut">Sign Out</button>
-        </div>
+      </div>
+      <div class="auth3" v-if="isLogin">
+        <button class="sign-in" @click="logOut">Sign Out</button>
+      </div>
+      <div class="auth2" v-if="isLogin">
+        <router-link to="/dashboard/settings">
+          <button class="sign-in" style="background-color: transparent; border: none;">
+            <img src="../../assets/svg/puzzle-mini.svg" alt="">
+          </button>
+        </router-link>
         <div class="auth" v-if="!isLogin">
           <router-link to="/sign-in">
             <button class="sign-in">Sign In </button>
@@ -257,6 +257,7 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   text-transform: uppercase;
   gap: 10px;
 }
@@ -317,7 +318,7 @@ li.active img {
 }
 
 .auth2 {
-  width: 10%;
+  width: 5%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -329,7 +330,7 @@ li.active img {
   width: 10%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
 }
 
