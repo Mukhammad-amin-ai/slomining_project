@@ -44,7 +44,7 @@
               Volume <span class="volume_value ">{{ product.volume }}%</span>
             </div>
           </div>
-            <router-link to="/dashboard/deposit">
+            <router-link :to="{ path: '/dashboard/deposit', query: { id: product.id } }">
 
               <ButtonComponent
               text="Buy now"
