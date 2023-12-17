@@ -34,7 +34,7 @@
               <p>BNB-Binance coin</p>
             </div>
           </div>
-          <div class="item" @click="convert('SOL', 4)" :class="{ 'borderclas': id === 3 }">
+          <div class="item" @click="convert('SOL', 4)" :class="{ 'borderclas': id === 4 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/sol.png" alt="" />
@@ -42,7 +42,7 @@
               <p>SOL-Solana</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDT', 3)" :class="{ 'borderclas': id === 3 }">
+          <div class="item" @click="convert('USDT', 5)" :class="{ 'borderclas': id === 5 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
@@ -50,7 +50,7 @@
               <p>USDT-TRC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDT', 4)" :class="{ 'borderclas': id === 4 }">
+          <div class="item" @click="convert('USDT', 6)" :class="{ 'borderclas': id === 6 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
@@ -58,15 +58,15 @@
               <p>USDT-ERC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('BUSB', 5)" :class="{ 'borderclas': id === 5 }">
+          <div class="item" @click="convert('BUSD', 7)" :class="{ 'borderclas': id === 7 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/4687.png" alt="" />
               </div>
-              <p>BUSB (BEP20)</p>
+              <p>BUSD (BEP20)</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDC', 6)" :class="{ 'borderclas': id === 6 }">
+          <div class="item" @click="convert('SOL', 8)" :class="{ 'borderclas': id === 8 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdc.png" alt="" />
@@ -139,15 +139,14 @@
           </div>
           <div class="add_cart_section d-flex justify-content-start">
             <div class="left_side">
-              <img src="@/assets/images/qr.png" alt="" class="img-fluid" />
+              <!-- <img src="../../assets/images/pay_card/BTC.png" alt="#" class="img-fluid" /> -->
+              <img :src="this.img" alt="#" class="img-fluid" />
             </div>
             <div class="right_side ml-1 mt-2 d-flex flex-column">
               <div class="transfer">Transfer Address</div>
 
-              <div class="right_heading d-flex justify-content-start center pointer"
-                @click="copiedText('TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe')">
-                <div class="copied_text mt-1">TL7g5C19vLgKXK8Rf7sMSSqsw4wusUvSoe</div>
-
+              <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText(this.coin)">
+                <div class="copied_text mt-1">{{ this.coin }}</div>
                 <svg class="copied_img ml-1" style="width: 20px" data-v-653498c4="" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1024 1024">
                   <path fill="currentColor"
@@ -219,10 +218,11 @@ export default {
       imageUrl: '',
       uploadedFileName: '',
       uploadedFile: '',
-      id: ""
+      id: "",
+      coin: '',
+      img: "",
     }
   },
-
   methods: {
     handleImageUpload(event) {
       const file = event.target.files[0]
@@ -266,7 +266,7 @@ export default {
         })
     },
     async convert(option, id) {
-      // console.log(id);
+      // console.log(option);
       if (this.amount === '') {
         this.showModal = true
       } else {
@@ -276,6 +276,16 @@ export default {
         await this.$store.dispatch('convert', option)
         this.text = this.amount * this.$store.state.convert
         this.price = `${this.amount} USDT = ${this.text} ${option}`
+        if (option === 'BTC') {
+          // this.img = `../../assets/images/pay_card/${option}.png`
+          this.coin = 'bc1qeqtszu9eayzelerwgh5ll05x6u5ydt8xf6wm8q'
+        } else if (option === 'ETH' || option === 'BNB' || option === 'BUSD' || option === 'USDT' || option === 'ERC ') {
+          this.coin = "0x315E5666326e576429Ff2dd661729E8FF532d982"
+        } else if (option === 'USDT' || option === "TRX") {
+          this.coin = "TUFaBudpT3GWHUPAoi4odorNVjntB8LRLd"
+        } else if (option === "SOL" || option === "USDC") {
+          this.coin = "Ehwkz9H3hdQMSchN9Crr1nu2YG5SZrnZpADvAZce4AaZ"
+        }
       }
     }
   }
