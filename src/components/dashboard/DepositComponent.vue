@@ -10,7 +10,7 @@
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
-          <div class="item" @click="convert('BTC')" :class="classs">
+          <div class="item" @click="convert('BTC', 1)" :class="{ 'borderclas': id === 1 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/btc.svg" alt="" />
@@ -18,40 +18,38 @@
               <p>BTC-Bitcoin</p>
             </div>
           </div>
-          <div class="item">
-            <div class="item-container" @click="convert('ETH')" >
+          <div class="item" @click="convert('ETH', 2)" :class="{ 'borderclas': id === 2 }">
+            <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="" />
               </div>
               <p>ETH-ERC20</p>
             </div>
           </div>
-          <div class="item">
-            <div class="item-container" @click="convert('USDT')" >
+          <div class="item" @click="convert('USDT', 3)" :class="{ 'borderclas': id === 3 }">
+            <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
               </div>
               <p>USDT-TRC20</p>
             </div>
           </div>
-          <div class="item">
-            <div class="item-container" @click="convert('USDT')" >
+          <div class="item" @click="convert('USDT', 4)" :class="{ 'borderclas': id === 4 }">
+            <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
               </div>
               <p>USDT-ERC20</p>
             </div>
           </div>
-          <div class="item">
-            <div class="item-container" @click="convert('LTC')" >
+          <div class="item" @click="convert('LTC', 5)" :class="{ 'borderclas': id === 5 }">
+            <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="" />
               </div>
               <p>LTC-Litecoin</p>
             </div>
           </div>
-
-
         </div>
         <div class="btn-container">
           <div class="price-amout" :style="{ width: width }">
@@ -90,7 +88,6 @@
             </div>
           </template>
           <p style="color: red">Please enter Amount（USDT）</p>
-
         </n-card>
       </n-modal>
       <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
@@ -155,7 +152,6 @@
             </div>
           </div>
           <template #footer>
-
             <div class="deposit_footer_text d-flex justify-content-start center">
               <svg style="width: 20px; margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                 <path fill="currentColor"
@@ -197,7 +193,8 @@ export default {
       showModal: false,
       imageUrl: '',
       uploadedFileName: '',
-      uploadedFile: ''
+      uploadedFile: '',
+      id: ""
     }
   },
 
@@ -243,10 +240,12 @@ export default {
           console.error(err)
         })
     },
-    async convert(option) {
+    async convert(option, id) {
+      // console.log(id);
       if (this.amount === '') {
         this.showModal = true
       } else {
+        this.id = id
         this.width = '50%'
         this.classs = 'borderclas'
         await this.$store.dispatch('convert', option)
@@ -263,6 +262,7 @@ export default {
   border: 1px solid #000;
   border-radius: 6px;
 }
+
 .deposit_footer_text {
   background: var(--depost_bg);
   color: vaR(--depost_tex);
