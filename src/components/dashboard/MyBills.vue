@@ -30,7 +30,7 @@
           <tr>
             <!-- <td>12/14/23 11:24</td> -->
             <td class="usd"><span>USDT</span></td>
-            <td class="status"><span>Paid</span></td>
+            <td class="text-green"><span>Paid</span></td>
             <td>5 USDT</td>
             <td>$5.00</td>
             <td>$5</td>
