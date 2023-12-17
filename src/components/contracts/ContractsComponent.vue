@@ -2,8 +2,8 @@
   <div class="start_and_mining">
   <div class="mining_parent pt-0 transparent">
     <div class="container transparent">
-      <div class="start_title"> MINING CONTRACTS</div>
-      <div class="start_box_description">
+      <div class="start_title bigger"> MINING CONTRACTS</div>
+      <div class="start_box_description bigger2">
         We offer a variety of cloud mining investment contracts, <br> ensuring stable and reliable profits.
       </div>
       <div class="mining_items">
@@ -38,4 +38,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.bigger{
+  font-size: 35px;
+}
+.bigger2{
+  font-size: 18px;
+
+}
+</style>
