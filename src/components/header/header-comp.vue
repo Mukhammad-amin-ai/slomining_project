@@ -81,14 +81,12 @@
         <button class="sign-in" @click="logOut">Sign Out</button>
       </div>
       <div class="auth2" v-if="isLogin">
-
-        <router-link to="/dashboard/profile">
           <button class="sign-in" style="background-color: transparent; border: none;">
             <img class="img-fluid" src="../../assets/icons/profile-icon.png" alt="">
           </button>
-        <router-link to="/dashboard/settings">
+          <router-link to="/dashboard/profile">
             <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/icons/profile-icon.png" alt="">
-        </router-link>
+          </router-link>
       </div>
       <div class="auth" v-if="!isLogin">
         <router-link to="/sign-in">
