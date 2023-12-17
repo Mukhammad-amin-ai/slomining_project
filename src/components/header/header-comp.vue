@@ -488,6 +488,10 @@ button {
   .settings {
     display: flex;
   }
+
+  .auth3 {
+    width: 20%;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -507,14 +511,17 @@ button {
     display: flex;
   }
 }
+
 @media screen and (max-width: 630px) {
-  .auth2{
+  .auth2 {
     width: 20%;
   }
-  .auth3{
+
+  .auth3 {
     width: 20%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .logo {
     width: 20%;
@@ -537,30 +544,44 @@ button {
   .ml-5 {
     margin-left: 20px;
   }
-  .drop-auth{
+
+  .drop-auth {
     right: 10px;
   }
-  .settings{
+
+  .settings {
     margin-right: 10px;
   }
-}
-
-@media screen and (max-width: 376px) {
-
-  .sign-in{
+  .sign-in {
     font-size: 10px;
   }
-  .sign-up{
+
+  .sign-up {
     font-size: 10px;
   }
+  .auth3{
+    display: none !important;
+  }
+
 }
+
+/* @media screen and (max-width: 376px) {
+
+  .sign-in {
+    font-size: 10px;
+  }
+
+  .sign-up {
+    font-size: 10px;
+  }
+} */
 
 @media screen and (max-width: 320px) {
   .logo {
     width: 50% !important;
   }
-  .drop-auth{
+
+  .drop-auth {
     right: 0px;
   }
-}
-</style>
+}</style>

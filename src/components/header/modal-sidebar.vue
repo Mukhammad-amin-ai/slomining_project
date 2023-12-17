@@ -8,48 +8,37 @@
         <li v-for="link in sidebarLinks" :key="link.path">
           <router-link :to="link.path" class="sidebar_links" @click="setActive">
             <span class="link_name">{{ link.name }}</span>
-            <img
-              :style="{ opacity: isActive(link.path) ? '1' : '0' }"
-              src="@/assets/images/line.png"
-              alt="line"
-            />
+            <img :style="{ opacity: isActive(link.path) ? '1' : '0' }" src="@/assets/images/line.png" alt="line" />
           </router-link>
         </li>
         <li>
           <div class="profile_dropdown d-flex justify-content-between center" @click="openMenu">
             <div class="link_name profile_name" ref="profile">PROFILE</div>
-            <img
-              class="profile_icon"
-              src="@/assets/icons/right.svg"
-              style="width: 20px; margin-top: 6px; margin-right: 10px"
-              alt=""
-              ref="icon"
-            />
+            <img class="profile_icon" src="@/assets/icons/right.svg"
+              style="width: 20px; margin-top: 6px; margin-right: 10px" alt="" ref="icon" />
           </div>
           <div class="opened_items d-flex flex-column mt-1" ref="opened_items">
-            <router-link
-              class="sub_link_name"
-              v-for="link in openedItems"
-              :to="link.path"
-              :key="link"
-            >
+            <router-link class="sub_link_name" v-for="link in openedItems" :to="link.path" :key="link">
               <span @click="setActive">
                 {{ link.name }}
               </span>
             </router-link>
           </div>
         </li>
+        <li>
+          <div class="auth" v-if="isLogin">
+            <button class="sign-in" @click="logOut">Sign Out</button>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
-  <div
-    class="closeBg"
-    @click="closeMod"
-    :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"
-  ></div>
+  <div class="closeBg" @click="closeMod" :class="{ active_bg: $store.state.activeClass === 'active_navbar' }"></div>
 </template>
 
 <script>
+import Swal from 'sweetalert2'
+
 export default {
   data() {
     return {
@@ -73,11 +62,51 @@ export default {
   computed: {
     activeLink() {
       return this.$route.fullPath
+    },
+    isLogin() {
+      return JSON.parse(localStorage.getItem('isLogin'))
     }
   },
   methods: {
     isActive(linkPath) {
       return this.activeLink === linkPath
+    },
+    logOut() {
+      this.closeMod()
+      Swal.fire({
+        text: `Dou you want sign out?`,
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        confirmButtonColor: '#4466f2',
+        cancelButtonText: 'No',
+        cancelButtonColor: '#f31616',
+        reverseButtons: false
+      }).then(async (result) => {
+        console.log(JSON.parse(localStorage.getItem('isLogin')))
+        if (result.isConfirmed) {
+          localStorage.removeItem('form')
+          localStorage.removeItem('isLogin')
+          this.$store.state.isLogin = false
+          this.isLogin = false
+          this.$router.push('/')
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer
+              toast.onmouseleave = Swal.resumeTimer
+            }
+          })
+          await Toast.fire({
+            icon: 'success',
+            title: 'Sign out successfully'
+          })
+          throw window.location.reload()
+        }
+      })
     },
     setActive() {
       this.closeMod()
@@ -102,7 +131,8 @@ export default {
   updated() {
     document.body.style.overflow =
       this.$store.state.activeClass === 'active_navbar' ? 'hidden' : 'visible'
-  }
+  },
+
 }
 </script>
 
@@ -110,18 +140,22 @@ export default {
 .opened_items {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out; /* Adjust the timing function as needed */
+  transition: max-height 0.3s ease-out;
+  /* Adjust the timing function as needed */
   background: var(--form_bg);
 }
 
 .opened {
-  max-height: 250px; /* Set a maximum height for smooth transition */
+  max-height: 250px;
+  /* Set a maximum height for smooth transition */
 }
 
 .rotate_icon {
   transform: rotate(90deg);
-  transition: transform 0.3s ease-out; /* Transition for the icon rotation */
+  transition: transform 0.3s ease-out;
+  /* Transition for the icon rotation */
 }
+
 .active_bg {
   width: 30%;
   position: fixed;
@@ -130,6 +164,7 @@ export default {
   bottom: 0;
   z-index: 101;
 }
+
 .modal {
   width: 100vw;
   max-width: 100%;
@@ -183,6 +218,7 @@ ul {
   font-size: 16px;
   text-transform: uppercase;
 }
+
 .sub_link_name {
   width: 100%;
   padding: 0.5rem 1.5rem 0 1.5rem;
@@ -197,13 +233,16 @@ ul {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .sidebar_links img {
   width: 50px;
   margin-left: 25px;
 }
+
 .link_name {
   color: #1d2c4899;
 }
+
 .active_profile {
   color: var(--blue);
 }
@@ -211,5 +250,23 @@ ul {
 li span {
   position: relative;
   width: 100%;
+}
+
+.auth {
+  padding: 0.5rem 1.5rem 0 1.5rem;
+}
+
+.sign-in {
+  background-color: transparent;
+  border-radius: 5px;
+  font-family: Montserrat-Bold, sans-serif;
+  color: #1d2c4899;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.sign-in:hover {
+  background-color: red;
+  color: black;
 }
 </style>
