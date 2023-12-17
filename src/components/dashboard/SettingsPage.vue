@@ -18,7 +18,7 @@
         style="display: grid; grid-template-columns: 3fr 1fr"
       >
         <input type="number" id="verify" placeholder="******" class="form_input w-100" />
-        <button type="button" class="send ml-1">send</button>
+        <button type="button" class="send ml-1">Send</button>
       </div>
       <label for="verify" class="form_label">New password</label>
 
