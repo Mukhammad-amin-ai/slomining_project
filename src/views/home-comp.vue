@@ -12,7 +12,7 @@
       </div>
       <div class="hero-galery">
         <div class="galery-image">
-          <img src="../assets/images/coin.png" alt="hero" draggable="false" />
+          <img src="../assets/images/coin-min.png" alt="hero" draggable="false" />
         </div>
       </div>
     </div>

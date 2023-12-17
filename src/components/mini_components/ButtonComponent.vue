@@ -14,7 +14,7 @@ export default {
 .global_btn {
   padding: 10px;
   font-family: Montserrat-Medium, sans-serif;
-  border-radius: 16px;
+  border-radius: 5px;
   cursor: pointer;
   border: 0;
   background: transparent;
