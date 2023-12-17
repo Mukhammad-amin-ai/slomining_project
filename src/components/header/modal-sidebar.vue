@@ -25,6 +25,14 @@
             </router-link>
           </div>
         </li>
+        <li class="language">
+          <n-collapse arrow-placement="right">
+            <n-collapse-item title="Language" name="1" class="language-font ">
+              <div>English</div>
+              <div>Russian</div>
+            </n-collapse-item>
+          </n-collapse>
+        </li>
         <li>
           <div class="auth" v-if="isLogin">
             <button class="sign-in" @click="logOut">Sign Out</button>
@@ -37,8 +45,8 @@
 </template>
 
 <script>
+import { NCollapse, NCollapseItem } from 'naive-ui'
 import Swal from 'sweetalert2'
-
 export default {
   data() {
     return {
@@ -56,8 +64,13 @@ export default {
         { name: 'CONTRACTS', path: '/contacts' },
         { name: 'SETTINGS', path: '/dashboard/settings' }
       ],
-      isOpen: false
+      isOpen: false,
+      isOpen2L: false
     }
+  },
+  components: {
+    NCollapse,
+    NCollapseItem
   },
   computed: {
     activeLink() {
@@ -126,7 +139,8 @@ export default {
         this.$refs.icon.classList.remove('rotate_icon')
         this.$refs.profile.classList.remove('active_profile')
       }
-    }
+    },
+
   },
   updated() {
     document.body.style.overflow =
@@ -268,5 +282,22 @@ li span {
 .sign-in:hover {
   background-color: red;
   color: black;
+}
+
+.language {
+  display: none;
+  padding: 0.5rem 1.5rem 0 1.5rem;
+}
+
+.language-font {
+  font-family: Montserrat-Bold, sans-serif;
+  color: #1d2c4899;
+  font-size: 16px;
+}
+
+@media screen and (max-width:600px) {
+  .language {
+    display: block !important;
+  }
 }
 </style>
