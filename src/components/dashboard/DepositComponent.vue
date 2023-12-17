@@ -105,14 +105,7 @@
         </table>
       </div>
       <n-modal v-model:show="showModal">
-        <n-card
-          style="width: 600px"
-          title="Warning"
-          :bordered="false"
-          size="huge"
-          role="dialog"
-          aria-modal="true"
-        >
+        <n-card style="width: 600px" title="Warning" :bordered="false" size="huge" role="dialog" aria-modal="true">
           <template #header-extra>
             <div @click="showModal = false" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -122,14 +115,8 @@
         </n-card>
       </n-modal>
       <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
-        <n-card
-          style="width: 100%; max-width: 1000px; min-width: 350px"
-          title="Checkout"
-          :bordered="false"
-          size="huge"
-          role="dialog"
-          aria-modal="true"
-        >
+        <n-card style="width: 100%; max-width: 1000px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
+          role="dialog" aria-modal="true">
           <template #header-extra>
             <div @click="show = false" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -158,26 +145,16 @@
             <div class="right_side ml-1 mt-2 d-flex flex-column">
               <div class="transfer">Transfer Address</div>
 
-              <div
-                class="right_heading d-flex justify-content-start center pointer"
-                @click="copiedText(this.coin)"
-              >
+              <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText(this.coin)">
                 <div class="copied_text mt-1">{{ this.coin }}</div>
-                <svg
-                  class="copied_img ml-1"
-                  style="width: 20px"
-                  data-v-653498c4=""
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1024 1024"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z"
-                  ></path>
-                  <path
-                    fill="currentColor"
-                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z"
-                  ></path>
+                <svg class="copied_img ml-1" style="width: 20px" data-v-653498c4="" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1024 1024">
+                  <path fill="currentColor"
+                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z">
+                  </path>
+                  <path fill="currentColor"
+                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z">
+                  </path>
                 </svg>
               </div>
 
@@ -190,30 +167,20 @@
                 <div class="mt-4">
                   <span>{{ uploadedFileName }}</span>
                 </div>
-                
+
                 <input class="d-none" type="file" id="img" ref="imgFile" accept="image/*" @change="handleImageUpload" />
                 <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" />
-                <label
-                  for="img"
-                  class="send d-flex mt-1 text-center justify-content-center"
-                  style="width: 250px"
-                >
-                  Confirm payment</label
-                >
+                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px">
+                  Confirm payment</label>
               </div>
             </div>
           </div>
           <template #footer>
             <div class="deposit_footer_text d-flex justify-content-start center">
-              <svg
-                style="width: 20px; margin-right: 10px"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1024 1024"
-              >
-                <path
-                  fill="currentColor"
-                  d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z"
-                ></path>
+              <svg style="width: 20px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                <path fill="currentColor"
+                  d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z">
+                </path>
               </svg>
               Please transfer the exact amount to address
             </div>
@@ -255,7 +222,8 @@ export default {
       uploadedFile: '',
       id: '',
       coin: '',
-      img: ''
+      img: '',
+
     }
   },
   methods: {
@@ -269,6 +237,7 @@ export default {
           this.imageUrl = e.target.result
         }
         reader.readAsDataURL(file)
+
       }
     },
     showDeposit() {
@@ -319,12 +288,12 @@ export default {
           option === 'ETH' ||
           option === 'BNB' ||
           option === 'BUSD' ||
-          option === 'USDT' ||
+          // option === 'USDT' ||
           option === 'ERC '
         ) {
           this.img = '/pay_card/eth_usd_erc_bnb_busd.png'
           this.coin = '0x315E5666326e576429Ff2dd661729E8FF532d982'
-        } else if (option === 'USDT' || option === 'TRX') {
+        } else if (option === 'USDT') {
           this.img = '/pay_card/USDT_TRC.png'
           this.coin = 'TUFaBudpT3GWHUPAoi4odorNVjntB8LRLd'
         } else if (option === 'SOL' || option === 'USDC') {
