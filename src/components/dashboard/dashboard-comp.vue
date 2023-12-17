@@ -25,11 +25,6 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/dashboard/order" class="dashboard_link text-black">
-                <img src="@/assets/icons/text.svg" alt="" class="dashboard_icon" /> My
-                orders</router-link>
-            </li>
-            <li>
               <router-link to="/dashboard/settings" class="dashboard_link text-black">
                 <img src="@/assets/icons/puzzle.svg" alt="" class="dashboard_icon" /> settings
               </router-link>
