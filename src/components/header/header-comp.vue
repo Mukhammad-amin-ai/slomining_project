@@ -86,40 +86,41 @@
             <img src="../../assets/svg/puzzle-mini.svg" alt="">
           </button>
         </router-link>
-        <div class="auth" v-if="!isLogin">
-          <router-link to="/sign-in">
-            <button class="sign-in">Sign In </button>
-          </router-link>
-          <router-link to="/sign-up">
-            <button class="sign-up">Sign Up</button>
-          </router-link>
-        </div>
-        <div class="user ml-5 center">
-          <router-link to="/dashboard/profile">
-            <button class="bx-shadow center d-flex">
-              <img src="../../assets/svg/person-outline.svg" alt="person" />
-            </button>
-          </router-link>
-        </div>
-        <div class="settings center ml-5" v-if="!isLogin">
-          <button class="bx-shadow center d-flex" @click="dropauth">
-            <img src="../../assets/svg/settings-outline.svg" alt="settings" />
-          </button>
-        </div>
-        <div class="menu ml-5 center">
-          <button class="bx-shadow center d-flex" @click="clickMenu">
-            <img src="../../assets/svg/menu-outline.svg" alt="menu" />
-          </button>
-        </div>
-        <div class="drop-auth" :style="{ display: dropauthList ? 'flex' : 'none' }">
-          <router-link to="/sign-in">
-            <button class="sign-in">Sign In</button>
-          </router-link>
-          <router-link to="/sign-up">
-            <button class="sign-up">Sign Up</button>
-          </router-link>
-        </div>
       </div>
+      <div class="auth" v-if="!isLogin">
+        <router-link to="/sign-in">
+          <button class="sign-in">Sign In </button>
+        </router-link>
+        <router-link to="/sign-up">
+          <button class="sign-up">Sign Up</button>
+        </router-link>
+      </div>
+      <div class="user ml-5 center">
+        <router-link to="/dashboard/profile">
+          <button class="bx-shadow center d-flex">
+            <img src="../../assets/svg/person-outline.svg" alt="person" />
+          </button>
+        </router-link>
+      </div>
+      <div class="settings center ml-5" v-if="!isLogin">
+        <button class="bx-shadow center d-flex" @click="dropauth">
+          <img src="../../assets/svg/settings-outline.svg" alt="settings" />
+        </button>
+      </div>
+      <div class="menu ml-5 center">
+        <button class="bx-shadow center d-flex" @click="clickMenu">
+          <img src="../../assets/svg/menu-outline.svg" alt="menu" />
+        </button>
+      </div>
+      <div class="drop-auth" :style="{ display: dropauthList ? 'flex' : 'none' }">
+        <router-link to="/sign-in">
+          <button class="sign-in">Sign In</button>
+        </router-link>
+        <router-link to="/sign-up">
+          <button class="sign-up">Sign Up</button>
+        </router-link>
+      </div>
+
     </div>
   </header>
 </template>

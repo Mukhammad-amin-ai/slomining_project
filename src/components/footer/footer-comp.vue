@@ -12,7 +12,7 @@
               curate a curated of top-tier Cloud Mining investment projects, ensuring that your
               investment journey is both rewarding and secure.
             </p>
-            <div class="social-media">
+            <!-- <div class="social-media">
               <div class="item d-flex center">
                 <img src="../../assets/icons/logo-twitter.svg" alt="twitter">
               </div>
@@ -25,7 +25,7 @@
               <div class="item d-flex center">
                 <img src="../../assets/icons/mail-outline.svg" alt="mail">
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="learn">
             <p>LEARN</p>
