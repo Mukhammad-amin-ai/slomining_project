@@ -123,6 +123,39 @@
       </n-modal>
       <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
         <n-card
+          v-if="success"
+          style="width: 100%; max-width: 1000px; min-width: 350px"
+          title="Success"
+          :bordered="false"
+          size="huge"
+          role="dialog"
+          aria-modal="true"
+        >
+          <template #header-extra>
+            <div @click="closeModal" style="cursor: pointer">
+              <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
+            </div>
+          </template>
+          <div
+            class="success_parent d-flex justify-content-center center flex-column"
+            v-if="success"
+          >
+            <img src="@/assets/images/success.png" alt="" style="width: 150px" />
+            <div class="success_text mt-2">Thank you for your deposit</div>
+            <div class="success_description mt-3 text-center">
+              Once your transaction recieves all confirmations on the blockchain, <br />
+              your balance will change. This may take up to 20 minutes.
+            </div>
+            <div class="success_bottom mt-3 text-center">
+              Make one more deposit within 10 minutes <br />
+
+              to get a +25% bonus on your balance
+            </div>
+          </div>
+        </n-card>
+
+        <n-card
+          v-else
           style="width: 100%; max-width: 1000px; min-width: 350px"
           title="Checkout"
           :bordered="false"
@@ -131,10 +164,11 @@
           aria-modal="true"
         >
           <template #header-extra>
-            <div @click="show = false" style="cursor: pointer">
+            <div @click="closeModal" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
             </div>
           </template>
+
           <div class="heading_deposit">
             <div class="deposit_text">
               Please transfer to the following address <br />
@@ -190,19 +224,36 @@
                 <div class="mt-4">
                   <span>{{ uploadedFileName }}</span>
                 </div>
-                <!-- @change="handleImageUpload" -->
-                <!-- <input class="d-none" type="file" id="img" ref="imgFile" accept="image/*"  />
-                <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" /> -->
+
+                <input
+                  @change="handleImageUpload"
+                  class="d-none"
+                  type="file"
+                  id="img"
+                  ref="imgFile"
+                  accept="image/*"
+                />
+                <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" />
                 <label
                   for="img"
                   class="send d-flex mt-1 text-center justify-content-center"
                   style="width: 250px"
+                  v-if="!imageUrl"
                 >
-                  Confirm payment</label
+                  Upload Image</label
                 >
+                <button
+                  v-if="imageUrl"
+                  class="send d-flex mt-1 text-center justify-content-center"
+                  style="width: 250px"
+                  @click="showSuccess"
+                >
+                  Confirm
+                </button>
               </div>
             </div>
           </div>
+
           <template #footer>
             <div class="deposit_footer_text d-flex justify-content-start center">
               <svg
@@ -255,7 +306,8 @@ export default {
       uploadedFile: '',
       id: '',
       coin: '',
-      img: ''
+      img: '',
+      success: false
     }
   },
   methods: {
@@ -332,6 +384,16 @@ export default {
           this.coin = 'Ehwkz9H3hdQMSchN9Crr1nu2YG5SZrnZpADvAZce4AaZ'
         }
       }
+    },
+    showSuccess() {
+      this.success = true
+    },
+    closeModal() {
+      this.show = false
+      this.success = false
+      this.imageUrl = ''
+      this.uploadedFileName = ''
+      this.uploadedFile = ''
     }
   },
   mounted() {
@@ -345,6 +407,19 @@ export default {
 </script>
 
 <style scoped>
+.success_text {
+  font-size: 50px;
+  font-family: Montserrat-Bold, sans-serif;
+}
+
+.success_description {
+  font-size: 24px;
+  font-family: Montserrat-Medium, sans-serif;
+}
+.success_bottom {
+  font-size: 24px;
+  font-family: Montserrat-Bold, sans-serif, sans-serif;
+}
 .borderclas {
   border: 1px solid #000;
   border-radius: 6px;
