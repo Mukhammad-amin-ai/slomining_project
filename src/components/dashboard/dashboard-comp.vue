@@ -6,7 +6,7 @@
           <ul>
             <li>
               <router-link to="/dashboard/profile" class="dashboard_link text-black">
-                <img src="@/assets/icons/puzzle.svg" alt="" class="dashboard_icon" />
+                <img src="@/assets/svg/stats-chart-outline.svg" alt="" class="dashboard_icon" />
                 dashboard</router-link>
             </li>
             <li>
