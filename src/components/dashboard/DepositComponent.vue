@@ -583,6 +583,16 @@ h4 {
   th {
     padding: 0.875rem 1rem;
   }
+
+  .success_text {
+    font-size: 40px;
+  }
+
+  .success_description,
+  .success_bottom {
+    font-size: 20px;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -608,6 +618,13 @@ h4 {
   .next {
     width: 200px;
   }
+  .success_text {
+    font-size: 30px;
+  }
+  .success_description,
+  .success_bottom {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -618,6 +635,15 @@ h4 {
   p {
     font-size: 12px;
   }
+  .success_text {
+    font-size: 20px ;
+  }
+  .success_description,
+  .success_bottom {
+    font-size: 16px;
+  }
+
+
 }
 
 @media screen and (max-width: 320px) {
@@ -627,6 +653,13 @@ h4 {
 
   p {
     font-size: 10px;
+  }
+  .success_text {
+    font-size: 18px ;
+  }
+  .success_description,
+  .success_bottom {
+    font-size: 15px;
   }
 
 }</style>
