@@ -33,7 +33,14 @@
               {{ dealyRewardCount(item.daily_rewards) }}
             </div>
           </div>
+          <div class="item_term mt-2">
+            <div class="term_title">3 Days Fixed Rewards:</div>
+            <div class="term_content">
+              {{ item.fixed_rewards }}
+            </div>
+          </div>
         </div>
+
         <div class="item_right_footer d-flex justify-content-start btns">
           <div @click="showModal = true" v-if="isLogin">
             <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">

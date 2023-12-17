@@ -37,6 +37,12 @@
                 {{ product.daily_rewards }}
               </div>
             </div>
+            <div class="item_term mt-2">
+              <div class="term_title">3 Days Fixed Rewards:</div>
+              <div class="term_content">
+                {{ product.fixed_rewards }}
+              </div>
+            </div>
           </div>
           <div class="item_right_footer">
             <div class="item_card_volume">
