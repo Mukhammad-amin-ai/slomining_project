@@ -95,13 +95,13 @@
           <button class="sign-up">Sign Up</button>
         </router-link>
       </div>
-      <div class="user ml-5 center">
+      <!-- <div class="user ml-5 center">
         <router-link to="/dashboard/profile">
           <button class="bx-shadow center d-flex">
             <img src="../../assets/svg/person-outline.svg" alt="person" />
           </button>
         </router-link>
-      </div>
+      </div> -->
       <div class="settings center ml-5" v-if="!isLogin">
         <button class="bx-shadow center d-flex" @click="dropauth">
           <img src="../../assets/svg/settings-outline.svg" alt="settings" />
