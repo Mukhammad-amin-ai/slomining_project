@@ -144,10 +144,10 @@
                 <div class="mt-4">
                   <span>{{ uploadedFileName }}</span>
                 </div>
-                <input class="d-none" type="file" id="img" ref="imgFile" accept="image/*" @change="handleImageUpload" />
-                <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" />
-                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px;"> +
-                  upload screen</label>
+                <!-- @change="handleImageUpload" -->
+                <!-- <input class="d-none" type="file" id="img" ref="imgFile" accept="image/*"  />
+                <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" /> -->
+                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px;"> Confirm payment</label>
               </div>
             </div>
           </div>
