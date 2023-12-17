@@ -157,15 +157,36 @@ export default {
   },
   methods: {
     async convert(option, id) {
+      // console.log(option);
       if (this.amount === '') {
         this.showModal = true
       } else {
         this.id = id
         this.width = '50%'
-        this.class = 'borderclas'
+        this.classs = 'borderclas'
         await this.$store.dispatch('convert', option)
         this.text = this.amount * this.$store.state.convert
         this.price = `${this.amount} USDT = ${this.text} ${option}`
+        if (option === 'BTC') {
+          this.img = '/pay_card/BTC.png'
+          // this.img = `../../assets/images/pay_card/${option}.png`
+          this.coin = 'bc1qeqtszu9eayzelerwgh5ll05x6u5ydt8xf6wm8q'
+        } else if (
+            option === 'ETH' ||
+            option === 'BNB' ||
+            option === 'BUSD' ||
+            option === 'USDT' ||
+            option === 'ERC '
+        ) {
+          this.img = '/pay_card/eth_usd_erc_bnb_busd.png'
+          this.coin = '0x315E5666326e576429Ff2dd661729E8FF532d982'
+        } else if (option === 'USDT' || option === 'TRX') {
+          this.img = '/pay_card/USDT_TRC.png'
+          this.coin = 'TUFaBudpT3GWHUPAoi4odorNVjntB8LRLd'
+        } else if (option === 'SOL' || option === 'USDC') {
+          this.img = '/pay_card/SOL_USDC.png'
+          this.coin = 'Ehwkz9H3hdQMSchN9Crr1nu2YG5SZrnZpADvAZce4AaZ'
+        }
       }
     },
     alertFunc() {
