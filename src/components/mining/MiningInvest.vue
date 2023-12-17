@@ -31,7 +31,7 @@
           </p>
           <p class="mt-2 s-content">
             <span class="bullet-icon">•</span>Security is paramount to us. Our Reliable Cloud Mining Services are
-            fortified with robust measures, establishing SloMining as a paragon of transparency and trustworthiness, not
+            fortified with robust measures, establishing Skyhash as a paragon of transparency and trustworthiness, not
             just in Arizona, but across the USA.
           </p>
           <p class="mt-2 s-content">

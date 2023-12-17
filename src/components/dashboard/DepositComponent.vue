@@ -99,7 +99,16 @@
           </thead>
           <tbody>
             <tr>
-              <td>No Deposit history</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="color_grey">No Deposit history</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+
             </tr>
           </tbody>
         </table>
@@ -555,7 +564,9 @@ td {
 h4 {
   color: #198754;
 }
-
+.color_grey{
+  color: grey;
+}
 @media screen and (max-width: 1024px) {
   .deposit {
     margin: 0 !important;

@@ -25,14 +25,14 @@
             </router-link>
           </div>
         </li>
-        <li class="language">
+        <!-- <li class="language">
           <n-collapse arrow-placement="right">
             <n-collapse-item title="Language" name="1" class="language-font ">
               <div>English</div>
               <div>Russian</div>
             </n-collapse-item>
           </n-collapse>
-        </li>
+        </li> -->
         <li>
           <div class="auth" v-if="isLogin">
             <button class="sign-in" @click="logOut">Sign Out</button>
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { NCollapse, NCollapseItem } from 'naive-ui'
+// import { NCollapse, NCollapseItem } from 'naive-ui'
 import Swal from 'sweetalert2'
 export default {
   data() {
@@ -69,8 +69,8 @@ export default {
     }
   },
   components: {
-    NCollapse,
-    NCollapseItem
+    // NCollapse,
+    // NCollapseItem
   },
   computed: {
     activeLink() {
