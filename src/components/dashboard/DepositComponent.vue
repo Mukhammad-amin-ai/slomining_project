@@ -10,7 +10,7 @@
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
-          <div class="item" @click="convert('BTC', 1)" :class="{ 'borderclas': id === 1 }">
+          <div class="item" @click="convert('BTC', 1)" :class="{ borderclas: id === 1 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/btc.png" alt="" />
@@ -18,7 +18,7 @@
               <p>BTC-Bitcoin</p>
             </div>
           </div>
-          <div class="item" @click="convert('ETH', 2)" :class="{ 'borderclas': id === 2 }">
+          <div class="item" @click="convert('ETH', 2)" :class="{ borderclas: id === 2 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/eth.png" alt="" />
@@ -26,7 +26,7 @@
               <p>ETH-ERC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('BNB', 3)" :class="{ 'borderclas': id === 3 }">
+          <div class="item" @click="convert('BNB', 3)" :class="{ borderclas: id === 3 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/bnb.png" alt="" />
@@ -34,7 +34,7 @@
               <p>BNB-Binance coin</p>
             </div>
           </div>
-          <div class="item" @click="convert('SOL', 4)" :class="{ 'borderclas': id === 4 }">
+          <div class="item" @click="convert('SOL', 4)" :class="{ borderclas: id === 4 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/sol.png" alt="" />
@@ -42,7 +42,7 @@
               <p>SOL-Solana</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDT', 5)" :class="{ 'borderclas': id === 5 }">
+          <div class="item" @click="convert('USDT', 5)" :class="{ borderclas: id === 5 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
@@ -50,7 +50,7 @@
               <p>USDT-TRC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDT', 6)" :class="{ 'borderclas': id === 6 }">
+          <div class="item" @click="convert('USDT', 6)" :class="{ borderclas: id === 6 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
@@ -58,7 +58,7 @@
               <p>USDT-ERC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('BUSD', 7)" :class="{ 'borderclas': id === 7 }">
+          <div class="item" @click="convert('BUSD', 7)" :class="{ borderclas: id === 7 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/4687.png" alt="" />
@@ -66,7 +66,7 @@
               <p>BUSD (BEP20)</p>
             </div>
           </div>
-          <div class="item" @click="convert('SOL', 8)" :class="{ 'borderclas': id === 8 }">
+          <div class="item" @click="convert('SOL', 8)" :class="{ borderclas: id === 8 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdc.png" alt="" />
@@ -84,7 +84,7 @@
       </div>
       <h2>Deposit Records</h2>
       <div class="table-response">
-        <table class="table-info ">
+        <table class="table-info">
           <thead>
             <tr>
               <th>Date</th>
@@ -105,7 +105,14 @@
         </table>
       </div>
       <n-modal v-model:show="showModal">
-        <n-card style="width: 600px" title="Warning" :bordered="false" size="huge" role="dialog" aria-modal="true">
+        <n-card
+          style="width: 600px"
+          title="Warning"
+          :bordered="false"
+          size="huge"
+          role="dialog"
+          aria-modal="true"
+        >
           <template #header-extra>
             <div @click="showModal = false" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -115,8 +122,14 @@
         </n-card>
       </n-modal>
       <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
-        <n-card style="width: 100%; max-width: 1000px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
-          role="dialog" aria-modal="true">
+        <n-card
+          style="width: 100%; max-width: 1000px; min-width: 350px"
+          title="Checkout"
+          :bordered="false"
+          size="huge"
+          role="dialog"
+          aria-modal="true"
+        >
           <template #header-extra>
             <div @click="show = false" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -140,28 +153,38 @@
           <div class="add_cart_section d-flex justify-content-start">
             <div class="left_side">
               <!-- <img src="../../assets/images/pay_card/BTC.png" alt="#" class="img-fluid" /> -->
-              <img :src="this.img" alt="#" class="img-fluid" />
+              <img :src="img" :alt="img" class="img-fluid" />
             </div>
             <div class="right_side ml-1 mt-2 d-flex flex-column">
               <div class="transfer">Transfer Address</div>
 
-              <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText(this.coin)">
+              <div
+                class="right_heading d-flex justify-content-start center pointer"
+                @click="copiedText(this.coin)"
+              >
                 <div class="copied_text mt-1">{{ this.coin }}</div>
-                <svg class="copied_img ml-1" style="width: 20px" data-v-653498c4="" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1024 1024">
-                  <path fill="currentColor"
-                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z">
-                  </path>
-                  <path fill="currentColor"
-                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z">
-                  </path>
+                <svg
+                  class="copied_img ml-1"
+                  style="width: 20px"
+                  data-v-653498c4=""
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1024 1024"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z"
+                  ></path>
                 </svg>
               </div>
 
               <div class="transfer">Convert</div>
 
               <div class="right_heading d-flex justify-content-start center pointer text-green">
-                <div class="copied_text mt-1">{{ price }} </div>
+                <div class="copied_text mt-1">{{ price }}</div>
               </div>
               <div class="submit-form mt-2 d-flex flex-column">
                 <div class="mt-4">
@@ -170,17 +193,27 @@
                 <!-- @change="handleImageUpload" -->
                 <!-- <input class="d-none" type="file" id="img" ref="imgFile" accept="image/*"  />
                 <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" /> -->
-                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px;">
-                  Confirm payment</label>
+                <label
+                  for="img"
+                  class="send d-flex mt-1 text-center justify-content-center"
+                  style="width: 250px"
+                >
+                  Confirm payment</label
+                >
               </div>
             </div>
           </div>
           <template #footer>
             <div class="deposit_footer_text d-flex justify-content-start center">
-              <svg style="width: 20px; margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                <path fill="currentColor"
-                  d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z">
-                </path>
+              <svg
+                style="width: 20px; margin-right: 10px"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1024 1024"
+              >
+                <path
+                  fill="currentColor"
+                  d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z"
+                ></path>
               </svg>
               Please transfer the exact amount to address
             </div>
@@ -218,9 +251,9 @@ export default {
       imageUrl: '',
       uploadedFileName: '',
       uploadedFile: '',
-      id: "",
+      id: '',
       coin: '',
-      img: "",
+      img: ''
     }
   },
   methods: {
@@ -277,14 +310,24 @@ export default {
         this.text = this.amount * this.$store.state.convert
         this.price = `${this.amount} USDT = ${this.text} ${option}`
         if (option === 'BTC') {
+          this.img = '/pay_card/BTC.png'
           // this.img = `../../assets/images/pay_card/${option}.png`
           this.coin = 'bc1qeqtszu9eayzelerwgh5ll05x6u5ydt8xf6wm8q'
-        } else if (option === 'ETH' || option === 'BNB' || option === 'BUSD' || option === 'USDT' || option === 'ERC ') {
-          this.coin = "0x315E5666326e576429Ff2dd661729E8FF532d982"
-        } else if (option === 'USDT' || option === "TRX") {
-          this.coin = "TUFaBudpT3GWHUPAoi4odorNVjntB8LRLd"
-        } else if (option === "SOL" || option === "USDC") {
-          this.coin = "Ehwkz9H3hdQMSchN9Crr1nu2YG5SZrnZpADvAZce4AaZ"
+        } else if (
+          option === 'ETH' ||
+          option === 'BNB' ||
+          option === 'BUSD' ||
+          option === 'USDT' ||
+          option === 'ERC '
+        ) {
+          this.img = '/pay_card/eth_usd_erc_bnb_busd.png'
+          this.coin = '0x315E5666326e576429Ff2dd661729E8FF532d982'
+        } else if (option === 'USDT' || option === 'TRX') {
+          this.img = '/pay_card/USDT_TRC.png'
+          this.coin = 'TUFaBudpT3GWHUPAoi4odorNVjntB8LRLd'
+        } else if (option === 'SOL' || option === 'USDC') {
+          this.img = '/pay_card/SOL_USDC.png'
+          this.coin = 'Ehwkz9H3hdQMSchN9Crr1nu2YG5SZrnZpADvAZce4AaZ'
         }
       }
     }
@@ -331,8 +374,6 @@ export default {
   border-radius: 16px;
   padding: 20px 10px;
 }
-
-
 
 .deposit {
   margin: 10px 0 0 30px;
@@ -461,7 +502,6 @@ form {
   overflow-x: auto;
   border-radius: 8px !important;
   border: 1px solid var(--border_color);
-
 }
 
 .table-info {
@@ -473,9 +513,7 @@ thead,
 tbody {
   width: 100%;
   height: auto;
-
 }
-
 
 th,
 td {
