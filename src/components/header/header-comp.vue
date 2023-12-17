@@ -103,9 +103,9 @@
         <div class="auth" v-if="isLogin">
           <button class="sign-in" @click="logOut">Sign Out</button>
         </div>
-        <div class="auth" v-else>
+        <div class="auth" v-if="!isLogin">
           <router-link to="/sign-in">
-            <button class="sign-in">Sign In</button>
+            <button class="sign-in">Sign In </button>
           </router-link>
           <router-link to="/sign-up">
             <button class="sign-up">Sign Up</button>
@@ -150,7 +150,12 @@ export default {
       isScrolled: false,
       activeIndex: 0,
       dropauthList: false,
-      isLogin: localStorage.getItem('isLogin')
+
+    }
+  },
+  computed:{
+    isLogin() {
+      return  JSON.parse(localStorage.getItem('isLogin'))
     }
   },
   mounted() {
@@ -158,13 +163,6 @@ export default {
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
-  },
-  watch: {
-    isLogin(newVal) {
-      if (newVal) {
-        this.isLogin = localStorage.getItem('isLogin')
-      }
-    }
   },
   methods: {
     logOut() {
@@ -177,10 +175,12 @@ export default {
         cancelButtonColor: '#f31616',
         reverseButtons: false
       }).then(async (result) => {
-        if (result) {
+
+          console.log(  JSON.parse(localStorage.getItem('isLogin')))
+        if (result.isConfirmed) {
           localStorage.removeItem('form')
-          localStorage.setItem('isLogin', false)
-          this.$store.state.isLogin = true
+          localStorage.removeItem('isLogin')
+          this.$store.state.isLogin = false
           this.isLogin = false
           this.$router.push('/')
           const Toast = Swal.mixin({
