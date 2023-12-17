@@ -34,15 +34,15 @@
             </div>
           </div>
         </div>
-        <div class="item_right_footer d-flex justify-content-start">
+        <div class="item_right_footer d-flex justify-content-start" style="margin-bottom: 37px;">
           <div @click="showModal = true" v-if="isLogin">
-            <ButtonComponent text="Buy Now" class="default_black" />
+            <ButtonComponent text="Buy Now" class="default_black buyBtn" />
           </div>
           <router-link v-else to="/sign-in">
-            <ButtonComponent text="Buy now" class="default_white ml-1" />
+            <ButtonComponent text="Buy now" class="default_white ml-1 buyBtn" />
           </router-link>
           <router-link :to="'/product-detail/' + item.id">
-            <ButtonComponent text="See more" class="default_white ml-1" />
+            <ButtonComponent text="See more" class="default_white ml-1 seeBtn" />
           </router-link>
         </div>
       </div>
@@ -151,4 +151,19 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.buyBtn{
+  background-color: #148db3;
+  color: #fff !important;
+  font-family: Montserrat-Bold;
+
+}
+.seeBtn{
+  font-family: Montserrat-Bold;
+}
+
+.buyBtn:hover{
+  color: #000 !important;
+}
+
+</style>
