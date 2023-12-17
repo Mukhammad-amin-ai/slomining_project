@@ -36,9 +36,10 @@
         </div>
         <div class="item_right_footer d-flex justify-content-start btns">
           <div @click="showModal = true" v-if="isLogin">
-            <router-link to="/dashboard/deposit">
+            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id }}">
               <ButtonComponent text="Buy Now" class="default_black buyBtn" />
             </router-link>
+
           </div>
           <router-link v-else to="/sign-in">
             <ButtonComponent text="Buy now" class="default_white ml-1 buyBtn" />
