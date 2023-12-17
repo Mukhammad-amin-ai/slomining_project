@@ -58,7 +58,7 @@
             </router-link>
           </ul>
         </nav>
-        <div class="drop-down" @click="dropclick">
+        <!-- <div class="drop-down" @click="dropclick">
           <div class="lang">
             <img src="../../assets/svg/gb.fcfef678.svg" alt="eng" />
           </div>
@@ -75,16 +75,19 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="auth3" v-if="isLogin">
         <button class="sign-in" @click="logOut">Sign Out</button>
       </div>
       <div class="auth2" v-if="isLogin">
+
+        <router-link to="/dashboard/profile">
+          <button class="sign-in" style="background-color: transparent; border: none;">
+            <img class="img-fluid" src="../../assets/icons/profile-icon.png" alt="">
+          </button>
         <router-link to="/dashboard/settings">
-
             <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/icons/profile-icon.png" alt="">
-
         </router-link>
       </div>
       <div class="auth" v-if="!isLogin">
@@ -258,9 +261,10 @@ header {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   text-transform: uppercase;
   gap: 10px;
+  margin-right: 20px;
 }
 
 nav {
