@@ -132,7 +132,7 @@
           aria-modal="true"
         >
           <template #header-extra>
-            <div @click="show = false" style="cursor: pointer">
+            <div @click="closeModal" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
             </div>
           </template>
@@ -143,11 +143,11 @@
             <img src="@/assets/images/success.png" alt="" style="width: 150px" />
             <div class="success_text mt-2">Thank you for your deposit</div>
             <div class="success_description mt-3 text-center">
-              Once your transaction recieves all confirmations on the blockchain, <br> your balance will
-              change. This may take up to 20 minutes.
+              Once your transaction recieves all confirmations on the blockchain, <br />
+              your balance will change. This may take up to 20 minutes.
             </div>
             <div class="success_bottom mt-3 text-center">
-              Make one more deposit within 10 minutes <br>
+              Make one more deposit within 10 minutes <br />
 
               to get a +25% bonus on your balance
             </div>
@@ -164,7 +164,7 @@
           aria-modal="true"
         >
           <template #header-extra>
-            <div @click="show = false" style="cursor: pointer">
+            <div @click="closeModal" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
             </div>
           </template>
@@ -387,6 +387,13 @@ export default {
     },
     showSuccess() {
       this.success = true
+    },
+    closeModal() {
+      this.show = false
+      this.success = false
+      this.imageUrl = ''
+      this.uploadedFileName = ''
+      this.uploadedFile = ''
     }
   },
   mounted() {
@@ -408,7 +415,8 @@ export default {
 .success_description {
   font-size: 24px;
   font-family: Montserrat-Medium, sans-serif;
-}.success_bottom   {
+}
+.success_bottom {
   font-size: 24px;
   font-family: Montserrat-Bold, sans-serif, sans-serif;
 }
