@@ -42,7 +42,7 @@
               <p>SOL-Solana</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDT', 5)" :class="{ borderclas: id === 5 }">
+          <div class="item" @click="convert('USDT', 5, 'USDT-TRC20')" :class="{ borderclas: id === 5 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
@@ -50,7 +50,7 @@
               <p>USDT-TRC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('USDT', 6)" :class="{ borderclas: id === 6 }">
+          <div class="item" @click="convert('USDT', 6, 'USDT-E')" :class="{ borderclas: id === 6 }">
             <div class="item-container">
               <div class="image">
                 <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
@@ -136,7 +136,6 @@
             </div>
           </div>
         </n-card>
-
         <n-card v-else style="width: 100%; max-width: 1000px; min-width: 350px" title="Checkout" :bordered="false"
           size="huge" role="dialog" aria-modal="true">
           <template #header-extra>
@@ -167,7 +166,6 @@
             </div>
             <div class="right_side ml-1 mt-2 d-flex flex-column">
               <div class="transfer">Transfer Address</div>
-
               <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText(this.coin)">
                 <div class="copied_text mt-1">{{ this.coin }}</div>
                 <svg class="copied_img ml-1" style="width: 20px" data-v-653498c4="" xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +201,6 @@
               </div>
             </div>
           </div>
-
           <template #footer>
             <div class="deposit_footer_text d-flex justify-content-start center">
               <svg style="width: 20px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
@@ -297,7 +294,7 @@ export default {
           console.error(err)
         })
     },
-    async convert(option, id) {
+    async convert(option, id, usdt) {
       // console.log(option);
       if (this.amount === '') {
         this.showModal = true
@@ -316,12 +313,12 @@ export default {
           option === 'ETH' ||
           option === 'BNB' ||
           option === 'BUSD' ||
-          // option === 'USDT' ||
+          usdt === 'USDT-E' ||
           option === 'ERC '
         ) {
           this.img = '/pay_card/eth_usd_erc_bnb_busd.png'
           this.coin = '0x315E5666326e576429Ff2dd661729E8FF532d982'
-        } else if ( option === 'USDT') {
+        } else if (usdt === 'USDT-TRC20') {
           this.img = '/pay_card/USDT_TRC.png'
           this.coin = 'TUFaBudpT3GWHUPAoi4odorNVjntB8LRLd'
         } else if (option === 'SOL' || option === 'USDC') {
