@@ -59,11 +59,7 @@
 .item_card_volume {
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(
-    270deg,
-    hsla(0, 0%, 100%, 0.1) -1.52%,
-    hsla(0, 0%, 100%, 0.024) 104.35%
-  );
+  background: linear-gradient(270deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
   border-radius: 10px;
   padding: 8px;
   font-family: Montserrat-Bold, sans-serif;
@@ -72,7 +68,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
 }
 .volume_value {
   margin-left: 10px;
@@ -136,7 +131,8 @@
   .detail_card_right {
     width: 100%;
   }
-}@media (min-width: 993px) and (max-width: 1440px) {
+}
+@media (min-width: 993px) and (max-width: 1440px) {
   .detail_card_right {
     width: 60%;
   }
@@ -185,12 +181,7 @@
   background: var(--blue);
   /*background: #59adda;*/
   background: #2980b9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #ffffff,
-    #6dd5fa,
-    #2980b9
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to bottom,
     #ffffff,
@@ -207,11 +198,7 @@
 .mining_detail_card {
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(
-    90deg,
-    hsla(0, 0%, 100%, 0.1) -1.52%,
-    hsla(0, 0%, 100%, 0.024) 104.35%
-  );
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
   background-blend-mode: multiply, normal;
   border-radius: 20px;
   -moz-column-gap: 60px;
@@ -319,5 +306,10 @@
   .add_cart_section {
     display: flex !important;
     flex-direction: column !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .term_content {
+    font-size: 10px !important;
   }
 }
