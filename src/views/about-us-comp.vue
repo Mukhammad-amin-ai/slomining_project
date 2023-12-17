@@ -101,8 +101,8 @@
                                     <div class="floating">
                                         <textarea id="input__username" class="floating__input" name="name"
                                             placeholder="Your name"></textarea>
-                                        <label for="input__username" class="floating__label" data-content="Your name">
-                                            <span class="hidden--visually">Your name</span>
+                                        <label for="input__username" class="floating__label" data-content="Your question">
+                                            <span class="hidden--visually">Your question</span>
                                         </label>
                                     </div>
 
@@ -114,14 +114,18 @@
                             <h3>Find Us There</h3>
                             <div class="there">
                                 <div class="email d-flex">
-                                    <div class="bx-email"></div>
+                                    <div class="bx-email d-flex center">
+                                        <img src="../assets/icons/mail-outline.svg" alt="">
+                                    </div>
                                     <div class="text">
                                         <h4>Email:</h4>
-                                        <p>info@slomining.com</p>
+                                        <p>support@skyhash.com</p>
                                     </div>
                                 </div>
                                 <div class="email d-flex">
-                                    <div class="bx-email"></div>
+                                    <div class="bx-email d-flex center">
+                                        <img src="../assets/icons/location-outline.svg" alt="">
+                                    </div>
                                     <div class="text">
                                         <h4>Location:</h4>
                                         <p>Wtc 1cv New London House 6 London Street, UK</p>
