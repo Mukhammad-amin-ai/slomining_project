@@ -53,7 +53,7 @@ const store = createStore({
         if (response.status === 200) {
           commit('setRewards', response.data.BTC)
         }
-        console.log(response.data.BTC);
+        // console.log(response.data.BTC);
       } catch (e) {
         console.error(e);
       }
