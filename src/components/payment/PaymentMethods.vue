@@ -15,28 +15,25 @@
         </div>
         <div class="payment_circles">
           <div class="payment_circle">
-            <img src="@/assets/icons/coin.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/btc.png" alt="" class="payment_circle_image" />
           </div>
           <div class="payment_circle">
-            <img src="@/assets/icons/t.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/bnb.png" alt="" class="payment_circle_image" />
           </div>
           <div class="payment_circle">
-            <img src="@/assets/icons/trangle.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/eth.png" alt="" class="payment_circle_image" />
           </div>
           <div class="payment_circle">
-            <img src="@/assets/icons/l.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/sol.png" alt="" class="payment_circle_image" />
           </div>
           <div class="payment_circle">
-            <img src="@/assets/icons/square.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/usdc.png" alt="" class="payment_circle_image" />
           </div>
           <div class="payment_circle">
-            <img src="@/assets/icons/green.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/usdt.png" alt="" class="payment_circle_image" />
           </div>
           <div class="payment_circle">
-            <img src="@/assets/icons/copy.png" alt="" class="payment_circle_image" />
-          </div>
-          <div class="payment_circle">
-            <img src="@/assets/icons/fish.png" alt="" class="payment_circle_image" />
+            <img src="@/assets/images/coins/4687.png" alt="" class="payment_circle_image" />
           </div>
         </div>
       </div>
