@@ -70,7 +70,7 @@ export default {
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:920px) {
   .left-side {
     display: none;
   }
@@ -79,6 +79,7 @@ export default {
     width: 100%;
   }
 }
+
 
 
 </style>
