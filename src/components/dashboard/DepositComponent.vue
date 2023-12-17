@@ -563,6 +563,10 @@ h4 {
 
   .contant {
     width: 100%;
+    height: auto;
+  }
+  .deposit-container{
+    height: auto;
   }
 }
 
