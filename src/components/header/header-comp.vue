@@ -67,8 +67,12 @@
           </span>
           <div class="drop-list" :style="{ display: dropdawn ? 'block' : 'none' }">
             <ul>
-              <li><img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English</li>
-              <li><img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian</li>
+              <li>
+                <img src="../../assets/svg/gb.fcfef678.svg" alt="eng" /> English
+              </li>
+              <li>
+                <img src="../../assets/svg/ru.ab61f31e.svg" alt="ru" /> Russian
+              </li>
             </ul>
           </div>
         </div>
@@ -510,6 +514,9 @@ button {
   .user {
     display: flex;
   }
+  .auth3{
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 630px) {
@@ -565,6 +572,9 @@ button {
     display: none !important;
   }
 
+  .drop-down {
+    display: none !important;
+  }
 }
 
 /* @media screen and (max-width: 376px) {
@@ -586,4 +596,5 @@ button {
   .drop-auth {
     right: 0px;
   }
-}</style>
+}
+</style>
