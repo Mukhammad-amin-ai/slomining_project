@@ -78,7 +78,7 @@
         </div>
         <div class="auth2" v-if="isLogin">
           <router-link to="/dashboard/settings">
-            <button class="sign-in" style="background-color: #fff; border: none;">
+            <button class="sign-in" style="background-color: transparent; border: none;">
               <img src="../../assets/svg/puzzle-mini.svg" alt="">
             </button>
           </router-link>
@@ -322,6 +322,7 @@ li.active img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
 }
 
 .auth3 {
@@ -514,7 +515,8 @@ button {
   .user {
     display: flex;
   }
-  .auth3{
+
+  .auth3 {
     display: none !important;
   }
 }
