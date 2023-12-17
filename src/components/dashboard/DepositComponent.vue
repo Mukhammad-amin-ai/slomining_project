@@ -13,7 +13,7 @@
           <div class="item" @click="convert('BTC', 1)" :class="{ 'borderclas': id === 1 }">
             <div class="item-container">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/btc.svg" alt="" />
+                <img class="img-fluid" src="../../assets/images/coins/btc.png" alt="" />
               </div>
               <p>BTC-Bitcoin</p>
             </div>
@@ -21,15 +21,31 @@
           <div class="item" @click="convert('ETH', 2)" :class="{ 'borderclas': id === 2 }">
             <div class="item-container">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/etherum.svg" alt="" />
+                <img class="img-fluid" src="../../assets/images/coins/eth.png" alt="" />
               </div>
               <p>ETH-ERC20</p>
+            </div>
+          </div>
+          <div class="item" @click="convert('BNB', 3)" :class="{ 'borderclas': id === 3 }">
+            <div class="item-container">
+              <div class="image">
+                <img class="img-fluid" src="../../assets/images/coins/bnb.png" alt="" />
+              </div>
+              <p>BNB-Binance coin</p>
+            </div>
+          </div>
+          <div class="item" @click="convert('SOL', 4)" :class="{ 'borderclas': id === 3 }">
+            <div class="item-container">
+              <div class="image">
+                <img class="img-fluid" src="../../assets/images/coins/sol.png" alt="" />
+              </div>
+              <p>SOL-Solana</p>
             </div>
           </div>
           <div class="item" @click="convert('USDT', 3)" :class="{ 'borderclas': id === 3 }">
             <div class="item-container">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
+                <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
               </div>
               <p>USDT-TRC20</p>
             </div>
@@ -37,17 +53,25 @@
           <div class="item" @click="convert('USDT', 4)" :class="{ 'borderclas': id === 4 }">
             <div class="item-container">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-t.svg" alt="" />
+                <img class="img-fluid" src="../../assets/images/coins/usdt.png" alt="" />
               </div>
               <p>USDT-ERC20</p>
             </div>
           </div>
-          <div class="item" @click="convert('LTC', 5)" :class="{ 'borderclas': id === 5 }">
+          <div class="item" @click="convert('BUSB', 5)" :class="{ 'borderclas': id === 5 }">
             <div class="item-container">
               <div class="image">
-                <img class="img-fluid" src="../../assets/svg/crypto-L.svg" alt="" />
+                <img class="img-fluid" src="../../assets/images/coins/4687.png" alt="" />
               </div>
-              <p>LTC-Litecoin</p>
+              <p>BUSB (BEP20)</p>
+            </div>
+          </div>
+          <div class="item" @click="convert('USDC', 6)" :class="{ 'borderclas': id === 6 }">
+            <div class="item-container">
+              <div class="image">
+                <img class="img-fluid" src="../../assets/images/coins/usdc.png" alt="" />
+              </div>
+              <p>USDC(SOL)</p>
             </div>
           </div>
         </div>
@@ -147,7 +171,8 @@
                 <!-- @change="handleImageUpload" -->
                 <!-- <input class="d-none" type="file" id="img" ref="imgFile" accept="image/*"  />
                 <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" /> -->
-                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px;"> Confirm payment</label>
+                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px;">
+                  Confirm payment</label>
               </div>
             </div>
           </div>
