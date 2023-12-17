@@ -36,10 +36,9 @@
         </div>
         <div class="item_right_footer d-flex justify-content-start btns">
           <div @click="showModal = true" v-if="isLogin">
-            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id }}">
+            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">
               <ButtonComponent text="Buy Now" class="default_black buyBtn" />
             </router-link>
-
           </div>
           <router-link v-else to="/sign-in">
             <ButtonComponent text="Buy now" class="default_white ml-1 buyBtn" />
@@ -51,8 +50,14 @@
       </div>
     </div>
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
-      <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
-        role="dialog" aria-modal="true">
+      <n-card
+        style="width: 100%; max-width: 900px; min-width: 350px"
+        title="Checkout"
+        :bordered="false"
+        size="huge"
+        role="dialog"
+        aria-modal="true"
+      >
         <template #header-extra>
           <div @click="showModal = false" style="cursor: pointer">
             <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -83,7 +88,11 @@
                 Amount <br />
                 <span class="text-green d-flex justify-content-center center">
                   = {{ item.contract_price }} USDT
-                  <img style="width: 20px; margin-left: 5px; margin-bottom: 2px" src="@/assets/svg/crypto-t.svg" alt="" />
+                  <img
+                    style="width: 20px; margin-left: 5px; margin-bottom: 2px"
+                    src="@/assets/svg/crypto-t.svg"
+                    alt=""
+                  />
                 </span>
               </div>
               <div class="submit-form">
@@ -124,9 +133,7 @@ export default {
       dailyrewards: ''
     }
   },
-  mounted() {
-
-  },
+  mounted() {},
   methods: {
     changeType() {
       if (this.type === 'text') {
@@ -143,6 +150,7 @@ export default {
     inc() {
       this.count++
     },
+
     dealyRewardCount(option) {
       this.$store.dispatch('dailyReward')
       this.dailyrewards = this.$store.state.dailyReward * option
@@ -158,12 +166,12 @@ export default {
   color: #fff !important;
   font-family: Montserrat-Bold;
   padding: 16px;
-  width: 130% ;
+  width: 130%;
 }
 
 .seeBtn {
   padding: 16px;
-  width: 130% ;
+  width: 130%;
   font-family: Montserrat-Bold;
 }
 
@@ -177,10 +185,11 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .btns{
+  .btns {
     gap: 0;
   }
-  .buyBtn,.seeBtn{
+  .buyBtn,
+  .seeBtn {
     width: 100%;
   }
 }
