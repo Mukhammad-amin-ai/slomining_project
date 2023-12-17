@@ -108,7 +108,7 @@ export default {
 }
 
 .buttns {
-  width: 50%;
+  width: 46%;
   height: 100%;
   align-items: center;
   justify-content: space-between;
@@ -129,14 +129,15 @@ export default {
 .total {
   width: 100%;
   height: 94px;
-  padding: 12px 22px;
+  padding: 12px 4px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .08);
   border-radius: 0.5rem;
   margin: 16px 0;
+  gap: 15px;
 }
 
 .item {
-  width: 366px;
+  width: 400px;
   height: auto;
   margin: 8px 0px;
   padding: 0px 16px;
