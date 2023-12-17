@@ -320,12 +320,13 @@ form {
   border-radius: 5px;
 }
 
-thead {
+thead,
+tbody {
   width: 100%;
   height: auto;
 }
 
-th {
+th,td {
   padding: 0.875rem 1.25rem;
   font-family: Montserrat-Bold, sans-serif;
   color: rgb(33, 37, 41);

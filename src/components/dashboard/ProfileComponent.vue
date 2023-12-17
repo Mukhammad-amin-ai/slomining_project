@@ -85,7 +85,8 @@ export default {
   background-color: var(--blue);
   align-items: center;
   border-radius: 10px;
-  padding: 12px 22px;
+  padding: 12px 15px;
+  gap: 40px;
 }
 
 .money {
@@ -107,7 +108,7 @@ export default {
 }
 
 .buttns {
-  width: 40%;
+  width: 50%;
   height: 100%;
   align-items: center;
   justify-content: space-between;
