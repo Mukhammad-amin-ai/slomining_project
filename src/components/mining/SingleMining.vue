@@ -56,7 +56,7 @@
         </div>
       </div>
     </div>
-    <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
+    <!-- <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
       <n-card
         style="width: 100%; max-width: 900px; min-width: 350px"
         title="Checkout"
@@ -110,17 +110,17 @@
         </div>
         <template #footer> </template>
       </n-card>
-    </n-modal>
+    </n-modal> -->
   </div>
 </template>
 
 <script>
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
-import { NModal } from 'naive-ui'
-import { NCard } from 'naive-ui'
+//import { NModal } from 'naive-ui'
+//import { NCard } from 'naive-ui'
 export default {
   name: 'SingleMining',
-  components: { ButtonComponent, NModal, NCard },
+  components: { ButtonComponent },
   props: {
     item: Object
   },
@@ -140,7 +140,7 @@ export default {
       dailyrewards: ''
     }
   },
-  mounted() {},
+  mounted() { },
   methods: {
     changeType() {
       if (this.type === 'text') {
@@ -195,6 +195,7 @@ export default {
   .btns {
     gap: 0;
   }
+
   .buyBtn,
   .seeBtn {
     width: 100%;
