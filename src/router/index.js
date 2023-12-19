@@ -102,12 +102,11 @@ const router = createRouter({
     }
   ],
   scrollBehavior() {
-    // always scroll to top
     return { top: 0 }
   }
 })
 router.beforeEach((to, from, next) => {
-  AOS.init() // Initialize AOS
+  AOS.init() 
   next()
 })
 

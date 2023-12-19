@@ -161,7 +161,8 @@ export default {
     dealyRewardCount(option) {
       this.$store.dispatch('dailyReward')
       this.dailyrewards = this.$store.state.dailyReward * option
-      return `(${this.dailyrewards}) BTC = $ ${option}`
+      this.dailyrewards = this.dailyrewards.toString().slice(0, 10)
+      return `(${this.dailyrewards}) BTC = $ ${option}`;
     }
   }
 }
@@ -188,7 +189,7 @@ export default {
 
 .btns {
   margin-bottom: 30px;
-  gap: 60px;
+  gap: 30px;
 }
 
 @media screen and (max-width: 768px) {
