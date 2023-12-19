@@ -9,96 +9,63 @@
           <ul>
             <router-link to="/">
               <li :class="{ active: $route.fullPath === '/' }">
-                <span
-                  >Home
-                  <img
-                    v-show="{ active: $route.fullPath === '/' }"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+                <span>Home
+                  <img v-show="{ active: $route.fullPath === '/' }" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
             <router-link to="/contacts">
               <li :class="{ active: $route.fullPath === '/contacts' }">
-                <span
-                  >Contracts
-                  <img
-                    v-show="{ active: $route.fullPath === '/contacts' }"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+                <span>Contracts
+                  <img v-show="{ active: $route.fullPath === '/contacts' }" src="../../assets/images/line.png"
+                    alt="line" />
                 </span>
               </li>
             </router-link>
             <router-link to="/dashboard/profile" v-if="isLogin">
-              <li
-                :class="[
-                  { active: $route.fullPath === '/dashboard/' },
-                  { active: $route.fullPath === '/dashboard/profile' }
-                ]"
-              >
-                <span
-                  >Dashboard
-                  <img
-                    v-show="[
-                      { active: $route.fullPath === '/dashboard/' },
-                      { active: $route.fullPath === '/dashboard/profile' }
-                    ]"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+              <li :class="[
+                { active: $route.fullPath === '/dashboard/' },
+                { active: $route.fullPath === '/dashboard/profile' }
+              ]">
+                <span>Dashboard
+                  <img v-show="[
+                    { active: $route.fullPath === '/dashboard/' },
+                    { active: $route.fullPath === '/dashboard/profile' }
+                  ]" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
 
             <router-link to="/sign-in" v-else>
-              <li
-                :class="[
-                  { active: $route.fullPath === '/dashboard/' },
-                  { active: $route.fullPath === '/dashboard/profile' }
-                ]"
-              >
-                <span
-                  >Dashboard
-                  <img
-                    v-show="[
-                      { active: $route.fullPath === '/dashboard/' },
-                      { active: $route.fullPath === '/dashboard/profile' }
-                    ]"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+              <li :class="[
+                { active: $route.fullPath === '/dashboard/' },
+                { active: $route.fullPath === '/dashboard/profile' }
+              ]">
+                <span>Dashboard
+                  <img v-show="[
+                    { active: $route.fullPath === '/dashboard/' },
+                    { active: $route.fullPath === '/dashboard/profile' }
+                  ]" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
             <router-link to="/about">
               <li :class="{ active: $route.fullPath === '/about' }">
-                <span
-                  >About us
-                  <img
-                    v-show="{ active: $route.fullPath === '/about' }"
-                    src="../../assets/images/line.png"
-                    alt="line"
-                  />
+                <span>About us
+                  <img v-show="{ active: $route.fullPath === '/about' }" src="../../assets/images/line.png" alt="line" />
                 </span>
               </li>
             </router-link>
           </ul>
         </nav>
-      
+
       </div>
       <div class="auth3" v-if="isLogin">
         <button class="sign-in" @click="logOut">Sign Out</button>
       </div>
       <div class="auth2" v-if="isLogin">
         <router-link to="/dashboard/profile">
-          <img
-            class="img-fluid"
-            style="width: 25px;  !important;"
-            src="../../assets/icons/profile-icon.png"
-            alt=""
-          />
+          <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/icons/profile-icon.png" alt="" />
         </router-link>
       </div>
       <div class="auth" v-if="!isLogin">
@@ -109,13 +76,6 @@
           <button class="sign-up">Sign Up</button>
         </router-link>
       </div>
-      <!-- <div class="user ml-5 center">
-        <router-link to="/dashboard/profile">
-          <button class="bx-shadow center d-flex">
-            <img src="../../assets/svg/person-outline.svg" alt="person" />
-          </button>
-        </router-link>
-      </div> -->
       <div class="settings center ml-5" v-if="!isLogin">
         <button class="bx-shadow center d-flex" @click="dropauth">
           <img src="../../assets/svg/settings-outline.svg" alt="settings" />
@@ -193,7 +153,7 @@ export default {
             icon: 'success',
             title: 'Sign out successfully'
           })
-          throw window.location.reload()
+          throw window.location = '/'
         }
       })
     },
@@ -234,11 +194,9 @@ header {
   border-top: 0;
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(
-    90deg,
-    hsla(0, 0%, 100%, 0.1) -1.52%,
-    hsla(0, 0%, 100%, 0.024) 104.35%
-  );
+  background: linear-gradient(90deg,
+      hsla(0, 0%, 100%, 0.1) -1.52%,
+      hsla(0, 0%, 100%, 0.024) 104.35%);
   background-blend-mode: multiply, normal;
 }
 

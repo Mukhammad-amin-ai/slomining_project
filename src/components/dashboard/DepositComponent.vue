@@ -187,9 +187,7 @@
                   </path>
                 </svg>
               </div>
-
               <div class="transfer">Convert</div>
-
               <div class="right_heading d-flex justify-content-start center pointer text-green">
                 <div class="copied_text mt-1">{{ price }}</div>
               </div>
@@ -197,13 +195,13 @@
                 <div class="mt-4">
                   <span>{{ uploadedFileName }}</span>
                 </div>
-
-                <input @change="handleImageUpload" class="d-none" type="file" id="img" ref="imgFile" accept="image/*" />
+                <!-- <input @change="handleImageUpload" class="d-none" type="file" id="img" ref="imgFile" accept="image/*" />
                 <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" />
                 <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
                   v-if="!imageUrl">
-                  Upload Image</label>
-                <button v-if="imageUrl" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
+                  Upload Image</label> -->
+                  <!-- v-if="imageUrl" -->
+                <button class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
                   @click="showSuccess">
                   Confirm
                 </button>
