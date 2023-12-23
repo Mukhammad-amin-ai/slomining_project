@@ -29,9 +29,7 @@
           <div class="item_term">
             <div class="term_title">Daily Rewards</div>
             <div class="term_content">
-              <!-- {{ item.daily_rewards }} -->
-              <!-- {{ computedDelayRewardCount }} -->
-              {{ delayRewardCount()}}
+              {{ item.daily_rewards }} $
             </div>
           </div>
           <div class="item_term mt-2">
@@ -85,18 +83,18 @@ export default {
       dailyrewards: ''
     }
   },
-  computed: {
-    computedDelayRewardCount() {
-      const option = this.item.daily_rewards;
-      // console.log(option);
-      this.$store.dispatch('dailyReward');
+  // computed: {
+  //   computedDelayRewardCount() {
+  //     const option = this.item.daily_rewards;
+  //     // console.log(option);
+  //     this.$store.dispatch('dailyReward');
 
-      return `(${this.dailyrewards}) BTC = $ ${option}`;
-    }
-  },
-  mounted() {
-    this.fetchDailyReward();
-  },
+  //     return `(${this.dailyrewards}) BTC = $ ${option}`;
+  //   }
+  // },
+  // mounted() {
+  //   this.fetchDailyReward();
+  // },
   methods: {
     changeType() {
       if (this.type === 'text') {
@@ -120,17 +118,17 @@ export default {
     //   this.dailyrewards = this.dailyrewards.toString().slice(0, 10)
     //   return `(${this.dailyrewards}) BTC = $ ${option}`;
     // }
-    async fetchDailyReward() {
-      await this.$store.dispatch('dailyReward');
-      const option = this.item.daily_rewards;
-      this.dailyrewards = this.$store.state.dailyReward * option;
-      this.dailyrewards = this.dailyrewards.toString().slice(0, 10);
-    },
-    delayRewardCount() {
-      const option = this.item.daily_rewards;
-      // console.log(option);
-      return `(${this.dailyrewards}) BTC = $ ${option}`;
-    }
+    // async fetchDailyReward() {
+    //   await this.$store.dispatch('dailyReward');
+    //   const option = this.item.daily_rewards;
+    //   this.dailyrewards = this.$store.state.dailyReward * option;
+    //   this.dailyrewards = this.dailyrewards.toString().slice(0, 10);
+    // },
+    // delayRewardCount() {
+    //   const option = this.item.daily_rewards;
+    //   // console.log(option);
+    //   return `(${this.dailyrewards}) BTC = $ ${option}`;
+    // }
 
 
   }
@@ -158,7 +156,7 @@ export default {
 
 .btns {
   margin-bottom: 30px;
-  gap: 30px;
+  gap: 40px;
 }
 
 @media screen and (max-width: 768px) {
