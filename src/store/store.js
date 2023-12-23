@@ -37,7 +37,7 @@ const store = createStore({
     async convert({ commit }, option) {
       try {
         commit('setLoading', true)
-        let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=${option}&api_key=28f0d66a3a7be247a5ecd95f6ab3ad1f2533f7e22625601b9b4fd753508a6f64`)
+        let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=${option}&api_key=60a3a8c4121577763492d51f767b2d7545cce4c738aa1a6ccc52beff4f798960`)
         if (response.status === 200) {
           commit('setConvert', response.data[option])
           commit('setLoading', false)
@@ -48,7 +48,7 @@ const store = createStore({
     },
     async dailyReward({ commit }) {
       try {
-        let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=BTC&api_key=28f0d66a3a7be247a5ecd95f6ab3ad1f2533f7e22625601b9b4fd753508a6f64`)
+        let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=BTC&api_key=60a3a8c4121577763492d51f767b2d7545cce4c738aa1a6ccc52beff4f798960`)
         if (response.status === 200) {
           commit('setRewards', response.data.BTC)
         }
