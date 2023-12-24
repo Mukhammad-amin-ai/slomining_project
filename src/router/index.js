@@ -56,6 +56,11 @@ const router = createRouter({
           component: () => import('@/components/dashboard/OrderComponent.vue')
         },
         {
+          path: '/dashboard/affiliates',
+          name: 'affiliatesComponent',
+          component: () => import('@/components/dashboard/affiliatesComponent.vue')
+        },
+        {
           path: '/dashboard/settings',
           name: 'settings',
           component: () => import('@/components/dashboard/SettingsPage.vue')
