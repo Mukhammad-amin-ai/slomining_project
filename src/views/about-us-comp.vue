@@ -153,7 +153,7 @@ export default {
 .about {
     width: 100%;
     height: auto;
-    background-color: var(--blue);
+    background-color: var(--black);
 }
 
 .about-header-contant {
@@ -207,46 +207,6 @@ export default {
     width: 80%;
 }
 
-/* .stats {
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-}
-
-.stat-container {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.card {
-    width: 330px;
-    height: 164px;
-    background-color: #fff;
-}
-
-.img-stat {
-    width: 2.1875rem;
-}
-
-.card-contnat {
-    padding: 25px 0 28px;
-}
-
-.card-contnat h3 {
-    font-family: Montserrat-Extra-Bold, sans-serif;
-    font-size: 24px;
-    color: var(--blue);
-    padding: 10px 0;
-}
-
-.card-contnat p {
-    font-family: Montserrat-Medium, sans-serif;
-    font-size: 16px;
-    color: var(--text_gray);
-
-} */
-
 .get-in-touch {
     width: 100%;
     height: auto;
@@ -255,7 +215,8 @@ export default {
     cursor: pointer;
     border: 1px solid var(--white);
     backdrop-filter: blur(5px);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.284), transparent);
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.284), transparent); */
+    background-color: #fff;
     background-blend-mode: multiply, normal;
     border-radius: 20px;
     color: var(--black) !important;
@@ -264,7 +225,8 @@ export default {
 .get-in-touch h3 {
     font-size: 32px;
     font-family: Montserrat-Extra-Bold, sans-serif;
-    color: #fff;
+    /* color: #fff; */
+    color: #000;
 }
 
 .get-container {
@@ -290,7 +252,7 @@ export default {
 .question p {
     margin: 10px 0;
     font-family: Montserrat-Medium, sans-serif;
-    color: var(--text_gray);
+    color: var(--black);
     font-size: 16px;
 }
 
@@ -312,7 +274,7 @@ export default {
 .floating__input {
     padding: 1.8rem 1rem 0.6rem;
     font-size: 1rem;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     transition: border-color 0.2s ease;
     border-radius: 6px;
 }
@@ -327,7 +289,8 @@ export default {
     max-height: 0;
     font-weight: 500;
     pointer-events: none;
-    color: #8091A7;
+    /* color: #8091A7; */
+    color: #000;
 }
 
 .floating__label::before {
@@ -423,10 +386,12 @@ legend {
     transition: all .3s;
     padding: 10px 24px;
     border-radius: 0.375rem;
-    background-color: #8091A7;
+    /* background-color: #8091A7; */
+    background-color: #000;
+    color: #fff;
     font-family: Montserrat-Bold, sans-serif;
     font-size: 1rem;
-    color: #fff;
+    /* color: #fff; */
     border: none;
     cursor: pointer;
 }

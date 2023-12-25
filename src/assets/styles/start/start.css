@@ -1,9 +1,10 @@
 .start_and_mining {
-  background: linear-gradient(180deg, transparent 79.17%, #000),
-    linear-gradient(135.02deg, #272f48, #000 100.06%) ;
-  background: #2980B9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(180deg, transparent 79.17%, #000), linear-gradient(135.02deg, #272f48, #000 100.06%);
+  /* background: #2980B9;  fallback for old browsers */
+  background: #000; /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9); Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-blend-mode: multiply, normal, normal;
   padding-top: 100px;
   color: var(--white);
@@ -29,7 +30,7 @@
   font-size: 30px;
   font-family: Montserrat-Bold, sans-serif;
   /*color: var(--text_gray);*/
-  color: var(--text_gray);
+  color: var(--white);
   background: transparent;
   text-transform: uppercase;
 }
@@ -44,7 +45,8 @@
   background: transparent;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: linear-gradient(180deg, rgba(213, 227, 232, 0.5),transparent);
+  /* background: linear-gradient(180deg, rgba(213, 227, 232, 0.5),transparent); */
+
   border-radius: 10px;
   padding: 40px;
 }
@@ -56,11 +58,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(
-    90deg,
-    hsla(0, 0%, 100%, 0.1) -1.52%,
-    hsla(0, 0%, 100%, 0.024) 104.35%
-  );
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
   border-radius: 20px;
 }
 
@@ -75,16 +73,16 @@
   font-family: Montserrat-Bold, sans-serif;
   text-transform: uppercase;
   background: transparent;
-/*color: var(--white);*/
-  color: var(--text_gray);
+  color: var(--white);
+  /* color: var(--text_gray); */
 }
 
 .start_box_description {
   margin-top: 16px;
   font-family: Montserrat-Regular, sans-serif;
   background: transparent;
-  /*color: var(--white);*/
-  color: var(--text_gray);
+  color: var(--white);
+  /* color: var(--text_gray); */
   line-height: 28px;
 }
 
