@@ -6,37 +6,37 @@
           <ul>
             <li>
               <router-link to="/dashboard/profile" class="dashboard_link text-black">
-                <img src="@/assets/svg/stats-chart-outline.svg" alt="" class="dashboard_icon" />
+                <img src="@/assets/svg/stats-chart-outline.svg" alt="chart" class="dashboard_icon" />
                 dashboard</router-link>
             </li>
             <li>
               <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
-                <img src="@/assets/icons/text.svg" alt="" class="dashboard_icon" /> My
+                <img src="@/assets/icons/text.svg" alt="text" class="dashboard_icon" /> My
                 Bills</router-link>
             </li>
             <li>
               <router-link to="/dashboard/deposit" class="dashboard_link text-black">
-                <img src="@/assets/icons/cash.svg" alt="" class="dashboard_icon" /> Deposit
+                <img src="@/assets/icons/cash.svg" alt="cash" class="dashboard_icon" /> Deposit
               </router-link>
             </li>
             <li>
               <router-link to="/dashboard/withdraw" class="dashboard_link text-black">
-                <img src="@/assets/icons/swap.svg" alt="" class="dashboard_icon" /> withdraw
+                <img src="@/assets/icons/swap.svg" alt="swap" class="dashboard_icon" /> withdraw
               </router-link>
             </li>
-            <li>
+            <!-- <li>
               <router-link to="/dashboard/order" class="dashboard_link text-black">
                 <img src="@/assets/icons/document-text-outline.svg" alt="" class="dashboard_icon" /> My orders
               </router-link>
-            </li>
-            <li>
+            </li> -->
+            <!-- <li>
               <router-link to="/dashboard/affiliates" class="dashboard_link text-black">
                 <img src="@/assets/icons/cash-outline.svg" alt="" class="dashboard_icon" /> affiliates
               </router-link>
-            </li>
+            </li> -->
             <li>
               <router-link to="/dashboard/settings" class="dashboard_link text-black">
-                <img src="@/assets/icons/puzzle.svg" alt="" class="dashboard_icon" /> settings
+                <img src="@/assets/icons/puzzle.svg" alt="puzzle" class="dashboard_icon" /> settings
               </router-link>
             </li>
           </ul>

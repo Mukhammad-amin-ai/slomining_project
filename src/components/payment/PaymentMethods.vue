@@ -2,14 +2,14 @@
   <div class="payment_parent">
     <div class="container">
       <div class="payment_card">
-        <div class="payment_title detail_card_right_name center text-center">
+        <div class="payment_title detail_card_right_name center text-center" style="margin-bottom: 20px;">
           ACCEPT A VARIETY OF PAYMENT <br />
           METHODS
         </div>
         <div
           class="payment_description d-flex justify-content-center text-center "
         >
-          To ensure convenience for our investors, SKYHASH provides a diverse <br />
+          To ensure convenience for our investors,  Astro Hash provides a diverse <br />
           range of payment methods for both depositing funds and receiving <br />
           payments.
         </div>

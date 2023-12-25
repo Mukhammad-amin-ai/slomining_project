@@ -83,18 +83,6 @@ export default {
       dailyrewards: ''
     }
   },
-  // computed: {
-  //   computedDelayRewardCount() {
-  //     const option = this.item.daily_rewards;
-  //     // console.log(option);
-  //     this.$store.dispatch('dailyReward');
-
-  //     return `(${this.dailyrewards}) BTC = $ ${option}`;
-  //   }
-  // },
-  // mounted() {
-  //   this.fetchDailyReward();
-  // },
   methods: {
     changeType() {
       if (this.type === 'text') {
@@ -110,27 +98,7 @@ export default {
     },
     inc() {
       this.count++
-    },
-
-    // dealyRewardCount(option) {
-    //   this.$store.dispatch('dailyReward')
-    //   this.dailyrewards = this.$store.state.dailyReward * option
-    //   this.dailyrewards = this.dailyrewards.toString().slice(0, 10)
-    //   return `(${this.dailyrewards}) BTC = $ ${option}`;
-    // }
-    // async fetchDailyReward() {
-    //   await this.$store.dispatch('dailyReward');
-    //   const option = this.item.daily_rewards;
-    //   this.dailyrewards = this.$store.state.dailyReward * option;
-    //   this.dailyrewards = this.dailyrewards.toString().slice(0, 10);
-    // },
-    // delayRewardCount() {
-    //   const option = this.item.daily_rewards;
-    //   // console.log(option);
-    //   return `(${this.dailyrewards}) BTC = $ ${option}`;
-    // }
-
-
+    }
   }
 }
 </script>

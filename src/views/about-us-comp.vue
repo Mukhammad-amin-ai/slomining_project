@@ -37,8 +37,8 @@
                     <p>Skyhash - Leading the Evolution of Cloud Mining.</p>
                 </div>
                 <div class="image d-flex ">
-                    <div class="image-container">
-                        <img src="../assets/images/location.png" alt="">
+                    <div class="image-container ">
+                        <img src="../assets/images/AH/abt.png" alt="abt">
                     </div>
                 </div>
             </div>
@@ -195,10 +195,13 @@ export default {
 .image-container {
     width: 661px;
     height: 661px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .image-container img {
-    width: 100%;
+    width: 80%;
 }
 
 .stats {

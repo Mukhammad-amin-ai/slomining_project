@@ -8,4 +8,6 @@ export default {
     name: "affiliatesComponent"
 }
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>
