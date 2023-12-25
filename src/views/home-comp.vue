@@ -6,9 +6,9 @@
         <p>
           Empower Your Portfolio with Astro Hash's Distinctive Cloud Mining Edge
         </p>
-         <router-link to="/contacts">
-           <button class="start-mining pointer">start mining</button>
-         </router-link>
+        <router-link to="/contacts">
+          <button class="start-mining pointer">start mining</button>
+        </router-link>
       </div>
       <div class="hero-galery">
         <div class="galery-image">
@@ -22,7 +22,24 @@
     <MiningComponent />
     <WhyChoose />
     <PaymentMethods />
-    <!-- <MiningInvest /> -->
+    <div class="w100 d-flex center">
+      <div class="contant">
+        <p>
+          Cutting-Edge New Energy Mining Technology: We set ourselves apart by incorporating the latest
+          advancements in new energy mining technology. This commitment to innovation enables us to offer
+          users a reliable and secure method for cryptocurrency mining. Our state-of-the-art equipment is
+          optimized for energy efficiency, minimizing environmental impact while maximizing returns.
+        </p>
+        <p>
+          Stability and Security: Skyhash places the highest priority on stability and security.
+          Recognizing the importance of safeguarding your investments, we implement rigorous security measures
+          and adopt a vigilant approach to risk management. Skyhash provides a safe and risk-free environment
+          for mining activities.
+        </p>
+      </div>
+    </div>
+    <statsComp />
+
   </div>
 </template>
 <script>
@@ -30,6 +47,7 @@ import HowToStart from '@/components/start/HowToStart.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
 import WhyChoose from "@/components/choose/WhyChoose.vue";
 import PaymentMethods from "@/components/payment/PaymentMethods.vue";
+import statsComp from '@/components/about-us/stats-comp.vue'
 // import MiningInvest from "@/components/mining/MiningInvest.vue";
 
 export default {
@@ -38,7 +56,8 @@ export default {
     PaymentMethods,
     WhyChoose,
     MiningComponent,
-    HowToStart
+    HowToStart,
+    statsComp
   }
 }
 </script>
@@ -112,6 +131,19 @@ p {
 
 .galery-image img {
   width: 80%;
+}
+
+
+.contant {
+  width: 93%;
+  height: auto;
+
+}
+
+.contant p {
+  font-family: Montserrat-Medium, sans-serif;
+  font-size: 16px;
+  color: var(--white);
 }
 
 @media screen and (max-width:750px) {

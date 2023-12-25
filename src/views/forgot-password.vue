@@ -1,8 +1,8 @@
 <template>
     <div class="sign-in d-flex center">
-        <div class="container d-flex center">
+        <div class="container d-flex center" style="gap: 20px;">
             <div class="image ">
-                <img src="../assets/images/remote.png" alt="server">
+                <img src="../assets/images/AH/log.png" alt="log">
             </div>
             <div class="sign-in-form">
                 <div class="signin-text">

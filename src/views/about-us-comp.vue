@@ -42,7 +42,8 @@
                     </div>
                 </div>
             </div>
-            <div class="stats d-flex center">
+            <statsComp/>
+            <!-- <div class="stats d-flex center">
                 <div class="container d-flex stat-container">
                     <div class="card text-center rounded d-flex center">
                         <div class="card-contnat">
@@ -73,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="get-in-touch d-flex center">
                 <div class="get-container text-center">
                     <h3>Get In Touch with Us</h3>
@@ -141,9 +142,11 @@
     </div>
 </template>
 <script>
-
+import statsComp from '@/components/about-us/stats-comp.vue'
 export default {
-
+    components:{
+        statsComp
+    }
 }
 </script>
 <style scoped>
@@ -204,7 +207,7 @@ export default {
     width: 80%;
 }
 
-.stats {
+/* .stats {
     width: 100%;
     height: auto;
     padding: 100px 0;
@@ -242,7 +245,7 @@ export default {
     font-size: 16px;
     color: var(--text_gray);
 
-}
+} */
 
 .get-in-touch {
     width: 100%;
