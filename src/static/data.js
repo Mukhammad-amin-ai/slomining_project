@@ -95,7 +95,7 @@ const data = [
   {
     id: 8,
     name: 'Bitcoin',
-    image: '/card/9.jpg',
+    image: '/card/8.jpg',
     volume: 93,
     contract_term: '3 days',
     contract_price: 51900,

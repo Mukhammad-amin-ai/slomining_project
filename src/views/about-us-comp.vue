@@ -4,11 +4,11 @@
             <div class="about-header-contant d-flex center">
                 <div class="about-text">
                     <h4>Introduction:</h4>
-                    <p>Established in 2018 and headquartered in the United Kingdom, Skyhash has swiftly risen as a
+                    <p>Established in 2018 and headquartered in the United Kingdom,  Astro Hash  has swiftly risen as a
                         frontrunner in the cloud mining industry. With a global membership exceeding 300,000, our company
                         has been at the forefront of leveraging the potential of blockchain and cryptocurrencies.</p>
                     <h4>Our Strengths:</h4>
-                    <p>1. User-Friendly Platform: Skyhash prides itself on providing a user-friendly platform accessible to
+                    <p>1. User-Friendly Platform: Astro Hash prides itself on providing a user-friendly platform accessible to
                         both newcomers and seasoned miners. Our interface is designed to be intuitive and straightforward,
                         ensuring that anyone can easily navigate and optimize their mining experience.
                     </p>
@@ -19,22 +19,22 @@
                         optimized for energy efficiency, minimizing environmental impact while maximizing returns.
                     </p>
                     <p>
-                        3. Stability and Security: Skyhash places the highest priority on stability and security.
+                        3. Stability and Security: Astro Hash places the highest priority on stability and security.
                         Recognizing the importance of safeguarding your investments, we implement rigorous security measures
-                        and adopt a vigilant approach to risk management. Skyhash provides a safe and risk-free environment
+                        and adopt a vigilant approach to risk management. Astro Hash provides a safe and risk-free environment
                         for mining activities.
                     </p>
-                    <h4>Why Choose Skyhash:</h4>
+                    <h4>Why Choose Astro Hash:</h4>
                     <p>As we continue to push the boundaries of what's possible in the realm of cloud mining, we invite you
                         to embark on this exciting journey with us. Experience the ease of use, security, and profitability
-                        that Skyhash offers. Join us today and be part of the future of cryptocurrency mining.</p>
+                        that Astro Hash offers. Join us today and be part of the future of cryptocurrency mining.</p>
                     <p>As we continue to push the boundaries of what's possible in the world of cloud mining, we invite you
                         to
                         embark on this exciting journey with us. Experience the ease of use, security, and profitability
                         that
-                        SLOMINING offers. Join us today and be part of the future of cryptocurrency mining.</p>
+                        ASTRO HASH offers. Join us today and be part of the future of cryptocurrency mining.</p>
 
-                    <p>Skyhash - Leading the Evolution of Cloud Mining.</p>
+                    <p>Astro Hash - Leading the Evolution of Cloud Mining.</p>
                 </div>
                 <div class="image d-flex ">
                     <div class="image-container ">
@@ -120,7 +120,7 @@
                                     </div>
                                     <div class="text">
                                         <h4>Email:</h4>
-                                        <p>support@skyhash.com</p>
+                                        <p>support@astrohash.com</p>
                                     </div>
                                 </div>
                                 <div class="email d-flex">

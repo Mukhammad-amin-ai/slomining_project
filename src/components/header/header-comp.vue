@@ -10,15 +10,14 @@
             <router-link to="/">
               <li :class="{ active: $route.fullPath === '/' }">
                 <span>Home
-                  <img v-show="{ active: $route.fullPath === '/' }" src="../../assets/images/line.png" alt="line" />
+                  <!-- <img v-show="{ active: $route.fullPath === '/' }" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
             <router-link to="/contacts">
               <li :class="{ active: $route.fullPath === '/contacts' }">
                 <span>Contracts
-                  <img v-show="{ active: $route.fullPath === '/contacts' }" src="../../assets/images/line.png"
-                    alt="line" />
+                  <!-- <img v-show="{ active: $route.fullPath === '/contacts' }" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
@@ -28,10 +27,10 @@
                 { active: $route.fullPath === '/dashboard/profile' }
               ]">
                 <span>Dashboard
-                  <img v-show="[
+                  <!-- <img v-show="[
                     { active: $route.fullPath === '/dashboard/' },
                     { active: $route.fullPath === '/dashboard/profile' }
-                  ]" src="../../assets/images/line.png" alt="line" />
+                  ]" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
@@ -42,17 +41,17 @@
                 { active: $route.fullPath === '/dashboard/profile' }
               ]">
                 <span>Dashboard
-                  <img v-show="[
+                  <!-- <img v-show="[
                     { active: $route.fullPath === '/dashboard/' },
                     { active: $route.fullPath === '/dashboard/profile' }
-                  ]" src="../../assets/images/line.png" alt="line" />
+                  ]" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
             <router-link to="/about">
               <li :class="{ active: $route.fullPath === '/about' }">
                 <span>About us
-                  <img v-show="{ active: $route.fullPath === '/about' }" src="../../assets/images/line.png" alt="line" />
+                  <!-- <img v-show="{ active: $route.fullPath === '/about' }" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
@@ -184,7 +183,7 @@ header {
   top: 0;
   transition: all 0.3s linear;
   z-index: 99;
-  background-color: #fff;
+  background-color: #000 ;
 }
 
 .b-shadow {
@@ -255,11 +254,11 @@ ul {
 }
 
 li {
-  color: #1d2c4899;
+  color: #fff;
 }
 
 li.active {
-  color: #000;
+  color: #fff;
 }
 
 li span {

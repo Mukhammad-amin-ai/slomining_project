@@ -31,14 +31,14 @@
           optimized for energy efficiency, minimizing environmental impact while maximizing returns.
         </p>
         <p>
-          Stability and Security: Skyhash places the highest priority on stability and security.
+          Stability and Security:  Astro Hash places the highest priority on stability and security.
           Recognizing the importance of safeguarding your investments, we implement rigorous security measures
-          and adopt a vigilant approach to risk management. Skyhash provides a safe and risk-free environment
+          and adopt a vigilant approach to risk management.  Astro Hash provides a safe and risk-free environment
           for mining activities.
         </p>
+        <statsComp />
       </div>
     </div>
-    <statsComp />
 
   </div>
 </template>
@@ -69,6 +69,7 @@ export default {
   padding: 100px 0;
   justify-content: center;
   align-items: center;
+  background-color: #000;
 }
 
 .container {
@@ -88,7 +89,8 @@ export default {
 h1 {
   font-size: 45px;
   font-family: Montserrat-Extra-Bold, sans-serif;
-  color: rgb(28, 43, 70);
+  /* color: rgb(28, 43, 70); */
+  color: #fff;
   font-weight: 700;
 }
 
@@ -96,7 +98,7 @@ h1 {
 
 p {
   font-family: Montserrat-Medium, sans-serif;
-  color: rgb(128, 145, 167);
+  color: #fff;
   font-weight: 400;
   font-size: 16px;
   margin-top: 24px;
@@ -106,8 +108,8 @@ p {
   margin-top: 24px;
   padding: 12px 30px;
   border-radius: 7px;
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--black);
   text-transform: uppercase;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 16px;
