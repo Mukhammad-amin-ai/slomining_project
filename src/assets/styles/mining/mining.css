@@ -183,14 +183,10 @@
   /*  linear-gradient(135.02deg, #272f48, #000 100.06%);*/
   background: var(--blue);
   /*background: #59adda;*/
-  background: #2980b9; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #6dd5fa,
-    #2980b9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #000;
+  /* background: #2980b9; fallback for old browsers */
+  /* background: -webkit-linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9); Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(    to bottom,   #ffffff,    #6dd5fa,    #2980b9 ); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-blend-mode: multiply, normal, normal;
 
   background-blend-mode: multiply, normal, normal;
@@ -201,7 +197,8 @@
 .mining_detail_card {
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
+  /* background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%); */
+  background-color: #fff;
   background-blend-mode: multiply, normal;
   border-radius: 20px;
   -moz-column-gap: 60px;
@@ -211,13 +208,14 @@
   color: var(--black);
   padding: 80px;
   row-gap: 120px;
+  margin: 40px 0;
 }
 
 .detail_card_right_name {
   text-transform: uppercase;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 40px;
-  color: #fff;
+  color: #000;
 }
 
 .detail_card_right .item_right_heading,

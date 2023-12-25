@@ -178,11 +178,11 @@ export default {
   font-family: Montserrat-Regular, sans-serif;
   font-size: 16px;
   border-radius: 7px;
-  border: 1px solid #1c2b46;
+  border: 1px solid #000;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s linear all;
-  color: #000;
-  background-color: transparent;
+  color: #fff;
+  background-color: #000;
 }
 </style>
