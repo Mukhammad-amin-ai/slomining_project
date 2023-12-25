@@ -64,7 +64,7 @@
       </div>
       <div class="auth2" v-if="isLogin">
         <router-link to="/dashboard/profile">
-          <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/icons/profile-icon.png" alt="" />
+          <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/svg/person-outline.svg" alt="" />
         </router-link>
       </div>
       <div class="auth" v-if="!isLogin">

@@ -156,7 +156,9 @@ p {
   .hero-text {
     width: 100%;
   }
-
+  .galery-image img{
+    width: 100%;
+  }
   h1 {
     font-size: 30px !important;
     line-height: 30px;
