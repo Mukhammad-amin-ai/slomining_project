@@ -105,7 +105,8 @@ export default {
 
 <style scoped>
 .buyBtn {
-  background-color: #148db3;
+  /* background-color: #148db3; */
+  background-color: grey;
   color: #fff !important;
   font-family: Montserrat-Bold;
   padding: 16px;

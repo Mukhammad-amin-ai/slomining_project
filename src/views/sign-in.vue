@@ -6,7 +6,7 @@
       </div>
       <div class="sign-in-form">
         <div class="signin-text">
-          <h1>WELCOME TO SKYHASH</h1>
+          <h1>WELCOME TO  ASTRO HASH</h1>
           <p>Sign in to continue</p>
         </div>
         <form>

@@ -5,17 +5,17 @@
                 <h2 class="mb-1 mt-3">Privacy Policy</h2>
             </div>
             <section class="container">
-                <p>In its Privacy Policy, Skyhash diligently gathers, utilizes, shares, and safeguards user information
-                    acquired through the website skyhash.net. Any personal information collected from users or provided by
-                    them will be processed by Skyhash. The term "personal information" encompasses data that, alone or in
+                <p>In its Privacy Policy, Astro Hash diligently gathers, utilizes, shares, and safeguards user information
+                    acquired through the website astrohash.net. Any personal information collected from users or provided by
+                    them will be processed by Astro Hash. The term "personal information" encompasses data that, alone or in
                     conjunction with other details, enables direct or indirect identification, such as names, email
                     addresses, IP addresses, device identifiers, or other online identifiers.</p>
                 <p>
-                    Skyhash employs the collected information solely to fulfill contractual obligations and enhance customer
+                    Astro Hash employs the collected information solely to fulfill contractual obligations and enhance customer
                     service. The commitment to safeguarding user privacy is paramount. The Privacy Policy, in conjunction
                     with the Terms of Use and related documents, establishes the principles guiding the collection,
                     processing, and use of personal data. Users are encouraged to carefully read the document to comprehend
-                    Skyhash's stance on personal data and its utilization. If users wish to avoid the collection of personal
+                    Astro Hash's stance on personal data and its utilization. If users wish to avoid the collection of personal
                     information, discontinuing use of the site is advised.
                 </p>
                 <h4>1. USER INFORMATION </h4>
@@ -46,7 +46,7 @@
                 <p>Users possess rights, including data deletion, correction, processing restriction, and objection to
                     marketing use. Exercising these rights may impact cooperation</p>
                 <h4>8. PROTECTION OF PERSONAL DATA OF USERS.</h4>
-                <p>Responsibility for personal information disclosure lies with users while using the internet. Skyhash is
+                <p>Responsibility for personal information disclosure lies with users while using the internet. Astro Hash is
                     not liable for privacy statements or content outside its domain.</p>
                 <h4>9. CHANGES TO THE PRIVACY POLICY</h4>
                 <p>Any modifications to the Privacy Policy are published on the website, with significant changes notified
@@ -65,6 +65,7 @@ export default {
 .privacy {
     width: 100%;
     height: auto;
+    background-color: #000;
 }
 
 .head {
@@ -77,7 +78,8 @@ export default {
 
 h2 {
     font-family: Montserrat-Extra-Bold;
-    color: rgb(28, 43, 70);
+    /* color: rgb(28, 43, 70); */
+    color: #fff;
     font-size: 31px;
 }
 
@@ -90,7 +92,8 @@ h2 {
 
 p {
     font-family: Montserrat-Medium, sans-serif;
-    color: rgb(22, 28, 45);
+    /* color: rgb(22, 28, 45); */
+    color: #fff;
     font-size: 16px;
     line-height: 26px;
 }
@@ -98,7 +101,8 @@ p {
 h4 {
     font-family: Montserrat-Extra-Bold;
     font-size: 32px;
-    color: rgb(28, 43, 70);
+    /* color: rgb(28, 43, 70); */
+    color: #fff;
     line-height: 26px;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;

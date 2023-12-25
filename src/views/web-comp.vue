@@ -126,6 +126,7 @@ export default {
 .privacy {
     width: 100%;
     height: auto;
+    background-color: #000;
 }
 
 .head {
@@ -138,7 +139,8 @@ export default {
 
 h2 {
     font-family: Montserrat-Extra-Bold;
-    color: rgb(28, 43, 70);
+    /* color: rgb(28, 43, 70); */
+    color: #fff;
     font-size: 31px;
 }
 
@@ -156,7 +158,8 @@ h2 {
 
 .list-header h5 {
     font-family: Montserrat-Light, sans-serif;
-    color: var(--blue);
+    /* color: var(--blue); */
+    color: #fff;
     font-size: 17px;
 }
 
@@ -166,7 +169,8 @@ h2 {
 
 p {
     font-family: Montserrat-Medium, sans-serif;
-    color: rgb(128, 145, 167);
+    /* color: rgb(128, 145, 167); */
+    color: #fff;
     font-size: 16px;
     line-height: 26px;
 }
@@ -174,7 +178,8 @@ p {
 h4 {
     font-family: Montserrat-Extra-Bold;
     font-size: 22px;
-    color: rgb(28, 43, 70);
+    /* color: rgb(28, 43, 70); */
+    color: #fff;
     line-height: 26px;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
