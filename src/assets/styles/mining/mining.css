@@ -32,7 +32,8 @@
   /*  background: linear-gradient(180deg, rgba(190, 229, 236, 0.5),transparent);  background-blend-mode: multiply, normal;*/
   border: 1px solid var(--white);
   backdrop-filter: blur(5px);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), transparent);
+  /* background: linear-gradient(180deg, rgba(255, 255, 255), transparent); */
+  background-color: #fff;
   background-blend-mode: multiply, normal;
   border-radius: 20px;
   display: grid;
@@ -81,7 +82,9 @@
   height: 100%;
   width: 32%;
   border-radius: 8px;
+  /* background: linear-gradient(90deg, hsl(194, 100%, 33%) -1.52%, hsla(0, 87%, 58%, 0.02) 104.35%); */
   background: linear-gradient(90deg, hsl(194, 100%, 33%) -1.52%, hsla(0, 87%, 58%, 0.02) 104.35%);
+
 }
 
 .volume_value {
@@ -214,6 +217,7 @@
   text-transform: uppercase;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 40px;
+  color: #fff;
 }
 
 .detail_card_right .item_right_heading,

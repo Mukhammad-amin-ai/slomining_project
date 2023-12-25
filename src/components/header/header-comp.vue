@@ -369,14 +369,14 @@ button {
   font-family: Montserrat-Bold, sans-serif;
   font-size: 16px;
   border-radius: 7px;
-  border: 1px solid #1c2b46;
+  border: 1px solid #000;
   text-transform: uppercase;
   transition: 0.2s linear all;
   cursor: pointer;
 }
 
 .sign-in {
-  background-color: #1c2b46;
+  background-color: #000;
   color: #fff;
 }
 
@@ -391,7 +391,7 @@ button {
 }
 
 .sign-up:hover {
-  background-color: #1c2b46;
+  background-color: #000;
   color: #fff;
 }
 
