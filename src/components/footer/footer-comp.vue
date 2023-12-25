@@ -5,7 +5,7 @@
         <div class="information d-flex">
           <div class="our-team">
             <div class="our-logo">
-              <img src="../../assets/images/SKYHASH-02.png" alt="" />
+              <img src="../../assets/images/AH/logo.png" alt="logo" />
             </div>
             <p>
               Our dedicated team of experts, coupled with cutting-edge technology, enables us to
@@ -58,10 +58,10 @@
       <div class="all-rights d-flex">
         <div class="image">
           <router-link to="/">
-            <img src="../../assets/images/SKYHASH-02.png" alt="about" style="object-fit: contain" />
+            <img src="../../assets/images/AH/logo.png" alt="about" style="object-fit: contain" />
           </router-link>
         </div>
-        <h5>© 2018-2023, SKYHASH. All Rights Reserved.</h5>
+        <h5>© 2018-2023, Astro Hash. All Rights Reserved.</h5>
       </div>
     </div>
   </footer>
@@ -73,7 +73,7 @@ export default {}
 footer {
   width: 100%;
   height: auto;
-  background-color: var(--blue);
+  background-color: var(--black);
 }
 
 .container {

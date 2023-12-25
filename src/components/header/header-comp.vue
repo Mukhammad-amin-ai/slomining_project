@@ -2,7 +2,7 @@
   <header :class="{ 'b-shadow': isScrolled }">
     <div class="container">
       <router-link to="/" class="logo">
-        <img src="../../assets/images/SKYHASH.png" alt="slomining" />
+        <img src="../../assets/images/AH/logo.png" alt="logo" />
       </router-link>
       <div class="navigation">
         <nav>

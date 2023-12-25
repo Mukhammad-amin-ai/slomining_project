@@ -2,9 +2,9 @@
   <div class="hero">
     <div class="container">
       <div class="hero-text">
-        <h1>Skyhash: Your Gateway to Top-Tier Cloud Mining</h1>
+        <h1>Astro Hash: Your Gateway to Top-Tier Cloud Mining</h1>
         <p>
-          Empower Your Portfolio with Skyhash's Distinctive Cloud Mining Edge
+          Empower Your Portfolio with Astro Hash's Distinctive Cloud Mining Edge
         </p>
          <router-link to="/contacts">
            <button class="start-mining pointer">start mining</button>
@@ -12,7 +12,7 @@
       </div>
       <div class="hero-galery">
         <div class="galery-image">
-          <img src="../assets/images/coin-min.png" alt="hero" draggable="false" />
+          <img src="../assets/images/AH/ASTRHASH.png" alt="hero" draggable="false" />
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
     <MiningComponent />
     <WhyChoose />
     <PaymentMethods />
-    <MiningInvest />
+    <!-- <MiningInvest /> -->
   </div>
 </template>
 <script>
@@ -30,11 +30,11 @@ import HowToStart from '@/components/start/HowToStart.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
 import WhyChoose from "@/components/choose/WhyChoose.vue";
 import PaymentMethods from "@/components/payment/PaymentMethods.vue";
-import MiningInvest from "@/components/mining/MiningInvest.vue";
+// import MiningInvest from "@/components/mining/MiningInvest.vue";
 
 export default {
   components: {
-    MiningInvest,
+    // MiningInvest,
     PaymentMethods,
     WhyChoose,
     MiningComponent,
@@ -111,7 +111,7 @@ p {
 }
 
 .galery-image img {
-  width: 100%;
+  width: 80%;
 }
 
 @media screen and (max-width:750px) {
