@@ -2,6 +2,7 @@
   <div class="settings_parent">
     <TabReusable title="Settings" tab="Change Your Password" />
     <form class="settings_form d-flex flex-column mt-2">
+      
       <label for="email" class="form_label">Email</label>
       <input type="email" id="email" placeholder="example@gmail.com" class="form_input" />
       <label for="verify" class="form_label">Verify Code</label>
