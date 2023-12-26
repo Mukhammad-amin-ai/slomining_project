@@ -213,22 +213,30 @@ export default {
   margin: 30px 0;
   width: 100%;
   height: auto;
-  background-color: #f8f9fc;
+  /* background-color: #f8f9fc; */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
   border-radius: 16px;
   padding: 21px;
+
 }
 
 h2 {
   font-family: Montserrat-Extra-Bold, sans-serif;
   font-size: 32px;
-  color: var(--blue);
+  color: var(--white);
   margin-bottom: 24px;
 }
 
 p {
   font-family: Montserrat-Medium, sans-serif;
   font-size: 15px;
-  color: rgb(51, 57, 71);
+  /* color: rgb(51, 57, 71); */
+  color: #fff;
   line-height: 21px;
   padding-bottom: 10px;
 }
@@ -267,6 +275,13 @@ form {
 .item {
   flex: 0 0 auto;
   width: 23%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
+  border-radius: 4px;
 }
 
 .image {
@@ -279,8 +294,8 @@ form {
 }
 
 .item-container {
-  background: #fff;
-  border-radius: 4px;
+  /* background: #fff; */
+  /* border-radius: 4px; */
   padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -334,10 +349,12 @@ tbody {
   height: auto;
 }
 
-th,td {
+th,
+td {
   padding: 0.875rem 1.25rem;
   font-family: Montserrat-Bold, sans-serif;
-  color: rgb(33, 37, 41);
+  /* color: rgb(33, 37, 41); */
+  color: #fff;
   font-size: 15.008px;
   line-height: 26px;
 }
@@ -345,9 +362,11 @@ th,td {
 h4 {
   color: #198754;
 }
-.color_grey{
+
+.color_grey {
   color: grey;
 }
+
 @media screen and (max-width:1024px) {
   .deposit {
     margin: 0 !important;
@@ -397,20 +416,23 @@ h4 {
     width: 200px;
   }
 }
+
 @media screen and (max-width: 425px) {
-  h2{
+  h2 {
     font-size: 28px !important;
   }
-  p{
+
+  p {
     font-size: 12px;
   }
 }
+
 @media screen and (max-width:320px) {
   .next {
     width: 100px;
   }
-  p{
+
+  p {
     font-size: 10px;
   }
-}
-</style>
+}</style>

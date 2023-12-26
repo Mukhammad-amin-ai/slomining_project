@@ -108,7 +108,6 @@
               <td></td>
               <td></td>
               <td></td>
-
             </tr>
           </tbody>
         </table>
@@ -200,7 +199,7 @@
                 <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
                   v-if="!imageUrl">
                   Upload Image</label> -->
-                  <!-- v-if="imageUrl" -->
+                <!-- v-if="imageUrl" -->
                 <button class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
                   @click="showSuccess">
                   Confirm
@@ -378,7 +377,7 @@ export default {
 
 .deposit_footer_text {
   background: var(--depost_bg);
-  color: vaR(--depost_tex);
+  color: var(--depost_tex);
   padding: 10px;
   border-radius: 8px;
 }
@@ -426,7 +425,13 @@ export default {
   margin: 30px 0;
   width: 100%;
   height: 500px;
-  background-color: #f8f9fc;
+  /* background-color: #f8f9fc; */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
   border-radius: 16px;
   padding: 21px;
 }
@@ -434,14 +439,15 @@ export default {
 h2 {
   font-family: Montserrat-Extra-Bold, sans-serif;
   font-size: 32px;
-  color: var(--blue);
+  color: var(--white);
   margin-bottom: 24px;
 }
 
 p {
   font-family: Montserrat-Medium, sans-serif;
   font-size: 15px;
-  color: rgb(51, 57, 71);
+  /* color: rgb(51, 57, 71); */
+  color: #fff;
   line-height: 21px;
   padding-bottom: 10px;
 }
@@ -480,6 +486,13 @@ form {
 .item {
   flex: 0 0 auto;
   width: 23%;
+   background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
+  border-radius: 4px;
 }
 
 .image {
@@ -492,8 +505,7 @@ form {
 }
 
 .item-container {
-  background: #fff;
-  border-radius: 4px;
+  /* background: #fff; */
   padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -554,7 +566,8 @@ th,
 td {
   padding: 0.875rem 1.25rem;
   font-family: Montserrat-Bold, sans-serif;
-  color: rgb(33, 37, 41);
+  /* color: rgb(33, 37, 41); */
+  color: #fff;
   font-size: 15.008px;
   line-height: 26px;
 }
@@ -562,9 +575,11 @@ td {
 h4 {
   color: #198754;
 }
-.color_grey{
+
+.color_grey {
   color: grey;
 }
+
 @media screen and (max-width: 1024px) {
   .deposit {
     margin: 0 !important;
@@ -627,9 +642,11 @@ h4 {
   .next {
     width: 200px;
   }
+
   .success_text {
     font-size: 30px;
   }
+
   .success_description,
   .success_bottom {
     font-size: 18px;
@@ -644,9 +661,11 @@ h4 {
   p {
     font-size: 12px;
   }
+
   .success_text {
-    font-size: 20px ;
+    font-size: 20px;
   }
+
   .success_description,
   .success_bottom {
     font-size: 16px;
@@ -663,9 +682,11 @@ h4 {
   p {
     font-size: 10px;
   }
+
   .success_text {
-    font-size: 18px ;
+    font-size: 18px;
   }
+
   .success_description,
   .success_bottom {
     font-size: 15px;
