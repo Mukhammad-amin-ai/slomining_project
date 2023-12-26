@@ -3,7 +3,7 @@
     <div class="container">
       <div class="payment_card">
         <div class="payment_title detail_card_right_name center text-center" style="margin-bottom: 20px;">
-          ACCEPT A VARIETY OF PAYMENT <br />
+         WE ACCEPT  VARIETY OF PAYMENT <br />
           METHODS
         </div>
         <div

@@ -6,14 +6,10 @@
       </router-link>
       <div class="mining_detail_card">
         <div class="detail_card_left">
-          <img
-            :src="product.image"
-            :alt="product.name"
-            class="detail_card_left_image img-fluid rounded"
-          />
+          <img :src="product.image" :alt="product.name" class="detail_card_left_image img-fluid rounded" />
         </div>
         <div class="detail_card_right d-flex flex-column justify-content-start">
-          <div class="detail_card_right_name">
+          <div class="detail_card_right_name" style="color:#000 !important;">
             {{ product.name }}
           </div>
           <div class="item_right_heading">
@@ -50,14 +46,10 @@
               Volume <span class="volume_value ">{{ product.volume }}%</span>
             </div>
           </div>
-            <router-link :to="{ path: '/dashboard/deposit', query: { id: product.id } }">
+          <router-link :to="{ path: '/dashboard/deposit', query: { id: product.id } }">
 
-              <ButtonComponent
-              text="Buy now"
-              class="default_black mt-1"
-              style="width: 150px"
-              />
-            </router-link>
+            <ButtonComponent text="Buy now" class="default_black mt-1" style="width: 150px" />
+          </router-link>
         </div>
       </div>
       <div class="detail_card_right_name mb-1">detail</div>
@@ -66,14 +58,8 @@
     </div>
 
     <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
-      <n-card
-        style="width: 100%; max-width: 900px; min-width: 350px"
-        title="Checkout"
-        :bordered="false"
-        size="huge"
-        role="dialog"
-        aria-modal="true"
-      >
+      <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
+        role="dialog" aria-modal="true">
         <template #header-extra>
           <div @click="showModal = false" style="cursor: pointer">
             <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -104,11 +90,7 @@
                 Amount <br />
                 <span class="text-green d-flex justify-content-center center">
                   = {{ product.contract_price }} USDT
-                  <img
-                    style="width: 20px; margin-left: 5px; margin-bottom: 2px"
-                    src="@/assets/svg/crypto-t.svg"
-                    alt=""
-                  />
+                  <img style="width: 20px; margin-left: 5px; margin-bottom: 2px" src="@/assets/svg/crypto-t.svg" alt="" />
                 </span>
               </div>
               <div class="submit-form">

@@ -33,7 +33,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: #fff;
+    background-color: #000;
     bottom: 0;
     box-shadow: 0 -5px 10px 0 rgba(0,0,0,.06);
     z-index: 99;
@@ -42,12 +42,12 @@ export default {
 .item {
     width: 20%;
     height: 100%;
-    font-family: Montserrat-Medium, sans-serif;
     text-transform: uppercase;
 }
 
 .item a {
-    color: #000;
+    font-family: Montserrat-Medium, sans-serif;
+    color: #fff;
 }
 
 @media screen and (max-width:990px) {

@@ -114,6 +114,7 @@ export default {
 }
 
 .seeBtn {
+  color: #fff !important;
   padding: 16px;
   width: 130%;
   font-family: Montserrat-Bold;
