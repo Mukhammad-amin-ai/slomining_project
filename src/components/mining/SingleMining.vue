@@ -22,14 +22,14 @@
           </div>
           <div class="item_term">
             <div class="term_title">Contract Price</div>
-            <div class="term_content">$ {{ item.contract_price }}</div>
+            <div class="term_content">${{ item.contract_price }}</div>
           </div>
         </div>
         <div class="item_right_body">
           <div class="item_term">
             <div class="term_title">Daily Rewards</div>
             <div class="term_content">
-             $ {{ item.daily_rewards }} 
+             ${{ item.daily_rewards }} 
             </div>
           </div>
           <div class="item_term mt-2">
