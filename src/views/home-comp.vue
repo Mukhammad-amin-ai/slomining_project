@@ -86,6 +86,7 @@ export default {
   border: none !important;
   margin: 0 !important;
   border-radius: 0 !important;
+  -webkit-mask-image:none !important;
 }
 .container {
   width: 93%;
