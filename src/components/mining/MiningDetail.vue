@@ -9,7 +9,7 @@
           <img :src="product.image" :alt="product.name" class="detail_card_left_image img-fluid rounded" />
         </div>
         <div class="detail_card_right d-flex flex-column justify-content-start">
-          <div class="detail_card_right_name" style="color:#000 !important;">
+          <div class="detail_card_right_name">
             {{ product.name }}
           </div>
           <div class="item_right_heading">
@@ -41,14 +41,14 @@
             </div>
           </div>
           <div class="item_right_footer">
-            <div class="item_card_volume">
+            <div class="item_card_volume" style="color: #fff;">
               <div class="liquid-bar" :style="{ width: product.volume + '%' }"></div>
               Volume <span class="volume_value ">{{ product.volume }}%</span>
             </div>
           </div>
           <router-link :to="{ path: '/dashboard/deposit', query: { id: product.id } }">
 
-            <ButtonComponent text="Buy now" class="default_black mt-1" style="width: 150px" />
+            <ButtonComponent text="Buy now" class="default_black mt-1 color" style="width: 150px " />
           </router-link>
         </div>
       </div>
@@ -57,7 +57,7 @@
       <div class="product_detail" v-html="product.detail"></div>
     </div>
 
-    <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
+    <!-- <n-modal v-model:show="showModal" transform-origin="center" style="margin: auto">
       <n-card style="width: 100%; max-width: 900px; min-width: 350px" title="Checkout" :bordered="false" size="huge"
         role="dialog" aria-modal="true">
         <template #header-extra>
@@ -101,13 +101,13 @@
         </div>
         <template #footer> </template>
       </n-card>
-    </n-modal>
+    </n-modal> -->
   </div>
 </template>
 
 <script>
 import data from '@/static/data'
-import { NCard, NModal } from 'naive-ui'
+// import { NCard, NModal } from 'naive-ui'
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
 export default {
   name: 'MiningDetail',
@@ -120,7 +120,10 @@ export default {
       type: 'text'
     }
   },
-  components: { ButtonComponent, NModal, NCard },
+  // NModal, NCard 
+  components: {
+    ButtonComponent
+  },
   created() {
     const productId = this.$route.params.id
     this.product = this.getProductDetails(productId)
@@ -166,5 +169,9 @@ export default {
   transition: 0.3s linear all;
   color: #fff;
   background-color: #000;
+}
+
+.color {
+  color: #fff !important;
 }
 </style>

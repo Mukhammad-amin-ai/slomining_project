@@ -4,11 +4,12 @@
             <div class="about-header-contant d-flex center">
                 <div class="about-text">
                     <h4>Introduction:</h4>
-                    <p>Established in 2018 and headquartered in the United Kingdom,  Astro Hash  has swiftly risen as a
+                    <p>Established in 2018 and headquartered in the United Kingdom, Astro Hash has swiftly risen as a
                         frontrunner in the cloud mining industry. With a global membership exceeding 300,000, our company
                         has been at the forefront of leveraging the potential of blockchain and cryptocurrencies.</p>
                     <h4>Our Strengths:</h4>
-                    <p>1. User-Friendly Platform: Astro Hash prides itself on providing a user-friendly platform accessible to
+                    <p>1. User-Friendly Platform: Astro Hash prides itself on providing a user-friendly platform accessible
+                        to
                         both newcomers and seasoned miners. Our interface is designed to be intuitive and straightforward,
                         ensuring that anyone can easily navigate and optimize their mining experience.
                     </p>
@@ -21,7 +22,8 @@
                     <p>
                         3. Stability and Security: Astro Hash places the highest priority on stability and security.
                         Recognizing the importance of safeguarding your investments, we implement rigorous security measures
-                        and adopt a vigilant approach to risk management. Astro Hash provides a safe and risk-free environment
+                        and adopt a vigilant approach to risk management. Astro Hash provides a safe and risk-free
+                        environment
                         for mining activities.
                     </p>
                     <h4>Why Choose Astro Hash:</h4>
@@ -42,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <statsComp/>
+            <statsComp />
             <!-- <div class="stats d-flex center">
                 <div class="container d-flex stat-container">
                     <div class="card text-center rounded d-flex center">
@@ -144,7 +146,7 @@
 <script>
 import statsComp from '@/components/about-us/stats-comp.vue'
 export default {
-    components:{
+    components: {
         statsComp
     }
 }
@@ -212,21 +214,25 @@ export default {
     height: auto;
     padding: 20px 20px;
     gap: 20px;
-    cursor: pointer;
-    border: 1px solid var(--white);
-    backdrop-filter: blur(5px);
+    /* cursor: pointer; */
+    /* border: 1px solid var(--white); */
+    /* backdrop-filter: blur(5px); */
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.284), transparent); */
-    background-color: #fff;
-    background-blend-mode: multiply, normal;
+    /* background-color: #fff; */
+    /* background-blend-mode: multiply, normal; */
+    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
     border-radius: 20px;
-    color: var(--black) !important;
+    color: var(--white) !important;
 }
 
 .get-in-touch h3 {
     font-size: 32px;
     font-family: Montserrat-Extra-Bold, sans-serif;
     /* color: #fff; */
-    color: #000;
+    color: #fff;
 }
 
 .get-container {
@@ -252,7 +258,7 @@ export default {
 .question p {
     margin: 10px 0;
     font-family: Montserrat-Medium, sans-serif;
-    color: var(--black);
+    color: var(--white);
     font-size: 16px;
 }
 
@@ -274,7 +280,7 @@ export default {
 .floating__input {
     padding: 1.8rem 1rem 0.6rem;
     font-size: 1rem;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     transition: border-color 0.2s ease;
     border-radius: 6px;
 }
@@ -290,7 +296,7 @@ export default {
     font-weight: 500;
     pointer-events: none;
     /* color: #8091A7; */
-    color: #000;
+    color: #fff;
 }
 
 .floating__label::before {
@@ -434,7 +440,7 @@ legend {
 .text h4 {
     font-family: Montserrat-Extra-Bold, sans-serif;
     font-size: 16px;
-    color: var(--black);
+    color: var(--white);
 }
 
 .text p {
