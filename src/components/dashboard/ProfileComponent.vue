@@ -82,7 +82,7 @@ export default {
 .balance {
   width: 100%;
   height: 96px;
-  background-color: grey;
+  background-color: rgb(97, 96, 96);
   /* background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -105,6 +105,7 @@ export default {
 .money h2 {
   font-family: Montserrat-Bold, sans-serif;
   font-size: 17.6px;
+  /* color: #000; */
 }
 
 .money p {

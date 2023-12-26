@@ -6,7 +6,7 @@
         <loadingComp />
         <p>Amount (USDT)</p>
         <form @submit.prevent="convert">
-          <input type="text" v-model="this.amount" placeholder="Pleace enter amount" />
+          <input type="text" v-model="this.amount" placeholder="Minimal deposit amount 100$" />
         </form>
         <p>Deposit Network</p>
         <div class="crypto d-flex">
