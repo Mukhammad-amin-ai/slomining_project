@@ -22,7 +22,7 @@
         <div class="start_box d-flex flex-column" data-aos-duration="1000" data-aos="fade-up"
              data-aos-anchor-placement="center-bottom"  data-aos-delay="100">
           <img class="start_box_image" src="@/assets/images/home/start3.png" alt="" />
-          <div class="start_box_title">start learning</div>
+          <div class="start_box_title">start earning</div>
           <div class="start_box_description">
             After purchasing the contract, daily profits will be promptly deposited into your
             account.

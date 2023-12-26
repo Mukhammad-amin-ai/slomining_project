@@ -127,7 +127,7 @@ p {
   width: 100%;
   height: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 
