@@ -12,12 +12,13 @@
   --form_bg: #f8f9fc;
   --violet: #7952b3;
   --red: #f31616;
-  --deposit: #F4F4F4;
-  --depost_bg: #FDF6EC;
-  --depost_tex: #E6A23C;
+  --deposit: #f4f4f4;
+  --depost_bg: #fdf6ec;
+  --depost_tex: #e6a23c;
 }
-body{
+body {
   overflow-x: hidden;
+  margin: 0 0 auto; 
 }
 .d-flex {
   display: flex;

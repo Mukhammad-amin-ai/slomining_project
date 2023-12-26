@@ -17,7 +17,8 @@
       </div>
     </div>
   </div>
-  <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none"
+
+  <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#ffffff" lcw-marquee-1="coins" lcw-marquee-2="none"
     lcw-marquee-items="10"></div>
   <div class="start_and_mining">
     <how-to-start />
@@ -69,9 +70,6 @@ export default {
 }
 </script>
 <style scoped>
-.livecoinwatch-widget-5{
-  background-color: #000 !important;
-}
 .hero {
   width: 100%;
   height: auto;
@@ -82,6 +80,12 @@ export default {
   background-color: #000;
 }
 
+.livecoinwatch-widget-5{
+  background-color: #000 !important;
+  border: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
 .container {
   width: 93%;
   height: 75%;
