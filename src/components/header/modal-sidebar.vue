@@ -185,7 +185,7 @@ export default {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   /* background-color: #000; */
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 100;
   visibility: hidden;
@@ -227,7 +227,6 @@ ul {
 
 .link_name {
   width: 100%;
-
   padding: 0.5rem 1.5rem 0 1.5rem;
   font-family: Montserrat-Bold, sans-serif;
   font-size: 16px;

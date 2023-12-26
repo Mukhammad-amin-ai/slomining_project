@@ -1,0 +1,16 @@
+<template >
+    <div class="dashboard_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+            <path fill="none" :stroke="color" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                d="M304 48l112 112-112 112M398.87 160H96M208 464L96 352l112-112M114 352h302" />
+        </svg>
+    </div>
+</template>
+<script>
+export default {
+    props: {
+        color: String
+    }
+}
+</script>
+<style scoped></style>

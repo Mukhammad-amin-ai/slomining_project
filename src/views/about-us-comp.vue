@@ -122,7 +122,7 @@
                                     </div>
                                     <div class="text">
                                         <h4>Email:</h4>
-                                        <p>support@astrohash.com</p>
+                                        <p>support@astrohash.net</p>
                                     </div>
                                 </div>
                                 <div class="email d-flex">
