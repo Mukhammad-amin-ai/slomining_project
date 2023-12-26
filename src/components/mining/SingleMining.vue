@@ -129,6 +129,26 @@ export default {
   gap: 40px;
 }
 
+@media screen and (max-width: 1300px) {
+  .btns {
+    gap: 20px;
+  }
+
+  .buyBtn,
+  .seeBtn {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .buyBtn,
+  .seeBtn {
+    width: 100%;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   .btns {
     gap: 0;
