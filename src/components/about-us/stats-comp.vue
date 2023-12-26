@@ -3,28 +3,28 @@
         <div class="container d-flex stat-container">
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/member-out.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/members.png" alt="members">
                     <h3>300K+</h3>
                     <p>Active Members</p>
                 </div>
             </div>
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/country.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/countries.png" alt="members">
                     <h3>160+</h3>
                     <p>Countries Supported</p>
                 </div>
             </div>
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/deposit-out.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/deposit.png" alt="members">
                     <h3>5.5M+</h3>
                     <p>Total Deposit</p>
                 </div>
             </div>
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/widthdrow-out.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/total.png" alt="members">
                     <h3>8M+</h3>
                     <p>Total Withdraw</p>
                 </div>
