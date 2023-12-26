@@ -5,7 +5,7 @@
       
       <label for="email" class="form_label">Email</label>
       <input type="email" id="email" placeholder="example@gmail.com" class="form_input" />
-      <label for="verify" class="form_label">Verify Code</label>
+      <!-- <label for="verify" class="form_label">Verify Code</label>
       <div class="info d-flex center justify-content-start" style="margin-bottom: 6px">
         <svg class="flex-shrink-0 me-2" width="25" height="25" viewBox="0 0 24 24" fill="#ff6a8e">
           <path
@@ -13,16 +13,23 @@
           ></path>
         </svg>
         <span class="text-gray">Click Send button to get code</span>
-      </div>
-      <div
+      </div> -->
+      <!-- <div
         class="d-flex justify-content-start"
         style="display: grid; grid-template-columns: 3fr 1fr"
       >
         <input type="number" id="verify" placeholder="******" class="form_input w-100" />
         <button type="button" class="send ml-1">Send</button>
-      </div>
+      </div> -->
       <label for="verify" class="form_label">New password</label>
-
+      <div class="password relative w100">
+        <input :type="type" id="verify" placeholder="******" class="form_input w100" />
+        <div class="eyes" @click="changeType">
+          <img v-if="type === 'text'" src="@/assets/icons/eye-open.svg" alt="" />
+          <img v-else src="@/assets/icons/slash.svg" alt="" />
+        </div>
+      </div>
+      <label for="verify" class="form_label">Confirm password</label>
       <div class="password relative w100">
         <input :type="type" id="verify" placeholder="******" class="form_input w100" />
         <div class="eyes" @click="changeType">
