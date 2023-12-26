@@ -1,12 +1,12 @@
-@import './fonts.css';
-@import './variables.css';
-@import './start/start.css';
-@import './mining/mining.css';
-@import './choice/choice.css';
-@import './payment/payment.css';
-@import './dashboard/dashboard.css';
-@import './dashboard/bills.css';
-@import './dashboard/settings.css';
+@import "./fonts.css";
+@import "./variables.css";
+@import "./start/start.css";
+@import "./mining/mining.css";
+@import "./choice/choice.css";
+@import "./payment/payment.css";
+@import "./dashboard/dashboard.css";
+@import "./dashboard/bills.css";
+@import "./dashboard/settings.css";
 
 * {
   padding: 0;
@@ -31,4 +31,8 @@ input::-webkit-inner-spin-button {
   font-family: Montserrat-Medium, sans-serif;
 }
 
-
+@media screen and (max-width: 1000px) {
+  .wrap_c7ca {
+    bottom: 50px !important;
+  }
+}
