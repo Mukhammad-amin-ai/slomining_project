@@ -26,14 +26,13 @@
   transition: all 0.2s linear;
 }
 .left-side ul li .dashboard_link:hover {
-  background: var(--dashboard_bg);
-  /* innamay turingeeeee */
-  /* qarang google 2 moinitorda yandex 1 da  */
-  /* yandexga kliring */
+  /* background: var(--dashboard_bg); */
+  background-color: white;
   color: #000 !important;
 }
 .active_dashboard {
-  background: var(--dashboard_bg) !important; 
+  /* background: var(--dashboard_bg) !important;  */
+  background-color: white;
   /* color: #000 !important; */
 }
 .left-side ul li .dashboard_link {

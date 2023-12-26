@@ -1,43 +1,43 @@
 <template>
   <div class="dashboard_parent">
     <div class="container">
-
       <div class="dashboard d-flex justify-content-start">
         <div class="left-side">
           <ul>
             <li>
-              <router-link to="/dashboard/profile" class="dashboard_link text-black">
-                <img src="@/assets/svg/stats-chart-outline.svg" alt="chart" class="dashboard_icon" />
-                dashboard</router-link>
+              <router-link to="/dashboard/profile" class="dashboard_link text-black"
+                :class="'router-active-link' ? colorr = 'white' : colorr = 'black'">
+                <!-- <img src="@/assets/svg/stats-chart-outline.svg" alt="chart" class="dashboard_icon" /> -->
+                <statsComp :color="colorr" />
+                dashboard
+              </router-link>
             </li>
             <li>
               <router-link to="/dashboard/my-bills" class="dashboard_link text-black">
-                <img src="@/assets/icons/text.svg" alt="text" class="dashboard_icon" /> My
-                Bills</router-link>
+                <!-- <img src="@/assets/icons/text.svg" alt="text" class="dashboard_icon" /> -->
+                <MyBills color="white" />
+                My Bills
+              </router-link>
             </li>
             <li>
               <router-link to="/dashboard/deposit" class="dashboard_link text-black">
-                <img src="@/assets/icons/cash.svg" alt="cash" class="dashboard_icon" /> Deposit
+                <!-- <img src="@/assets/icons/cash.svg" alt="cash" class="dashboard_icon" /> -->
+                <depositIcon color="white" />
+                Deposit
               </router-link>
             </li>
             <li>
               <router-link to="/dashboard/withdraw" class="dashboard_link text-black">
-                <img src="@/assets/icons/swap.svg" alt="swap" class="dashboard_icon" /> withdraw
+                <!-- <img src="@/assets/icons/swap.svg" alt="swap" class="dashboard_icon" /> -->
+                <withDrowIcon color="white" />
+                withdraw
               </router-link>
             </li>
-            <!-- <li>
-              <router-link to="/dashboard/order" class="dashboard_link text-black">
-                <img src="@/assets/icons/document-text-outline.svg" alt="" class="dashboard_icon" /> My orders
-              </router-link>
-            </li> -->
-            <!-- <li>
-              <router-link to="/dashboard/affiliates" class="dashboard_link text-black">
-                <img src="@/assets/icons/cash-outline.svg" alt="" class="dashboard_icon" /> affiliates
-              </router-link>
-            </li> -->
             <li>
               <router-link to="/dashboard/settings" class="dashboard_link text-black">
-                <img src="@/assets/icons/puzzle.svg" alt="puzzle" class="dashboard_icon" /> settings
+                <!-- <img src="@/assets/icons/puzzle.svg" alt="puzzle" class="dashboard_icon" />  -->
+                <SettingsIcon color="white" />
+                settings
               </router-link>
             </li>
           </ul>
@@ -50,13 +50,25 @@
   </div>
 </template>
 <script>
+import statsComp from '../../assets/icons/deposit-icon/stats-comp.vue'
+import MyBills from '../../assets/icons/deposit-icon/my-bills.vue'
+import depositIcon from '../../assets/icons/deposit-icon/deposit-icon.vue'
+import withDrowIcon from '../../assets/icons/deposit-icon/withdro-icon.vue'
+import SettingsIcon from '../../assets/icons/deposit-icon/setting-icon.vue'
 export default {
   data() {
     return {
-      path: ''
+      path: '',
+      colorr: 'white'
     }
   },
-
+  components: {
+    statsComp,
+    MyBills,
+    depositIcon,
+    withDrowIcon,
+    SettingsIcon
+  },
   methods: {
     getPath() {
       return (this.path = this.$route.fullPath)
@@ -72,7 +84,7 @@ export default {
 </script>
 <style scoped>
 .router-link-active {
-  background: var(--dashboard_bg) !important;
+  background: white !important;
   color: #000 !important;
 }
 
@@ -91,7 +103,4 @@ export default {
     width: 100%;
   }
 }
-
-
-
 </style>
