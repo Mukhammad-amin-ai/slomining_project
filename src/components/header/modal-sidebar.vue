@@ -8,7 +8,7 @@
         <li v-for="link in sidebarLinks" :key="link.path">
           <router-link :to="link.path" class="sidebar_links" @click="setActive">
             <span class="link_name">{{ link.name }}</span>
-            <img :style="{ opacity: isActive(link.path) ? '1' : '0' }" src="@/assets/images/line.png" alt="line" />
+            <!-- <img :style="{ opacity: isActive(link.path) ? '1' : '0' }" src="@/assets/images/line.png" alt="line" /> -->
           </router-link>
         </li>
         <li>
@@ -156,7 +156,7 @@ export default {
   overflow: hidden;
   transition: max-height 0.3s ease-out;
   /* Adjust the timing function as needed */
-  background: var(--form_bg);
+  background: rgb(59, 59, 59);
 }
 
 .opened {
@@ -184,6 +184,7 @@ export default {
   max-width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: #000; */
   position: absolute;
   top: 0;
   z-index: 100;
@@ -204,7 +205,7 @@ export default {
 .sidebar {
   width: 70%;
   height: 100%;
-  background-color: #fff;
+  background-color: #000;
   position: sticky;
   bottom: 0;
   top: 0;
@@ -235,10 +236,11 @@ ul {
 
 .sub_link_name {
   width: 100%;
-  padding: 0.5rem 1.5rem 0 1.5rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
-  color: var(--text_gray);
+  /* color: var(--text_gray); */
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -254,11 +256,12 @@ ul {
 }
 
 .link_name {
-  color: #1d2c4899;
+  /* color: #1d2c4899; */
+  color: #fff;
 }
 
 .active_profile {
-  color: var(--blue);
+  color: var(--white);
 }
 
 li span {
@@ -271,10 +274,12 @@ li span {
 }
 
 .sign-in {
-  background-color: transparent;
+  background-color: grey;
   border-radius: 5px;
+  /* border: none; */
   font-family: Montserrat-Bold, sans-serif;
-  color: #1d2c4899;
+  /* color: #1d2c4899; */
+  color: #fff;
   font-size: 14px;
   padding: 10px;
 }
