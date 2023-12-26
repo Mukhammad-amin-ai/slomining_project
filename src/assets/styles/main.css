@@ -16,6 +16,11 @@
   text-decoration: none;
   /*background-color: var(--main);*/
   font-family: Montserrat-Medium, sans-serif, sans-serif;
+  font-display: swap;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 input[type="number"] {
   -moz-appearance: textfield;
