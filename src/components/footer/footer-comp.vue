@@ -36,7 +36,6 @@
               <router-link to="/what-is-web3">
                 <li>What is web3?</li>
               </router-link>
-              <!-- <li></li> -->
             </ul>
           </div>
           <div class="compan">

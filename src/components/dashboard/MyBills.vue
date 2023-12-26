@@ -22,7 +22,7 @@
             <th>USDT</th>
             <th>Balance</th>
             <th>Type</th>
-            <th>Wallet Address</th>
+            <!-- <th>Wallet Address</th> -->
           </tr>
         </thead>
         <tbody>
@@ -35,7 +35,7 @@
             <td>$5.00</td>
             <td>$5</td>
             <td>Registration Bonus</td>
-            <td></td>
+            <!-- <td></td> -->
           </tr>
           <!-- Add more rows as needed -->
         </tbody>
@@ -53,6 +53,7 @@ export default {
 <style scoped>
 th,
 td {
-  color: #fff !important;
+  color: #fff ;
 }
+
 </style>

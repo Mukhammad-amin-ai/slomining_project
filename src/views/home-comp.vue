@@ -17,6 +17,8 @@
       </div>
     </div>
   </div>
+  <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="none"
+    lcw-marquee-items="10"></div>
   <div class="start_and_mining">
     <how-to-start />
     <MiningComponent />
@@ -31,9 +33,9 @@
           optimized for energy efficiency, minimizing environmental impact while maximizing returns.
         </p>
         <p>
-          Stability and Security:  Astro Hash places the highest priority on stability and security.
+          Stability and Security: Astro Hash places the highest priority on stability and security.
           Recognizing the importance of safeguarding your investments, we implement rigorous security measures
-          and adopt a vigilant approach to risk management.  Astro Hash provides a safe and risk-free environment
+          and adopt a vigilant approach to risk management. Astro Hash provides a safe and risk-free environment
           for mining activities.
         </p>
         <statsComp />
@@ -42,6 +44,7 @@
 
   </div>
 </template>
+
 <script>
 import HowToStart from '@/components/start/HowToStart.vue'
 import MiningComponent from '@/components/mining/MiningComponent.vue'
@@ -58,10 +61,17 @@ export default {
     MiningComponent,
     HowToStart,
     statsComp
+  },
+  mounted() {
+    // Initialize LiveCoinWatch widget here
+    // LCW.init();
   }
 }
 </script>
 <style scoped>
+.livecoinwatch-widget-5{
+  background-color: #000 !important;
+}
 .hero {
   width: 100%;
   height: auto;
@@ -156,9 +166,11 @@ p {
   .hero-text {
     width: 100%;
   }
-  .galery-image img{
+
+  .galery-image img {
     width: 100%;
   }
+
   h1 {
     font-size: 30px !important;
     line-height: 30px;

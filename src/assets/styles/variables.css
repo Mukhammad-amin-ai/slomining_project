@@ -16,7 +16,9 @@
   --depost_bg: #FDF6EC;
   --depost_tex: #E6A23C;
 }
-
+body{
+  overflow-x: hidden;
+}
 .d-flex {
   display: flex;
 }
@@ -59,7 +61,7 @@
 }
 
 .text-green {
-  color: var(--green);
+  color: var(--green) !important;
 }
 
 .justify-content-start {
