@@ -80,14 +80,15 @@ export default {
   background-color: #000;
 }
 
-.livecoinwatch-widget-5{
-  /* width: 100!important; */
+.livecoinwatch-widget-5 {
+  width: 100% !important;
   background-color: #000 !important;
   border: none !important;
   margin: 0 !important;
   border-radius: 0 !important;
-  -webkit-mask-image:none !important;
+  -webkit-mask-image: none !important;
 }
+
 .container {
   width: 93%;
   height: 75%;

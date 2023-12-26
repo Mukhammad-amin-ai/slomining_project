@@ -8,13 +8,13 @@
                     <p>Active Members</p>
                 </div>
             </div>
-            <div class="card text-center rounded d-flex center">
+            <!-- <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
                     <img class="img-stat" src="../../assets/images/countries.png" alt="members">
                     <h3>160+</h3>
                     <p>Countries Supported</p>
                 </div>
-            </div>
+            </div> -->
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
                     <img class="img-stat" src="../../assets/images/deposit.png" alt="members">
@@ -85,7 +85,21 @@ export default {
 }
 
 
-
+@media screen and (max-width:1130px) {
+    .stat-container{
+        width: 80%;
+    }
+}
+@media screen and (max-width:930px) {
+    .stat-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width:830px) {
+    .stat-container{
+        width: 100%;
+    }
+}
 
 @media screen and (max-width:768px) {
     .stat-container {
