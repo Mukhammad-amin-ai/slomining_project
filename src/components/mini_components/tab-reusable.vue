@@ -27,7 +27,7 @@ export default {
 h1 {
     font-family: Montserrat-Extra-Bold, sans-serif;
     font-size: 32px;
-    color: var(--blue);
+    color: var(--white);
     margin-bottom: 24px;
 }
 
@@ -46,7 +46,8 @@ li {
     height: 100%;
     background-color: transparent;
     border: none;
-    color: #59adda;
+    /* color: #59adda; */
+    color: #f8f97f;
     font-size: 17px;
     font-family: Montserrat-Extra-Bold, sans-serif;
     margin: 0px 0px -1px;
@@ -61,7 +62,7 @@ li {
     right: 0;
     bottom: 0;
     height: 2px;
-    background-color: #59adda;
+    background-color: #f8f97f;
     width: 100%;
     transition: all .2s;
     transform: scale(1)
