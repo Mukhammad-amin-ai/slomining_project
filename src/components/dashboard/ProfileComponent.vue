@@ -53,7 +53,7 @@
           <h5>$ 0.00</h5>
         </div>
         <div class="item">
-          <h3>SLOMINING</h3>
+          <h3>ASTRO HASH</h3>
           <h5>$ 5.00</h5>
         </div>
       </div>
@@ -223,7 +223,13 @@ h5 {
   }
 
   .toptal-resp .item {
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .08);
     border-radius: 0.5rem;
     padding: 20px;
