@@ -3,28 +3,28 @@
         <div class="container d-flex stat-container">
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/members.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/member-out.png" alt="members">
                     <h3>300K+</h3>
                     <p>Active Members</p>
                 </div>
             </div>
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/countries.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/country.png" alt="members">
                     <h3>160+</h3>
                     <p>Countries Supported</p>
                 </div>
             </div>
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/deposit.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/deposit-out.png" alt="members">
                     <h3>5.5M+</h3>
                     <p>Total Deposit</p>
                 </div>
             </div>
             <div class="card text-center rounded d-flex center">
                 <div class="card-contnat">
-                    <img class="img-stat" src="../../assets/images/total.png" alt="members">
+                    <img class="img-stat" src="../../assets/images/widthdrow-out.png" alt="members">
                     <h3>8M+</h3>
                     <p>Total Withdraw</p>
                 </div>
@@ -53,7 +53,13 @@ export default {
 .card {
     width: 330px;
     height: 164px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
 }
 
 .img-stat {
@@ -67,14 +73,14 @@ export default {
 .card-contnat h3 {
     font-family: Montserrat-Extra-Bold, sans-serif;
     font-size: 24px;
-    color: var(--blue);
+    color: var(--white);
     padding: 10px 0;
 }
 
 .card-contnat p {
     font-family: Montserrat-Medium, sans-serif;
     font-size: 16px;
-    color: var(--text_gray);
+    color: var(--white);
 
 }
 </style>
