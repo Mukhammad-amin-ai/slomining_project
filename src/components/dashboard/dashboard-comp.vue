@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard_parent">
     <div class="container">
+
       <div class="dashboard d-flex justify-content-start">
         <div class="left-side">
           <ul>
@@ -72,6 +73,7 @@ export default {
 <style scoped>
 .router-link-active {
   background: var(--dashboard_bg) !important;
+  color: #000 !important;
 }
 
 @media screen and (max-width:1380px) {

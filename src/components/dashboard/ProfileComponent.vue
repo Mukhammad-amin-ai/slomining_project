@@ -82,7 +82,13 @@ export default {
 .balance {
   width: 100%;
   height: 96px;
-  background-color: var(--blue);
+  background-color: grey;
+  /* background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%); */
   align-items: center;
   border-radius: 10px;
   padding: 12px 15px;
@@ -134,6 +140,12 @@ export default {
   border-radius: 0.5rem;
   margin: 16px 0;
   gap: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
 }
 
 .item {
@@ -141,17 +153,18 @@ export default {
   height: auto;
   margin: 8px 0px;
   padding: 0px 16px;
+
 }
 
 h3 {
   font-family: Montserrat-Bold, sans-serif;
-  color: var(--blue);
+  color: var(--white);
   font-size: 17.6px;
 }
 
 h5 {
   font-family: Montserrat-Bold, sans-serif;
-  color: var(--blue);
+  color: var(--white);
   font-size: 24px;
 
 }
@@ -175,6 +188,12 @@ h5 {
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .08);
   border-radius: 0.5rem;
   padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
 }
 
 @media screen and (max-width:1380px) {
@@ -237,21 +256,21 @@ h5 {
   .item {
     width: 100%;
   }
-  .dashboard-profile{
+
+  .dashboard-profile {
     margin: 10px 0 0 10px !important;
   }
 }
 
 @media screen and (max-width:425px) {
-  .balance{
+  .balance {
     height: auto;
     flex-direction: column;
     align-items: flex-start !important;
   }
-  .buttns{
+
+  .buttns {
     gap: 10px;
   }
 }
-
-
 </style>

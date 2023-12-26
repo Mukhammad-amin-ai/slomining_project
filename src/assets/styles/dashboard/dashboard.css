@@ -1,6 +1,7 @@
 .dashboard_parent {
   padding-top: 20px;
   padding-bottom: 80px;
+  background-color: #000;
 }
 
 .dashboard_icon {
@@ -15,7 +16,7 @@
 }
 .left-side ul li .dashboard_link {
   padding: 20px 50px 20px 20px;
-  background: var(--white);
+  background: var(--black);
   margin-top: 8px;
   display: flex;
   justify-content: flex-start;
@@ -29,9 +30,11 @@
   /* innamay turingeeeee */
   /* qarang google 2 moinitorda yandex 1 da  */
   /* yandexga kliring */
+  color: #000 !important;
 }
 .active_dashboard {
   background: var(--dashboard_bg) !important; 
+  /* color: #000 !important; */
 }
 .left-side ul li .dashboard_link {
   font-size: 14px;
@@ -39,7 +42,6 @@
   justify-content: flex-start;
   align-items: center;
   text-transform: uppercase;
-
   font-family: Montserrat-Bold, sans-serif;
 }
 .dashboard_icon {
