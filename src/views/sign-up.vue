@@ -10,48 +10,24 @@
         </div>
         <form>
           <div class="floating">
-            <input
-              id="input__username"
-              class="floating__input"
-              name="Email"
-              type="text"
-              placeholder="Email"
-              v-model="form.email"
-            />
+            <input id="input__username" class="floating__input" name="Email" type="text" placeholder="Email"
+              v-model="form.email" />
             <label for="Email" class="floating__label" data-content="Email">
-              <span class="hidden--visually"> Email</span></label
-            >
+              <span class="hidden--visually"> Email</span></label>
             <div class="err-msg" v-if="errors.email">{{ errors.email }}</div>
           </div>
           <div class="floating">
-            <input
-              id="input__password"
-              type="password"
-              class="floating__input"
-              name="password"
-              placeholder="Password"
-              v-model="form.password"
-            />
-            <label for="input__password" class="floating__label" data-content="Password"
-              ><span class="hidden--visually">Password</span></label
-            >
+            <input id="input__password" type="password" class="floating__input" name="password" placeholder="Password"
+              v-model="form.password" />
+            <label for="input__password" class="floating__label" data-content="Password"><span
+                class="hidden--visually">Password</span></label>
             <div class="err-msg" v-if="errors.password">{{ errors.password }}</div>
           </div>
           <div class="floating">
-            <input
-              id="input__password"
-              type="password"
-              class="floating__input"
-              name="password"
-              placeholder="Password Confirmation"
-              v-model="form.password_confirm"
-            />
-            <label
-              for="input__password"
-              class="floating__label"
-              data-content="Password Confirmation"
-              ><span class="hidden--visually">Confirm Password</span></label
-            >
+            <input id="input__password" type="password" class="floating__input" name="password"
+              placeholder="Password Confirmation" v-model="form.password_confirm" />
+            <label for="input__password" class="floating__label" data-content="Password Confirmation"><span
+                class="hidden--visually">Confirm Password</span></label>
             <div class="err-msg" v-if="errors.password_confirm">{{ errors.password_confirm }}</div>
           </div>
         </form>
@@ -77,7 +53,7 @@ import Swal from 'sweetalert2'
 
 export default {
   data() {
-    return{
+    return {
       form: {
         email: '',
         password: '',
@@ -100,7 +76,7 @@ export default {
       if (Object.keys(this.errors).length === 0) {
         localStorage.setItem('form', JSON.stringify(this.form))
         localStorage.setItem('isLogin', true)
-        this.$store.state.isLogin  = true
+        this.$store.state.isLogin = true
 
         const Toast = Swal.mixin({
           toast: true,
@@ -119,8 +95,8 @@ export default {
         })
         this.$router.push('/dashboard/profile')
         setTimeout(() => {
-        window.location.reload()
-        } , 1000)
+          window.location.reload()
+        }, 1000)
       }
     },
     isValidEmail(email) {
@@ -133,6 +109,7 @@ export default {
 .sign-in {
   width: 100%;
   height: auto;
+  background-color: #000;
 }
 
 .container {
@@ -162,14 +139,16 @@ export default {
 h1 {
   font-size: 32px;
   font-family: Montserrat-Extra-Bold, sans-serif;
-  color: rgb(28, 43, 70);
+  /* color: rgb(28, 43, 70); */
+  color: #fff;
   line-height: 38.4px;
 }
 
 p {
   font-size: 16px;
   font-family: Montserrat-Regular, sans-serif;
-  color: rgb(128, 145, 167);
+  /* color: rgb(128, 145, 167); */
+  color: #fff;
   line-height: 26px;
 }
 
@@ -189,9 +168,10 @@ form {
 .floating__input {
   padding: 1.8rem 1rem 0.6rem;
   font-size: 1rem;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   transition: border-color 0.2s ease;
   border-radius: 6px;
+  background-color: #fff;
 }
 
 .floating__input::placeholder {
@@ -235,21 +215,21 @@ form {
   width: 100%;
 }
 
-.floating__input:focus + .floating__label::after {
+.floating__input:focus+.floating__label::after {
   transform: scale3d(1, 1, 1);
   opacity: 1;
 }
 
-.floating__input:placeholder-shown + .floating__label::before {
+.floating__input:placeholder-shown+.floating__label::before {
   transform: translate3d(0, -2.2rem, 0) scale3d(1, 1, 1);
 }
 
 .floating__label::before,
-.floating__input:focus + .floating__label::before {
+.floating__input:focus+.floating__label::before {
   transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
 }
 
-.floating__input:focus + .floating__label::before {
+.floating__input:focus+.floating__label::before {
   color: var(--color__accent);
 }
 
@@ -285,12 +265,14 @@ legend {
   height: auto;
   margin-bottom: 24px;
   font-family: Montserrat-Medium, sans-serif;
-  color: rgba(33, 37, 41, 0.75);
+  /* color: rgba(33, 37, 41, 0.75); */
+  color: #fff;
+  /* color: ; */
 }
 
 .sign-up-text span {
   font-family: Montserrat-Bold, sans-serif;
-  color: rgb(97, 66, 143);
+  color: #212dd7;
 }
 
 .btn {
@@ -302,7 +284,7 @@ legend {
   font-weight: 500;
   font-size: 1rem;
   text-transform: uppercase;
-  background-color: var(--blue);
+  background-color: rgba(128, 128, 128, 0.84);
   color: var(--white);
 }
 
@@ -318,12 +300,13 @@ legend {
 
 .dont h5 {
   font-family: Montserrat-Regular, sans-serif;
-  color: rgba(33, 37, 41, 0.75) !important;
+  /* color: rgba(33, 37, 41, 0.75) !important; */
+  color: #fff;
   font-size: 16px;
 }
 
 .dont h5 span {
-  color: #000;
+  color: #212dd7;
 }
 
 @media screen and (max-width: 1024px) {
@@ -336,6 +319,7 @@ legend {
   .image {
     display: none;
   }
+
   .sign-in-form {
     width: 100%;
   }

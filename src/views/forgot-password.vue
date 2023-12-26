@@ -55,6 +55,7 @@ export default {
 .sign-in {
     width: 100%;
     height: auto;
+    background-color: #000;
 }
 
 .container {
@@ -85,14 +86,16 @@ export default {
 h1 {
     font-size: 32px;
     font-family: Montserrat-Extra-Bold, sans-serif;
-    color: rgb(28, 43, 70);
+    /* color: rgb(28, 43, 70); */
+    color: #fff;
     line-height: 38.4px;
 }
 
 p {
     font-size: 16px;
     font-family: Montserrat-Regular, sans-serif;
-    color: rgb(128, 145, 167);
+    /* color: rgb(128, 145, 167); */
+    color: #fff;
     line-height: 26px;
 }
 
@@ -114,9 +117,10 @@ form {
 .floating__input {
     padding: 1.8rem 1rem 0.6rem;
     font-size: 1rem;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     transition: border-color 0.2s ease;
     border-radius: 6px;
+    background-color: #fff;
 }
 
 .floating__input::placeholder {
@@ -225,7 +229,7 @@ legend {
     font-size: 1rem;
     font-family: Montserrat-Bold, sans-serif;
     margin-bottom: 30px;
-    background-color: var(--blue);
+    background-color: grey;
     color: var(--white);
     cursor: pointer;
 }
@@ -237,7 +241,8 @@ legend {
     height: auto;
     margin-bottom: 24px;
     font-family: Montserrat-Medium, sans-serif;
-    color: rgba(33, 37, 41, 0.75);
+    /* color: rgba(33, 37, 41, 0.75); */
+    color: #fff;
 }
 
 .sign-up-text span {
@@ -256,7 +261,7 @@ legend {
     font-weight: 500;
     font-size: 1rem;
     text-transform: uppercase;
-    background-color: var(--blue);
+    background-color: grey;
     color: var(--white);
 }
 
@@ -275,12 +280,13 @@ legend {
 
 .dont h5 {
     font-family: Montserrat-Regular, sans-serif;
-    color: rgba(33, 37, 41, 0.75) !important;
+    /* color: rgba(33, 37, 41, 0.75) !important; */
+    color: #fff;
     font-size: 16px;
 }
 
 .dont h5 span {
-    color: #000;
+    color: #212dd7;
 }
 
 @media screen and (max-width: 1300px) {
