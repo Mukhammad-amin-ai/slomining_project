@@ -83,4 +83,15 @@ export default {
     color: var(--white);
 
 }
+
+
+
+
+@media screen and (max-width:768px) {
+    .stat-container {
+        width: 90%;
+        justify-content: center !important;
+    }
+
+}
 </style>
