@@ -36,6 +36,7 @@
               <router-link to="/what-is-web3">
                 <li>What is web3?</li>
               </router-link>
+              <!-- <li></li> -->
             </ul>
           </div>
           <div class="compan">
@@ -143,6 +144,11 @@ footer {
 .learn {
   width: 30%;
   height: 100%;
+  /* margin-left: 200px; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin-bottom: 69px;
 }
 
 .learn ul {
@@ -152,7 +158,6 @@ footer {
 }
 
 .learn li {
-
   font-size: 16px;
   font-family: Montserrat-Medium, sans-serif;
   color: #fff;
@@ -178,6 +183,7 @@ li:hover {
 .compan {
   width: 25%;
   height: 100%;
+  margin-bottom: 20px;
 }
 
 .compan ul {

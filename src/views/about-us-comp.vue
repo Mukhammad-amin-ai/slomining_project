@@ -186,7 +186,7 @@ export default {
 .about-text p {
     font-size: 16px;
     font-family: Montserrat-Medium, sans-serif;
-    color: var(--text_gray);
+    color: var(--white);
     margin: 30px 0;
     line-height: 26px;
 }

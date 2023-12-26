@@ -6,7 +6,7 @@
         <loadingComp />
         <p>Amount (USDT)</p>
         <form @submit.prevent="convert">
-          <input type="text" placeholder="Pleace enter amount" v-model="this.amount">
+          <input type="text" placeholder="Minimal withdraw amount 100$" v-model="this.amount">
         </form>
         <p>Withdraw Address</p>
         <form>
