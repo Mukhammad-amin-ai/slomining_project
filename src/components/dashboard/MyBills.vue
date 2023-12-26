@@ -51,5 +51,8 @@ export default {
 </script>
 
 <style scoped>
-
+th,
+td {
+  color: #fff !important;
+}
 </style>
