@@ -81,6 +81,7 @@ export default {
 }
 
 .livecoinwatch-widget-5{
+  /* width: 100!important; */
   background-color: #000 !important;
   border: none !important;
   margin: 0 !important;
