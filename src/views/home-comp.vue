@@ -16,10 +16,11 @@
         </div>
       </div>
     </div>
+    <div class="container2">
+      <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#ffffff" lcw-marquee-1="coins" lcw-marquee-2="none"
+        lcw-marquee-items="10"></div>
+    </div>
   </div>
-
-  <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#ffffff" lcw-marquee-1="coins" lcw-marquee-2="none"
-    lcw-marquee-items="10"></div>
   <div class="start_and_mining">
     <how-to-start />
     <MiningComponent />
@@ -78,6 +79,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #000;
+  flex-direction: column;
 }
 
 .livecoinwatch-widget-5 {
@@ -95,8 +97,16 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
+
+.container2 {
+  width: 93%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .hero-text {
   width: 55%;
