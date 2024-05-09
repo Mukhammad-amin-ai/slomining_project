@@ -1,11 +1,9 @@
 <template >
   <modalSidebar />
   <headerComp />
- 
   <div>
     <router-view></router-view>
   </div>
-
   <stickyNav />
   <footerComp />
 </template>

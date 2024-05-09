@@ -9,10 +9,26 @@
           <h1>SIGN UP</h1>
         </div>
         <form>
+          <div class="registrationName">
+            <div class="floating">
+              <input id="input__firstname" class="floating__input" name="Email" type="text" placeholder="First Name"
+                     v-model="form.firstName" />
+              <label for="input__firstname" class="floating__label" data-content="First Name">
+                <span class="hidden--visually">First Name</span></label>
+              <div class="err-msg" v-if="errors.email">{{ errors.email }}</div>
+            </div>
+            <div class="floating">
+              <input id="input__lastname" class="floating__input" name="Email" type="text" placeholder="Last Name"
+                     v-model="form.lastName" />
+              <label for="input__lastname" class="floating__label" data-content="Last Name">
+                <span class="hidden--visually"> Last Name</span></label>
+              <div class="err-msg" v-if="errors.email">{{ errors.email }}</div>
+            </div>
+          </div>
           <div class="floating">
-            <input id="input__username" class="floating__input" name="Email" type="text" placeholder="Email"
+            <input id="input__email" class="floating__input" name="Email" type="text" placeholder="Email"
               v-model="form.email" />
-            <label for="Email" class="floating__label" data-content="Email">
+            <label for="input__email" class="floating__label" data-content="Email">
               <span class="hidden--visually"> Email</span></label>
             <div class="err-msg" v-if="errors.email">{{ errors.email }}</div>
           </div>
@@ -24,9 +40,9 @@
             <div class="err-msg" v-if="errors.password">{{ errors.password }}</div>
           </div>
           <div class="floating">
-            <input id="input__password" type="password" class="floating__input" name="password"
+            <input id="input__confirm" type="password" class="floating__input" name="password"
               placeholder="Password Confirmation" v-model="form.password_confirm" />
-            <label for="input__password" class="floating__label" data-content="Password Confirmation"><span
+            <label for="input__confirm" class="floating__label" data-content="Password Confirmation"><span
                 class="hidden--visually">Confirm Password</span></label>
             <div class="err-msg" v-if="errors.password_confirm">{{ errors.password_confirm }}</div>
           </div>
@@ -50,11 +66,14 @@
 </template>
 <script>
 import Swal from 'sweetalert2'
+import axios from 'axios'
 
 export default {
   data() {
     return {
       form: {
+        firstName:"",
+        lastName:"",
         email: '',
         password: '',
         password_confirm: ''
@@ -76,31 +95,50 @@ export default {
       if (Object.keys(this.errors).length === 0) {
         localStorage.setItem('form', JSON.stringify(this.form))
         localStorage.setItem('isLogin', true)
+
         this.$store.state.isLogin = true
 
-        const Toast = Swal.mixin({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer
-            toast.onmouseleave = Swal.resumeTimer
-          }
-        })
-        Toast.fire({
-          icon: 'success',
-          title: 'Signed in successfully'
-        })
-        this.$router.push('/dashboard/profile')
-        setTimeout(() => {
-          window.location.reload()
-        }, 1000)
+        this.apiRegister()
       }
     },
     isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    },
+   async apiRegister(){
+      let formObject ={
+        firstname : this.form.firstName,
+        lastname : this.form.lastName,
+        email : this.form.email,
+        password: this.form.password,
+        conf_password : this.form.password_confirm
+      }
+      try{
+        let response = await axios.post("http://localhost:3000/api/register", formObject)
+        if(response.data.token){
+          localStorage.setItem('jwt_token', JSON.stringify(response.data.token))
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer
+              toast.onmouseleave = Swal.resumeTimer
+            }
+          })
+          Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
+          this.$router.push('/dashboard/profile')
+          setTimeout(() => {
+            window.location.reload()
+          }, 1000)
+        }
+      }catch (e){
+        console.error(e)
+      }
     }
   }
 }
@@ -139,7 +177,6 @@ export default {
 h1 {
   font-size: 32px;
   font-family: Montserrat-Extra-Bold, sans-serif;
-  /* color: rgb(28, 43, 70); */
   color: #fff;
   line-height: 38.4px;
 }
@@ -147,7 +184,6 @@ h1 {
 p {
   font-size: 16px;
   font-family: Montserrat-Regular, sans-serif;
-  /* color: rgb(128, 145, 167); */
   color: #fff;
   line-height: 26px;
 }
@@ -265,9 +301,7 @@ legend {
   height: auto;
   margin-bottom: 24px;
   font-family: Montserrat-Medium, sans-serif;
-  /* color: rgba(33, 37, 41, 0.75); */
   color: #fff;
-  /* color: ; */
 }
 
 .sign-up-text span {
@@ -300,7 +334,6 @@ legend {
 
 .dont h5 {
   font-family: Montserrat-Regular, sans-serif;
-  /* color: rgba(33, 37, 41, 0.75) !important; */
   color: #fff;
   font-size: 16px;
 }
@@ -308,6 +341,8 @@ legend {
 .dont h5 span {
   color: #212dd7;
 }
+
+
 
 @media screen and (max-width: 1024px) {
   .container {

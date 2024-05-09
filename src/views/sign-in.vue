@@ -49,7 +49,6 @@
             <p>Forgot Password?</p>
           </router-link>
         </div>
-        <!-- <ButtonComponent text="Sign in "  /> -->
         <button class="sign-in btn" @click="login">Sign in</button>
         <div class="dont">
           <h5>
@@ -61,21 +60,18 @@
   </div>
 </template>
 <script>
-// import ButtonComponent from '@/components/mini_components/ButtonComponent.vue';
 import Swal from 'sweetalert2'
+import axios from 'axios'
 
 export default {
-  components: {
-    // ButtonComponent,
-  },
+
   data() {
     return {
       form: {
         email: '',
         password: '',
-        password_confirm: ''
       },
-      errors: {} // To store validation errors
+      errors: {}
     }
   },
   methods: {
@@ -86,34 +82,52 @@ export default {
       } else if (!this.form.password || this.form.password.length < 6) {
         this.errors.password = 'Password must be at least 6 characters.'
       }
-
       if (Object.keys(this.errors).length === 0) {
         localStorage.setItem('form', JSON.stringify(this.form))
         localStorage.setItem('isLogin', true)
+
         this.$store.state.isLogin = true
-        const Toast = Swal.mixin({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer
-            toast.onmouseleave = Swal.resumeTimer
-          }
-        })
-        Toast.fire({
-          icon: 'success',
-          title: 'Signed in successfully'
-        })
-        this.$router.push('/dashboard/profile')
-        setTimeout(() => {
-          window.location.reload()
-        }, 1000)
+
+        this.apiLogin()
+
       }
     },
     isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    },
+   async apiLogin(){
+      let loginObj ={
+        email:this.form.email,
+        password:this.form.password
+      }
+      try{
+        let response = await axios.post('http://localhost:3000/api/login',loginObj)
+        if(response.data.token){
+          localStorage.setItem('jwt_token', JSON.stringify(response.data.token))
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer
+                toast.onmouseleave = Swal.resumeTimer
+              }
+            })
+          await Toast.fire({
+              icon: 'success',
+              title: 'Signed in successfully'
+            })
+            this.$router.push('/dashboard/profile')
+            setTimeout(() => {
+              window.location.reload()
+            }, 1000)
+        }
+        // console.log(response.data)
+      }catch(e) {
+        console.error(e)
+      }
     }
   }
 }

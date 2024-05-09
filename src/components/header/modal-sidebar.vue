@@ -25,14 +25,6 @@
             </router-link>
           </div>
         </li>
-        <!-- <li class="language">
-          <n-collapse arrow-placement="right">
-            <n-collapse-item title="Language" name="1" class="language-font ">
-              <div>English</div>
-              <div>Russian</div>
-            </n-collapse-item>
-          </n-collapse>
-        </li> -->
         <li>
           <div class="auth" v-if="isLogin">
             <button class="sign-in" @click="logOut">Sign Out</button>
@@ -45,7 +37,6 @@
 </template>
 
 <script>
-// import { NCollapse, NCollapseItem } from 'naive-ui'
 import Swal from 'sweetalert2'
 export default {
   data() {
@@ -68,10 +59,6 @@ export default {
       isOpen2L: false
     }
   },
-  components: {
-    // NCollapse,
-    // NCollapseItem
-  },
   computed: {
     activeLink() {
       return this.$route.fullPath
@@ -86,6 +73,7 @@ export default {
     },
     logOut() {
       this.closeMod()
+      localStorage.removeItem('jwt_token')
       Swal.fire({
         text: `Dou you want sign out?`,
         showCancelButton: true,
@@ -123,7 +111,6 @@ export default {
     },
     setActive() {
       this.closeMod()
-      // You may not need this function if clicking the link updates the active route automatically.
     },
     closeMod() {
       this.$store.dispatch('modalClose')
@@ -155,19 +142,16 @@ export default {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  /* Adjust the timing function as needed */
   background: rgb(59, 59, 59);
 }
 
 .opened {
   max-height: 250px;
-  /* Set a maximum height for smooth transition */
 }
 
 .rotate_icon {
   transform: rotate(90deg);
   transition: transform 0.3s ease-out;
-  /* Transition for the icon rotation */
 }
 
 .active_bg {
@@ -184,7 +168,6 @@ export default {
   max-width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* background-color: #000; */
   position: fixed;
   top: 0;
   z-index: 100;
@@ -238,7 +221,6 @@ ul {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   font-family: Montserrat-Regular, sans-serif;
   font-size: 14px;
-  /* color: var(--text_gray); */
   color: #fff;
   text-transform: uppercase;
 }
@@ -255,7 +237,6 @@ ul {
 }
 
 .link_name {
-  /* color: #1d2c4899; */
   color: #fff;
 }
 
@@ -275,9 +256,7 @@ li span {
 .sign-in {
   background-color: grey;
   border-radius: 5px;
-  /* border: none; */
   font-family: Montserrat-Bold, sans-serif;
-  /* color: #1d2c4899; */
   color: #fff;
   font-size: 14px;
   padding: 10px;

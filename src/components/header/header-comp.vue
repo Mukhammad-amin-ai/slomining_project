@@ -10,14 +10,12 @@
             <router-link to="/">
               <li :class="{ active: $route.fullPath === '/' }">
                 <span>Home
-                  <!-- <img v-show="{ active: $route.fullPath === '/' }" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
             <router-link to="/contacts">
               <li :class="{ active: $route.fullPath === '/contacts' }">
                 <span>Contracts
-                  <!-- <img v-show="{ active: $route.fullPath === '/contacts' }" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
@@ -27,10 +25,6 @@
                 { active: $route.fullPath === '/dashboard/profile' }
               ]">
                 <span>Dashboard
-                  <!-- <img v-show="[
-                    { active: $route.fullPath === '/dashboard/' },
-                    { active: $route.fullPath === '/dashboard/profile' }
-                  ]" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
@@ -41,17 +35,12 @@
                 { active: $route.fullPath === '/dashboard/profile' }
               ]">
                 <span>Dashboard
-                  <!-- <img v-show="[
-                    { active: $route.fullPath === '/dashboard/' },
-                    { active: $route.fullPath === '/dashboard/profile' }
-                  ]" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
             <router-link to="/about">
               <li :class="{ active: $route.fullPath === '/about' }">
                 <span>About us
-                  <!-- <img v-show="{ active: $route.fullPath === '/about' }" src="../../assets/images/line.png" alt="line" /> -->
                 </span>
               </li>
             </router-link>
@@ -63,7 +52,7 @@
         <button class="sign-in" @click="logOut">Sign Out</button>
       </div>
       <div class="auth2" v-if="isLogin">
-        <router-link to="/dashboard/profile">
+        <router-link to="/dashboard/settings">
           <img class="img-fluid" style="width: 25px;  !important;" src="../../assets/svg/person-outline.svg" alt="" />
         </router-link>
       </div>
@@ -121,6 +110,7 @@ export default {
   },
   methods: {
     logOut() {
+      localStorage.removeItem('jwt_token')
       Swal.fire({
         text: `Dou you want sign out?`,
         showCancelButton: true,
@@ -162,7 +152,6 @@ export default {
     handleScroll() {
       this.isScrolled = window.scrollY > 700
     },
-
     dropauth() {
       this.dropauthList = !this.dropauthList
     },
@@ -183,7 +172,7 @@ header {
   top: 0;
   transition: all 0.3s linear;
   z-index: 99;
-  background-color: #000 ;
+  background-color: #000;
 }
 
 .b-shadow {
@@ -194,8 +183,8 @@ header {
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
   background: linear-gradient(90deg,
-      hsla(0, 0%, 100%, 0.1) -1.52%,
-      hsla(0, 0%, 100%, 0.024) 104.35%);
+  hsla(0, 0%, 100%, 0.1) -1.52%,
+  hsla(0, 0%, 100%, 0.024) 104.35%);
   background-blend-mode: multiply, normal;
 }
 

@@ -45,17 +45,7 @@ const store = createStore({
       } catch (e) {
         console.error(e);
       }
-    },
-    // async dailyReward({ commit }) {
-    //   try {
-    //     let response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=BTC&api_key=60a3a8c4121577763492d51f767b2d7545cce4c738aa1a6ccc52beff4f798960`)
-    //     if (response.status === 200) {
-    //       commit('setRewards', response.data.BTC)
-    //     }
-    //   } catch (e) {
-    //     console.error(e);
-    //   }
-    // }
+    }
   },
 
 })
