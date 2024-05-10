@@ -78,7 +78,8 @@ export default {
         password: '',
         password_confirm: ''
       },
-      errors: {} // To store validation errors
+      errors: {},
+      url:import.meta.env.VITE_BASE_URL
     }
   },
   methods: {
@@ -113,7 +114,7 @@ export default {
         conf_password : this.form.password_confirm
       }
       try{
-        let response = await axios.post("http://localhost:3000/api/register", formObject)
+        let response = await axios.post(`${this.url}api/register`, formObject)
         if(response.data.token){
           localStorage.setItem('jwt_token', JSON.stringify(response.data.token))
           const Toast = Swal.mixin({

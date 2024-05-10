@@ -71,7 +71,8 @@ export default {
         email: '',
         password: '',
       },
-      errors: {}
+      errors: {},
+      url:import.meta.env.VITE_BASE_URL
     }
   },
   methods: {
@@ -101,7 +102,7 @@ export default {
         password:this.form.password
       }
       try{
-        let response = await axios.post('http://localhost:3000/api/login',loginObj)
+        let response = await axios.post(`${this.url}api/login`,loginObj)
         if(response.data.token){
           localStorage.setItem('jwt_token', JSON.stringify(response.data.token))
             const Toast = Swal.mixin({
