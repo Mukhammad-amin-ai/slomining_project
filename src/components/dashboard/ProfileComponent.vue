@@ -4,7 +4,7 @@
       <div class="balance  d-flex">
         <div class="money">
           <h2>BALANCE</h2>
-          <p>$ 5</p>
+          <p>$ {{this.data?.balance}}</p>
         </div>
         <div class="buttns d-flex">
           <router-link to="/dashboard/deposit">
@@ -18,39 +18,47 @@
       <div class="total d-flex">
         <div class="item">
           <h3>Total Deposit</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.totalDeposit === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.totalDeposit}} </h5>
         </div>
         <div class="item">
           <h3>Total Withdrawal</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.totalWithdraw === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.totalWithdraw}} </h5>
         </div>
         <div class="item">
           <h3>Total Earned</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.totalEarned === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.totalEarned}} </h5>
         </div>
       </div>
       <div class="toptal-resp">
         <div class="item">
           <h3>Total Deposit</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.totalDeposit === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.totalDeposit}} </h5>
         </div>
         <div class="item">
           <h3>Total Withdrawal</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.totalWithdraw === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.totalWithdraw}} </h5>
         </div>
         <div class="item">
           <h3>Total Earned</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.totalEarned === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.totalEarned}} </h5>
         </div>
       </div>
       <div class="profit d-flex">
         <div class="item">
           <h3>Profits</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.profits === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.profits}} </h5>
         </div>
         <div class="item">
           <h3>Commissions</h3>
-          <h5>$ 0.00</h5>
+          <h5 v-if="this.data?.commission === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.data?.commission}} </h5>
         </div>
         <div class="item">
           <h3>ASTRO HASH</h3>
@@ -63,11 +71,25 @@
 
 <script>
 export default {
-  name: 'ProfileComponent'
+  name: 'ProfileComponent',
+  data() {
+    return {
+      data: []
+    }
+  },
+  methods: {
+    fetchData() {
+      this.$store.dispatch('Api/fetchData')
+      this.data = this.$store.state.Api.data
+    }
+  },
+  mounted() {
+    this.fetchData()
+  }
 }
 </script>
 
-<style  scoped>
+<style scoped>
 .dashboard-profile {
   margin: 10px 0 0 30px;
   width: 100%;
@@ -83,12 +105,6 @@ export default {
   width: 100%;
   height: 96px;
   background-color: rgb(97, 96, 96);
-  /* background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(60px);
-  backdrop-filter: blur(60px);
-  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%); */
   align-items: center;
   border-radius: 10px;
   padding: 12px 15px;
@@ -105,7 +121,6 @@ export default {
 .money h2 {
   font-family: Montserrat-Bold, sans-serif;
   font-size: 17.6px;
-  /* color: #000; */
 }
 
 .money p {
@@ -197,13 +212,13 @@ h5 {
   background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
 }
 
-@media screen and (max-width:1380px) {
+@media screen and (max-width: 1380px) {
   .contain {
     width: 100%;
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .dashboard-profile {
     width: 90%;
   }
@@ -213,7 +228,7 @@ h5 {
   }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .total {
     display: none !important;
   }
@@ -223,7 +238,6 @@ h5 {
   }
 
   .toptal-resp .item {
-    /* background-color: #fff; */
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -241,7 +255,7 @@ h5 {
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .contain {
     height: auto;
   }
@@ -269,7 +283,7 @@ h5 {
   }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width: 425px) {
   .balance {
     height: auto;
     flex-direction: column;

@@ -3,12 +3,12 @@
     <TabReusable title="Settings" tab="Change Your Password" />
     <form class="settings_form d-flex flex-column mt-2">
       <label for="firstname" class="form_label">First Name</label>
-      <input type="text" id="firstname" class="form_input" v-model=this.dataUserInfo.firstname />
+      <input type="text" id="firstname" class="form_input" v-model=this.data.firstname />
       <label for="lastname" class="form_label">Last Name</label>
-      <input type="text" id="lastname" class="form_input" v-model=this.dataUserInfo.lastname />
+      <input type="text" id="lastname" class="form_input" v-model=this.data.lastname />
       <label for="email" class="form_label">Email</label>
       <input type="email" id="email" placeholder="example@gmail.com" class="form_input"
-             v-model=this.dataUserInfo.email />
+             v-model=this.data.email />
       <label for="verify1" class="form_label">New password</label>
       <div class="password relative w100">
         <input :type="type" id="verify1" placeholder="******" class="form_input w100" v-model="password" />
@@ -36,8 +36,8 @@
 import Swal from 'sweetalert2'
 import TabReusable from '@/components/mini_components/tab-reusable.vue'
 import axios from 'axios'
+import { mapState } from 'vuex'
 
-let token = localStorage.getItem('jwt_token')
 export default {
   name: 'SettingsPage',
   components: { TabReusable },
@@ -47,9 +47,12 @@ export default {
       dataUserInfo: [],
       password: '',
       confPass: '',
-      userId: '',
       url:import.meta.env.VITE_BASE_URL
     }
+  },
+  computed:{
+    ...mapState('Api', ['data']),
+    ...mapState('Api', ['userId'])
   },
   methods: {
     changeType() {
@@ -59,28 +62,30 @@ export default {
         this.type = 'text'
       }
     },
-    async decode() {
-      const tokenParts = token.split('.')
-      const payload = JSON.parse(atob(tokenParts[1]))
-      this.userId = payload.userId
-      // console.log(payload.userId)
-      if (payload.userId) {
-        const tokenB = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
-        try {
-          let response = await axios.get(`${this.url}api/getUserById/${payload.userId}`,
-            { headers: { Authorization: `Bearer ${tokenB}` } })
-          this.dataUserInfo = response.data
-        } catch (err) {
-          console.error('error of decoding', err)
-        }
-      }
-    },
+    // async decode() {
+    //   const tokenParts = token.split('.')
+    //   const payload = JSON.parse(atob(tokenParts[1]))
+    //   // console.log(payload)
+    //   this.userId = payload.userId
+    //   // console.log(payload.userId)
+    //   if (payload.userId) {
+    //     const tokenB = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
+    //     try {
+    //       let response = await axios.get(`${this.url}api/getUserById/${payload.userId}`,
+    //         { headers: { Authorization: `Bearer ${tokenB}` } })
+    //       this.dataUserInfo = response.data
+    //       console.log( response.data)
+    //     } catch (err) {
+    //       console.error('error of decoding', err)
+    //     }
+    //   }
+    // },
     async updateInfo() {
       let userUpdObj = {
         _id: this.userId,
-        firstname: this.dataUserInfo.firstname,
-        lastname: this.dataUserInfo.lastname,
-        email: this.dataUserInfo.email,
+        firstname: this.data.firstname,
+        lastname: this.data.lastname,
+        email: this.data.email,
         password: this.password,
         conf_password: this.confPass
       }
@@ -94,7 +99,7 @@ export default {
     },
     popUp() {
       Swal.fire({
-        text: `Dou you want sign out?`,
+        text: `Dou you Update information ?`,
         showCancelButton: true,
         confirmButtonText: 'Yes',
         confirmButtonColor: '#4466f2',
@@ -121,11 +126,13 @@ export default {
           })
         }
       })
+    },
+    fetchData(){
+      this.$store.dispatch("Api/fetchData")
     }
   },
   mounted() {
-    this.decode()
-
+    this.fetchData()
   }
 }
 </script>

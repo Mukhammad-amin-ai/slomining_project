@@ -11,31 +11,13 @@
                 </div>
                 <form>
                     <div class="floating">
-                        <input id="input__username" class="floating__input" name="Email" type="text" placeholder="Email" />
+                        <input id="input__username" class="floating__input" name="Email" type="text" placeholder="Email" v-model="email" />
                         <label for="Email" class="floating__label" data-content="Email">
                             <span class="hidden--visually">
                                 Email</span></label>
                     </div>
-                    <div class="verify-code d-flex">
-                        <div class="floating">
-                            <input id="Verify code" type="password" class="floating__input" name="Verify code"
-                                placeholder="Password" />
-                            <label for="Verify code" class="floating__label" data-content="Verify code"><span
-                                    class="hidden--visually">Verify code</span></label>
-                        </div>
-                        <button class="verify">
-                            send
-                        </button>
-                    </div>
-                    <div class="floating">
-                        <input id="input__password" type="password" class="floating__input" name="password"
-                            placeholder="Password" />
-                        <label for="input__password" class="floating__label" data-content="Password"><span
-                                class="hidden--visually">Confirm Password</span></label>
-                    </div>
-
                 </form>
-                <button class="sign-in btn ">Sign in</button>
+                <button class="sign-in btn " @click="resetPassword">Reset Password</button>
                 <div class="dont">
                     <h5>Remember your password ? <router-link to="/sign-in"><span>SIGN IN</span></router-link></h5>
                 </div>
@@ -44,11 +26,47 @@
     </div>
 </template>
 <script>
-// import ButtonComponent from '@/components/mini_components/ButtonComponent.vue';
+import axios from 'axios'
+import Swal from 'sweetalert2'
+
 export default {
-    components: {
-        // ButtonComponent,
+  data(){
+    return {
+      email:""
     }
+  },
+  methods:{
+    async resetPassword(){
+      let dataObj = {
+        email:this.email
+      }
+      try{
+        let response = await axios.post(`${import.meta.env.VITE_BASE_URL}api/forgotPassword`, dataObj)
+        if(response.data.message === "Password Reset Successfully"){
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer
+              toast.onmouseleave = Swal.resumeTimer
+            }
+          })
+          await Toast.fire({
+            icon: 'success',
+            title: 'Password Reset Successfully'
+          })
+          setTimeout(() => {
+            window.location.href = '/sign-in'
+          }, 800)
+        }
+      }catch(err){
+        console.error("Error on resetting password",err)
+      }
+    }
+  }
 }
 </script>
 <style scoped>

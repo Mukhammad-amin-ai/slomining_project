@@ -133,13 +133,25 @@ export default {
           })
           this.$router.push('/dashboard/profile')
           setTimeout(() => {
-            window.location.reload()
+            Swal.fire({
+              text: `Bonus 50$ for the first registration`,
+              showCancelButton: false,
+              confirmButtonText: 'Yes',
+              confirmButtonColor: '#4466f2',
+              cancelButtonText: 'No',
+              cancelButtonColor: '#f31616',
+              reverseButtons: false
+            }).then(async (result) => {
+              if (result.isConfirmed) {
+                window.location.reload()
+              }
+            })
           }, 1000)
         }
       }catch (e){
         console.error(e)
       }
-    }
+    },
   }
 }
 </script>
