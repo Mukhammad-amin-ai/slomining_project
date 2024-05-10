@@ -129,6 +129,7 @@ export default {
     },
     fetchData(){
       this.$store.dispatch("Api/fetchData")
+      console.log(this.data)
     }
   },
   mounted() {

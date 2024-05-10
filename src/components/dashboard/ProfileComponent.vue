@@ -4,7 +4,7 @@
       <div class="balance  d-flex">
         <div class="money">
           <h2>BALANCE</h2>
-          <p>$ {{this.data?.balance}}</p>
+          <p>$ {{this.dataProfile?.balance}}</p>
         </div>
         <div class="buttns d-flex">
           <router-link to="/dashboard/deposit">
@@ -18,47 +18,47 @@
       <div class="total d-flex">
         <div class="item">
           <h3>Total Deposit</h3>
-          <h5 v-if="this.data?.totalDeposit === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.totalDeposit}} </h5>
+          <h5 v-if="this.dataProfile?.totalDeposit === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.totalDeposit}} </h5>
         </div>
         <div class="item">
           <h3>Total Withdrawal</h3>
-          <h5 v-if="this.data?.totalWithdraw === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.totalWithdraw}} </h5>
+          <h5 v-if="this.dataProfile?.totalWithdraw === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.totalWithdraw}} </h5>
         </div>
         <div class="item">
           <h3>Total Earned</h3>
-          <h5 v-if="this.data?.totalEarned === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.totalEarned}} </h5>
+          <h5 v-if="this.dataProfile?.totalEarned === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.totalEarned}} </h5>
         </div>
       </div>
       <div class="toptal-resp">
         <div class="item">
           <h3>Total Deposit</h3>
-          <h5 v-if="this.data?.totalDeposit === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.totalDeposit}} </h5>
+          <h5 v-if="this.dataProfile?.totalDeposit === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.totalDeposit}} </h5>
         </div>
         <div class="item">
           <h3>Total Withdrawal</h3>
-          <h5 v-if="this.data?.totalWithdraw === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.totalWithdraw}} </h5>
+          <h5 v-if="this.dataProfile?.totalWithdraw === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.totalWithdraw}} </h5>
         </div>
         <div class="item">
           <h3>Total Earned</h3>
-          <h5 v-if="this.data?.totalEarned === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.totalEarned}} </h5>
+          <h5 v-if="this.dataProfile?.totalEarned === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.totalEarned}} </h5>
         </div>
       </div>
       <div class="profit d-flex">
         <div class="item">
           <h3>Profits</h3>
-          <h5 v-if="this.data?.profits === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.profits}} </h5>
+          <h5 v-if="this.dataProfile?.profits === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.profits}} </h5>
         </div>
         <div class="item">
           <h3>Commissions</h3>
-          <h5 v-if="this.data?.commission === 0">$ 0.00</h5>
-          <h5 v-else>$ {{this.data?.commission}} </h5>
+          <h5 v-if="this.dataProfile?.commission === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.commission}} </h5>
         </div>
         <div class="item">
           <h3>ASTRO HASH</h3>
@@ -70,6 +70,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'ProfileComponent',
   data() {
@@ -77,10 +79,14 @@ export default {
       data: []
     }
   },
+  computed:{
+    ...mapState('Api', ['dataProfile']),
+  },
   methods: {
     fetchData() {
       this.$store.dispatch('Api/fetchData')
-      this.data = this.$store.state.Api.data
+      console.log(this.dataProfile)
+      // this.data = this.$store.state.Api.data
     }
   },
   mounted() {
