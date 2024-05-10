@@ -85,8 +85,6 @@ export default {
   methods: {
     fetchData() {
       this.$store.dispatch('Api/fetchData')
-      console.log(this.dataProfile)
-      // this.data = this.$store.state.Api.data
     }
   },
   mounted() {

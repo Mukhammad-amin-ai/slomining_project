@@ -7,8 +7,10 @@
           We offer a variety of cloud mining investment contracts, <br> ensuring stable and reliable profits.
         </div>
         <div class="mining_items">
-          <SingleMining v-for="(item, index) in data" :key="item" :item="item" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom" :data-aos-delay="index + '50'" />
+<!--          <SingleMining :item="product" data-aos="fade-up"-->
+<!--                        data-aos-anchor-placement="top-bottom" :data-aos-delay="index + '50'" />-->
+          <SingleMining v-for="(item, index) in products" :key="item" :item="item" data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom" :data-aos-delay="index + '50'" />
         </div>
         <!-- <div class="text-center d-flex justify-content-center center text-white">{{ data?.length }} records</div> -->
 
@@ -20,15 +22,30 @@
 <script>
 import data from '@/static/data.js'
 import SingleMining from '@/components/mining/SingleMining.vue'
+import axios from 'axios'
+import { mapState } from 'vuex'
 
 export default {
   name: 'MiningComponent',
   components: { SingleMining },
   data() {
     return {
-      data
+      data,
+      product: []
     }
+  },
+  computed:{
+    ...mapState('Api',['products'])
+  },
+  methods: {
+    fetchProducts(){
+      this.$store.dispatch('Api/fetchProduct')
+    }
+  },
+  mounted() {
+    this.fetchProducts()
   }
+
 }
 </script>
 

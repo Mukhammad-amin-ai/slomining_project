@@ -4,7 +4,8 @@ const base_url = import.meta.env.VITE_BASE_URL
 const state = {
     data:[],
     dataProfile:[],
-    userId:""
+    userId:"",
+    products:[]
 }
 const mutations = {
   getData(state,payload){
@@ -15,6 +16,9 @@ const mutations = {
   },
   getDataProfile(state,payload){
     state.dataProfile = payload
+  },
+  getProducts(state,payload){
+    state.products = payload
   }
 }
 const actions = {
@@ -31,10 +35,19 @@ const actions = {
           { headers: { Authorization: `Bearer ${tokenB}` } })
         commit('getData',response.data)
         commit('getDataProfile',response.data)
-        console.log( response.data)
+        // console.log( response.data)
       } catch (err) {
         console.error('error of decoding', err)
       }
+    }
+  },
+  async fetchProduct({commit}){
+    try{
+      let response = await axios.get(`${base_url}api/products`)
+      commit('getProducts',response.data)
+      console.log(response.data)
+    }catch (e) {
+      console.error(e)
     }
   }
 }

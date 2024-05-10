@@ -7,7 +7,7 @@
         profits.
       </div>
       <div class="mining_items">
-        <SingleMining v-for="(item, index) in data" :key="item" :item="item" data-aos="fade-up"
+        <SingleMining v-for="(item, index) in products" :key="item" :item="item" data-aos="fade-up"
           data-aos-anchor-placement="top-bottom" :data-aos-delay="index + '50'" />
       </div>
     </div>
@@ -17,6 +17,7 @@
 <script>
 import data from '@/static/data.js'
 import SingleMining from '@/components/mining/SingleMining.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'MiningComponent',
@@ -25,6 +26,17 @@ export default {
     return {
       data
     }
+  },
+  computed:{
+    ...mapState('Api',['products'])
+  },
+  methods:{
+     fetchProducts(){
+      this.$store.dispatch('Api/fetchProduct')
+    }
+  },
+  mounted() {
+    this.fetchProducts()
   }
 }
 </script>

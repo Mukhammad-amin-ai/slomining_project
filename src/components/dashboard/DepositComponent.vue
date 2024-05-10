@@ -194,12 +194,6 @@
                 <div class="mt-4">
                   <span>{{ uploadedFileName }}</span>
                 </div>
-                <!-- <input @change="handleImageUpload" class="d-none" type="file" id="img" ref="imgFile" accept="image/*" />
-                <img class="uploaded-img" v-if="imageUrl" :src="imageUrl" alt="Uploaded Image" />
-                <label for="img" class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
-                  v-if="!imageUrl">
-                  Upload Image</label> -->
-                <!-- v-if="imageUrl" -->
                 <button class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
                   @click="showSuccess">
                   Confirm
@@ -223,13 +217,13 @@
   </div>
 </template>
 <script>
-// import axios from 'axios'
 import tabReusable from '../mini_components/tab-reusable.vue'
 import { NCard } from 'naive-ui'
 import { NModal } from 'naive-ui'
 import loadingComp from '@/components/mini_components/loading-comp.vue'
 import Swal from 'sweetalert2'
 import data from '@/static/data.js'
+import axios from 'axios'
 export default {
   name: 'DepositComponent',
   components: {
@@ -255,7 +249,8 @@ export default {
       id: '',
       coin: '',
       img: '',
-      success: false
+      success: false,
+      base_url:import.meta.env.VITE_BASE_URL,
     }
   },
   methods: {
@@ -342,6 +337,16 @@ export default {
       this.imageUrl = ''
       this.uploadedFileName = ''
       this.uploadedFile = ''
+    },
+    async getById(){
+      try{
+        let response = await axios.get(`${this.base_url}api/products/${this.$route.query.id}`)
+        console.log(this.$route.query.id)
+        console.log(response.data)
+        this.amount = response.data.contract_price
+      }catch(error){
+        console.error('Problem with fetching By Id',error)
+      }
     }
   },
   mounted() {
@@ -350,6 +355,7 @@ export default {
         this.amount = item.contract_price
       }
     })
+    this.getById()
   }
 }
 </script>

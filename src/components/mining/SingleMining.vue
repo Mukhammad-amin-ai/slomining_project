@@ -49,7 +49,7 @@
           <router-link v-else to="/sign-in">
             <ButtonComponent text="Buy now" class="default_white ml-1 buyBtn" />
           </router-link>
-          <router-link :to="'/product-detail/' + item.id">
+          <router-link :to="'/product-detail/' + item._id">
             <ButtonComponent text="See more" class="default_white ml-1 seeBtn" />
           </router-link>
         </div>
