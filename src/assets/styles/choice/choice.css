@@ -1,7 +1,4 @@
 .why_choice {
-  /*background: var(--black);*/
-  /*padding-top: 100px;*/
-
   color: var(--black);
 }
 
@@ -10,8 +7,6 @@
   -webkit-backdrop-filter: blur(5px);
   background: transparent;
   backdrop-filter: blur(5px);
-  /* background: linear-gradient(180deg, rgba(190, 229, 236, 0.5), transparent); */
-  /* background-color: var(--white); */
   background-blend-mode: multiply, normal;
   border-radius: 12px;
   display: flex;
@@ -25,7 +20,6 @@
   grid-template-rows: 1fr;
   padding: 40px;
   gap: 20px;
-  /* background-color: var(--white) */
 }
 .choice_box {
   display: flex;
@@ -35,14 +29,12 @@
   text-align: center;
   padding: 20px 40px;
   cursor: pointer;
-  /* background: rgba(255, 255, 255, 0.2); */
   background-color: var(--white);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
   background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
-  /* background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%); */
   border-radius: 20px;
 }
 

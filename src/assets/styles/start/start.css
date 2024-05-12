@@ -1,35 +1,19 @@
 .start_and_mining {
   background: linear-gradient(180deg, transparent 79.17%, #000), linear-gradient(135.02deg, #272f48, #000 100.06%);
-  /* background: #2980B9;  fallback for old browsers */
-  background: #000; /* fallback for old browsers */
-  /* background: -webkit-linear-gradient(to bottom, #ffffff, #6dd5fa, #2980b9); Chrome 10-25, Safari 5.1-6 */
-  /* background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: #000; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000;
+  background: #000;
   background-blend-mode: multiply, normal, normal;
   padding-top: 100px;
   color: var(--white);
   font-family: Montserrat-Regular, sans-serif;
   position: relative;
 }
-/*.start_and_mining:after {*/
-/*  background: linear-gradient(0deg,#151515 20%,hsla(0,0%,8%,0));*/
-/*  bottom: 0;*/
-/*  content: "";*/
-/*  height: 40px;*/
-/*  left: 0;*/
-/*  mix-blend-mode: multiply;*/
-/*  opacity: .9;*/
-/*  position: absolute;*/
-/*  width: 100%;*/
-/*  z-index: 102!important;*/
-/*}*/
 .start_parent {
   background: transparent;
 }
 .start_title {
   font-size: 30px;
   font-family: Montserrat-Bold, sans-serif;
-  /*color: var(--text_gray);*/
   color: var(--white);
   background: transparent;
   text-transform: uppercase;
@@ -46,8 +30,6 @@
   background: transparent;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  /* background: linear-gradient(180deg, rgba(213, 227, 232, 0.5),transparent); */
-
   border-radius: 10px;
   padding: 40px;
 }
@@ -75,7 +57,6 @@
   text-transform: uppercase;
   background: transparent;
   color: var(--white);
-  /* color: var(--text_gray); */
 }
 
 .start_box_description {
@@ -83,7 +64,6 @@
   font-family: Montserrat-Regular, sans-serif;
   background: transparent;
   color: var(--white);
-  /* color: var(--text_gray); */
   line-height: 28px;
 }
 

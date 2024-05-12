@@ -44,6 +44,12 @@
                 </span>
               </li>
             </router-link>
+            <router-link to="/faq">
+              <li :class="{ active: $route.fullPath === '/faq' }">
+                <span>FAQ
+                </span>
+              </li>
+            </router-link>
           </ul>
         </nav>
 

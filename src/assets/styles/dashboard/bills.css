@@ -1,4 +1,3 @@
-/* Updated styles for the table */
 .my-bills-parent {
     width: 100%;
 }
@@ -6,7 +5,7 @@
 .bills-table {
     margin-top: 40px;
     width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    overflow-x: auto;
 }
 
 .table {
@@ -16,7 +15,6 @@
 
 .table {
     border: 1px solid var(--border_color);
-
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -66,10 +64,6 @@
     border-radius: 50px;
     background: var(--green);
 }
-
-
-
-/* select */
 
 #date {
     width: 400px;

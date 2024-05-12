@@ -23,6 +23,7 @@
   </div>
   <div class="start_and_mining">
     <how-to-start />
+    <lastTransactions/>
     <MiningComponent />
     <WhyChoose />
     <PaymentMethods />
@@ -53,21 +54,18 @@ import MiningComponent from '@/components/mining/MiningComponent.vue'
 import WhyChoose from "@/components/choose/WhyChoose.vue";
 import PaymentMethods from "@/components/payment/PaymentMethods.vue";
 import statsComp from '@/components/about-us/stats-comp.vue'
-// import MiningInvest from "@/components/mining/MiningInvest.vue";
+import lastTransactions from '@/components/latest/last-transactions.vue'
 
 export default {
   components: {
-    // MiningInvest,
     PaymentMethods,
+    lastTransactions,
     WhyChoose,
     MiningComponent,
     HowToStart,
     statsComp
   },
-  mounted() {
-    // Initialize LiveCoinWatch widget here
-    // LCW.init();
-  }
+
 }
 </script>
 <style scoped>

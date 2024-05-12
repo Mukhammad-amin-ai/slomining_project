@@ -7,14 +7,12 @@
 @import "./dashboard/dashboard.css";
 @import "./dashboard/bills.css";
 @import "./dashboard/settings.css";
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  /*background-color: var(--main);*/
   font-family: Montserrat-Medium, sans-serif, sans-serif;
   font-display: swap;
   -webkit-user-select: none;
@@ -22,6 +20,15 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+.swal2-popup{
+  background-color: #000 !important;
+  color: #ffffff !important;
+}
+.swal2-timer-progress-bar{
+  background-color: #f1f1f1 !important;
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
 }

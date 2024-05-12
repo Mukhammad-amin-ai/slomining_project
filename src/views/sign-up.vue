@@ -137,7 +137,7 @@ export default {
             Swal.fire({
               text: `Bonus 50$ for the first registration`,
               showCancelButton: false,
-              confirmButtonText: 'Yes',
+              confirmButtonText: 'Continue',
               confirmButtonColor: '#4466f2',
               cancelButtonText: 'No',
               cancelButtonColor: '#f31616',
@@ -150,6 +150,22 @@ export default {
           }, 1000)
         }
       }catch (e){
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer
+            toast.onmouseleave = Swal.resumeTimer
+          }
+        })
+        await Toast.fire({
+          icon: 'error',
+          title: 'Email Already Used',
+
+        })
         console.error(e)
       }
     },

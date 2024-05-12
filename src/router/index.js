@@ -10,7 +10,7 @@ import privacyComp from '@/views/privacy-comp.vue'
 import termsComp from '@/views/terms-comp.vue'
 import webComp from '@/views/web-comp.vue'
 import crypto from '@/views/crupto-comp.vue'
-
+import faqComp from '@/views/faq-comp.vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -104,6 +104,10 @@ const router = createRouter({
     {
       path: '/what-is-web3',
       component: webComp
+    },
+    {
+      path:'/faq',
+      component:faqComp
     }
   ],
   scrollBehavior() {

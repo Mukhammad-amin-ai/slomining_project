@@ -6,7 +6,7 @@
       </div>
       <div class="sign-in-form">
         <div class="signin-text">
-          <h1>WELCOME TO  ASTRO HASH</h1>
+          <h1>WELCOME TO ASTRO HASH</h1>
           <p>Sign in to continue</p>
         </div>
         <form>
@@ -35,7 +35,7 @@
             />
 
             <label for="input__password" class="floating__label" data-content="Password"
-              ><span class="hidden--visually">Password</span></label
+            ><span class="hidden--visually">Password</span></label
             >
             <div class="err-msg" v-if="errors.password">{{ errors.password }}</div>
           </div>
@@ -52,7 +52,8 @@
         <button class="sign-in btn" @click="login">Sign in</button>
         <div class="dont">
           <h5>
-            Don't have an account ? <router-link to="/sign-up"><span>Sign Up</span></router-link>
+            Don't have an account ?
+            <router-link to="/sign-up"><span>Sign Up</span></router-link>
           </h5>
         </div>
       </div>
@@ -69,10 +70,10 @@ export default {
     return {
       form: {
         email: '',
-        password: '',
+        password: ''
       },
       errors: {},
-      url:import.meta.env.VITE_BASE_URL
+      url: import.meta.env.VITE_BASE_URL
     }
   },
   methods: {
@@ -84,8 +85,7 @@ export default {
         this.errors.password = 'Password must be at least 6 characters.'
       }
       if (Object.keys(this.errors).length === 0) {
-        localStorage.setItem('form', JSON.stringify(this.form))
-        localStorage.setItem('isLogin', true)
+
 
         this.$store.state.isLogin = true
 
@@ -96,38 +96,56 @@ export default {
     isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     },
-   async apiLogin(){
-      let loginObj ={
-        email:this.form.email,
-        password:this.form.password
+    async apiLogin() {
+      let loginObj = {
+        email: this.form.email,
+        password: this.form.password
       }
-      try{
-        let response = await axios.post(`${this.url}api/login`,loginObj)
-        if(response.data.token){
+      try {
+        let response = await axios.post(`${this.url}api/login`, loginObj)
+
+        if (response.data.token) {
           localStorage.setItem('jwt_token', JSON.stringify(response.data.token))
-            const Toast = Swal.mixin({
-              toast: true,
-              position: 'top-end',
-              showConfirmButton: false,
-              timer: 3000,
-              timerProgressBar: true,
-              didOpen: (toast) => {
-                toast.onmouseenter = Swal.stopTimer
-                toast.onmouseleave = Swal.resumeTimer
-              }
-            })
+          localStorage.setItem('form', JSON.stringify(this.form))
+          localStorage.setItem('isLogin', true)
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer
+              toast.onmouseleave = Swal.resumeTimer
+            }
+          })
           await Toast.fire({
-              icon: 'success',
-              title: 'Signed in successfully'
-            })
-            this.$router.push('/dashboard/profile')
-            setTimeout(() => {
-              window.location.reload()
-            }, 1000)
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
+          this.$router.push('/dashboard/profile')
+          setTimeout(() => {
+            window.location.reload()
+          }, 1000)
         }
-        // console.log(response.data)
-      }catch(e) {
-        console.error(e)
+      } catch (e) {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer
+            toast.onmouseleave = Swal.resumeTimer
+          }
+        })
+        await Toast.fire({
+          icon: 'error',
+          title: 'Email Or Password Wrong',
+          theme:'dark'
+        })
+        console.error('Problem with Login', e)
       }
     }
   }
@@ -167,7 +185,6 @@ export default {
 h1 {
   font-size: 32px;
   font-family: Montserrat-Extra-Bold, sans-serif;
-  /* color: rgb(28, 43, 70); */
   color: #fff;
   line-height: 38.4px;
 }
@@ -175,9 +192,7 @@ h1 {
 p {
   font-size: 16px;
   font-family: Montserrat-Regular, sans-serif;
-  /* color: rgb(128, 145, 167); */
   color: #fff;
-
   line-height: 26px;
 }
 
@@ -233,10 +248,9 @@ form {
   content: '';
   height: 0.1rem;
   position: absolute;
-  transition:
-    transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 180ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.3s ease;
+  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+  opacity 180ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 0.3s ease;
   opacity: 0;
   left: 0;
   top: 100%;
@@ -259,9 +273,7 @@ form {
   transform: translate3d(0, -3.12rem, 0) scale3d(0.82, 0.82, 1);
 }
 
-.floating__input:focus + .floating__label::before {
-  color: var(--color__accent);
-}
+
 
 input {
   background: none;
@@ -365,6 +377,7 @@ legend {
   .container {
     padding: 50px 0;
   }
+
   .form-check {
     width: 40%;
   }
