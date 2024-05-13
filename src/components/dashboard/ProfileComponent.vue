@@ -62,7 +62,8 @@
         </div>
         <div class="item">
           <h3>ASTRO HASH</h3>
-          <h5>$ 5.00</h5>
+          <h5 v-if="this.dataProfile?.bonus === 0">$ 0.00</h5>
+          <h5 v-else>$ {{this.dataProfile?.bonus}} </h5>
         </div>
       </div>
     </div>

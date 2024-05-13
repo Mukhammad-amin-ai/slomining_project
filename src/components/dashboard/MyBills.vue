@@ -15,29 +15,23 @@
       <table class="table">
         <thead class="thead">
           <tr>
-            <!-- <th>Date</th> -->
             <th>Currency</th>
             <th>Status</th>
             <th>Amount</th>
             <th>USDT</th>
             <th>Balance</th>
             <th>Type</th>
-            <!-- <th>Wallet Address</th> -->
           </tr>
         </thead>
         <tbody>
-          <!-- Add your table rows dynamically here -->
-          <tr>
-            <!-- <td>12/14/23 11:24</td> -->
-            <td class="usd"><span>USDT</span></td>
-            <td class="text-green"><span>Paid</span></td>
-            <td>5 USDT</td>
-            <td>$5.00</td>
-            <td>$5</td>
-            <td>Registration Bonus</td>
-            <!-- <td></td> -->
+          <tr v-for="item in data.bills" :key="item">
+            <td class="usd"><span>{{item.currency}}</span></td>
+            <td class="text-green"><span>{{item.status}}</span></td>
+            <td>{{item.amount}} {{item.currency}}</td>
+            <td>{{item.amount}}</td>
+            <td>${{item.balance}}</td>
+            <td>{{item.type}}</td>
           </tr>
-          <!-- Add more rows as needed -->
         </tbody>
       </table>
     </div>
@@ -45,8 +39,21 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
-  name: 'MyBills'
+  name: 'MyBills',
+  computed:{
+    ...mapState("Api",['data'])
+  },
+  methods:{
+    fetchData(){
+      this.$store.dispatch('Api/fetchData')
+    }
+  },
+  mounted() {
+    this.fetchData()
+    console.log(this.data)
+  }
 }
 </script>
 

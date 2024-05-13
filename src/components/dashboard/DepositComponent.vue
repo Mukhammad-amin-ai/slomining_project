@@ -86,29 +86,29 @@
       <div class="table-response">
         <table class="table-info">
           <thead>
-            <tr>
-              <th>Date</th>
-              <th>Currency</th>
-              <th>Status</th>
-              <th>Amount</th>
-              <th>USDT</th>
-              <th>Balance</th>
-              <th>Type</th>
-              <th>Wallet Address</th>
-            </tr>
+          <tr>
+            <th>Date</th>
+            <th>Currency</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>USDT</th>
+            <th>Balance</th>
+            <th>Type</th>
+            <th>Wallet Address</th>
+          </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class="color_grey">No Deposit history</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="color_grey">No Deposit history</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
           </tbody>
         </table>
       </div>
@@ -123,8 +123,9 @@
         </n-card>
       </n-modal>
       <n-modal v-model:show="show" transform-origin="center" style="margin: auto">
-        <n-card v-if="success" style="width: 100%; max-width: 1000px; min-width: 350px" title="Success" :bordered="false"
-          size="huge" role="dialog" aria-modal="true">
+        <n-card v-if="success" style="width: 100%; max-width: 1000px; min-width: 350px" title="Success"
+                :bordered="false"
+                size="huge" role="dialog" aria-modal="true">
           <template #header-extra>
             <div @click="closeModal" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -145,7 +146,7 @@
           </div>
         </n-card>
         <n-card v-else style="width: 100%; max-width: 1000px; min-width: 350px" title="Checkout" :bordered="false"
-          size="huge" role="dialog" aria-modal="true">
+                size="huge" role="dialog" aria-modal="true">
           <template #header-extra>
             <div @click="closeModal" style="cursor: pointer">
               <img alt="close" src="@/assets/images/x.svg" style="width: 20px" />
@@ -169,7 +170,6 @@
           </div>
           <div class="add_cart_section d-flex justify-content-start">
             <div class="left_side">
-              <!-- <img src="../../assets/images/pay_card/BTC.png" alt="#" class="img-fluid" /> -->
               <img :src="img" :alt="img" class="img-fluid" />
             </div>
             <div class="right_side ml-1 mt-2 d-flex flex-column">
@@ -177,12 +177,12 @@
               <div class="right_heading d-flex justify-content-start center pointer" @click="copiedText(this.coin)">
                 <div class="copied_text mt-1">{{ this.coin }}</div>
                 <svg class="copied_img ml-1" style="width: 20px" data-v-653498c4="" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1024 1024">
+                     viewBox="0 0 1024 1024">
                   <path fill="currentColor"
-                    d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z">
+                        d="M768 832a128 128 0 0 1-128 128H192A128 128 0 0 1 64 832V384a128 128 0 0 1 128-128v64a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64h64z">
                   </path>
                   <path fill="currentColor"
-                    d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z">
+                        d="M384 128a64 64 0 0 0-64 64v448a64 64 0 0 0 64 64h448a64 64 0 0 0 64-64V192a64 64 0 0 0-64-64H384zm0-64h448a128 128 0 0 1 128 128v448a128 128 0 0 1-128 128H384a128 128 0 0 1-128-128V192A128 128 0 0 1 384 64z">
                   </path>
                 </svg>
               </div>
@@ -195,7 +195,7 @@
                   <span>{{ uploadedFileName }}</span>
                 </div>
                 <button class="send d-flex mt-1 text-center justify-content-center" style="width: 250px"
-                  @click="showSuccess">
+                        @click="buyProduct">
                   Confirm
                 </button>
               </div>
@@ -205,7 +205,7 @@
             <div class="deposit_footer_text d-flex justify-content-start center">
               <svg style="width: 20px; margin-right: 10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                 <path fill="currentColor"
-                  d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z">
+                      d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 192a58.432 58.432 0 0 0-58.24 63.744l23.36 256.384a35.072 35.072 0 0 0 69.76 0l23.296-256.384A58.432 58.432 0 0 0 512 256zm0 512a51.2 51.2 0 1 0 0-102.4 51.2 51.2 0 0 0 0 102.4z">
                 </path>
               </svg>
               Please transfer the exact amount to address
@@ -224,6 +224,11 @@ import loadingComp from '@/components/mini_components/loading-comp.vue'
 import Swal from 'sweetalert2'
 import data from '@/static/data.js'
 import axios from 'axios'
+import { mapState } from 'vuex'
+
+const token = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
+
+
 export default {
   name: 'DepositComponent',
   components: {
@@ -250,8 +255,11 @@ export default {
       coin: '',
       img: '',
       success: false,
-      base_url:import.meta.env.VITE_BASE_URL,
+      base_url: import.meta.env.VITE_BASE_URL
     }
+  },
+  computed: {
+    ...mapState('Api', ['userId'])
   },
   methods: {
     handleImageUpload(event) {
@@ -308,7 +316,6 @@ export default {
         this.price = `${this.amount} USDT = ${this.text} ${option}`
         if (option === 'BTC') {
           this.img = '/pay_card/BTC.png'
-          // this.img = `../../assets/images/pay_card/${option}.png`
           this.coin = 'bc1qeqtszu9eayzelerwgh5ll05x6u5ydt8xf6wm8q'
         } else if (
           option === 'ETH' ||
@@ -330,6 +337,7 @@ export default {
     },
     showSuccess() {
       this.success = true
+      this.buyProduct()
     },
     closeModal() {
       this.show = false
@@ -338,14 +346,49 @@ export default {
       this.uploadedFileName = ''
       this.uploadedFile = ''
     },
-    async getById(){
-      try{
+    async getById() {
+      try {
         let response = await axios.get(`${this.base_url}api/products/${this.$route.query.id}`)
         console.log(this.$route.query.id)
         console.log(response.data)
         this.amount = response.data.contract_price
-      }catch(error){
-        console.error('Problem with fetching By Id',error)
+      } catch (error) {
+        console.error('Problem with fetching By Id', error)
+      }
+    },
+    getUser() {
+      this.$store.dispatch('Api/fetchData')
+    },
+    async buyProduct() {
+      let obj = {
+        idOfProduct:this.$route.query.id,
+        type:'Miner',
+        time:new Date().getHours()
+      }
+      try {
+        let response = await axios.put(`${this.base_url}api/purchase/${this.userId}`, obj,{headers:{Authorization:`Bearer ${token}`}})
+        if(response.data.message === 'Product purchased successfully'){
+          this.success = true
+        }
+        console.log(response.data)
+      } catch (error) {
+        this.closeModal()
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer
+            toast.onmouseleave = Swal.resumeTimer
+          }
+        })
+        await Toast.fire({
+          icon: 'error',
+          title: 'You Don`t have enough money'
+        })
+        console.error('error buying product', error)
       }
     }
   },
@@ -355,7 +398,10 @@ export default {
         this.amount = item.contract_price
       }
     })
-    this.getById()
+    this.getUser()
+    if (this.$route.query.id !== undefined) {
+      this.getById()
+    }
   }
 }
 </script>
@@ -492,7 +538,7 @@ form {
 .item {
   flex: 0 0 auto;
   width: 23%;
-   background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(60px);
