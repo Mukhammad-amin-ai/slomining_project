@@ -42,10 +42,15 @@
 
         <div class="item_right_footer d-flex justify-content-start btns">
           <div @click="showModal = true" v-if="isLogin">
-            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">
-              <ButtonComponent text="Buy Now" class="default_black buyBtn" />
-            </router-link>
+<!--            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">-->
+              <ButtonComponent text="Buy Now" @click="buyProduct" class="default_black buyBtn" />
+<!--            </router-link>-->
           </div>
+<!--          <div @click="showModal = true" v-if="isLogin">-->
+<!--            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">-->
+<!--              <ButtonComponent text="Buy Now" class="default_black buyBtn" />-->
+<!--            </router-link>-->
+<!--          </div>-->
           <router-link v-else to="/sign-in">
             <ButtonComponent text="Buy now" class="default_white ml-1 buyBtn" />
           </router-link>
@@ -60,18 +65,23 @@
 
 <script>
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
+import axios from 'axios'
+import Swal from 'sweetalert2'
+const token = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
 
 export default {
   name: 'SingleMining',
   components: { ButtonComponent },
   props: {
-    item: Object
+    item: Object,
+    userId:String
   },
   data() {
     return {
       isLogin: localStorage.getItem('isLogin'),
       showModal: false,
       type: 'text',
+      base_url: import.meta.env.VITE_BASE_URL,
       count: 1,
       bodyStyle: {
         width: '600px'
@@ -84,20 +94,63 @@ export default {
     }
   },
   methods: {
-    changeType() {
-      if (this.type === 'text') {
-        this.type = 'password'
-      } else {
-        this.type = 'text'
-      }
-    },
-    dec() {
-      if (this.count > 0) {
-        this.count--
-      }
-    },
-    inc() {
-      this.count++
+    async buyProduct() {
+      Swal.fire({
+        text: `Dou you want to Buy`,
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        confirmButtonColor: '#4466f2',
+        cancelButtonText: 'No',
+        cancelButtonColor: '#f31616',
+        reverseButtons: false
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          let obj = {
+            idOfProduct:this.item._id,
+            type:'Miner',
+            time:new Date().getHours(),
+            minute:new Date().getMinutes()
+          }
+          try {
+            let response = await axios.put(`${this.base_url}api/purchase/${this.userId}`, obj,{headers:{Authorization:`Bearer ${token}`}})
+            if(response.data.message === 'Product purchased successfully'){
+              const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.onmouseenter = Swal.stopTimer
+                  toast.onmouseleave = Swal.resumeTimer
+                }
+              })
+              await Toast.fire({
+                icon: 'success',
+                title: 'You Successfully buy contract'
+              })
+            }
+            console.log(response.data)
+          } catch (error) {
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer
+                toast.onmouseleave = Swal.resumeTimer
+              }
+            })
+            await Toast.fire({
+              icon: 'error',
+              title: 'You Don`t have enough money'
+            })
+            console.error('error buying product', error)
+          }
+        }
+      })
     }
   }
 }
@@ -105,7 +158,6 @@ export default {
 
 <style scoped>
 .buyBtn {
-  /* background-color: #148db3; */
   background-color: grey;
   color: #fff !important;
   font-family: Montserrat-Bold;
@@ -133,7 +185,6 @@ export default {
   .btns {
     gap: 20px;
   }
-
   .buyBtn,
   .seeBtn {
     width: 100%;

@@ -7,7 +7,7 @@
           We offer a variety of cloud mining investment contracts, <br> ensuring stable and reliable profits.
         </div>
         <div class="mining_items">
-          <SingleMining v-for="(item, index) in products" :key="item" :item="item" data-aos="fade-up"
+          <SingleMining v-for="(item, index) in products" :key="item" :userId="userId" :item="item" data-aos="fade-up"
                         data-aos-anchor-placement="top-bottom" :data-aos-delay="index + '50'" />
         </div>
       </div>
@@ -30,11 +30,13 @@ export default {
     }
   },
   computed: {
-    ...mapState('Api', ['products'])
+    ...mapState('Api', ['products']),
+    ...mapState('Api',['userId'])
   },
   methods: {
     fetchProducts() {
       this.$store.dispatch('Api/fetchProduct')
+      this.$store.dispatch('Api/fetchData')
     }
   },
   mounted() {
