@@ -67,7 +67,7 @@
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-const token = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
+
 
 export default {
   name: 'SingleMining',
@@ -105,6 +105,7 @@ export default {
         reverseButtons: false
       }).then(async (result) => {
         if (result.isConfirmed) {
+          const token = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
           let obj = {
             idOfProduct:this.item._id,
             type:'Miner',
