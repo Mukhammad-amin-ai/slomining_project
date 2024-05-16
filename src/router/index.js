@@ -51,9 +51,9 @@ const router = createRouter({
           component: () => import('@/components/dashboard/WithDraw.vue')
         },
         {
-          path: '/dashboard/order',
-          name: 'order',
-          component: () => import('@/components/dashboard/OrderComponent.vue')
+          path: '/dashboard/contracts',
+          name: 'ContractComponent',
+          component: () => import('@/components/dashboard/contractsComponent.vue')
         },
         {
           path: '/dashboard/affiliates',

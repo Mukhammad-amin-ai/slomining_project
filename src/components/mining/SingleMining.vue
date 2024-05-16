@@ -131,6 +131,7 @@ export default {
                 title: 'You Successfully buy contract'
               })
             }
+            window.location.reload()
             console.log(response.data)
           } catch (error) {
             const Toast = Swal.mixin({

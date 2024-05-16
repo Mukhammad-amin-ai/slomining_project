@@ -3,12 +3,10 @@
     <div class="bills-select">
       <select name="date" id="date">
         <option value="all" selected>All</option>
-        <option value="withdrawal">Withdrawal</option>
+        <option value="withdrawal">Withdraw</option>
         <option value="deposit">Deposit</option>
-        <option value="capital">Capital</option>
         <option value="buy">Buy</option>
         <option value="reward">Reward</option>
-        <option value="slomming">SLOMMING</option>
       </select>
     </div>
     <div class="bills-table">

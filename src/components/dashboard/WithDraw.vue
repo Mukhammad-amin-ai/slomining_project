@@ -204,7 +204,6 @@ export default {
 
 .contant {
   width: 1144px;
-  /* height: 784px; */
   height: auto;
 }
 
@@ -213,7 +212,6 @@ export default {
   margin: 30px 0;
   width: 100%;
   height: auto;
-  /* background-color: #f8f9fc; */
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -222,7 +220,6 @@ export default {
   background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) -1.52%, hsla(0, 0%, 100%, 0.024) 104.35%);
   border-radius: 16px;
   padding: 21px;
-
 }
 
 h2 {
@@ -235,7 +232,6 @@ h2 {
 p {
   font-family: Montserrat-Medium, sans-serif;
   font-size: 15px;
-  /* color: rgb(51, 57, 71); */
   color: #fff;
   line-height: 21px;
   padding-bottom: 10px;
@@ -294,8 +290,6 @@ form {
 }
 
 .item-container {
-  /* background: #fff; */
-  /* border-radius: 4px; */
   padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -316,7 +310,6 @@ form {
 .next {
   width: 300px;
   height: auto;
-  padding: 0 16px;
   background-color: #697386;
   border-radius: 10px;
   font-family: Montserrat-Medium, sans-serif;
@@ -353,9 +346,8 @@ th,
 td {
   padding: 0.875rem 1.25rem;
   font-family: Montserrat-Bold, sans-serif;
-  /* color: rgb(33, 37, 41); */
   color: #fff;
-  font-size: 15.008px;
+  font-size: 15px;
   line-height: 26px;
 }
 

@@ -33,6 +33,13 @@
               </router-link>
             </li>
             <li>
+              <router-link to="/dashboard/contracts" class="dashboard_link text-black"
+                           :class="{ 'router-active-link': isRouterActive6 }" >
+                <contractIcon :color="computedColor6" />
+                Contracts
+              </router-link>
+            </li>
+            <li>
               <router-link to="/dashboard/settings" class="dashboard_link text-black"
               :class="{ 'router-active-link': isRouterActive5 }"  >
                 <SettingsIcon :color="computedColor5" />
@@ -54,7 +61,7 @@ import MyBills from '../../assets/icons/deposit-icon/my-bills.vue'
 import depositIcon from '../../assets/icons/deposit-icon/deposit-icon.vue'
 import withDrowIcon from '../../assets/icons/deposit-icon/withdro-icon.vue'
 import SettingsIcon from '../../assets/icons/deposit-icon/setting-icon.vue'
-
+import contractIcon from '@/assets/icons/deposit-icon/contract-icon.vue'
 
 
 export default {
@@ -65,6 +72,7 @@ export default {
     }
   },
   components: {
+    contractIcon,
     statsComp,
     MyBills,
     depositIcon,
@@ -86,6 +94,12 @@ export default {
     },
     isRouterActive5() {
       return this.$route.path === '/dashboard/settings';
+    },
+    isRouterActive6() {
+      return this.$route.path === '/dashboard/contracts';
+    },
+    computedColor6() {
+      return this.isRouterActive6 ? 'black' : 'white';
     },
     computedColor5() {
       return this.isRouterActive5 ? 'black' : 'white';

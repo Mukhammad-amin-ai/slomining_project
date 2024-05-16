@@ -46,10 +46,10 @@
               Volume <span class="volume_value ">{{ product.volume }}%</span>
             </div>
           </div>
-          <router-link :to="{ path: '/dashboard/deposit', query: { id: this.products._id } }">
+          <!--          <router-link :to="{ path: '/dashboard/deposit', query: { id: this.products._id } }">-->
 
-            <ButtonComponent text="Buy now" class="default_black mt-1 color" style="width: 150px " />
-          </router-link>
+          <ButtonComponent @click="buyProduct" text="Buy now" class="default_black mt-1 color" style="width: 150px " />
+          <!--          </router-link>-->
         </div>
       </div>
       <div class="detail_card_right_name mb-1">detail</div>
@@ -63,6 +63,9 @@
 import axios from 'axios'
 import data from '@/static/data'
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
+import Swal from 'sweetalert2'
+import { mapState } from 'vuex'
+
 export default {
   name: 'MiningDetail',
   data() {
@@ -72,9 +75,9 @@ export default {
       showModal: false,
       count: 1,
       type: 'text',
-      base_url:import.meta.env.VITE_BASE_URL,
-      products:[],
-      id:""
+      base_url: import.meta.env.VITE_BASE_URL,
+      products: [],
+      id: ''
     }
   },
   components: {
@@ -88,7 +91,8 @@ export default {
   computed: {
     liquidWidth() {
       return `${this.product.volume}%`
-    }
+    },
+    ...mapState('Api', ['userId'])
   },
   methods: {
     getProductDetails(productId) {
@@ -109,18 +113,82 @@ export default {
     inc() {
       this.count++
     },
-    async getProductById(){
-      try{
+    getData() {
+      this.$store.dispatch('Api/fetchData')
+    },
+    async getProductById() {
+      try {
         let response = await axios.get(`${this.base_url}api/products/${this.id}`)
         console.log(response.data)
         this.products = response.data
-      }catch(error){
-        console.error('Problem with fetching By Id',error)
+      } catch (error) {
+        console.error('Problem with fetching By Id', error)
       }
+    },
+    async buyProduct() {
+      Swal.fire({
+        text: `Dou you want to Buy`,
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        confirmButtonColor: '#4466f2',
+        cancelButtonText: 'No',
+        cancelButtonColor: '#f31616',
+        reverseButtons: false
+      }).then(async (result) => {
+        if (result.isConfirmed) {
+          const token = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
+          let obj = {
+            idOfProduct: this.$route.params.id,
+            type: 'Contract',
+            time: new Date().getHours(),
+            minute: new Date().getMinutes()
+          }
+          try {
+            let response = await axios.put(`${this.base_url}api/purchase/${this.userId}`, obj, { headers: { Authorization: `Bearer ${token}` } })
+            if (response.data.message === 'Product purchased successfully') {
+              const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.onmouseenter = Swal.stopTimer
+                  toast.onmouseleave = Swal.resumeTimer
+                }
+              })
+              await Toast.fire({
+                icon: 'success',
+                title: 'You Successfully buy contract'
+              })
+               window.location.href = '/'
+            }
+            console.log(response.data)
+          } catch (error) {
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer
+                toast.onmouseleave = Swal.resumeTimer
+              }
+            })
+            await Toast.fire({
+              icon: 'error',
+              title: 'You Don`t have enough money'
+            })
+            console.error('error buying product', error)
+          }
+        }
+      })
     }
   },
   mounted() {
     this.getProductById()
+    this.getData()
   }
 }
 </script>
