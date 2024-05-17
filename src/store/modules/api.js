@@ -24,6 +24,10 @@ const mutations = {
 }
 const actions = {
   async fetchData({ commit }) {
+    if(localStorage.getItem('jwt_token')===null){
+        window.location.href = '/sign-in'
+    }
+
     const tokenParts = token.split('.')
     const payload = JSON.parse(atob(tokenParts[1]))
     // console.log(payload)
@@ -39,6 +43,9 @@ const actions = {
         // console.log( response.data)
       } catch (err) {
         console.error('error of decoding', err)
+        if(err.message === 'Unauthorized'){
+          window.location.href = '/sign-in'
+        }
       }
     }
   },

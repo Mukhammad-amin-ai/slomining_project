@@ -29,7 +29,7 @@
           <div class="item_term">
             <div class="term_title">Daily Rewards</div>
             <div class="term_content">
-             ${{ item.daily_rewards }} 
+              ${{ item.daily_rewards }}
             </div>
           </div>
           <div class="item_term mt-2">
@@ -42,15 +42,15 @@
 
         <div class="item_right_footer d-flex justify-content-start btns">
           <div @click="showModal = true" v-if="isLogin">
-<!--            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">-->
-              <ButtonComponent text="Buy Now" @click="buyProduct" class="default_black buyBtn" />
-<!--            </router-link>-->
+            <!--            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">-->
+            <ButtonComponent text="Buy Now" @click="buyProduct" class="default_black buyBtn" />
+            <!--            </router-link>-->
           </div>
-<!--          <div @click="showModal = true" v-if="isLogin">-->
-<!--            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">-->
-<!--              <ButtonComponent text="Buy Now" class="default_black buyBtn" />-->
-<!--            </router-link>-->
-<!--          </div>-->
+          <!--          <div @click="showModal = true" v-if="isLogin">-->
+          <!--            <router-link :to="{ path: '/dashboard/deposit', query: { id: item.id } }">-->
+          <!--              <ButtonComponent text="Buy Now" class="default_black buyBtn" />-->
+          <!--            </router-link>-->
+          <!--          </div>-->
           <router-link v-else to="/sign-in">
             <ButtonComponent text="Buy now" class="default_white ml-1 buyBtn" />
           </router-link>
@@ -67,6 +67,7 @@
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { mapActions } from 'vuex'
 
 
 export default {
@@ -74,7 +75,7 @@ export default {
   components: { ButtonComponent },
   props: {
     item: Object,
-    userId:String
+    userId: String
   },
   data() {
     return {
@@ -94,6 +95,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions('Timer', ['startTimer']),
     async buyProduct() {
       Swal.fire({
         text: `Dou you want to Buy`,
@@ -107,14 +109,15 @@ export default {
         if (result.isConfirmed) {
           const token = localStorage.getItem('jwt_token').replace(/^"(.*)"$/, '$1')
           let obj = {
-            idOfProduct:this.item._id,
-            type:'Miner',
-            time:new Date().getHours(),
-            minute:new Date().getMinutes()
+            idOfProduct: this.item._id,
+            type: 'Miner',
+            time: new Date().getHours(),
+            minute: new Date().getMinutes()
           }
           try {
-            let response = await axios.put(`${this.base_url}api/purchase/${this.userId}`, obj,{headers:{Authorization:`Bearer ${token}`}})
-            if(response.data.message === 'Product purchased successfully'){
+            let response = await axios.put(`${this.base_url}api/purchase/${this.userId}`, obj, { headers: { Authorization: `Bearer ${token}` } })
+            if (response.data.message === 'Product purchased successfully') {
+              await this.startTimer(this.item.contract_timer)
               const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -187,6 +190,7 @@ export default {
   .btns {
     gap: 20px;
   }
+
   .buyBtn,
   .seeBtn {
     width: 100%;

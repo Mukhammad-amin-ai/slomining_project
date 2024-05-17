@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { createStore } from 'vuex'
 import Api from './modules/api.js'
-
+import Timer from './modules/timer.js'
 
 const store = createStore({
   state: {
@@ -50,7 +50,8 @@ const store = createStore({
     }
   },
   modules:{
-    Api
+    Api,
+    Timer
   }
 })
 

@@ -3,10 +3,10 @@
     <div class="content">
       <h2>Contracts</h2>
       <div class="contract-contents">
-         <div class="NoContract" v-if="dataProfile?.contracts?.length === 0">
-           <h1>No Contract Found</h1>
-           <img src="../../assets/images/AH/abt.png" alt="">
-         </div>
+        <div class="NoContract" v-if="dataProfile?.contracts?.length === 0">
+          <h1>No Contract Found</h1>
+          <img src="../../assets/images/AH/abt.png" alt="">
+        </div>
         <div v-else class="mining_item_card myGrid" v-for="data in dataProfile.contracts" :key="data">
           <div class="item_card_left" style="display: flex; flex-direction: column-reverse;">
             <img draggable="false" :src="data.image" :alt="data.name" class="item_card_image" />
@@ -42,8 +42,15 @@
               </div>
             </div>
             <div class="item_card_volume">
-              <div class="liquid-bar" :style="{ width: data.volume + '%' }"></div>
-              Volume <span class="volume_value">{{ data.volume }}%</span>
+              <div class="liquid-bar" :style="{ width: 100 + '%' }">
+              </div>
+              End time : <span class="volume_value">
+             <countDown2 :hours="24" />
+              <!--              <countDown :deadline-time="86400" />-->
+              <!--              </div> Volume <span class="volume_value">{{ data.volume }}%-->
+            </span>
+
+
             </div>
             <div class="btnComponent">
               <button @click="deleteContract(data._id)">
@@ -61,9 +68,13 @@
 import { mapState } from 'vuex'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import countDown2 from '@/components/countDown2V.vue'
 
 export default {
   name: 'ContractComponent',
+  components: {
+    countDown2
+  },
   data() {
     return {
       base_url: import.meta.env.VITE_BASE_URL
@@ -77,6 +88,8 @@ export default {
       this.$store.dispatch('Api/fetchData')
     },
     async deleteContract(id) {
+      sessionStorage.removeItem('endTime')
+      sessionStorage.removeItem('expire')
       Swal.fire({
         text: `Dou you want to cancel contract ?`,
         showCancelButton: true,
@@ -99,7 +112,7 @@ export default {
                 data: deleteObj
               }
             )
-            if(response.data.message === 'Contract deleted successfully'){
+            if (response.data.message === 'Contract deleted successfully') {
               window.location.reload()
             }
             console.log(response.data)
@@ -172,7 +185,7 @@ export default {
   cursor: pointer;
 }
 
-.NoContract{
+.NoContract {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -183,7 +196,7 @@ export default {
   color: #fff;
 }
 
-.NoContract img{
+.NoContract img {
   width: 50%;
   height: 70%;
   margin-left: 15%;
@@ -195,7 +208,6 @@ export default {
     width: 100%;
   }
 }
-
 
 
 @media screen and (max-width: 1200px) {
