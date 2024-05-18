@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+const base_url = import.meta.env.VITE_BASE_URL
  const state = {
     endTime: null,
     remainingTime: null,
@@ -27,7 +28,7 @@ import axios from 'axios';
  const actions = {
     async startTimer({ commit, dispatch }, hours) {
       try {
-        const response = await axios.post('http://localhost:3000/set-timer', { hours });
+        const response = await axios.post(`${base_url}set-timer`, { hours });
         commit('SET_END_TIME', response.data.endTime);
         dispatch('startCountdown');
       } catch (error) {
@@ -36,7 +37,7 @@ import axios from 'axios';
     },
     async getTimer({ commit, dispatch }) {
       try {
-        const response = await axios.get('http://localhost:3000/get-timer');
+        const response = await axios.get(`${base_url}get-timer`);
         if (response.data.endTime) {
           commit('SET_END_TIME', response.data.endTime);
           commit('SET_REMAINING_TIME', response.data.remainingTime);
@@ -48,7 +49,7 @@ import axios from 'axios';
     },
     async stopTimer({ commit }) {
       try {
-        await axios.post('http://localhost:3000/stop-timer');
+        await axios.post(`${base_url}stop-timer`);
         commit('CLEAR_INTERVAL');
         commit('RESET_TIMER');
       } catch (error) {
