@@ -67,7 +67,6 @@
 import ButtonComponent from '@/components/mini_components/ButtonComponent.vue'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import { mapActions } from 'vuex'
 
 
 export default {

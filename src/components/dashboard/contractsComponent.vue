@@ -46,11 +46,7 @@
               </div>
               End time : <span class="volume_value">
              <countDown2 :index="index" />
-              <!--              <countDown :deadline-time="86400" />-->
-              <!--              </div> Volume <span class="volume_value">{{ data.volume }}%-->
             </span>
-
-
             </div>
             <div class="btnComponent">
               <button @click="deleteContract(data._id)">
@@ -65,7 +61,7 @@
 </template>
 
 <script>
-import {  mapState } from 'vuex'
+import { mapState } from 'vuex'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import countDown2 from '@/components/countDown2V.vue'

@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div v-if="remainingTime !== null">
       <p>{{ formattedTime }}</p>
     </div>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
   props: {
@@ -20,14 +20,18 @@ export default {
     },
   },
   computed: {
-    ...mapState('Timer',['remainingTime']),
-    ...mapGetters('Timer',['formattedTime']),
+    ...mapState('Timer', {
+      remainingTime: (state) => (index) => state.timers[index]?.remainingTime,
+    }),
+    formattedTime() {
+      return this.$store.getters['Timer/formattedTime'](this.index);
+    },
   },
   methods: {
-    ...mapActions('Timer',['stopTimer', 'getTimer']),
+    ...mapActions('Timer', ['stopTimer', 'getTimer']),
   },
-  mounted() {
-    this.getTimer(this.index)
-  }
+  async mounted() {
+    await this.getTimer(this.index);
+  },
 };
 </script>
