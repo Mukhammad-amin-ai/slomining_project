@@ -95,7 +95,6 @@ export default {
     }
   },
   methods: {
-    ...mapActions('Timer', ['startTimer']),
     async buyProduct() {
       Swal.fire({
         text: `Dou you want to Buy`,
@@ -112,12 +111,12 @@ export default {
             idOfProduct: this.item._id,
             type: 'Miner',
             time: new Date().getHours(),
-            minute: new Date().getMinutes()
+            minute: new Date().getMinutes(),
+            hours:this.item.contract_timer
           }
           try {
             let response = await axios.put(`${this.base_url}api/purchase/${this.userId}`, obj, { headers: { Authorization: `Bearer ${token}` } })
             if (response.data.message === 'Product purchased successfully') {
-              await this.startTimer(this.item.contract_timer)
               const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',

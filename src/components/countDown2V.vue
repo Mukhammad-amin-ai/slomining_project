@@ -14,7 +14,7 @@ import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   props: {
-    hours: {
+    index: {
       type: Number,
       required: true,
     },
@@ -27,7 +27,7 @@ export default {
     ...mapActions('Timer',['stopTimer', 'getTimer']),
   },
   mounted() {
-    this.getTimer()
+    this.getTimer(this.index)
   }
 };
 </script>
