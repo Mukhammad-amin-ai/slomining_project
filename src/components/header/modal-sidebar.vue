@@ -51,7 +51,7 @@ export default {
         { name: 'MY BILLS', path: '/dashboard/my-bills' },
         { name: 'DEPOSIT', path: '/dashboard/deposit' },
         { name: 'WITHDRAW', path: '/dashboard/withdraw' },
-        { name: 'MY ORDERS', path: '/dashboard/order' },
+        { name: 'MY CONTRACTS', path: '/dashboard/contracts' },
         { name: 'CONTRACTS', path: '/contacts' },
         { name: 'SETTINGS', path: '/dashboard/settings' }
       ],
